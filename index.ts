@@ -112,14 +112,14 @@ export { TextArea } from './components/TextArea';
 export { Tooltip } from './components/Tooltip';
 export { TreeItem } from './components/TreeItem';
 export { VerifiedBadge } from './components/VerifiedBadge';
-
+export { Input } from './components/Input';
 // Stitches
 export {
   styled,
   css,
   theme,
   createTheme,
-  darkTheme,
+  themes,
   getCssText,
   globalCss,
   keyframes,

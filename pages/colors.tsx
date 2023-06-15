@@ -25,7 +25,8 @@ import { Text } from '../components/Text';
 import { TextField } from '../components/TextField';
 import { TreeItem } from '../components/TreeItem';
 import { ColorTools } from '../custom/ColorTools';
-import { darkTheme as darkThemeClassName } from '../stitches.config';
+import { ThemeProvider, useTheme } from "next-themes";
+import getNextTheme, { isDarkTheme } from '../utils/getNextTheme';
 
 const sidebarWidth = 240;
 
@@ -78,10 +79,11 @@ export default function Colors() {
   const [textBlocks, setTextBlocks] = useLocalStorage('colors-textBlocks', true);
   const [alphaScales, setAlphaScales] = useLocalStorage('colors-alphaScales', false);
 
-  const [darkTheme, setDarkTheme] = useLocalStorage('colors-darkTheme', false);
   const [grayscale, setGrayscale] = useLocalStorage('colors-grayscale', false);
   const [blur, setBlur] = useLocalStorage('colors-blur', false);
   const [gap, setGap] = useLocalStorage('colors-gap', true);
+
+  const { theme, setTheme } = useTheme();
 
   // No SSR please
   if (typeof window === 'undefined') {
@@ -95,12 +97,6 @@ export default function Colors() {
   React.useLayoutEffect(() => {
     document.documentElement.classList.toggle('gap', gap);
   }, [gap]);
-
-  React.useLayoutEffect(() => {
-    document.body.classList.toggle('theme-default', !darkTheme);
-    document.body.classList.toggle(darkThemeClassName, darkTheme);
-    document.documentElement.style.backgroundColor = darkTheme ? 'black' : '';
-  }, [darkTheme]);
 
   return (
     <>
@@ -150,7 +146,7 @@ export default function Colors() {
             <Checkbox defaultChecked={blur} onChange={(e) => setBlur(e.target.checked)}>
               Blur
             </Checkbox>
-            <Checkbox defaultChecked={darkTheme} onChange={(e) => setDarkTheme(e.target.checked)}>
+            <Checkbox defaultChecked={isDarkTheme(theme)} onChange={(e) => setTheme(getNextTheme(theme, undefined, !!e.target.checked ? 'dark' : 'light'))}>
               Dark theme
             </Checkbox>
             <Separator css={{ my: '$3' }} />
@@ -1558,7 +1554,10 @@ function useLocalStorage(key: string, initialValue: any) {
 
 function darkThemeColor(color: string): any {
   return {
-    [`body.${darkThemeClassName} &`]: {
+    // [`body.${darkThemeClassName} &`]: {
+    //   bc: color,
+    // },
+    [`body &`]: {
       bc: color,
     },
   };

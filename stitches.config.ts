@@ -1,4 +1,5 @@
-import { createStitches } from '@stitches/react';
+import { createStitches, PropertyValue } from '@stitches/react';
+import { ColorTheme, createThemeColors, mapColor } from './utils/radixColors';
 import {
   gray,
   mauve,
@@ -131,6 +132,14 @@ export const {
 } = createStitches({
   theme: {
     colors: {
+      text: '$primary12',
+      outline: '$primary12',
+      outlineHover: '$gray12',
+
+      unimportant: '$gray11',
+      important: '$primary11',
+      highlight: '$warning9',
+
       ...gray,
       ...mauve,
       ...slate,
@@ -205,6 +214,16 @@ export const {
     fonts: {
       untitled: 'Untitled Sans, -apple-system, system-ui, sans-serif',
       mono: 'Söhne Mono, menlo, monospace',
+    },
+    shadows: {
+      border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay6',
+      common: `0 1px calc(3px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.15)`,
+      boxShadow: `$border, $common`,
+      error: `0px 0px 3px $colors$error11`,
+      focus: `0 0 0 2px $colors$primary7`, // or if want gray focus: `0 0 0 2px $colors$gray7`
+      focusBottom: `0 2px 0px 0px $colors$primary7`,
+      // light: '0 0 0 2px $colors$gray1',
+      strong: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
     },
     space: {
       1: '5px',
@@ -416,73 +435,143 @@ export const {
 
 export type CSS = Stitches.CSS<typeof config>;
 
-export const darkTheme = createTheme('dark-theme', {
-  colors: {
-    ...grayDark,
-    ...mauveDark,
-    ...slateDark,
-    ...sageDark,
-    ...oliveDark,
-    ...sandDark,
-    ...tomatoDark,
-    ...redDark,
-    ...crimsonDark,
-    ...pinkDark,
-    ...plumDark,
-    ...purpleDark,
-    ...violetDark,
-    ...indigoDark,
-    ...blueDark,
-    ...skyDark,
-    ...mintDark,
-    ...cyanDark,
-    ...tealDark,
-    ...greenDark,
-    ...grassDark,
-    ...limeDark,
-    ...yellowDark,
-    ...amberDark,
-    ...orangeDark,
-    ...brownDark,
-    ...bronzeDark,
-    ...goldDark,
 
-    ...grayDarkA,
-    ...mauveDarkA,
-    ...slateDarkA,
-    ...sageDarkA,
-    ...oliveDarkA,
-    ...sandDarkA,
-    ...tomatoDarkA,
-    ...redDarkA,
-    ...crimsonDarkA,
-    ...pinkDarkA,
-    ...plumDarkA,
-    ...purpleDarkA,
-    ...violetDarkA,
-    ...indigoDarkA,
-    ...blueDarkA,
-    ...skyDarkA,
-    ...mintDarkA,
-    ...cyanDarkA,
-    ...tealDarkA,
-    ...greenDarkA,
-    ...grassDarkA,
-    ...limeDarkA,
-    ...yellowDarkA,
-    ...amberDarkA,
-    ...orangeDarkA,
-    ...brownDarkA,
-    ...bronzeDarkA,
-    ...goldDarkA,
+// #region color themes
+const avocadoVariables = {
+  tan2v: '#d2b48c',
+  gray1v: '#d1d1d1',
+  brown1v: '#917d63',
+  brown2v: '#7a6850',
+  lightbrownv: '#ab977d',
 
-    // Semantic colors
-    hiContrast: '$slate12',
-    loContrast: '$slate1',
-    canvas: 'hsl(0 0% 15%)',
-    panel: '$slate3',
-    transparentPanel: 'hsl(0 100% 100% / 97%)',
-    shadowLight: 'hsl(206 22% 7% / 35%)',
-    shadowDark: 'hsl(206 22% 7% / 20%)',
-  },
-});
+  // ltan3: '#ede7da',
+  // ltan: '#f0e2c5',
+  // ltan2: '#faeccf',
+  lbrownv: '#c9bea7',
+  tanv: '#d6c9b6',
+  // text: 'black',
+  // lightgreen: '#edf5e6',
+  // green1: '#bdccaf',
+  // lightgreen2: '#dfebd5',
+  lightgreen3v: '#d2e0c5',
+  // darkgreen: '#547556',
+}
+
+const crimsonTheme: ColorTheme = {
+  primary: 'crimson',
+  secondary: 'crimson',
+  accent: 'crimson',
+  gray: 'mauve',
+  error: 'red',
+  success: 'green',
+  info: 'blue',
+  warning: 'yellow',
+}
+
+const tealTheme: ColorTheme = {
+  primary: 'teal',
+  secondary: 'teal',
+  accent: 'teal',
+  gray: 'sage',
+  error: 'red',
+  success: 'green',
+  info: 'blue',
+  warning: 'yellow',
+}
+
+const blueTheme: ColorTheme = {
+  primary: 'indigo',
+  secondary: 'indigo',
+  accent: 'indigo',
+  gray: 'slate',
+  error: 'red',
+  success: 'green',
+  info: 'blue',
+  warning: 'yellow',
+}
+
+// (avocadoTheme, true, 'grass', 'olive', 'red', 'green', 'blue', 'yellow', avocadoVariables, 'gold')
+const avocadoTheme: ColorTheme = {
+  primary: 'grass',
+  secondary: 'grass',
+  accent: 'grass',
+  gray: 'olive',
+  error: 'red',
+  success: 'green',
+  info: 'blue',
+  warning: 'yellow',
+}
+
+const violetTheme: ColorTheme = {
+  primary: 'violet',
+  secondary: 'violet',
+  accent: 'violet',
+  gray: 'mauve',
+  error: 'red',
+  success: 'green',
+  info: 'blue',
+  warning: 'yellow',
+}
+
+const lavendarBlushTheme: ColorTheme = {
+  ...violetTheme,
+  primary: 'pink',
+}
+
+export const themes = {
+  crimson: createTheme({
+    colors: {
+      ...createThemeColors(crimsonTheme, true)
+    },
+  }),
+  crimsonDark: createTheme({
+    colors: {
+      ...createThemeColors(crimsonTheme, false)
+    },
+  }),
+  teal: createTheme({
+    colors: {
+      ...createThemeColors(tealTheme, true)
+    },
+  }),
+  tealDark: createTheme({
+    colors: {
+      ...createThemeColors(tealTheme, false)
+    },
+    // fonts: {
+    //   system: "Arial, Helvetica, sans-serif"
+    // },
+  }),
+  avocado: createTheme({
+    colors: {
+      ...pinkDark,
+      ...createThemeColors(avocadoTheme, true, avocadoVariables)
+    },
+  }),
+  blueberry: createTheme({
+    colors: {
+      ...blue,
+      ...createThemeColors(blueTheme, true)
+      // ...pink,
+      // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
+    },
+  }),
+  violet: createTheme({
+    colors: {
+      ...blue,
+      ...createThemeColors(violetTheme, true)
+      // ...pink,
+      // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
+    },
+  }),
+  ['lavendar blush']: createTheme({
+    colors: {
+      ...crimson,
+      ...createThemeColors(lavendarBlushTheme, true)
+      // ...pink,
+      // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
+    },
+  }),
+}
+
+// #endregion

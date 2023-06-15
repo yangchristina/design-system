@@ -1,5 +1,5 @@
 import { styled } from '../stitches.config';
-import { ComponentProps, forwardRef, useId } from "react";
+import React, { ComponentProps, forwardRef, useId } from "react";
 import InputLabel from "./InputLabel";
 
 export const inputLayoutStyle = {
@@ -29,7 +29,7 @@ export const InputWrapper = styled('div', {
     gridArea: 'input',
 })
 
-export const Input1 = styled('input', {
+export const InputField = styled('input', {
     all: 'unset',
     ...inputLayoutStyle,
     boxShadow: '$boxShadow',
@@ -66,14 +66,14 @@ const Col = styled('div', {
     flexDirection: 'column',
 })
 
-type InputProps = ComponentProps<typeof Input1> & { error?: boolean, label?: string }
+type InputProps = ComponentProps<typeof InputField> & { error?: boolean, label?: string }
 export const Input = forwardRef<HTMLInputElement, InputProps>(({ children, label, type = 'text', error, ...props }, forwardedRef) => {
     const id = useId()
     return (
         <InputWrapper>
             {label && <InputLabel htmlFor={id}>{label}</InputLabel>}
             <Col>
-                <Input1 error={error} id={id} type={type} ref={forwardedRef} {...props} />
+                <InputField error={error} id={id} type={type} ref={forwardedRef} {...props} />
                 {children}
             </Col>
         </InputWrapper>

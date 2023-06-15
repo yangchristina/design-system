@@ -16,7 +16,7 @@ import {
   CheckIcon,
   TextAlignJustifyIcon,
 } from '@radix-ui/react-icons';
-import { darkTheme as darkThemeClassName, theme as lightThemeClassName } from '../stitches.config';
+import { useTheme } from 'next-themes';
 import { colors, getHiContrast, loContrasts } from '../pages/colors';
 
 const steps = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
@@ -785,8 +785,9 @@ export function ColorTools() {
 }
 
 function EditableScale({ name, lightThemeConfig, darkThemeConfig }: EditableScaleProps) {
+  const { theme } = useTheme()
   // Whether dark theme is currently active
-  const isDarkTheme = document.body.classList.contains(darkThemeClassName.toString());
+  const isDarkTheme = !!theme?.toLowerCase()?.includes("dark")
 
   // Current curves
   const [lightThemeCurve, setLightThemeCurve] = React.useState(lightThemeConfig.defaultCurve);
@@ -894,7 +895,7 @@ function EditableScale({ name, lightThemeConfig, darkThemeConfig }: EditableScal
 
         const backdropColor = isDarkTheme
           ? newColors.find((color) => color.name === `${name}1`)?.value ??
-            computedStyles.getPropertyValue(`--colors-${name}1`)
+          computedStyles.getPropertyValue(`--colors-${name}1`)
           : '#ffffff';
 
         const alphaValue =
