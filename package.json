@@ -44,7 +44,8 @@
     "@radix-ui/react-tooltip": "1.0.0",
     "@radix-ui/react-use-layout-effect": "1.0.0",
     "@stitches/react": "1.2.8",
-    "lodash.merge": "^4.6.2"
+    "lodash.merge": "^4.6.2",
+    "react-bezier-curve-editor": "^1.1.2"
   },
   "devDependencies": {
     "@next/mdx": "10.2.3",
@@ -61,7 +62,6 @@
     "np": "^7.3.0",
     "prettier": "^2.1.2",
     "react": "17.0.1",
-    "react-bezier-curve-editor": "^1.0.0",
     "react-dom": "17.0.1",
     "rollup": "^2.33.1",
     "rollup-plugin-typescript2": "^0.29.0",
