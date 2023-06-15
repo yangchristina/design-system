@@ -137,7 +137,7 @@ function Home() {
           left: 0,
           bottom: 0,
           overflowY: 'auto',
-          width: 250,
+          width: 'max-content',
           px: '$6',
           py: '$6',
         }}
@@ -399,7 +399,7 @@ function Home() {
         </Box>
       </Box>
 
-      <Box css={{ bc: '$loContrast', height: '100%' }}>
+      <Box css={{ bc: '$loContrast', height: '100%', marginInline: '150px' }}>
         <Section size="3">
           <Container size="2">
             <Heading size="4" css={{ ta: 'center', mb: '$3' }}>
@@ -1444,6 +1444,7 @@ function Home() {
             <Flex css={{ ai: 'flex-start', gap: '$6', mt: '$6' }}>
               <Input label="Size 5 label" labelSize={5} />
               <Input error label="Error" />
+              <Input valid label="Valid" />
             </Flex>
           </Container>
         </Section>

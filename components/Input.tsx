@@ -1,6 +1,5 @@
 import { styled } from '../stitches.config';
 import React, { ComponentProps, forwardRef, useId } from "react";
-import InputLabel from "./InputLabel";
 import { Label } from './Label';
 
 export const inputLayoutStyle = {
@@ -50,6 +49,11 @@ export const InputField = styled('input', {
                 boxShadow: '$error',
             }
         },
+        valid: {
+            true: {
+                boxShadow: '$success',
+            }
+        },
         design: {
             invisible: {
                 boxShadow: 'none',
@@ -67,14 +71,14 @@ const Col = styled('div', {
     flexDirection: 'column',
 })
 
-type InputProps = ComponentProps<typeof InputField> & { error?: boolean, label?: string, labelSize?: number }
-export const Input = forwardRef<HTMLInputElement, InputProps>(({ children, label, type = 'text', error, labelSize, ...props }, forwardedRef) => {
+type InputProps = ComponentProps<typeof InputField> & { error?: boolean, valid?: boolean, label?: string, labelSize?: number }
+export const Input = forwardRef<HTMLInputElement, InputProps>(({ children, label, type = 'text', error, labelSize = 5, valid = false, ...props }, forwardedRef) => {
     const id = useId()
     return (
         <InputWrapper>
             {label && <Label size={labelSize} htmlFor={id}>{label}</Label>}
             <Col>
-                <InputField error={error} id={id} type={type} ref={forwardedRef} {...props} />
+                <InputField error={error} valid={valid} id={id} type={type} ref={forwardedRef} {...props} />
                 {children}
             </Col>
         </InputWrapper>
