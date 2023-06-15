@@ -10,7 +10,7 @@ export function DarkThemeButton() {
   return (
     <Button
       style={{ position: 'fixed', zIndex: 999, right: 15, top: 15 }}
-      onClick={() => getNextTheme(theme, undefined, isDarkTheme(theme) ? 'light' : 'dark')}
+      onClick={() => setTheme(getNextTheme(theme, undefined, isDarkTheme(theme) ? 'light' : 'dark'))}
     >
       Toggle theme
     </Button>
