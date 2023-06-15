@@ -13,6 +13,7 @@ import { Link } from '../components/Link';
 import { AppBar } from '../components/AppBar';
 import { Banner } from '../components/Banner';
 import { Alert } from '../components/Alert';
+import { Input } from '../components/Input';
 import { Kbd } from '../components/Kbd';
 import { Separator } from '../components/Separator';
 import { Table, Caption, Thead, Tbody, Tfoot, Tr, Th, Td } from '../components/Table';
@@ -238,6 +239,13 @@ function Home() {
             <Link href="#dropdownmenu" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Dropdown Menu
+              </Text>
+            </Link>
+          </Box>
+          <Box css={{ my: '$1' }}>
+            <Link href="#input" variant="subtle" css={{ display: 'inline-flex' }}>
+              <Text size="2" css={{ lineHeight: '20px' }}>
+                Input
               </Text>
             </Link>
           </Box>
@@ -1416,6 +1424,26 @@ function Home() {
                 readOnly
                 defaultValue="eihuweofjew"
               ></TextArea>
+            </Flex>
+          </Container>
+        </Section>
+        <Flex css={{ jc: 'center' }}>
+          <Separator size="2" />
+        </Flex>
+        <Section size="3">
+          <Container size="2">
+            <Heading id="input" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+              Input
+            </Heading>
+            <Heading css={{ mb: '$6' }}>Input test</Heading>
+            <Flex css={{ ai: 'flex-start', gap: '$6' }}>
+              <Input label="Default" />
+              <Input size="small" label="Small" />
+              <Input placeholder="Placeholder" />
+            </Flex>
+            <Flex css={{ ai: 'flex-start', gap: '$6', mt: '$6' }}>
+              <Input label="Size 5 label" labelSize={5} />
+              <Input error label="Error" />
             </Flex>
           </Container>
         </Section>

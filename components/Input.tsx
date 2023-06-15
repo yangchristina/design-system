@@ -1,6 +1,7 @@
 import { styled } from '../stitches.config';
 import React, { ComponentProps, forwardRef, useId } from "react";
 import InputLabel from "./InputLabel";
+import { Label } from './Label';
 
 export const inputLayoutStyle = {
     display: 'inline-flex',
@@ -66,12 +67,12 @@ const Col = styled('div', {
     flexDirection: 'column',
 })
 
-type InputProps = ComponentProps<typeof InputField> & { error?: boolean, label?: string }
-export const Input = forwardRef<HTMLInputElement, InputProps>(({ children, label, type = 'text', error, ...props }, forwardedRef) => {
+type InputProps = ComponentProps<typeof InputField> & { error?: boolean, label?: string, labelSize?: number }
+export const Input = forwardRef<HTMLInputElement, InputProps>(({ children, label, type = 'text', error, labelSize, ...props }, forwardedRef) => {
     const id = useId()
     return (
         <InputWrapper>
-            {label && <InputLabel htmlFor={id}>{label}</InputLabel>}
+            {label && <Label size={labelSize} htmlFor={id}>{label}</Label>}
             <Col>
                 <InputField error={error} id={id} type={type} ref={forwardedRef} {...props} />
                 {children}
