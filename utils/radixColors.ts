@@ -146,9 +146,10 @@ export function createThemeColors(theme: ColorTheme, isLight = true, variables?:
         ...mapColor(accent, 'accent'),
         ...mapColor(secondary, 'secondary'),
         ...(isLight ? lightDefaults : darkDefaults),
-        ...radixScales[primary + suffix], ...radixScales[gray + suffix], ...radixScales[error + suffix], ...radixScales[success + suffix],
-        ...radixScales[warning + suffix], ...radixScales[info + suffix], ...radixScales[success + suffix],
-        ...(secondary && radixScales[secondary + suffix]),
+        // const primary 
+        // ...radixScales[(primary + suffix) as keyof typeof radixScales], ...radixScales[gray + suffix], ...radixScales[error + suffix], ...radixScales[success + suffix],
+        // ...radixScales[warning + suffix], ...radixScales[info + suffix], ...radixScales[success + suffix],
+        // ...(secondary && radixScales[secondary + suffix]),
         ...variables
     }
 }
