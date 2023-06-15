@@ -7,10 +7,12 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
+      banner: "'use client'",
     },
     {
       file: pkg.module,
       format: 'es',
+      banner: "'use client'",
     },
   ],
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
