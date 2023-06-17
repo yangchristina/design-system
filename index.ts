@@ -1,5 +1,6 @@
-export * from "./hooks";
 
+export * from "./hooks";
+export { Spinner } from "./components/Spinner";
 export {
   Accordion,
   AccordionTrigger,
