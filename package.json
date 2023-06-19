@@ -15,7 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "ds:build": "rollup -c",
     "ds:release": "yarn ds:build && np",
-    "publish": "npm version <update_type> && npm publish"
+    "publish": "npm version update_type && npm publish"
   },
   "peerDependencies": {
     "react": "^18.0.0",
