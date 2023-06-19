@@ -127,4 +127,5 @@ export {
   globalCss,
   keyframes,
   config,
+  globalStyles
 } from './stitches.config';
