@@ -27,11 +27,11 @@
   "exclude": [
     "node_modules",
     "pages",
+    "dist"
   ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "dist"
   ]
 }

@@ -644,5 +644,14 @@ export const globalStyles = {
   },
   a: {
     textDecoration: 'none'
+  },
+  '.gap': {
+    display: 'flex',
+    gap: 15
+  },
+  '.center': {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 }
