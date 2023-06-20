@@ -1,7 +1,7 @@
 import localforage from "localforage"
 import { useEffect, useState } from "react"
 
-export default function useForageItem<T>(
+export function useForageItem<T>(
     key: string,
     isValid: (x: unknown) => boolean,
     defaultValue: T

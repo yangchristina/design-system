@@ -1,4 +1,4 @@
-import useForageItem from "./useForageItem"
+import {useForageItem} from "./useForageItem"
 
 /**
  * each item in the array gets its own key
@@ -6,7 +6,7 @@ import useForageItem from "./useForageItem"
  * @param isValid
  * @returns
  */
-export default function useForageArray<T>(
+export function useForageArray<T>(
     groupKey: string,
     isValid: (x: unknown) => boolean,
     defaultValue: T[] = []

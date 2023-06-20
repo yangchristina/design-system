@@ -9,7 +9,7 @@ const getRandomKey = () => Math.random().toString(36).substring(2, 11)
  * @param isValid
  * @returns
  */
-export default function useForageSortedArray<T>(
+export function useForageSortedArray<T>(
     groupKey: string,
     isValid: (x: unknown) => boolean,
     defaultArray: T[] = [],

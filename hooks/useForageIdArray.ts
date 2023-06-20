@@ -1,6 +1,6 @@
 import localforage from "localforage"
 import { useEffect, useState } from "react"
-import useForageArray from "./useForageArray"
+import {useForageArray} from "./useForageArray"
 import { uniqBy, isString, cloneDeep } from 'lodash'
 
 /** Difference from useForageSortedArray
