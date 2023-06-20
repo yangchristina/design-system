@@ -6,6 +6,7 @@ export default {
   input: './index.ts',
   output: {
     dir: 'dist',
+    banner: "'use client'",
   },
   // [
   //   {
