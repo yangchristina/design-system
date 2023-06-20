@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { Box } from '../components/Box';
 import { Section } from '../components/Section';

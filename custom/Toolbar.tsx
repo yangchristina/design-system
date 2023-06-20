@@ -1,3 +1,4 @@
+"use client"
 import { Avatar } from '../components/Avatar';
 import { Box } from '../components/Box';
 import { Button } from '../components/Button';

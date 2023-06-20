@@ -1,3 +1,4 @@
+"use client"
 import { styled } from '../stitches.config';
 
 export const TabLink = styled('a', {

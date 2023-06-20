@@ -1,3 +1,4 @@
+"use client"
 import { Box } from '../components/Box';
 import { Container } from '../components/Container';
 import { Flex } from '../components/Flex';

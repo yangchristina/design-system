@@ -1,3 +1,4 @@
+"use client"
 import React, { ReactText } from 'react';
 import { CheckIcon } from '@radix-ui/react-icons';
 import { styled, CSS } from '../stitches.config';

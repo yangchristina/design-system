@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { styled, VariantProps, CSS } from '../stitches.config';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';

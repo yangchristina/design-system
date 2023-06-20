@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import chroma from 'chroma-js';
 import bezier from 'bezier-easing';

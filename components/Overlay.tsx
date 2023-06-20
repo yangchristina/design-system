@@ -1,3 +1,4 @@
+"use client"
 import { styled, css } from '../stitches.config';
 
 export const overlayStyles = css({

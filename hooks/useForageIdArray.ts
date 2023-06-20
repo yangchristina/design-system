@@ -1,3 +1,4 @@
+"use client"
 import localforage from "localforage"
 import { useEffect, useState } from "react"
 import {useForageArray} from "./useForageArray"

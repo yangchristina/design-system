@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import * as MenuPrimitive from '@radix-ui/react-menu';
 import { CheckIcon } from '@radix-ui/react-icons';

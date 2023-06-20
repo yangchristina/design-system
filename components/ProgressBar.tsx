@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { styled, keyframes, CSS, VariantProps } from '../stitches.config';
 import * as ProgressPrimitive from '@radix-ui/react-progress';

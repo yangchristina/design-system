@@ -1,3 +1,4 @@
+"use client"
 import { Box } from '../components/Box';
 import { Text } from '../components/Text';
 import { Section } from '../components/Section';

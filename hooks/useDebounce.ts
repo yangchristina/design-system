@@ -1,3 +1,4 @@
+"use client"
 // useDebounce.js
 import { useState, useEffect } from 'react';
 

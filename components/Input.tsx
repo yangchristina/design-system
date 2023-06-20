@@ -1,3 +1,4 @@
+"use client"
 import { styled } from '../stitches.config';
 import React, { ComponentProps, forwardRef, useId } from "react";
 import { Label } from './Label';

@@ -1,3 +1,4 @@
+"use client"
 import { css, styled } from '../stitches.config';
 
 export const panelStyles = css({

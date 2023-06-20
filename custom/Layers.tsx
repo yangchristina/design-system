@@ -1,3 +1,4 @@
+"use client"
 import { Box } from '../components/Box';
 import { TreeItem } from '../components/TreeItem';
 import { Text } from '../components/Text';

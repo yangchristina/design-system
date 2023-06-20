@@ -1,3 +1,4 @@
+"use client"
 import { styled } from '../stitches.config';
 import { Button } from '../components/Button';
 import { TextField } from './TextField';

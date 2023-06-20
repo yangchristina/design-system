@@ -1,3 +1,4 @@
+"use client"
 export * from "./useDebounce";
 export * from "./useDoubleTap";
 export * from "./useEdit";

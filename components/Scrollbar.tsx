@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { Flex } from '../components/Flex';
 import { Box } from '../components/Box';

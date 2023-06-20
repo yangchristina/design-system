@@ -1,3 +1,4 @@
+"use client"
 import { styled } from '../stitches.config';
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group';
 

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { styled, CSS } from '../stitches.config';
 import { CaretSortIcon } from '@radix-ui/react-icons';

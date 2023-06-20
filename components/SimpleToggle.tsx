@@ -1,3 +1,4 @@
+"use client"
 import { styled } from '../stitches.config';
 import * as TogglePrimitive from '@radix-ui/react-toggle';
 

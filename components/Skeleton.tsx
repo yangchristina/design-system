@@ -1,3 +1,4 @@
+"use client"
 import { styled, keyframes } from '../stitches.config';
 
 const pulse = keyframes({

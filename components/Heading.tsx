@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { Text } from './Text';
 import { VariantProps, CSS } from '../stitches.config';

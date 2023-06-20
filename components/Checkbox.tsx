@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { styled, CSS, VariantProps } from '../stitches.config';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
