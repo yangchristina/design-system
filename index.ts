@@ -1,6 +1,7 @@
 
 export * from "./hooks";
 export { Spinner } from "./components/Spinner";
+export { TriangleNav } from "./components/TriangleNav";
 export {
   Accordion,
   AccordionTrigger,

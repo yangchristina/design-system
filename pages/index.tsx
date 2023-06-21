@@ -25,6 +25,7 @@ import { Image } from '../components/Image';
 import { Code } from '../components/Code';
 import { Sup } from '../components/Sup';
 import { Sub } from '../components/Sub';
+import { TriangleNav } from '../components/TriangleNav';
 import { TextField } from '../components/TextField';
 import { Section } from '../components/Section';
 import { Spinner } from '../components/Spinner';
@@ -122,6 +123,7 @@ import {
 } from '@radix-ui/react-icons';
 import { Toolbar } from '../custom/Toolbar';
 import { DarkThemeButton } from '../custom/DarkThemeButton';
+import LeftRightNav from '../components/LeftRightNav';
 
 function Home() {
   return (
@@ -258,6 +260,13 @@ function Home() {
             </Link>
           </Box>
           <Box css={{ my: '$1' }}>
+            <Link href="#leftrightnav" variant="subtle" css={{ display: 'inline-flex' }}>
+              <Text size="2" css={{ lineHeight: '20px' }}>
+                Left Right Nav
+              </Text>
+            </Link>
+          </Box>
+          <Box css={{ my: '$1' }}>
             <Link href="#link" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Link
@@ -366,6 +375,13 @@ function Home() {
             <Link href="#TextField" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 TextField
+              </Text>
+            </Link>
+          </Box>
+          <Box css={{ my: '$1' }}>
+            <Link href="#trianglenav" variant="subtle" css={{ display: 'inline-flex' }}>
+              <Text size="2" css={{ lineHeight: '20px' }}>
+                TriangleNav
               </Text>
             </Link>
           </Box>
@@ -1494,6 +1510,38 @@ function Home() {
               <Text size="3" css={{ color: '$slate11' }}>
                 @colmtuite
               </Text>
+            </Flex>
+          </Container>
+        </Section>
+        <Flex css={{ jc: 'center' }}>
+          <Separator size="2" />
+        </Flex>
+        <Section size="3">
+          <Container size="2">
+            <Heading id="leftrightnav" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+              Left Right Nav
+            </Heading>
+            <Flex css={{ fd: 'column', ai: 'center' }}>
+              <LeftRightNav type="triangle" layout={'expanded'}>Triangle</LeftRightNav>
+              <LeftRightNav type="caret" layout={'expanded'}>Caret</LeftRightNav>
+              <LeftRightNav height={1.5} type="triangle" layout={'compact'}>Taller Compact Triangle</LeftRightNav>
+              <LeftRightNav type="caret" layout={'compact'}>Taller Compact Caret</LeftRightNav>
+            </Flex>
+          </Container>
+        </Section>
+        <Flex css={{ jc: 'center' }}>
+          <Separator size="2" />
+        </Flex>
+        <Section size="3">
+          <Container size="2">
+            <Heading id="trianglenav" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+              Triangle Nav
+            </Heading>
+            <Flex css={{ fd: 'row', ai: 'center' }}>
+              <TriangleNav direction="left" />
+              <TriangleNav direction="right" />
+              <TriangleNav height={1.5} direction="left" />
+              <TriangleNav height={1.5} direction="right" />
             </Flex>
           </Container>
         </Section>

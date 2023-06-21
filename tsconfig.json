@@ -19,7 +19,7 @@
       "dom",
       "dom.iterable",
       "es2017",
-      "esnext",
+      "esnext"
     ],
     "allowJs": true,
     "isolatedModules": true
@@ -32,6 +32,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
+    "**/*.tsx"
   ]
 }
