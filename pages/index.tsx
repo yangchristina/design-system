@@ -27,6 +27,7 @@ import { Sup } from '../components/Sup';
 import { Sub } from '../components/Sub';
 import { TextField } from '../components/TextField';
 import { Section } from '../components/Section';
+import { Spinner } from '../components/Spinner';
 import { Avatar } from '../components/Avatar';
 import { TabLink } from '../components/TabLink';
 import { SimpleToggle } from '../components/SimpleToggle';
@@ -379,6 +380,13 @@ function Home() {
             <Link href="#simpletoggle" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Simple Toggle
+              </Text>
+            </Link>
+          </Box>
+          <Box css={{ my: '$1' }}>
+            <Link href="#spinner" variant="subtle" css={{ display: 'inline-flex' }}>
+              <Text size="2" css={{ lineHeight: '20px' }}>
+                Spinner
               </Text>
             </Link>
           </Box>
@@ -1803,6 +1811,19 @@ function Home() {
               </SheetTrigger>
               <SheetContent side="left"></SheetContent>
             </Sheet>
+          </Container>
+        </Section>
+        <Flex css={{ jc: 'center' }}>
+          <Separator size="2" />
+        </Flex>
+        <Section size="3">
+          <Container size="2" css={{ background: '$primary3' }} >
+            <Heading id="spinner" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+              Spinner
+            </Heading>
+            <Spinner color="overlay6" />
+            <Spinner color="overlay7" />
+            <Spinner color="overlay8" />
           </Container>
         </Section>
         <Flex css={{ jc: 'center' }}>
