@@ -1,3 +1,4 @@
+'use client';
 import React, { ComponentProps, Fragment } from 'react'
 import * as SelectPrimitive from '@radix-ui/react-select';
 import Trigger from './components/Trigger';
