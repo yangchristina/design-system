@@ -1,6 +1,23 @@
 "use client"
 import { styled } from '../stitches.config';
 
+// export const IconButton = styled('button', {
+//   all: 'unset',
+//   fontFamily: 'inherit',
+//   borderRadius: '100%',
+//   height: 25,
+//   width: 25,
+//   display: 'inline-flex',
+//   alignItems: 'center',
+//   justifyContent: 'center',
+//   color: '$gray11',
+//   top: 10,
+//   right: 10,
+
+//   '&:hover': { backgroundColor: '$overlay4' },
+//   '&:focus': { boxShadow: `0 0 0 2px $colors$gray7` },
+// });
+
 export const IconButton = styled('button', {
   // Reset
   alignItems: 'center',
