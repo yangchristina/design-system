@@ -2,7 +2,7 @@
 import { styled } from '../stitches.config';
 import { Button } from '../components/Button';
 import { TextField } from './TextField';
-import { Select } from '../components/Select';
+import { OldSelect } from '../components/OldSelect';
 
 export const ControlGroup = styled('div', {
   display: 'flex',
@@ -70,7 +70,7 @@ export const ControlGroup = styled('div', {
       },
     },
   },
-  [`& ${Select}`]: {
+  [`& ${OldSelect}`]: {
     borderRadius: 0,
     boxShadow:
       'inset 0 1px $colors$slate7, inset -1px 0 $colors$slate7, inset 0 -1px $colors$slate7',

@@ -5,7 +5,7 @@ import { Flex } from '../components/Flex';
 import { Text } from '../components/Text';
 import { Grid } from '../components/Grid';
 import { RadioGrid, RadioGridGroup } from '../components/RadioGrid';
-import { Select } from '../components/Select';
+// import { Select } from '../components/Select';
 import { Separator } from '../components/Separator';
 import { Card } from '../components/Card';
 import { Image } from '../components/Image';

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../components/Button';
+import { OldSelect } from '../components/OldSelect';
 import { IconButton } from '../components/IconButton';
 import { Container } from '../components/Container';
 import { Box } from '../components/Box';
@@ -19,7 +20,7 @@ import { Separator } from '../components/Separator';
 import { Table, Caption, Thead, Tbody, Tfoot, Tr, Th, Td } from '../components/Table';
 import { VerifiedBadge } from '../components/VerifiedBadge';
 import { Card } from '../components/Card';
-import { Select } from '../components/Select';
+import { Select } from '../components/select';
 import { TextArea } from '../components/TextArea';
 import { Image } from '../components/Image';
 import { Code } from '../components/Code';
@@ -312,6 +313,13 @@ function Home() {
             <Link href="#sheet" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Sheet
+              </Text>
+            </Link>
+          </Box>
+          <Box css={{ my: '$1' }}>
+            <Link href="#select" variant="subtle" css={{ display: 'inline-flex' }}>
+              <Text size="2" css={{ lineHeight: '20px' }}>
+                Select
               </Text>
             </Link>
           </Box>
@@ -1407,13 +1415,13 @@ function Home() {
             </ControlGroup>
             <ControlGroup css={{ mt: '$6' }}>
               <TextField size="1" placeholder="Hello world" />
-              <Select>
+              <OldSelect>
                 <option>Button</option>
                 <option>Button</option>
                 <option>Button</option>
                 <option>Button</option>
                 <option>Button</option>
-              </Select>
+              </OldSelect>
             </ControlGroup>
             <ControlGroup css={{ mt: '$6' }}>
               <TextField placeholder="Hello world" />
@@ -1859,6 +1867,30 @@ function Home() {
               </SheetTrigger>
               <SheetContent side="left"></SheetContent>
             </Sheet>
+          </Container>
+        </Section>
+        <Section size="3">
+          <Container size="2">
+            <Heading id="select" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+              Select
+            </Heading>
+            <Select
+              onChange={console.log}
+              data={[{
+                type: 'item',
+                label: 'min',
+                value: 'minute',
+              },
+              {
+                type: 'item',
+                label: 'hr',
+                value: 'hour',
+              },
+              {
+                type: 'item',
+                label: 'days',
+                value: 'day',
+              }]} />
           </Container>
         </Section>
         <Flex css={{ jc: 'center' }}>

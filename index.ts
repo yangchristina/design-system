@@ -91,7 +91,8 @@ export { ProgressBar } from './components/ProgressBar';
 export { Radio, RadioGroup } from './components/Radio';
 export { RadioCard, RadioCardGroup } from './components/RadioCard';
 export { Section } from './components/Section';
-export { Select } from './components/Select';
+export { OldSelect as OldSelect } from './components/OldSelect';
+export { Select } from './components/select';
 export { Separator } from './components/Separator';
 export {
   Sheet,

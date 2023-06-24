@@ -49,7 +49,7 @@ const StyledCaretSortIcon = styled(CaretSortIcon, {
 
 type SelectProps = React.ComponentProps<typeof StyledSelect> & { css?: CSS };
 
-export const Select = React.forwardRef<React.ElementRef<typeof StyledSelect>, SelectProps>(
+export const OldSelect = React.forwardRef<React.ElementRef<typeof StyledSelect>, SelectProps>(
   ({ css, ...props }, forwardedRef) => (
     <SelectWrapper css={css}>
       <StyledSelect ref={forwardedRef} {...props} />
@@ -58,4 +58,4 @@ export const Select = React.forwardRef<React.ElementRef<typeof StyledSelect>, Se
   )
 );
 
-Select.toString = () => `.${SelectWrapper.className}`;
+OldSelect.toString = () => `.${SelectWrapper.className}`;

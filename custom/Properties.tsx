@@ -11,7 +11,7 @@ import { Box } from '../components/Box';
 import { Flex } from '../components/Flex';
 import { IconButton } from '../components/IconButton';
 import { TextField } from '../components/TextField';
-import { Select } from '../components/Select';
+import { OldSelect } from '../components/OldSelect';
 import { Text } from '../components/Text';
 import { ScrollArea } from '../components/Scrollbar';
 
@@ -221,14 +221,14 @@ export function Properties() {
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select css={{ width: '100%' }}>
+                  <OldSelect css={{ width: '100%' }}>
                     <option value="option1" label="Visible">
                       fewfew
                     </option>
                     <option value="option2" label="Hidden">
                       fewfew
                     </option>
-                  </Select>
+                  </OldSelect>
                 </Box>
                 <Box css={{ ml: '$1', mr: '-$1' }}>
                   <IconButton>
@@ -262,11 +262,11 @@ export function Properties() {
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select css={{ width: '100%' }}>
+                  <OldSelect css={{ width: '100%' }}>
                     <option value="option1" label="Untitled"></option>
                     <option value="option2" label="Repeat X"></option>
                     <option value="option3" label="Repeat Y"></option>
-                  </Select>
+                  </OldSelect>
                 </Box>
                 <Box css={{ ml: '$1', mr: '-$1' }}>
                   <IconButton>
@@ -296,13 +296,13 @@ export function Properties() {
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select css={{ width: '100%' }}>
+                  <OldSelect css={{ width: '100%' }}>
                     <option value="option1" label="Normal"></option>
                     <option value="option2" label="Italic"></option>
                     <option value="option3" label="Medium"></option>
                     <option value="option3" label="Bold"></option>
                     <option value="option3" label="Bold Italic"></option>
-                  </Select>
+                  </OldSelect>
                 </Box>
                 <Box css={{ ml: '$1', mr: '-$1' }}>
                   <IconButton>
@@ -367,12 +367,12 @@ export function Properties() {
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select css={{ width: '100%' }}>
+                  <OldSelect css={{ width: '100%' }}>
                     <option value="option1" label="As Typed"></option>
                     <option value="option2" label="Lowercase"></option>
                     <option value="option3" label="Uppercase"></option>
                     <option value="option3" label="Capitalized"></option>
-                  </Select>
+                  </OldSelect>
                 </Box>
                 <Box css={{ ml: '$1', mr: '-$1' }}>
                   <IconButton>
@@ -601,7 +601,7 @@ export function Properties() {
                   </IconButton>
                 </Box>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select
+                  <OldSelect
                     css={{
                       width: 'calc(100% + 1px)',
                       borderTopRightRadius: 0,
@@ -617,7 +617,7 @@ export function Properties() {
                     <option value="option3" label="Brightness">
                       Brightness
                     </option>
-                  </Select>
+                  </OldSelect>
                 </Box>
               </Flex>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
@@ -644,7 +644,7 @@ export function Properties() {
                   </IconButton>
                 </Box>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select
+                  <OldSelect
                     css={{
                       width: 'calc(100% + 1px)',
                       borderTopRightRadius: 0,
@@ -660,7 +660,7 @@ export function Properties() {
                     <option value="option3" label="Blur">
                       Blur
                     </option>
-                  </Select>
+                  </OldSelect>
                 </Box>
               </Flex>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
@@ -703,7 +703,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -713,7 +713,7 @@ export function Properties() {
                   <option value="option1" label="Rotate"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -733,7 +733,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -743,7 +743,7 @@ export function Properties() {
                   <option value="option1" label="Rotate X"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -763,7 +763,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -773,7 +773,7 @@ export function Properties() {
                   <option value="option1" label="Rotate Y"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -793,7 +793,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -803,7 +803,7 @@ export function Properties() {
                   <option value="option1" label="Rotate Z"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -823,7 +823,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -833,7 +833,7 @@ export function Properties() {
                   <option value="option1" label="Scale"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -853,7 +853,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -863,7 +863,7 @@ export function Properties() {
                   <option value="option1" label="Scale X"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -883,7 +883,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -893,7 +893,7 @@ export function Properties() {
                   <option value="option1" label="Scale Y"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -913,7 +913,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -923,7 +923,7 @@ export function Properties() {
                   <option value="option1" label="Scale Z"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -943,7 +943,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -953,7 +953,7 @@ export function Properties() {
                   <option value="option1" label="Skew X"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -973,7 +973,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -983,7 +983,7 @@ export function Properties() {
                   <option value="option1" label="Skew Y"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -1003,7 +1003,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -1013,7 +1013,7 @@ export function Properties() {
                   <option value="option1" label="Translate X"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -1033,7 +1033,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -1043,7 +1043,7 @@ export function Properties() {
                   <option value="option1" label="Translate Y"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -1063,7 +1063,7 @@ export function Properties() {
             </Flex>
             <Flex css={{ ai: 'center', px: '$3', py: '$1' }}>
               <Box css={{ flexBasis: '0', flexGrow: 1 }}>
-                <Select
+                <OldSelect
                   css={{
                     width: 'calc(100% + 1px)',
                     borderTopRightRadius: 0,
@@ -1073,7 +1073,7 @@ export function Properties() {
                   <option value="option1" label="Translate Z"></option>
                   <option value="option2" label="Repeat X"></option>
                   <option value="option3" label="Repeat Y"></option>
-                </Select>
+                </OldSelect>
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
@@ -1097,7 +1097,7 @@ export function Properties() {
               </Box>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select css={{ width: '100%' }}>
+                  <OldSelect css={{ width: '100%' }}>
                     <option value="option1" label="Center"></option>
                     <option value="option2" label="Top"></option>
                     <option value="option3" label="Right"></option>
@@ -1107,7 +1107,7 @@ export function Properties() {
                     <option value="option2" label="Bottom Right"></option>
                     <option value="option3" label="Bottom Left"></option>
                     <option value="option3" label="Top Left"></option>
-                  </Select>
+                  </OldSelect>
                 </Box>
                 <Box css={{ ml: '$1', mr: '-$1' }}>
                   <IconButton>
@@ -1161,7 +1161,7 @@ export function Properties() {
                   </IconButton>
                 </Box>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select
+                  <OldSelect
                     css={{
                       width: 'calc(100% + 1px)',
                       borderTopRightRadius: 0,
@@ -1171,7 +1171,7 @@ export function Properties() {
                     <option value="option1" label="Fill"></option>
                     <option value="option2" label="Repeat X"></option>
                     <option value="option3" label="Repeat Y"></option>
-                  </Select>
+                  </OldSelect>
                 </Box>
               </Flex>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
@@ -1198,7 +1198,7 @@ export function Properties() {
                   </IconButton>
                 </Box>
                 <Box css={{ flexGrow: 1 }}>
-                  <Select
+                  <OldSelect
                     css={{
                       width: 'calc(100% + 1px)',
                       borderTopRightRadius: 0,
@@ -1208,7 +1208,7 @@ export function Properties() {
                     <option value="option1" label="Transform"></option>
                     <option value="option2" label="Repeat X"></option>
                     <option value="option3" label="Repeat Y"></option>
-                  </Select>
+                  </OldSelect>
                 </Box>
               </Flex>
               <Flex css={{ flexBasis: '0', flexGrow: 1 }}>
