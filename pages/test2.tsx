@@ -1,11 +1,11 @@
 import React from 'react'
-import { Toolbar, ToolbarOld } from '../custom/Toolbar'
+import { Toolbar } from '../custom/Toolbar'
 
 const Test2 = () => {
     return (
         <div>
             <Toolbar orientation="vertical" />
-            <ToolbarOld />
+            {/* <ToolbarOld /> */}
             <Toolbar orientation="horizontal" />
         </div>
     )
