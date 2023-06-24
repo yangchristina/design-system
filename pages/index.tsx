@@ -121,6 +121,8 @@ import {
   TriangleUpIcon,
   VideoIcon,
   RocketIcon,
+  CardStackPlusIcon,
+  PlusCircledIcon,
 } from '@radix-ui/react-icons';
 import { Toolbar } from '../custom/Toolbar';
 import { DarkThemeButton } from '../custom/DarkThemeButton';
@@ -1891,6 +1893,51 @@ function Home() {
                 label: 'days',
                 value: 'day',
               }]} />
+            <Box>
+              <Tooltip content="Indicators" side="bottom" align="center">
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <IconButton>
+                      <CardStackPlusIcon />
+                    </IconButton>
+                  </SheetTrigger>
+                  <SheetContent css={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    padding: '$5',
+                    gap: 20,
+                  }} side="left">
+                    <h2>Indicators</h2>
+                    <Select
+                      onChange={console.log}
+                      placeholder="Select an indicator"
+                      data={
+                        Object.entries({
+                          'relative_volume': "Relative Volume",
+                          'sma_cross_50_200': "SMA Golden Cross (50/200)",
+                          'sma_cross_20_50': "SMA Cross 20/50",
+                          'ema_cross_50_200': "EMA Golden Cross (50/200)",
+                          'ema_cross_20_50': "EMA Cross 20/50",
+                          'ema_cross_5_20': "EMA Cross 5/20",
+                          'candlestick': 'Candlestick',
+                          'ddmm': 'DDMM',
+                          'squash': 'Rectangle Bottom'
+                        }).map(([indicator, label]) => {
+                          return {
+                            type: 'item',
+                            label: label,
+                            value: indicator,
+                          }
+                        })
+                      } />
+                    <IconButton>
+                      <PlusCircledIcon />
+                    </IconButton>
+                  </SheetContent>
+                </Sheet>
+              </Tooltip>
+            </Box>
           </Container>
         </Section>
         <Flex css={{ jc: 'center' }}>

@@ -29,7 +29,11 @@ const itemStyle = {
         pointerEvents: 'none',
     },
     
-    '&[data-highlighted]': {
+    "&:hover": {
+        backgroundColor: '$gray5',
+        color: '$primary12',
+    },
+    '&[data-highlighted]': { // ISSUE: This is not working in sheet has to use :hover instead
         backgroundColor: '$gray5',
         color: '$primary12',
     },
