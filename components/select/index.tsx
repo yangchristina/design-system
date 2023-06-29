@@ -64,7 +64,7 @@ type SelectProps = {
     placeholder?: string, data: ContentUnit[],
     error?: boolean,
     allowSelectNone?: boolean,
-} & { onChange: (value: string) => void; } & ComponentProps<typeof SelectPrimitive.Root> & ComponentProps<typeof Trigger>
+} & { onChange: (value: string) => void; } & Omit<ComponentProps<typeof SelectPrimitive.Root>, 'onChange'> & Omit<ComponentProps<typeof Trigger>, 'onChange'>
 
 /**
  * should i nest a form in here?
