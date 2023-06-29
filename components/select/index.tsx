@@ -63,14 +63,14 @@ function handleType(obj: ContentUnit | ContentUnit[]): JSX.Element {
 type SelectProps = {
     placeholder?: string, data: ContentUnit[],
     error?: boolean,
-    allowSelectNone?: boolean
-} & { onChange: (value: string) => void; } & ComponentProps<typeof SelectPrimitive.Root>
+    allowSelectNone?: boolean,
+} & { onChange: (value: string) => void; } & ComponentProps<typeof SelectPrimitive.Root> & ComponentProps<typeof Trigger>
 
 /**
  * should i nest a form in here?
  * @returns 
  */
-export const Select = ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, ...props }: SelectProps) => {
+export const Select = ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, color, ...props }: SelectProps) => {
     const noCategoryItem: ContentUnit = {
         type: 'item',
         label: placeholder,
@@ -79,7 +79,7 @@ export const Select = ({ placeholder = 'Select a category', data, value, onChang
     data = allowSelectNone ? [noCategoryItem, ...data] : [...data]
     return (
         <SelectPrimitive.Root {...props} value={value} onValueChange={onChange}>
-            <Trigger error={error} placeholder={placeholder} />
+            <Trigger color={color} error={error} placeholder={placeholder} />
             <Content>
                 <>
                     {handleType(data)}
@@ -88,3 +88,4 @@ export const Select = ({ placeholder = 'Select a category', data, value, onChang
         </SelectPrimitive.Root>
     )
 }
+

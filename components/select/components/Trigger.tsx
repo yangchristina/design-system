@@ -1,12 +1,15 @@
 'use client';
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import { styled } from '../../../stitches.config';
 import { SelectTrigger, Value, SelectIcon } from '@radix-ui/react-select';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
+import { selectColorVariants } from "../styles";
 
-const Trigger = ({ placeholder = 'Select a category', error = false }: { placeholder?: string, error?: boolean }) => {
+type TriggerProps = ComponentProps<typeof SelectTrigger>
+const Trigger = ({ placeholder = 'Select a category', error = false, ...props }: { placeholder?: string, error?: boolean } & TriggerProps) => {
     return (
-        <StyledTrigger error={error} aria-label="select-trigger">
+        // @ts-expect-error
+        <StyledTrigger {...props} error={error} aria-label="select-trigger">
             <Value placeholder={placeholder} />
             <SelectIcon>
                 <ChevronDownIcon />
@@ -28,9 +31,10 @@ const StyledTrigger = styled(SelectTrigger, {
     lineHeight: 1,
     height: 35,
     gap: 5,
-    backgroundColor: '$gray1',
+    backgroundColor: '$loContrast',
+    boxShadow: '$border',
     color: '$primary12',
-    boxShadow: `0px 0px 3px $colors$gray7`,
+    // boxShadow: `0px 0px 3px $colors$gray8`,
     // boxShadow: '$boxShadow',
     '&:hover': { backgroundColor: '$gray3' },
     '&:focus': { boxShadow: `$focus` },
@@ -38,18 +42,38 @@ const StyledTrigger = styled(SelectTrigger, {
 
     gridArea: 'category',
 
+    border: '$boxShadow',
+
     variants: {
-        color: {
-            light: {},
-            mid: {
-                backgroundColor: '$gray2',
+        ...selectColorVariants,
+        border: {
+            thin5: {
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay5',
             },
-        },
-        error: {
-            true: {
-                color: '$error11',
-                boxShadow: `$error`,
-            }
+            thin6: {
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay6',
+            },
+            thin7: {
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay7',
+            },
+            thin8: {
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay8',
+            },
+            thin9: {
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay9',
+            },
+            thin10: {
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay10',
+            },
+            thin11: {
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay11',
+            },
+            thin12: {
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay12',
+            },
         }
+    },
+    defaultVariants: {
+        color: 'loContrast'
     }
 });

@@ -1876,23 +1876,99 @@ function Home() {
             <Heading id="select" css={{ mb: '$6', scrollMarginTop: '$7' }}>
               Select
             </Heading>
-            <Select
-              onChange={console.log}
-              data={[{
-                type: 'item',
-                label: 'min',
-                value: 'minute',
-              },
-              {
-                type: 'item',
-                label: 'hr',
-                value: 'hour',
-              },
-              {
-                type: 'item',
-                label: 'days',
-                value: 'day',
-              }]} />
+            <Flex gap="2">
+              <Select
+                onChange={console.log}
+                data={[{
+                  type: 'item',
+                  label: 'min',
+                  value: 'minute',
+                },
+                {
+                  type: 'item',
+                  label: 'hr',
+                  value: 'hour',
+                },
+                {
+                  type: 'item',
+                  label: 'days',
+                  value: 'day',
+                }]} />
+              <Flex gap="2">
+                <Select
+                  color="primary"
+                  onChange={console.log}
+                  data={[{
+                    type: 'item',
+                    label: 'min',
+                    value: 'minute',
+                  },
+                  {
+                    type: 'item',
+                    label: 'hr',
+                    value: 'hour',
+                  },
+                  {
+                    type: 'item',
+                    label: 'days',
+                    value: 'day',
+                  }]} />
+                <Select
+                  color="secondary"
+                  onChange={console.log}
+                  data={[{
+                    type: 'item',
+                    label: 'min',
+                    value: 'minute',
+                  },
+                  {
+                    type: 'item',
+                    label: 'hr',
+                    value: 'hour',
+                  },
+                  {
+                    type: 'item',
+                    label: 'days',
+                    value: 'day',
+                  }]} />
+                <Select
+                  color="hiContrast"
+                  onChange={console.log}
+                  data={[{
+                    type: 'item',
+                    label: 'min',
+                    value: 'minute',
+                  },
+                  {
+                    type: 'item',
+                    label: 'hr',
+                    value: 'hour',
+                  },
+                  {
+                    type: 'item',
+                    label: 'days',
+                    value: 'day',
+                  }]} />
+                <Select
+                  color="outline"
+                  onChange={console.log}
+                  data={[{
+                    type: 'item',
+                    label: 'min',
+                    value: 'minute',
+                  },
+                  {
+                    type: 'item',
+                    label: 'hr',
+                    value: 'hour',
+                  },
+                  {
+                    type: 'item',
+                    label: 'days',
+                    value: 'day',
+                  }]} />
+              </Flex>
+            </Flex>
             <Box>
               <Tooltip content="Indicators" side="bottom" align="center">
                 <Sheet>
