@@ -15,6 +15,7 @@ const SelectContent = styled(SelectPrimitive.Content, {
     zIndex: 1000,
     boxShadow:
         '0px 10px 25px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
+    border: '1px solid $overlay7',
 });
 
 const scrollButtonStyles = {
