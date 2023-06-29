@@ -61,6 +61,10 @@ export const Button = styled('button', {
       },
     },
     variant: {
+      primary: {
+        backgroundColor: '$primary3',
+        boxShadow: 'inset 0 0 0 1px $colors$primary11',
+      },
       gray: {
         backgroundColor: '$loContrast',
         boxShadow: 'inset 0 0 0 1px $colors$slate7',
