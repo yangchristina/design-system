@@ -1,4 +1,4 @@
-
+export { AnnouncementsBar } from './custom/AnnouncementsBar';
 export * from "./hooks";
 export { Spinner } from "./components/Spinner";
 export { TriangleNav } from "./components/TriangleNav";
