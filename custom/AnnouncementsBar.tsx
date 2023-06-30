@@ -1,3 +1,4 @@
+'use client'
 import { Cross1Icon } from '@radix-ui/react-icons';
 import React from 'react'
 import { IconButton } from '../components/IconButton';
