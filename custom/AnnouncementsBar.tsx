@@ -119,7 +119,6 @@ export const AnnouncementsBar = ({ announcements, setAnnouncements }: Announceme
     if (announcements.length === 0) return <></>
 
     const handleClose = (id: string | number) => {
-        console.log("handleClose", id)
         setAnnouncements(announcements.filter((announcement) => announcement.id !== id))
     }
 
