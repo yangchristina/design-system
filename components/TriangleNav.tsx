@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '../stitches.config'
-import { DirectionNavProps } from './LeftRightNav';
+import { DirectionNavProps } from './DirectionNav';
 
 export const TriangleNav = ({ height = 0.8, direction, fn = () => console.log("left clicked"), css = {} }: DirectionNavProps) => {
     const width = height / Math.sqrt(2)

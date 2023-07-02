@@ -25,7 +25,7 @@ const Container = styled('div', {
     }
 })
 const Flex = styled('div', { display: 'flex', alignItems: 'center' })
-const LeftRightNav = ({ children, type = 'triangle', navCSS, layout = "expanded", ...props }: {
+export const DirectionNav = ({ children, type = 'triangle', navCSS, layout = "expanded", ...props }: {
     children: ReactNode, handleLeft?: () => void, handleRight?: () => void, type?: 'caret' | 'triangle', height?: number,
     containerCSS?: any, navCSS?: any, layout?: 'compact' | 'expanded'
 }) => {
@@ -40,9 +40,6 @@ const LeftRightNav = ({ children, type = 'triangle', navCSS, layout = "expanded"
         </Container>
     )
 }
-
-export default LeftRightNav
-
 
 const caretNavStyles = {
     width: 30, height: 30, zIndex: 10
