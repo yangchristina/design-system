@@ -1,3 +1,4 @@
+'use client'
 import { CaretLeftIcon, CaretRightIcon } from '@radix-ui/react-icons'
 import React, { ReactNode, ComponentProps } from 'react'
 import { styled } from '../stitches.config'
