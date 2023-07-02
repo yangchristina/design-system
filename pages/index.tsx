@@ -92,6 +92,7 @@ import {
   ContextMenuLabel,
   ContextMenuSeparator,
 } from '../components/ContextMenu';
+import { DirectionNav } from '../components/DirectionNav';
 import {
   ActivityLogIcon,
   ArrowRightIcon,
@@ -126,7 +127,6 @@ import {
 } from '@radix-ui/react-icons';
 import { Toolbar } from '../custom/Toolbar';
 import { DarkThemeButton } from '../custom/DarkThemeButton';
-import LeftRightNav from '../components/LeftRightNav';
 
 function Home() {
   return (
@@ -242,6 +242,13 @@ function Home() {
             </Link>
           </Box>
           <Box css={{ my: '$1' }}>
+            <Link href="#directionnav" variant="subtle" css={{ display: 'inline-flex' }}>
+              <Text size="2" css={{ lineHeight: '20px' }}>
+                DirectionNav
+              </Text>
+            </Link>
+          </Box>
+          <Box css={{ my: '$1' }}>
             <Link href="#dropdownmenu" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Dropdown Menu
@@ -259,13 +266,6 @@ function Home() {
             <Link href="#kbd" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Kbd
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#leftrightnav" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Left Right Nav
               </Text>
             </Link>
           </Box>
@@ -1528,22 +1528,6 @@ function Home() {
         </Flex>
         <Section size="3">
           <Container size="2">
-            <Heading id="leftrightnav" css={{ mb: '$6', scrollMarginTop: '$7' }}>
-              Left Right Nav
-            </Heading>
-            <Flex css={{ fd: 'column', ai: 'center' }}>
-              <LeftRightNav type="triangle" layout={'expanded'}>Triangle</LeftRightNav>
-              <LeftRightNav type="caret" layout={'expanded'}>Caret</LeftRightNav>
-              <LeftRightNav height={1.5} type="triangle" layout={'compact'}>Taller Compact Triangle</LeftRightNav>
-              <LeftRightNav type="caret" layout={'compact'}>Taller Compact Caret</LeftRightNav>
-            </Flex>
-          </Container>
-        </Section>
-        <Flex css={{ jc: 'center' }}>
-          <Separator size="2" />
-        </Flex>
-        <Section size="3">
-          <Container size="2">
             <Heading id="trianglenav" css={{ mb: '$6', scrollMarginTop: '$7' }}>
               Triangle Nav
             </Heading>
@@ -1831,6 +1815,16 @@ function Home() {
             </Dialog>
           </Container>
         </Section>
+        <Flex css={{ jc: 'center' }}>
+          <Separator size="2" />
+        </Flex>
+        <Container size="2">
+          <Heading id="directionnav" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+            Direction Nav
+          </Heading>
+          <DirectionNav><RocketIcon /></DirectionNav>
+          <DirectionNav>DIRECTIONS IN HERE</DirectionNav>
+        </Container>
         <Flex css={{ jc: 'center' }}>
           <Separator size="2" />
         </Flex>
