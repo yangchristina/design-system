@@ -10,7 +10,6 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'mi
 }
 // TODO: allow decimal values, what does size even do??? not in use currently
 export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, handleChange, value, id, min, max, allowDecimal, size, ...props }, forwardedRef) => {
-    const randomId = useId()
     const [state, setState, revert] = useEdit<number | string>(value ?? '')
 
     const handleChangeDebounced = (e: ChangeEvent<HTMLInputElement>) => {
@@ -31,8 +30,7 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
     }
 
     const debouncedChangeHandler = useCallback(
-        debounce(handleChangeDebounced, 800)
-        , [min, max]);
+        debounce(handleChangeDebounced, 800), [min, max]);
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         setState(e.target.value)
@@ -48,7 +46,8 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
                 max={max && max + 10} onChange={onChange}
                 type="number"
                 value={state ?? ''}
-                id={id || randomId} {...props} />
+                id={id}
+                {...props} />
         </span>
     )
 })

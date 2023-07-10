@@ -79,7 +79,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({ children, label
         <InputWrapper>
             {label && <Label size={labelSize} htmlFor={id}>{label}</Label>}
             <Col>
-                <InputField error={error} valid={valid} id={id} type={type} ref={forwardedRef} {...props} />
+                <InputField error={error} valid={valid} id={props.id ?? id} type={type} ref={forwardedRef} {...props} />
                 {children}
             </Col>
         </InputWrapper>
