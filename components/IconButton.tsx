@@ -152,6 +152,6 @@ export const IconButton = styled('button', {
   },
   defaultVariants: {
     size: '1',
-    variant: 'ghost',
+    // variant: 'ghost',
   },
 });

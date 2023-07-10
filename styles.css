@@ -13,6 +13,11 @@ body {
   line-height: 1;
 }
 
+i {
+  width: 15px;
+  height: 15px;
+}
+
 svg {
   display: block;
   vertical-align: middle;
