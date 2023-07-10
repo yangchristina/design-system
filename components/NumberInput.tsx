@@ -4,16 +4,19 @@ import { useEdit } from '../hooks/useEdit'
 import { debounce } from "lodash"
 import { ChangeEvent, forwardRef, useCallback, useId } from "react"
 import { Input } from './Input'
+import { round } from 'lodash'
 
 type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'min' | 'max' | 'onChange' | 'value'> & {
-    error?: boolean, label?: string, max?: number, min?: number, handleChange: (value: number) => void, value?: number, allowDecimal?: boolean
+    error?: boolean, label?: string, max?: number, min?: number, handleChange: (value: number) => void, value?: number, precision?: number, integerOnly?: boolean
 }
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, handleChange, value, id, min, max, allowDecimal, size, ...props }, forwardedRef) => {
+export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, handleChange, value, id, min, max, precision, integerOnly, size, ...props }, forwardedRef) => {
     const [state, setState, revert] = useEdit<number | string>(value ?? '')
-
+    if (integerOnly) {
+        precision = 0
+    }
     const handleChangeDebounced = (e: ChangeEvent<HTMLInputElement>) => {
-        const int = allowDecimal ? parseFloat(e.target.value) : parseInt(e.target.value)
+        const int = precision !== undefined ? round(parseFloat(e.target.value), precision) : parseFloat(e.target.value)
         if (max !== undefined && int > max) {
             handleChange?.(max)
             return
