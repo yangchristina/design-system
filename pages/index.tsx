@@ -91,7 +91,8 @@ import {
   ContextMenuRadioGroup,
   ContextMenuLabel,
   ContextMenuSeparator,
-} from '../components/ContextMenu';
+} from '../components/ContextMenu2';
+import { ContextMenu as ContextMenu1 } from '../components/ContextMenu';
 import { DirectionNav } from '../components/DirectionNav';
 import {
   ActivityLogIcon,
@@ -124,6 +125,7 @@ import {
   RocketIcon,
   CardStackPlusIcon,
   PlusCircledIcon,
+  ResetIcon
 } from '@radix-ui/react-icons';
 import { Toolbar } from '../custom/Toolbar';
 import { DarkThemeButton } from '../custom/DarkThemeButton';
@@ -136,6 +138,7 @@ function Home() {
       <AppBar size="2" color="loContrast" border sticky glass>
         <Button>Button</Button>
       </AppBar>
+      {/* #region nav */}
       <Box
         css={{
           position: 'fixed',
@@ -148,6 +151,25 @@ function Home() {
           py: '$6',
         }}
       >
+        <Heading>My own</Heading>
+        <Box as="ul" css={{ p: 0 }}>
+          {
+            [
+              {
+                id: 'contextmenu',
+                name: 'Context Menu',
+              }
+            ].map((item) => {
+              return <Box key={item.id} css={{ my: '$1' }}>
+                <Link href={`#${item.id}`} variant="subtle" css={{ display: 'inline-flex' }}>
+                  <Text size="2" css={{ lineHeight: '20px' }}>
+                    {item.name}
+                  </Text>
+                </Link>
+              </Box>
+            })
+          }
+        </Box>
         <Heading>Quick nav</Heading>
         <Box as="ul" css={{ p: 0 }}>
           <Box css={{ my: '$1' }}>
@@ -214,7 +236,7 @@ function Home() {
             </Link>
           </Box>
           <Box css={{ my: '$1' }}>
-            <Link href="#contextmenu" variant="subtle" css={{ display: 'inline-flex' }}>
+            <Link href="#contextmenu2" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Context Menu
               </Text>
@@ -432,6 +454,7 @@ function Home() {
           </Box>
         </Box>
       </Box>
+      {/* #endregion nav */}
 
       <Box css={{ bc: '$loContrast', height: '100%', marginInline: '150px' }}>
         <Section size="3">
@@ -1586,6 +1609,23 @@ function Home() {
               lot of startup stuff is focused on the initial phases, when you don’t have a team,
               idea, or investors.
             </Paragraph>
+          </Container>
+        </Section>
+        <Flex css={{ jc: 'center' }}>
+          <Separator size="2" />
+        </Flex>
+        <Section size="3">
+          <Container size="3">
+            <Container size="2">
+              <Heading id="contextmenu" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+                Context Menu
+              </Heading>
+            </Container>
+            <Flex css={{ gap: '$3' }}>
+              <ContextMenu1 units={[{ onSelect: console.log, label: 'Reset panda', rightSlot: <ResetIcon /> }]}>
+                <div>Click me</div>
+              </ContextMenu1>
+            </Flex>
           </Container>
         </Section>
         <Flex css={{ jc: 'center' }}>
@@ -3221,7 +3261,7 @@ function Home() {
         </Flex>
         <Section size="3">
           <Container size="2">
-            <Heading id="contextmenu" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+            <Heading id="contextmenu2" css={{ mb: '$6', scrollMarginTop: '$7' }}>
               ContextMenu
             </Heading>
             <ContextMenu>
