@@ -4,6 +4,7 @@ export * from "./utils"
 export { Spinner } from "./components/Spinner";
 export { TriangleNav } from "./components/TriangleNav";
 export { DirectionNav } from "./components/DirectionNav";
+export { NumberInput } from "./components/NumberInput";
 export {
   Accordion,
   AccordionTrigger,
