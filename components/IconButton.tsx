@@ -86,6 +86,8 @@ export const IconButton = styled('button', {
       },
     },
     variant: {
+      solid: {
+      },
       ghost: {
         backgroundColor: 'transparent',
         borderWidth: '0',
@@ -152,6 +154,6 @@ export const IconButton = styled('button', {
   },
   defaultVariants: {
     size: '1',
-    // variant: 'ghost',
+    variant: 'ghost',
   },
 });
