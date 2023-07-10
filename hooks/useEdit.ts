@@ -3,14 +3,15 @@ import { useEffect, useState } from "react";
 
 export function useEdit<T>(initialState: T
 ) {
-    const [state, setState] = useState<T>(initialState);
+    const initialClone = JSON.parse(JSON.stringify(initialState));
+    const [state, setState] = useState<T>(initialClone);
 
     useEffect(() => {
-        setState(initialState);
+        setState(initialClone);
     }, [initialState])
 
     function revert() {
-        setState(initialState);
+        setState(initialClone);
     }
 
     return [state, setState, revert] as const
