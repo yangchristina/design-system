@@ -33,7 +33,7 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
     }
 
     const debouncedChangeHandler = useCallback(
-        debounce(handleChangeDebounced, 800), [min, max]);
+        debounce(handleChangeDebounced, 800), [min, max, handleChange]);
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         setState(e.target.value)
