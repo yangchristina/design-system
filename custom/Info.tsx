@@ -1,3 +1,4 @@
+'use client'
 import { Tooltip } from '../components/Tooltip'
 import { InfoCircledIcon } from '@radix-ui/react-icons'
 import React from 'react'
