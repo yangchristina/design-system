@@ -7,6 +7,7 @@ import { Box } from '../components/Box';
 import { Flex } from '../components/Flex';
 import { Grid } from '../components/Grid';
 import { Badge } from '../components/Badge';
+import { Info } from '../components/Info';
 import { Switch } from '../components/Switch';
 import { ControlGroup } from '../components/ControlGroup';
 import { Text } from '../components/Text';
@@ -158,6 +159,10 @@ function Home() {
               {
                 id: 'contextmenu',
                 name: 'Context Menu',
+              },
+              {
+                id: 'info',
+                name: 'Info',
               }
             ].map((item) => {
               return <Box key={item.id} css={{ my: '$1' }}>
@@ -1482,6 +1487,19 @@ function Home() {
                 defaultValue="eihuweofjew"
               ></TextArea>
             </Flex>
+          </Container>
+        </Section>
+        <Flex css={{ jc: 'center' }}>
+          <Separator size="2" />
+        </Flex>
+        <Section size="3">
+          <Container size="2">
+            <Heading id="info" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+              Input
+            </Heading>
+            <Box>
+              <Info text={"Have some information here."} />
+            </Box>
           </Container>
         </Section>
         <Flex css={{ jc: 'center' }}>
