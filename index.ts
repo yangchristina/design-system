@@ -67,7 +67,7 @@ export {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
 } from './components/DropdownMenu';
-export { Flex } from './components/Flex';
+export { Flex, FlexForm } from './components/Flex';
 export { Grid } from './components/Grid';
 export { Heading } from './components/Heading';
 export { IconButton } from './components/IconButton';
