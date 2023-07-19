@@ -11,10 +11,10 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'mi
     value?: number, precision?: number, integerOnly?: boolean,
 } & ({
     allowUndefined: true,
-    handleChange: (value: number | undefined) => void
+    onChange: (value: number | undefined) => void
 } | {
     allowUndefined?: false,
-    handleChange: (value: number) => void
+    onChange: (value: number) => void
 })
 
 // export const NumberInputNative = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
@@ -26,7 +26,7 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'mi
 //     </span>
 // })
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, handleChange, value, id, min, max, precision, integerOnly, size, allowUndefined, ...props }, forwardedRef) => {
+export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, ...props }, forwardedRef) => {
     const [state, setState, revert] = useEdit<number | string>(value ?? '')
     if (integerOnly) {
         precision = 0
@@ -35,28 +35,28 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
         const int = precision !== undefined ? round(parseFloat(e.target.value), precision) : parseFloat(e.target.value)
         if (allowUndefined && !e.target.value) {
             // @ts-expect-error
-            handleChange(undefined)
+            onChange(undefined)
             return
         }
         if (max !== undefined && int > max) {
-            handleChange?.(max)
+            onChange?.(max)
             return
         }
         if (min !== undefined && int < min) {
-            handleChange?.(min)
+            onChange?.(min)
             return
         }
         if (!e.target.value || Number.isNaN(int)) {
             revert()
             return
         }
-        handleChange?.(int)
+        onChange?.(int)
     }
 
     const debouncedChangeHandler = useCallback(
-        debounce(handleChangeDebounced, 800), [min, max, handleChange]);
+        debounce(handleChangeDebounced, 800), [min, max, onChange]);
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setState(e.target.value)
         debouncedChangeHandler(e)
     }
@@ -67,7 +67,7 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
                 label={label}
                 ref={forwardedRef}
                 min={min && min - 10}
-                max={max && max + 10} onChange={onChange}
+                max={max && max + 10} onChange={handleChange}
                 type="number"
                 value={state ?? ''}
                 id={id}
