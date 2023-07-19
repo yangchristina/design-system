@@ -50,7 +50,7 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
                 type="number"
                 value={state ?? ''}
                 id={id}
-                step={precision !== undefined ? 10 ** (-1 * precision) : "any"}
+                step={precision ? 10 ** (-1 * precision) : "any"}
                 {...props} />
         </span>
     )
