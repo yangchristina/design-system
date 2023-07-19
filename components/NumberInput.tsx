@@ -10,23 +10,32 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'mi
     error?: boolean, label?: string, max?: number, min?: number,
     value?: number, precision?: number, integerOnly?: boolean,
 } & ({
-    nullable: true,
-    handleChange: (value: number | null) => void
+    allowUndefined: true,
+    handleChange: (value: number | undefined) => void
 } | {
-    nullable?: false,
+    allowUndefined?: false,
     handleChange: (value: number) => void
 })
+
+// export const NumberInputNative = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
+//     <span>
+//         <Input
+//             ref={forwardedRef}
+//             {...props}
+//             />
+//     </span>
+// })
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, handleChange, value, id, min, max, precision, integerOnly, size, nullable, ...props }, forwardedRef) => {
+export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, handleChange, value, id, min, max, precision, integerOnly, size, allowUndefined, ...props }, forwardedRef) => {
     const [state, setState, revert] = useEdit<number | string>(value ?? '')
     if (integerOnly) {
         precision = 0
     }
     const handleChangeDebounced = (e: ChangeEvent<HTMLInputElement>) => {
         const int = precision !== undefined ? round(parseFloat(e.target.value), precision) : parseFloat(e.target.value)
-        if (nullable && !e.target.value) {
+        if (allowUndefined && !e.target.value) {
             // @ts-expect-error
-            handleChange(null)
+            handleChange(undefined)
             return
         }
         if (max !== undefined && int > max) {
