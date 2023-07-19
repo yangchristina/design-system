@@ -1,6 +1,6 @@
 {
   "name": "@planda/design-system",
-  "version": "1.0.46",
+  "version": "1.0.47",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
