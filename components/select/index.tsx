@@ -5,6 +5,7 @@ import Trigger from './components/Trigger';
 import Item, { ItemButton } from './components/Item';
 import { styled } from '../../stitches.config';
 import Content from './components/Content';
+import { isStringArray } from '../../utils';
 
 export interface SelectItem {
     type: 'item',
@@ -61,14 +62,14 @@ function handleType(obj: ContentUnit | ContentUnit[]): JSX.Element {
 }
 
 type SelectProps = {
-    placeholder?: string, data: ContentUnit[],
+    placeholder?: string, data: ContentUnit[] | string[],
     error?: boolean,
     allowSelectNone?: boolean,
 } & { onChange: (value: string) => void; } & Omit<ComponentProps<typeof SelectPrimitive.Root>, 'onChange'> & Omit<ComponentProps<typeof Trigger>, 'onChange'>
 
 /**
  * should i nest a form in here?
- * @returns 
+ * @returns
  */
 export const Select = ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, color, ...props }: SelectProps) => {
     const noCategoryItem: ContentUnit = {
@@ -76,6 +77,7 @@ export const Select = ({ placeholder = 'Select a category', data, value, onChang
         label: placeholder,
         value: '/',
     }
+    if (isStringArray(data)) data = data.map(item => ({ value: item, label: item, type: 'item' as const }))
     data = allowSelectNone ? [noCategoryItem, ...data] : [...data]
     return (
         <SelectPrimitive.Root {...props} value={value} onValueChange={onChange}>
@@ -88,4 +90,3 @@ export const Select = ({ placeholder = 'Select a category', data, value, onChang
         </SelectPrimitive.Root>
     )
 }
-
