@@ -21,7 +21,7 @@ import { Separator } from '../components/Separator';
 import { Table, Caption, Thead, Tbody, Tfoot, Tr, Th, Td } from '../components/Table';
 import { VerifiedBadge } from '../components/VerifiedBadge';
 import { Card } from '../components/Card';
-import { Select } from '../components/select';
+import { ContentUnit, Select } from '../components/select';
 import { TextArea } from '../components/TextArea';
 import { Image } from '../components/Image';
 import { Code } from '../components/Code';
@@ -2057,7 +2057,7 @@ function Home() {
                             label: label,
                             value: indicator,
                           }
-                        })
+                        }) as ContentUnit[]
                       } />
                     <IconButton>
                       <PlusCircledIcon />
