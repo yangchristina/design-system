@@ -4,7 +4,7 @@
   <a href="./LICENSE"><img allt="MIT License" src="https://badgen.now.sh/badge/license/MIT"/></a>
 </p>
 
-Forked from [radix-ui/design-system](https://github.com/radix-ui/design-system)
+Built off of [radix-ui/design-system](https://github.com/radix-ui/design-system)
 
 Built with [Stitches](https://github.com/stitchesjs/stitches) and [Radix UI Primitives](https://radix-ui.com/primitives/docs/overview/introduction).
 
