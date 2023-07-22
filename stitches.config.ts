@@ -654,5 +654,8 @@ export const globalStyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  li: {
+    marginInline: 40
   }
 }
