@@ -71,22 +71,25 @@ type SelectProps = {
  * should i nest a form in here?
  * @returns
  */
-export const Select = ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, color, ...props }: SelectProps) => {
-    const noCategoryItem: ContentUnit = {
-        type: 'item',
-        label: placeholder,
-        value: '/',
+
+export const Select = React.forwardRef<React.ElementRef<typeof SelectPrimitive.Root>, SelectProps>(
+    ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, color, ...props }) => {
+        const noCategoryItem: ContentUnit = {
+            type: 'item',
+            label: placeholder,
+            value: '/',
+        }
+        if (isStringArray(data)) data = data.map(item => ({ value: item, label: item, type: 'item' as const }))
+        data = allowSelectNone ? [noCategoryItem, ...data] : [...data]
+        return (
+            <SelectPrimitive.Root {...props} value={value} onValueChange={onChange}>
+                <Trigger color={color} error={error} placeholder={placeholder} />
+                <Content>
+                    <>
+                        {handleType(data)}
+                    </>
+                </Content>
+            </SelectPrimitive.Root>
+        )
     }
-    if (isStringArray(data)) data = data.map(item => ({ value: item, label: item, type: 'item' as const }))
-    data = allowSelectNone ? [noCategoryItem, ...data] : [...data]
-    return (
-        <SelectPrimitive.Root {...props} value={value} onValueChange={onChange}>
-            <Trigger color={color} error={error} placeholder={placeholder} />
-            <Content>
-                <>
-                    {handleType(data)}
-                </>
-            </Content>
-        </SelectPrimitive.Root>
-    )
-}
+)
