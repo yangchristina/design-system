@@ -5,6 +5,7 @@ export { Spinner } from "./components/Spinner";
 export { Info } from "./components/Info";
 export { TriangleNav } from "./components/TriangleNav";
 export { DirectionNav } from "./components/DirectionNav";
+export { MultiToggleGroup, ToggleGroup } from './components/ToggleGroup'
 export { NumberInput } from "./components/NumberInput";
 export {
   Accordion,

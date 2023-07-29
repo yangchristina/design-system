@@ -1,7 +1,7 @@
 'use client'
+import React, { ComponentProps, forwardRef } from 'react'
 import { styled } from '../stitches.config';
 import * as ToggleGroupPrimative from '@radix-ui/react-toggle-group'
-import { ComponentProps, forwardRef } from 'react'
 interface ToggleGroupItem {
     value: string,
     label: string,
@@ -26,9 +26,6 @@ export const ToggleGroup = forwardRef<HTMLDivElement, { items: ToggleGroupItem[]
     )
 })
 ToggleGroup.displayName = 'ToggleGroup'
-
-export default ToggleGroup
-
 
 export const MultiToggleGroup = ({ items, id, ...field }: Omit<ToggleGroupPrimative.ToggleGroupMultipleProps, 'type'> & {
     items: ToggleGroupItem[], id?: string
