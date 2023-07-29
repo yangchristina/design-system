@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { styled, CSS } from '../stitches.config';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { Cross1Icon } from '@radix-ui/react-icons';
@@ -68,3 +68,24 @@ const DialogTitle = DialogPrimitive.Title;
 const DialogDescription = DialogPrimitive.Description;
 
 export { Dialog, DialogTrigger, DialogContent, DialogClose, DialogTitle, DialogDescription };
+
+
+// export const SimpleDialog = ({ children }: { children: ReactNode, trigger: JSX.Element }) => {
+//   return (
+//     <Dialog>
+//       <DialogTrigger asChild>
+//         {trigger}
+//       </DialogTrigger>
+//       <DialogContent>
+//         <Text size="5" as="h6" css={{ fontWeight: 500, mb: '$3' }}>
+//           Dialog Heading
+//         </Text>
+//         <Text size="3" as="p" css={{ lineHeight: '25px' }}>
+//           There are 5 variants to choose from. Use is for positive states. This is a link
+//           Traditional business literature won’t help you solve it- most of that stuff is
+//           focused on life after product/market fit, after the Trough of Sorrow.
+//         </Text>
+//       </DialogContent>
+//     </Dialog>
+//   )
+// }
