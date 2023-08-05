@@ -20,7 +20,7 @@ export const Timeline = ({ items }: { items: TimelineItem[] }) => {
         if (node === null) {
             // DOM node referenced by ref has been unmounted
         } else {
-            setProgressHeight(node.offsetTop)
+            setProgressHeight(node.offsetTop + 15)
             // DOM node referenced by ref has changed and exists
         }
     }, []); // adjust deps
@@ -51,26 +51,16 @@ export const Timeline = ({ items }: { items: TimelineItem[] }) => {
 interface Props { date: Date, title: ReactNode, children: ReactNode, completed?: boolean, size?: number }
 const TimelineItem = forwardRef<any, Props>(
     ({ completed = false, children, size = 2 }, forwardedRef) => {
+        const fontSize = (size + 2) * 8
         return (
             <>
-                <dt ref={forwardedRef} style={{ fontSize: (size + 2) * 8 }} className={styles.dt}>
+                <dt ref={forwardedRef} style={{ fontSize }} className={styles.dt}>
                     <div className={styles.circleWrapper}>
                         <div data-completed={completed} className={styles.circle} />
                     </div>
                     Beast of Bodmin
                 </dt>
-                <dd className={styles.dd}>{children}</dd>
+                <dd style={{ fontSize: fontSize * 0.8 }} className={styles.dd}>{children}</dd>
             </>
         )
     })
-
-const TimelineItemContent = ({ }: { date: Date, title: ReactNode, children: ReactNode }) => {
-    return (
-        <li className={styles.content}>
-            <ul>
-                <li>Task 1</li>
-                <li>Assignment 2</li>
-            </ul>
-        </li>
-    )
-}
