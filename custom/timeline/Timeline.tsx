@@ -11,7 +11,7 @@ export interface TimelineItem {
     id: string | number;
 }
 
-export const Timeline = ({ items }: { items: TimelineItem[] }) => {
+export const Timeline = ({ items, offset = 0 }: { items: TimelineItem[], offset?: number }) => {
     const [progressHeight, setProgressHeight] = useState<string | number>(0)
     const lastCompletedIndex = items.findLastIndex(item => item.completed)
     if (progressHeight !== '100%' && lastCompletedIndex === items.length - 1) {
@@ -36,7 +36,7 @@ export const Timeline = ({ items }: { items: TimelineItem[] }) => {
                 })
             }
             <div className={styles.bar}>
-                <div style={{ height: progressHeight }} className={styles.innerBar} />
+                <div style={{ height: typeof progressHeight === 'string' ? progressHeight : progressHeight + offset }} className={styles.innerBar} />
                 {/* <ProgressBar css={{ height: '100%', width: '100%' }} orientation={'vertical'} thickness={3} variant={"blue"} max={100} value={50} /> */}
             </div>
         </ul>
