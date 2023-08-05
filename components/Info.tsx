@@ -1,4 +1,7 @@
 "use client"
+/**
+ * Author: Christina Yang
+ */
 import { Tooltip } from './Tooltip'
 import { InfoCircledIcon } from '@radix-ui/react-icons'
 import React from 'react'

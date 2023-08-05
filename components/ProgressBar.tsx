@@ -21,9 +21,10 @@ const indeterminateProgress = keyframes({
 const StyledProgressBar = styled(ProgressPrimitive.Root, {
   boxSizing: 'border-box',
   position: 'relative',
-  height: '$1',
   overflow: 'hidden',
   borderRadius: '$pill',
+  transform: 'translateZ(0)',
+
 
   '&[data-state="indeterminate"]': {
     backgroundColor: '$slate4',
@@ -57,10 +58,73 @@ const StyledProgressBar = styled(ProgressPrimitive.Root, {
           'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)',
       },
     },
+    thickness: {
+      1: {
+      },
+      2: {
+      },
+      3: {
+      },
+    },
+    orientation: {
+      horizontal: {
+        width: '100%',
+        height: '$1',
+      },
+      vertical: {
+        height: '100%',
+        width: '$1',
+      },
+    }
   },
   defaultVariants: {
     variant: 'gray',
+    orientation: 'horizontal',
   },
+  compoundVariants: [
+    {
+      thickness: 1,
+      orientation: 'horizontal',
+      css: {
+        height: '$1',
+      },
+    },
+    {
+      thickness: 2,
+      orientation: 'horizontal',
+      css: {
+        height: '$2',
+      },
+    },
+    {
+      thickness: 3,
+      orientation: 'horizontal',
+      css: {
+        height: '$3',
+      },
+    },
+    {
+      thickness: 1,
+      orientation: 'vertical',
+      css: {
+        width: '$1',
+      },
+    },
+    {
+      thickness: 2,
+      orientation: 'vertical',
+      css: {
+        width: '$2',
+      },
+    },
+    {
+      thickness: 3,
+      orientation: 'vertical',
+      css: {
+        width: '$3',
+      },
+    },
+  ]
 });
 
 const ProgressBarIndicator = styled(ProgressPrimitive.Indicator, {
@@ -70,9 +134,23 @@ const ProgressBarIndicator = styled(ProgressPrimitive.Indicator, {
   right: 0,
   bottom: 0,
   left: 0,
-  width: '100%',
+
   backgroundColor: '$slate4',
-  transition: 'transform 150ms cubic-bezier(0.65, 0, 0.35, 1)',
+  // transition: 'transform 150ms cubic-bezier(0.65, 0, 0.35, 1)',
+  transition: 'transform 660ms cubic-bezier(0.65, 0, 0.35, 1)',
+  variants: {
+    orientation: {
+      horizontal: {
+        width: '100%',
+      },
+      vertical: {
+        height: '100%',
+      },
+    }
+  },
+  defaultVariants: {
+    orientation: 'horizontal',
+  }
 });
 
 type ProgressBarVariants = VariantProps<typeof StyledProgressBar>;
@@ -87,7 +165,7 @@ export const ProgressBar = React.forwardRef<
 
   return (
     <StyledProgressBar {...props} ref={forwardedRef} value={value} max={max}>
-      <ProgressBarIndicator style={{ transform: `translateX(${percentage}%)` }} />
+      <ProgressBarIndicator style={{ transform: props.orientation === 'vertical' ? `translateY(${percentage}%)` : `translateX(${percentage}%)` }} />
     </StyledProgressBar>
   );
 });

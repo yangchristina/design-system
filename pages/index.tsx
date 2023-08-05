@@ -2114,6 +2114,16 @@ function Home() {
             <Box>
               <ProgressBar variant="blue" max={100} value={50} />
             </Box>
+            <Heading css={{ mb: '$6' }}>Blue variant, thickness=2</Heading>
+            <Box>
+              <ProgressBar variant="blue" thickness={2} max={100} value={50} />
+            </Box>
+            <Heading css={{ mb: '$6' }}>Vertical</Heading>
+            <Flex direction={'row'} gap={5} css={{ height: 150 }}>
+              <ProgressBar orientation={'vertical'} variant="blue" max={100} value={50} />
+              <ProgressBar orientation={'vertical'} thickness={2} variant="blue" max={100} value={50} />
+              <ProgressBar orientation={'vertical'} thickness={3} variant={"gradient"} max={100} value={50} />
+            </Flex>
           </Container>
         </Section>
         <Flex css={{ jc: 'center' }}>
