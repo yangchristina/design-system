@@ -51,7 +51,7 @@ export const Timeline = ({ items, offset = 0, grayOutCompleted = false }: { item
 
 interface Props { date: Date, title: ReactNode, children: ReactNode, completed?: boolean, size?: number, grayOutCompleted: boolean }
 const TimelineItem = forwardRef<any, Props>(
-    ({ completed = false, children, size = 2, grayOutCompleted }, forwardedRef) => {
+    ({ completed = false, children, title, size = 2, grayOutCompleted }, forwardedRef) => {
         const fontSize = (size + 2) * 8
         const shouldGray = completed && grayOutCompleted
         return (
@@ -60,7 +60,7 @@ const TimelineItem = forwardRef<any, Props>(
                     <div className={styles.circleWrapper}>
                         <div data-completed={completed} className={styles.circle} />
                     </div>
-                    Beast of Bodmin
+                    {title}
                 </dt>
                 <dd data-gray={shouldGray} style={{ fontSize: fontSize * 0.8 }} className={styles.dd}>{children}</dd>
             </>
