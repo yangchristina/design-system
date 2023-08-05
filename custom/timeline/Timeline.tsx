@@ -12,9 +12,11 @@ export interface TimelineItem {
 }
 
 export const Timeline = ({ items }: { items: TimelineItem[] }) => {
-    const [progressHeight, setProgressHeight] = useState(0)
+    const [progressHeight, setProgressHeight] = useState<string | number>(0)
     const lastCompletedIndex = items.findLastIndex(item => item.completed)
-    const lastCompletedRef = useRef<any>()
+    if (progressHeight !== '100%' && lastCompletedIndex === items.length - 1) {
+        setProgressHeight('100%')
+    }
 
     const onRefChange = useCallback(node => {
         if (node === null) {
@@ -29,8 +31,7 @@ export const Timeline = ({ items }: { items: TimelineItem[] }) => {
         <ul className={styles.timelineList}>
             {
                 items.map((item, index, arr) => {
-                    const isLast = index === arr.length - 1 && lastCompletedIndex === arr.length - 1
-                    const ref = (index - 1 === lastCompletedIndex || isLast) ? onRefChange : undefined
+                    const ref = (index - 1 === lastCompletedIndex) ? onRefChange : undefined
                     return <TimelineItem key={item.id} ref={ref} completed={item.completed} size={item.size} date={item.date} title={item.header} >{item.content}</TimelineItem>
                 })
             }

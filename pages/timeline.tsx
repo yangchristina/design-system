@@ -12,7 +12,7 @@ const TimelineDemo = () => {
             id: 0,
         },
         {
-            completed: false,
+            completed: true,
             date: new Date(),
             header: "Byy",
             content: "HDFOISJFOISJDFOI sdfnsldfjsl sdfoisajgoa afjioas OSEJFSO",
@@ -20,7 +20,7 @@ const TimelineDemo = () => {
             id: 1,
         },
         {
-            completed: true,
+            completed: false,
             date: new Date(),
             header: "Byy",
             content: "HDFOISJFOISJDFOI sdfnsldfjsl sdfoisajgoa afjioas OSEJFSO",
