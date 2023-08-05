@@ -1,7 +1,7 @@
 'use client'
 import React, { forwardRef, ReactNode, useRef, useCallback, useState } from 'react'
 import styles from "./Timeline.module.css";
-
+import { format } from 'date-fns'
 export interface TimelineItem {
     date: Date;
     header: ReactNode;
@@ -30,7 +30,7 @@ export const Timeline = ({ items, offset = 0, grayOutCompleted = false }: { item
     return (
         <ul className={styles.timelineList}>
             {
-                items.map((item, index, arr) => {
+                items.map((item, index) => {
                     const ref = (index - 1 === lastCompletedIndex) ? onRefChange : undefined
                     return <TimelineItem grayOutCompleted={grayOutCompleted} key={item.id} ref={ref} completed={item.completed} size={item.size} date={item.date} title={item.header} >{item.content}</TimelineItem>
                 })
@@ -51,12 +51,13 @@ export const Timeline = ({ items, offset = 0, grayOutCompleted = false }: { item
 
 interface Props { date: Date, title: ReactNode, children: ReactNode, completed?: boolean, size?: number, grayOutCompleted: boolean }
 const TimelineItem = forwardRef<any, Props>(
-    ({ completed = false, children, title, size = 2, grayOutCompleted }, forwardedRef) => {
+    ({ completed = false, children, title, date, size = 2, grayOutCompleted }, forwardedRef) => {
         const fontSize = (size + 2) * 8
         const shouldGray = completed && grayOutCompleted
         return (
             <>
                 <dt data-gray={shouldGray} ref={forwardedRef} style={{ fontSize }} className={styles.dt}>
+                    <sub className={styles.label} >{format(date, 'MMM d')}</sub>
                     <div className={styles.circleWrapper}>
                         <div data-completed={completed} className={styles.circle} />
                     </div>
