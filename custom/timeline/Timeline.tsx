@@ -11,7 +11,7 @@ export interface TimelineItem {
     id: string | number;
 }
 
-export const Timeline = ({ items, offset = 0 }: { items: TimelineItem[], offset?: number }) => {
+export const Timeline = ({ items, offset = 0, grayOutCompleted = false }: { items: TimelineItem[], offset?: number, grayOutCompleted?: boolean }) => {
     const [progressHeight, setProgressHeight] = useState<string | number>(0)
     const lastCompletedIndex = items.findLastIndex(item => item.completed)
     if (progressHeight !== '100%' && lastCompletedIndex === items.length - 1) {
@@ -32,7 +32,7 @@ export const Timeline = ({ items, offset = 0 }: { items: TimelineItem[], offset?
             {
                 items.map((item, index, arr) => {
                     const ref = (index - 1 === lastCompletedIndex) ? onRefChange : undefined
-                    return <TimelineItem key={item.id} ref={ref} completed={item.completed} size={item.size} date={item.date} title={item.header} >{item.content}</TimelineItem>
+                    return <TimelineItem grayOutCompleted={grayOutCompleted} key={item.id} ref={ref} completed={item.completed} size={item.size} date={item.date} title={item.header} >{item.content}</TimelineItem>
                 })
             }
             <div className={styles.bar}>
@@ -49,19 +49,20 @@ export const Timeline = ({ items, offset = 0 }: { items: TimelineItem[], offset?
  * @returns
  */
 
-interface Props { date: Date, title: ReactNode, children: ReactNode, completed?: boolean, size?: number }
+interface Props { date: Date, title: ReactNode, children: ReactNode, completed?: boolean, size?: number, grayOutCompleted: boolean }
 const TimelineItem = forwardRef<any, Props>(
-    ({ completed = false, children, size = 2 }, forwardedRef) => {
+    ({ completed = false, children, size = 2, grayOutCompleted }, forwardedRef) => {
         const fontSize = (size + 2) * 8
+        const shouldGray = completed && grayOutCompleted
         return (
             <>
-                <dt ref={forwardedRef} style={{ fontSize }} className={styles.dt}>
+                <dt data-gray={shouldGray} ref={forwardedRef} style={{ fontSize }} className={styles.dt}>
                     <div className={styles.circleWrapper}>
                         <div data-completed={completed} className={styles.circle} />
                     </div>
                     Beast of Bodmin
                 </dt>
-                <dd style={{ fontSize: fontSize * 0.8 }} className={styles.dd}>{children}</dd>
+                <dd data-gray={shouldGray} style={{ fontSize: fontSize * 0.8 }} className={styles.dd}>{children}</dd>
             </>
         )
     })

@@ -4,7 +4,7 @@ import { Timeline, TimelineItem } from '../custom/timeline/Timeline'
 const TimelineDemo = () => {
     const defaultItems: TimelineItem[] = [
         {
-            completed: false,
+            completed: true,
             date: new Date(),
             header: "Milestone 1",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae magna eget risus sollicitudin imperdiet sit amet eget dolor. Nulla facilisi. Donec vulputate interdum sollicitudin. Nulla facilisi. Donec vulputate interdum sollicitudin.",
@@ -31,6 +31,7 @@ const TimelineDemo = () => {
     return (
         <div style={{ padding: 30, width: '50%' }} >
             <Timeline
+                grayOutCompleted
                 items={defaultItems}
             />
         </div>

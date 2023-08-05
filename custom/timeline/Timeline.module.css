@@ -70,12 +70,19 @@
     gap: 40px;
 }
 
+.dt[data-gray="true"] {
+    color: rgb(173, 173, 173);
+}
+
 .dd {
     position: relative;
     display: block;
     font-size: 0.6em;
     margin-left: 120px;
     margin-bottom: 15px;
+}
+.dd[data-gray="true"] {
+    color: rgb(201, 201, 201);
 }
 
 .item span {
