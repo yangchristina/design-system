@@ -24,6 +24,8 @@
     flex-direction: column;
     padding-inline-start: 40px;
     gap: 5px;
+    margin-block: 0px;
+    position: relative;
 }
 
 .timelineList ::marker {
@@ -51,10 +53,10 @@
 .circle {
     background-color: #d9faf7;
     border-radius: 50%;
-    width: calc(0.9em + 5px);
-    height: calc(0.9em + 5px);
-    min-width: calc(0.9em + 5px);
-    min-height: calc(0.9em + 5px);
+    width: calc(0.9em + 3px);
+    height: calc(0.9em + 3px);
+    min-width: calc(0.9em + 3px);
+    min-height: calc(0.9em + 3px);
     transform-origin: center;
     border: gray solid 2px;
     box-sizing: border-box;

@@ -25,13 +25,12 @@ export const Timeline = ({ items }: { items: TimelineItem[] }) => {
         }
     }, []); // adjust deps
 
-    console.log(progressHeight)
-
     return (
         <ul className={styles.timelineList}>
             {
-                items.map((item, index) => {
-                    const ref = index === lastCompletedIndex ? onRefChange : undefined
+                items.map((item, index, arr) => {
+                    const isLast = index === arr.length - 1 && lastCompletedIndex === arr.length - 1
+                    const ref = (index - 1 === lastCompletedIndex || isLast) ? onRefChange : undefined
                     return <TimelineItem key={item.id} ref={ref} completed={item.completed} size={item.size} date={item.date} title={item.header} >{item.content}</TimelineItem>
                 })
             }
