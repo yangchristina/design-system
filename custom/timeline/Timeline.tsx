@@ -29,16 +29,16 @@ export const Timeline = ({ items, offset = 0, grayOutCompleted = false }: { item
 
     return (
         <ul className={styles.timelineList}>
+            <div className={styles.bar}>
+                <div style={{ height: typeof progressHeight === 'string' ? progressHeight : progressHeight + offset }} className={styles.innerBar} />
+                {/* <ProgressBar css={{ height: '100%', width: '100%' }} orientation={'vertical'} thickness={3} variant={"blue"} max={100} value={50} /> */}
+            </div>
             {
                 items.map((item, index) => {
                     const ref = (index - 1 === lastCompletedIndex) ? onRefChange : undefined
                     return <TimelineItem grayOutCompleted={grayOutCompleted} key={item.id} ref={ref} completed={item.completed} size={item.size} date={item.date} title={item.header} >{item.content}</TimelineItem>
                 })
             }
-            <div className={styles.bar}>
-                <div style={{ height: typeof progressHeight === 'string' ? progressHeight : progressHeight + offset }} className={styles.innerBar} />
-                {/* <ProgressBar css={{ height: '100%', width: '100%' }} orientation={'vertical'} thickness={3} variant={"blue"} max={100} value={50} /> */}
-            </div>
         </ul>
     )
 }

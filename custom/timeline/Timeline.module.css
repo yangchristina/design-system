@@ -12,7 +12,7 @@
     height: 100%;
     left: 80px;
     margin-left: calc(80px / 2 - 15px / 2);
-    z-index: -1;
+    /* z-index: 0; */
     box-sizing: border-box;
     transform-origin: center;
     border: black solid 1px;
@@ -77,6 +77,7 @@
     display: flex;
     align-items: center;
     font-weight: bold;
+    z-index: 1;
 }
 
 .dt[data-gray="true"] {

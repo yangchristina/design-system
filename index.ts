@@ -2,6 +2,7 @@ export { AnnouncementsBar } from './custom/AnnouncementsBar';
 export * from "./hooks";
 export * from "./utils"
 export { Timeline } from "./custom/timeline/Timeline";
+export type { TimelineItem } from "./custom/timeline/Timeline";
 export { Spinner } from "./components/Spinner";
 export { Info } from "./components/Info";
 export { TriangleNav } from "./components/TriangleNav";
