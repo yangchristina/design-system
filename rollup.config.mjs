@@ -2,6 +2,7 @@
 import pkg from './package.json' assert { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
 import preserveDirectives from "rollup-plugin-preserve-directives";
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   input: './index.ts',
@@ -25,6 +26,11 @@ export default {
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
   plugins: [
     typescript(),
+    postcss({
+      extract: false,
+      modules: true,
+      use: ['sass'],
+    }),
     preserveDirectives(),
     // typescript({
     //   clean: true,
