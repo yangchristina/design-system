@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useEdit } from '../hooks/useEdit'
-import { debounce } from "lodash"
+import { debounce, isNil } from "lodash"
 import { ChangeEvent, forwardRef, useCallback, useId } from "react"
 import { Input } from './Input'
 import { round } from 'lodash'
@@ -71,7 +71,7 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
                 type="number"
                 value={state ?? ''}
                 id={id}
-                step={precision ? 10 ** (-1 * precision) : "any"}
+                step={!isNil(precision) ? 10 ** (-1 * precision) : "any"}
                 {...props} />
         </span>
     )
