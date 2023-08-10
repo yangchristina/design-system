@@ -9,6 +9,7 @@ import { round } from 'lodash'
 type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'min' | 'max' | 'onChange' | 'value'> & {
     error?: boolean, label?: string, max?: number, min?: number,
     value?: number, precision?: number, integerOnly?: boolean,
+    debounceWait?: number,
 } & ({
     allowUndefined: true,
     onChange: (value: number | undefined) => void
@@ -26,7 +27,7 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'mi
 //     </span>
 // })
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, ...props }, forwardedRef) => {
+export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 800, ...props }, forwardedRef) => {
     const [state, setState, revert] = useEdit<number | string>(value ?? '')
     if (integerOnly) {
         precision = 0
@@ -54,7 +55,7 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
     }
 
     const debouncedChangeHandler = useCallback(
-        debounce(handleChangeDebounced, 800), [min, max, onChange]);
+        debounce(handleChangeDebounced, debounceWait), [min, max, onChange]);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setState(e.target.value)
