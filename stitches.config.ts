@@ -528,51 +528,51 @@ const lavendarBlushTheme: ColorTheme = {
 }
 
 export const themes = {
-  crimson: ({
+  crimson: {
     colors: {
       ...createThemeColors(crimsonTheme, true)
     },
-  }),
-  crimsonDark: ({
+  },
+  crimsonDark: {
     colors: {
       ...createThemeColors(crimsonTheme, false)
     },
-  }),
-  teal: ({
+  },
+  teal: {
     colors: {
       ...createThemeColors(tealTheme, true)
     },
-  }),
-  tealDark: ({
+  },
+  tealDark: {
     colors: {
       ...createThemeColors(tealTheme, false)
     },
     // fonts: {
     //   system: "Arial, Helvetica, sans-serif"
     // },
-  }),
-  avocado: ({
+  },
+  avocado: {
     colors: {
       ...pinkDark,
       ...createThemeColors(avocadoTheme, true, avocadoVariables)
     },
-  }),
-  blueberry: ({
+  },
+  blueberry: {
     colors: {
       ...blue,
       ...createThemeColors(blueTheme, true)
       // ...pink,
       // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
     },
-  }),
-  violet: ({
+  },
+  violet: {
     colors: {
       ...blue,
       ...createThemeColors(violetTheme, true)
       // ...pink,
       // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
     },
-  }),
+  },
   ['lavendar blush']: {
     colors: {
       ...crimson,
