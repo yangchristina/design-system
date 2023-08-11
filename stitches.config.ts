@@ -127,7 +127,7 @@ export const {
   getCssText,
   globalCss,
   keyframes,
-  config,
+  config: rawConfig,
   reset,
 } = createStitches({
   prefix: 'design-system',
@@ -437,6 +437,9 @@ export const {
     }),
   },
 });
+
+const { prefix, ...rest } = rawConfig
+export const config = rest
 
 export type CSS = Stitches.CSS<typeof config>;
 
