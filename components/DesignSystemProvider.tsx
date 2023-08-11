@@ -15,3 +15,8 @@ export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = (props)
     value={themes}
   ><TooltipProvider {...props} /></ThemeProvider>;
 };
+
+
+export const DesignSystemTooltipOnlyProvider: React.FC<DesignSystemProviderProps> = (props) => {
+  return <TooltipProvider {...props} />
+};

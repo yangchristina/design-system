@@ -49,7 +49,7 @@ export { Container } from './components/Container';
 // } from './components/ContextMenu';
 export { ContextMenu } from './components/ContextMenu';
 export { ControlGroup } from './components/ControlGroup';
-export { DesignSystemProvider } from './components/DesignSystemProvider';
+export { DesignSystemProvider, DesignSystemTooltipOnlyProvider } from './components/DesignSystemProvider';
 export {
   Dialog,
   DialogClose,
