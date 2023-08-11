@@ -527,22 +527,22 @@ const lavendarBlushTheme: ColorTheme = {
 }
 
 export const themes = {
-  crimson: createTheme({
+  crimson: ({
     colors: {
       ...createThemeColors(crimsonTheme, true)
     },
   }),
-  crimsonDark: createTheme({
+  crimsonDark: ({
     colors: {
       ...createThemeColors(crimsonTheme, false)
     },
   }),
-  teal: createTheme({
+  teal: ({
     colors: {
       ...createThemeColors(tealTheme, true)
     },
   }),
-  tealDark: createTheme({
+  tealDark: ({
     colors: {
       ...createThemeColors(tealTheme, false)
     },
@@ -550,13 +550,13 @@ export const themes = {
     //   system: "Arial, Helvetica, sans-serif"
     // },
   }),
-  avocado: createTheme({
+  avocado: ({
     colors: {
       ...pinkDark,
       ...createThemeColors(avocadoTheme, true, avocadoVariables)
     },
   }),
-  blueberry: createTheme({
+  blueberry: ({
     colors: {
       ...blue,
       ...createThemeColors(blueTheme, true)
@@ -564,7 +564,7 @@ export const themes = {
       // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
     },
   }),
-  violet: createTheme({
+  violet: ({
     colors: {
       ...blue,
       ...createThemeColors(violetTheme, true)
@@ -572,15 +572,21 @@ export const themes = {
       // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
     },
   }),
-  ['lavendar blush']: createTheme({
+  ['lavendar blush']: {
     colors: {
       ...crimson,
       ...createThemeColors(lavendarBlushTheme, true)
       // ...pink,
       // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
     },
-  }),
+  },
 }
+
+
+export const providerThemes = (themes: Record<string, any>) => Object.entries(themes).reduce((acc, [key, value]) => {
+  acc[key] = createTheme(value)
+  return acc
+}, {})
 
 // #endregion
 
