@@ -117,6 +117,7 @@ import {
   goldDarkA,
 } from '@radix-ui/colors';
 import type * as Stitches from '@stitches/react';
+import { toProviderThemes } from './utils';
 export type { VariantProps } from '@stitches/react';
 
 export const {
@@ -583,11 +584,7 @@ export const themes = {
 }
 
 
-export const providerThemes = (themes: Record<string, any>) => Object.entries(themes).reduce((acc, [key, value]) => {
-  acc[key] = createTheme(value)
-  return acc
-}, {})
-
+export const providerThemes = toProviderThemes(themes, createTheme)
 // #endregion
 
 

@@ -13,3 +13,8 @@ export default function getNextTheme(theme = '', inc = 1, type?: 'light' | 'dark
 export const isDarkTheme = (theme: string | undefined) => {
     return !!theme?.toLowerCase().includes('dark')
 }
+
+export const toProviderThemes = (themes: Record<string, any>, createTheme: any) => Object.entries(themes).reduce((acc, [key, value]) => {
+    acc[key] = createTheme(value)
+    return acc
+}, {})

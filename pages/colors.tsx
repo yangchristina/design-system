@@ -26,7 +26,7 @@ import { TextField } from '../components/TextField';
 import { TreeItem } from '../components/TreeItem';
 import { ColorTools } from '../custom/ColorTools';
 import { ThemeProvider, useTheme } from "next-themes";
-import getNextTheme, { isDarkTheme } from '../utils/getNextTheme';
+import getNextTheme, { isDarkTheme } from '../utils/theme';
 
 const sidebarWidth = 240;
 

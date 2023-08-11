@@ -2,7 +2,7 @@
 import React from 'react';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
 import { ThemeProvider } from 'next-themes';
-import { providerThemes, themes as myThemes } from "../stitches.config";
+import { providerThemes } from "../stitches.config";
 
 type TooltipProviderProps = React.ComponentProps<typeof TooltipProvider>;
 interface DesignSystemProviderProps extends TooltipProviderProps {
@@ -14,7 +14,7 @@ export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ them
   return <ThemeProvider
     attribute="class"
     defaultTheme="teal" // normally leave as system
-    value={themes || providerThemes(myThemes)}
+    value={themes || providerThemes}
   ><TooltipProvider {...props} /></ThemeProvider>;
 };
 
