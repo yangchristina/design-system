@@ -133,6 +133,7 @@ export {
   theme,
   createTheme,
   themes,
+  reset,
   getCssText,
   globalCss,
   keyframes,

@@ -1,5 +1,6 @@
 import { createStitches, PropertyValue } from '@stitches/react';
 import { ColorTheme, createThemeColors, mapColor } from './utils/radixColors';
+// TODO createStitches prevent style ejection
 import {
   gray,
   mauve,
@@ -131,7 +132,7 @@ export const {
   config: rawConfig,
   reset,
 } = createStitches({
-  prefix: 'design-system',
+  // prefix: 'design-system',
   theme: {
     colors: {
       text: '$primary12',
