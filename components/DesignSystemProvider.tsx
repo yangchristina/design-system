@@ -9,13 +9,23 @@ interface DesignSystemProviderProps extends TooltipProviderProps {
   themes?: any;
 }
 
+const mergeThemes = (themes1: Record<string, string>, themes2: Record<string, string>) => {
+  const mergedThemes = { ...themes1 };
+  Object.entries(themes2).forEach(([key, val]) => {
+    if (mergedThemes[key]) {
+      mergedThemes[key] = `${mergedThemes[key]} ${val}`;
+    } else {
+      mergedThemes[key] = val;
+    }
+  });
+  return mergedThemes;
+}
+
 export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, ...props }) => {
-  console.log("providerThemes", providerThemes)
-  console.log("themes", themes)
   return <ThemeProvider
     attribute="class"
     defaultTheme="teal" // normally leave as system
-    value={themes || providerThemes}
+    value={mergeThemes(providerThemes, themes)}
   ><TooltipProvider {...props} /></ThemeProvider>;
 };
 
