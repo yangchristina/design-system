@@ -25,8 +25,8 @@ export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ them
   return <ThemeProvider
     attribute="class"
     defaultTheme="teal" // normally leave as system
-    value={mergeThemes(providerThemes, themes)}
-  ><TooltipProvider {...props} /></ThemeProvider>;
+    value={{ ...providerThemes, ...themes, }}
+  > <TooltipProvider {...props} /></ThemeProvider >;
 };
 
 
