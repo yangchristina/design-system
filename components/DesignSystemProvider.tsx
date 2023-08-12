@@ -10,7 +10,8 @@ interface DesignSystemProviderProps extends TooltipProviderProps {
 }
 
 export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, ...props }) => {
-
+  console.log("providerThemes", providerThemes)
+  console.log("themes", themes)
   return <ThemeProvider
     attribute="class"
     defaultTheme="teal" // normally leave as system

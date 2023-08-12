@@ -118,7 +118,7 @@ import {
   goldDarkA,
 } from '@radix-ui/colors';
 import type * as Stitches from '@stitches/react';
-import { toProviderThemes } from './utils';
+import { createAllThemes, toProviderThemes } from './utils';
 export type { VariantProps } from '@stitches/react';
 
 export const {
@@ -132,7 +132,7 @@ export const {
   config: rawConfig,
   reset,
 } = createStitches({
-  // prefix: 'design-system',
+  prefix: 'design-system',
   theme: {
     colors: {
       text: '$primary12',
@@ -584,10 +584,10 @@ export const themes = {
   },
 }
 
+const createdThemes = createAllThemes(themes, createTheme)
 
-export const providerThemes = toProviderThemes(themes, createTheme)
+export const providerThemes = toProviderThemes(createdThemes)
 // #endregion
-
 
 export const globalStyles = {
   '*': {
