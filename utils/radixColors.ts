@@ -54,10 +54,74 @@ export interface ColorTheme {
     warning: string,
 }
 const lightDefaults = {
+    hiContrast: 'black',
+    loContrast: 'white',
+
     ...blackOverlay,
     ...radixScales.whiteA,
     ...radixScales.pink,
     ...mapColor('whiteA', 'overlayB'),
+
+    ...radixScales.gray,
+    ...radixScales.mauve,
+    ...radixScales.slate,
+    ...radixScales.sage,
+    ...radixScales.olive,
+    ...radixScales.sand,
+    ...radixScales.tomato,
+    ...radixScales.red,
+    ...radixScales.crimson,
+    ...radixScales.pink,
+    ...radixScales.plum,
+    ...radixScales.purple,
+    ...radixScales.violet,
+    ...radixScales.indigo,
+    ...radixScales.blue,
+    ...radixScales.sky,
+    ...radixScales.mint,
+    ...radixScales.cyan,
+    ...radixScales.teal,
+    ...radixScales.green,
+    ...radixScales.grass,
+    ...radixScales.lime,
+    ...radixScales.yellow,
+    ...radixScales.amber,
+    ...radixScales.orange,
+    ...radixScales.brown,
+    ...radixScales.bronze,
+    ...radixScales.gold,
+
+    ...radixScales.grayA,
+    ...radixScales.mauveA,
+    ...radixScales.slateA,
+    ...radixScales.sageA,
+    ...radixScales.oliveA,
+    ...radixScales.sandA,
+    ...radixScales.tomatoA,
+    ...radixScales.redA,
+    ...radixScales.crimsonA,
+    ...radixScales.pinkA,
+    ...radixScales.plumA,
+    ...radixScales.purpleA,
+    ...radixScales.violetA,
+    ...radixScales.indigoA,
+    ...radixScales.blueA,
+    ...radixScales.skyA,
+    ...radixScales.mintA,
+    ...radixScales.cyanA,
+    ...radixScales.tealA,
+    ...radixScales.greenA,
+    ...radixScales.grassA,
+    ...radixScales.limeA,
+    ...radixScales.yellowA,
+    ...radixScales.amberA,
+    ...radixScales.orangeA,
+    ...radixScales.brownA,
+    ...radixScales.bronzeA,
+    ...radixScales.goldA,
+
+    ...radixScales.whiteA,
+    ...radixScales.blackA,
 }
 const darkDefaults = {
     ...whiteOverlay,
@@ -121,8 +185,13 @@ const darkDefaults = {
     ...radixScales.goldDarkA,
 
     // Semantic colors
-    hiContrast: '$slate12',
-    loContrast: '$slate1',
+    hiContrast: 'white',
+    loContrast: 'black',
+    // // Semantic colors
+    // hiContrast: '$slate12',
+    // // loContrast: '$slate1',
+    // loContrast: 'white',
+
     canvas: 'hsl(0 0% 15%)',
     panel: '$slate3',
     transparentPanel: 'hsl(0 100% 100% / 97%)',
@@ -137,6 +206,7 @@ export function createThemeColors(theme: ColorTheme, isLight = true, variables?:
     } = theme
     const suffix = isLight ? '' : 'Dark'
     return {
+        ...(isLight ? lightDefaults : darkDefaults),
         ...mapColor(error, 'error'),
         ...mapColor(success, 'success'),
         ...mapColor(info, 'info'),
@@ -145,8 +215,7 @@ export function createThemeColors(theme: ColorTheme, isLight = true, variables?:
         ...mapColor(primary, 'primary'),
         ...mapColor(accent, 'accent'),
         ...mapColor(secondary, 'secondary'),
-        ...(isLight ? lightDefaults : darkDefaults),
-        // const primary 
+        // const primary
         // ...radixScales[(primary + suffix) as keyof typeof radixScales], ...radixScales[gray + suffix], ...radixScales[error + suffix], ...radixScales[success + suffix],
         // ...radixScales[warning + suffix], ...radixScales[info + suffix], ...radixScales[success + suffix],
         // ...(secondary && radixScales[secondary + suffix]),
