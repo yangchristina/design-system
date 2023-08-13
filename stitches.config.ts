@@ -143,10 +143,8 @@ export const {
       important: '$primary11',
       highlight: '$warning9',
 
-
       canvas: 'hsl(0 0% 93%)',
       panel: '$loContrast',
-      transparentPanel: 'hsl(0 0% 0% / 97%)',
       shadowLight: 'hsl(206 22% 7% / 35%)',
       shadowDark: 'hsl(206 22% 7% / 20%)',
     },
