@@ -9,6 +9,7 @@ import { Text } from '../components/Text';
 import { Tooltip } from '../components/Tooltip';
 import { HamburgerMenuIcon, PlayIcon, Share1Icon } from '@radix-ui/react-icons';
 import { ReactNode } from 'react'
+import React from 'react';
 // export function ToolbarOld() {
 //   return (
 //     <Box

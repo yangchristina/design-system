@@ -57,7 +57,6 @@ const lightDefaults = {
     hiContrast: 'black',
     loContrast: 'white',
     transparentPanel: 'hsl(0 0% 0% / 97%)',
-
     ...blackOverlay,
     ...radixScales.whiteA,
     ...radixScales.pink,
