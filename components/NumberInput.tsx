@@ -56,7 +56,6 @@ export const NumberInput = forwardRef<any, InputProps>(({ children, label, error
         return int
     }
     const handleChangeDebounced = (val: string) => {
-        if (value === state) return
         const newValue = calculateChange(val)
         if (newValue === 'revert') {
             revert()
