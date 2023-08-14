@@ -59,6 +59,9 @@ export const InputField = styled('input', {
             invisible: {
                 boxShadow: 'none',
                 backgroundColor: 'inherit',
+            },
+            solid: {
+                backgroundColor: '$loContrast',
             }
         }
     }
