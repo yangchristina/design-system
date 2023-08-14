@@ -22,6 +22,8 @@ type InputProps = OmitOverlap<ComponentProps<typeof Input>> & OmitOverlap<React.
     onChange: (value: number) => void
 })
 
+const castNumberString = (s: unknown): string => (typeof s !== 'string' && typeof s !== 'number') ? '' : s.toString()
+
 // export const NumberInputNative = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
 //     <span>
 //         <Input
@@ -32,35 +34,43 @@ type InputProps = OmitOverlap<ComponentProps<typeof Input>> & OmitOverlap<React.
 // })
 // TODO: allow decimal values, what does size even do??? not in use currently
 export const NumberInput = forwardRef<any, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 2000, ...props }, forwardedRef) => {
-    const [state, setState, revert] = useEdit<number | string>(value ?? '')
+    const [state, setState, revert] = useEdit<number | string | undefined>(value ?? '')
     if (integerOnly) {
         precision = 0
     }
-    const handleChangeDebounced = (val: string) => {
+
+    const calculateChange = (val: string) => {
         const int = precision !== undefined ? round(parseFloat(val), precision) : parseFloat(val)
         if (allowUndefined && !val) {
-            // @ts-expect-error
-            onChange(undefined)
-            return
+            return undefined
         }
         if (max !== undefined && int > max) {
-            onChange?.(max)
-            return
+            return max
         }
         if (min !== undefined && int < min) {
-            onChange?.(min)
-            return
+            return min
         }
         if (!val || Number.isNaN(int)) {
+            return 'revert'
+        }
+        return int
+    }
+    const handleChangeDebounced = (val: string) => {
+        if (value === state) return
+        const newValue = calculateChange(val)
+        if (newValue === 'revert') {
             revert()
             return
         }
-        onChange?.(int)
-        setState(int.toString())
+        // @ts-expect-error
+        onChange(newValue)
+        setState(newValue)
     }
+
     const ref = (forwardedRef as MutableRefObject<any>) || useRef(null)
 
-    useOutsideAlerter(ref, () => { value !== state && handleChangeDebounced(state.toString()) })
+    const outsideCallback = useCallback(() => handleChangeDebounced(castNumberString(state)), [min, max, onChange, state]);
+    useOutsideAlerter(ref, outsideCallback)
 
     const debouncedChangeHandler = useCallback(
         debounce(handleChangeDebounced, debounceWait), [min, max, onChange]);
