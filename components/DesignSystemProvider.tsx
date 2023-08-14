@@ -7,6 +7,7 @@ import { providerThemes } from "../stitches.config";
 type TooltipProviderProps = React.ComponentProps<typeof TooltipProvider>;
 interface DesignSystemProviderProps extends TooltipProviderProps {
   themes?: any;
+  defaultTheme?: string;
 }
 
 const mergeThemes = (themes1: Record<string, string>, themes2: Record<string, string>) => {
@@ -21,10 +22,10 @@ const mergeThemes = (themes1: Record<string, string>, themes2: Record<string, st
   return mergedThemes;
 }
 
-export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, ...props }) => {
+export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, defaultTheme = 'teal-theme', ...props }) => {
   return <ThemeProvider
     attribute="class"
-    defaultTheme="teal-theme" // normally leave as system
+    defaultTheme={defaultTheme} // normally leave as system
     value={{ ...providerThemes, ...themes, }}
   > <TooltipProvider {...props} /></ThemeProvider >;
 };
