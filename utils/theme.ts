@@ -23,6 +23,6 @@ export const createAllThemes = (themes: Record<string, any>, createTheme: any) =
 }, {} as CreatedThemes)
 
 export const toProviderThemes = (createdThemes: CreatedThemes) => Object.entries(createdThemes).reduce((acc, [key, value]) => {
-    acc[key] = value.className
+    acc[key] = value.className + '-theme'
     return acc
 }, {} as Record<string, string>)
