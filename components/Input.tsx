@@ -77,7 +77,7 @@ const Col = styled('span', {
     position: 'relative',
     padding: 0,
     margin: 0,
-    display: 'flex',
+    display: 'inline-flex',
     flexDirection: 'column',
 })
 
