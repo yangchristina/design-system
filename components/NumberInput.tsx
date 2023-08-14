@@ -53,6 +53,7 @@ export const NumberInput = forwardRef<any, InputProps>(({ children, label, error
             return
         }
         onChange?.(int)
+        setState(int.toString())
     }
     const ref = (forwardedRef as MutableRefObject<any>) || useRef(null)
 
