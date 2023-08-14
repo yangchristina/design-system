@@ -61,9 +61,9 @@ export const NumberInput = forwardRef<any, InputProps>(({ children, label, error
             revert()
             return
         }
+        setState(newValue)
         // @ts-expect-error
         onChange(newValue)
-        setState(newValue)
     }
 
     const ref = (forwardedRef as MutableRefObject<any>) || useRef(null)
