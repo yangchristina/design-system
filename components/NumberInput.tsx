@@ -7,7 +7,10 @@ import { Input } from './Input'
 import { round } from 'lodash'
 import { useOutsideAlerter } from '../hooks/useOutsideAlerter'
 
-type InputProps = ComponentProps<typeof Input> & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'min' | 'max' | 'onChange' | 'value'> & {
+
+type OmitOverlap<Type> = Omit<Type, 'type' | 'min' | 'max' | 'onChange' | 'value'>
+
+type InputProps = OmitOverlap<ComponentProps<typeof Input>> & OmitOverlap<React.InputHTMLAttributes<HTMLInputElement>> & {
     error?: boolean, label?: string, max?: number, min?: number,
     value?: number, precision?: number, integerOnly?: boolean,
     debounceWait?: number,
