@@ -21,7 +21,7 @@ export const inputCSSVarStyle = {
     '&:focus-within': { boxShadow: `var(--shadows-focus)`, scale: 1.02, borderColor: 'transparent' }
 }
 
-export const InputWrapper = styled('div', {
+export const InputWrapper = styled('span', {
     display: 'flex',
     alignItems: 'center',
     gap: 10,
@@ -73,7 +73,7 @@ export const InputField = styled('input', {
     }
 });
 
-const Col = styled('div', {
+const Col = styled('span', {
     position: 'relative',
     padding: 0,
     margin: 0,
