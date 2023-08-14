@@ -18,11 +18,11 @@ export const isDarkTheme = (theme: string | undefined) => {
 type ThemeReturn = ReturnType<typeof createTheme>;  // string
 type CreatedThemes = Record<string, ThemeReturn>
 export const createAllThemes = (themes: Record<string, any>, createTheme: any) => Object.entries(themes).reduce((acc, [key, value]) => {
-    acc[key] = createTheme(key.replaceAll(" ", '-'), value)
+    acc[key] = createTheme(key.replaceAll(" ", '-') + '-theme', value)
     return acc
 }, {} as CreatedThemes)
 
 export const toProviderThemes = (createdThemes: CreatedThemes) => Object.entries(createdThemes).reduce((acc, [key, value]) => {
-    acc[key] = value.className + '-theme'
+    acc[key] = value.className
     return acc
 }, {} as Record<string, string>)
