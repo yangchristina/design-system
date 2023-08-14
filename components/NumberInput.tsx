@@ -2,12 +2,12 @@
 import React, { MutableRefObject, useRef } from 'react'
 import { useEdit } from '../hooks/useEdit'
 import { debounce, isNil } from "lodash"
-import { ChangeEvent, forwardRef, useCallback, useId } from "react"
+import { ChangeEvent, forwardRef, useCallback, useId, ComponentProps } from "react"
 import { Input } from './Input'
 import { round } from 'lodash'
 import { useOutsideAlerter } from '../hooks/useOutsideAlerter'
 
-type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'min' | 'max' | 'onChange' | 'value'> & {
+type InputProps = ComponentProps<typeof Input> & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'min' | 'max' | 'onChange' | 'value'> & {
     error?: boolean, label?: string, max?: number, min?: number,
     value?: number, precision?: number, integerOnly?: boolean,
     debounceWait?: number,

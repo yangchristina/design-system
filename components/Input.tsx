@@ -62,6 +62,12 @@ export const InputField = styled('input', {
             },
             solid: {
                 backgroundColor: '$loContrast',
+            },
+            native: {
+                all: 'revert',
+                // margin: '5px',
+                padding: 3,
+                '&:focus': { boxShadow: 'initial', scale: 'initial' },
             }
         }
     }

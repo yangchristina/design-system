@@ -1522,7 +1522,7 @@ function Home() {
               <Input valid label="Valid" />
             </Flex>
             <Flex css={{ ai: 'flex-start', gap: '$6', mt: '$6' }}>
-              <NumberInput label="Number max 10" max={10} onChange={console.log} />
+              <NumberInput design={'native'} label="Number, native, max 10" max={10} onChange={console.log} />
               <NumberInput error label="Number Input" max={10} onChange={console.log} />
               <NumberInput label="Number Input" onChange={console.log} />
             </Flex>
