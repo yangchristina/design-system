@@ -1,10 +1,11 @@
 'use client'
-import React from 'react'
+import React, { MutableRefObject, useRef } from 'react'
 import { useEdit } from '../hooks/useEdit'
 import { debounce, isNil } from "lodash"
 import { ChangeEvent, forwardRef, useCallback, useId } from "react"
 import { Input } from './Input'
 import { round } from 'lodash'
+import { useOutsideAlerter } from '../hooks/useOutsideAlerter'
 
 type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'min' | 'max' | 'onChange' | 'value'> & {
     error?: boolean, label?: string, max?: number, min?: number,
@@ -27,14 +28,14 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'mi
 //     </span>
 // })
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 800, ...props }, forwardedRef) => {
+export const NumberInput = forwardRef<any, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 2000, ...props }, forwardedRef) => {
     const [state, setState, revert] = useEdit<number | string>(value ?? '')
     if (integerOnly) {
         precision = 0
     }
-    const handleChangeDebounced = (e: ChangeEvent<HTMLInputElement>) => {
-        const int = precision !== undefined ? round(parseFloat(e.target.value), precision) : parseFloat(e.target.value)
-        if (allowUndefined && !e.target.value) {
+    const handleChangeDebounced = (val: string) => {
+        const int = precision !== undefined ? round(parseFloat(val), precision) : parseFloat(val)
+        if (allowUndefined && !val) {
             // @ts-expect-error
             onChange(undefined)
             return
@@ -47,26 +48,29 @@ export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children,
             onChange?.(min)
             return
         }
-        if (!e.target.value || Number.isNaN(int)) {
+        if (!val || Number.isNaN(int)) {
             revert()
             return
         }
         onChange?.(int)
     }
+    const ref = (forwardedRef as MutableRefObject<any>) || useRef(null)
+
+    useOutsideAlerter(ref, () => { value !== state && handleChangeDebounced(state.toString()) })
 
     const debouncedChangeHandler = useCallback(
         debounce(handleChangeDebounced, debounceWait), [min, max, onChange]);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setState(e.target.value)
-        debouncedChangeHandler(e)
+        debouncedChangeHandler(e.target.value)
     }
 
     return (
         <span>
             <Input
                 label={label}
-                ref={forwardedRef}
+                ref={ref}
                 min={min && min - 10}
                 max={max && max + 10} onChange={handleChange}
                 type="number"
