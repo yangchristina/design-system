@@ -33,7 +33,7 @@ const castNumberString = (s: unknown): string => (typeof s !== 'string' && typeo
 //     </span>
 // })
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput = forwardRef<any, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 2000, ...props }, forwardedRef) => {
+export const NumberInput = forwardRef<any, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 5000, ...props }, forwardedRef) => {
     const [state, setState, revert] = useEdit<number | string | undefined>(value ?? '')
     if (integerOnly) {
         precision = 0
