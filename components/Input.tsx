@@ -22,7 +22,7 @@ export const inputCSSVarStyle = {
 }
 
 export const InputWrapper = styled('span', {
-    display: 'flex',
+    display: 'inline-flex',
     alignItems: 'center',
     gap: 10,
     position: 'relative',
