@@ -22,14 +22,13 @@ const mergeThemes = (themes1: Record<string, string>, themes2: Record<string, st
   return mergedThemes;
 }
 
-export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, defaultTheme = 'teal-theme', ...props }) => {
+export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, defaultTheme = 'teal', ...props }) => {
   return <ThemeProvider
     attribute="class"
     defaultTheme={defaultTheme} // normally leave as system
     value={{ ...providerThemes, ...themes, }}
   > <TooltipProvider {...props} /></ThemeProvider >;
 };
-
 
 export const DesignSystemTooltipOnlyProvider: React.FC<DesignSystemProviderProps> = (props) => {
   return <TooltipProvider {...props} />
