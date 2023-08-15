@@ -402,7 +402,6 @@ const avocadoVariables = {
 }
 
 const crimsonTheme: ColorTheme = {
-  ...crimsonA,
   primary: 'crimson',
   secondary: 'crimsonA',
   accent: 'crimsonDark',
@@ -483,6 +482,7 @@ const matchaTheme: ColorTheme = {
 export const themes = {
   crimson: {
     colors: {
+      ...crimsonA,
       ...createThemeColors(crimsonTheme, true)
     },
   },
