@@ -437,8 +437,8 @@ const blueTheme: ColorTheme = {
 // (avocadoTheme, true, 'grass', 'olive', 'red', 'green', 'blue', 'yellow', avocadoVariables, 'gold')
 const avocadoTheme: ColorTheme = {
   primary: 'grass',
-  secondary: 'grassA',
-  accent: 'grassDark',
+  secondary: 'gold',
+  accent: 'grass',
   gray: 'olive',
   error: 'red',
   success: 'green',

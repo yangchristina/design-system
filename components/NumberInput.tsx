@@ -1,12 +1,16 @@
 'use client'
-import React from 'react'
+import React, { MutableRefObject, useRef } from 'react'
 import { useEdit } from '../hooks/useEdit'
 import { debounce, isNil } from "lodash"
-import { ChangeEvent, forwardRef, useCallback, useId } from "react"
+import { ChangeEvent, forwardRef, useCallback, useId, ComponentProps } from "react"
 import { Input } from './Input'
 import { round } from 'lodash'
+import { useOutsideAlerter } from '../hooks/useOutsideAlerter'
 
-type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'min' | 'max' | 'onChange' | 'value'> & {
+
+type OmitOverlap<Type> = Omit<Type, 'type' | 'min' | 'max' | 'onChange' | 'value'>
+
+type InputProps = OmitOverlap<ComponentProps<typeof Input>> & OmitOverlap<React.InputHTMLAttributes<HTMLInputElement>> & {
     error?: boolean, label?: string, max?: number, min?: number,
     value?: number, precision?: number, integerOnly?: boolean,
     debounceWait?: number,
@@ -18,6 +22,8 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'mi
     onChange: (value: number) => void
 })
 
+const castNumberString = (s: unknown): string => (typeof s !== 'string' && typeof s !== 'number') ? '' : s.toString()
+
 // export const NumberInputNative = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
 //     <span>
 //         <Input
@@ -27,46 +33,57 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'mi
 //     </span>
 // })
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput = forwardRef<HTMLInputElement, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 800, ...props }, forwardedRef) => {
-    const [state, setState, revert] = useEdit<number | string>(value ?? '')
+export const NumberInput = forwardRef<any, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 5000, ...props }, forwardedRef) => {
+    const [state, setState, revert] = useEdit<number | string | undefined>(value ?? '')
     if (integerOnly) {
         precision = 0
     }
-    const handleChangeDebounced = (e: ChangeEvent<HTMLInputElement>) => {
-        const int = precision !== undefined ? round(parseFloat(e.target.value), precision) : parseFloat(e.target.value)
-        if (allowUndefined && !e.target.value) {
-            // @ts-expect-error
-            onChange(undefined)
-            return
+
+    const calculateChange = (val: string) => {
+        const int = precision !== undefined ? round(parseFloat(val), precision) : parseFloat(val)
+        if (allowUndefined && !val) {
+            return undefined
         }
         if (max !== undefined && int > max) {
-            onChange?.(max)
-            return
+            return max
         }
         if (min !== undefined && int < min) {
-            onChange?.(min)
-            return
+            return min
         }
-        if (!e.target.value || Number.isNaN(int)) {
+        if (!val || Number.isNaN(int)) {
+            return 'revert'
+        }
+        return int
+    }
+    const handleChangeDebounced = (val: string) => {
+        const newValue = calculateChange(val)
+        if (newValue === 'revert') {
             revert()
             return
         }
-        onChange?.(int)
+        setState(newValue)
+        // @ts-expect-error
+        onChange(newValue)
     }
+
+    const ref = (forwardedRef as MutableRefObject<any>) || useRef(null)
+
+    const outsideCallback = useCallback(() => handleChangeDebounced(castNumberString(state)), [min, max, onChange, state]);
+    useOutsideAlerter(ref, outsideCallback)
 
     const debouncedChangeHandler = useCallback(
         debounce(handleChangeDebounced, debounceWait), [min, max, onChange]);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setState(e.target.value)
-        debouncedChangeHandler(e)
+        debouncedChangeHandler(e.target.value)
     }
 
     return (
         <span>
             <Input
                 label={label}
-                ref={forwardedRef}
+                ref={ref}
                 min={min && min - 10}
                 max={max && max + 10} onChange={handleChange}
                 type="number"

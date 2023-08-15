@@ -13,7 +13,7 @@ import { ControlGroup } from '../components/ControlGroup';
 import { Text } from '../components/Text';
 import { Link } from '../components/Link';
 import { AppBar } from '../components/AppBar';
-import { Banner } from '../components/Banner';
+import { NumberInput } from '../components/NumberInput';
 import { Alert } from '../components/Alert';
 import { Input } from '../components/Input';
 import { Kbd } from '../components/Kbd';
@@ -1520,6 +1520,11 @@ function Home() {
               <Input label="Size 5 label" labelSize={5} />
               <Input error label="Error" />
               <Input valid label="Valid" />
+            </Flex>
+            <Flex css={{ ai: 'flex-start', gap: '$6', mt: '$6' }}>
+              <NumberInput design={'native'} label="Number, native, max 10" max={10} onChange={console.log} />
+              <NumberInput error label="Number Input" max={10} onChange={console.log} />
+              <NumberInput label="Number Input" onChange={console.log} />
             </Flex>
           </Container>
         </Section>

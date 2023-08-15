@@ -21,8 +21,8 @@ export const inputCSSVarStyle = {
     '&:focus-within': { boxShadow: `var(--shadows-focus)`, scale: 1.02, borderColor: 'transparent' }
 }
 
-export const InputWrapper = styled('div', {
-    display: 'flex',
+export const InputWrapper = styled('span', {
+    display: 'inline-flex',
     alignItems: 'center',
     gap: 10,
     position: 'relative',
@@ -59,16 +59,25 @@ export const InputField = styled('input', {
             invisible: {
                 boxShadow: 'none',
                 backgroundColor: 'inherit',
+            },
+            solid: {
+                backgroundColor: '$loContrast',
+            },
+            native: {
+                all: 'revert',
+                // margin: '5px',
+                padding: 3,
+                '&:focus': { boxShadow: 'initial', scale: 'initial' },
             }
         }
     }
 });
 
-const Col = styled('div', {
+const Col = styled('span', {
     position: 'relative',
     padding: 0,
     margin: 0,
-    display: 'flex',
+    display: 'inline-flex',
     flexDirection: 'column',
 })
 
