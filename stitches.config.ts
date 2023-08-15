@@ -135,6 +135,7 @@ export const {
   prefix: 'design-system',
   theme: {
     colors: {
+      ...crimsonA,
       text: '$primary12',
       outline: '$primary12',
       outlineHover: '$gray12',
@@ -482,7 +483,6 @@ const matchaTheme: ColorTheme = {
 export const themes = {
   crimson: {
     colors: {
-      ...crimsonA,
       ...createThemeColors(crimsonTheme, true)
     },
   },
