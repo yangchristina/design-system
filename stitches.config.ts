@@ -458,8 +458,25 @@ const violetTheme: ColorTheme = {
 }
 
 const lavendarBlushTheme: ColorTheme = {
-  ...violetTheme,
   primary: 'pink',
+  secondary: 'plum',
+  accent: 'pinkDark',
+  gray: 'mauve',
+  error: 'red',
+  success: 'green',
+  info: 'blue',
+  warning: 'yellow',
+}
+
+const matchaTheme: ColorTheme = {
+  primary: 'grass',
+  secondary: 'grassA',
+  accent: 'grassDark',
+  gray: 'sage',
+  error: 'red',
+  success: 'green',
+  info: 'blue',
+  warning: 'yellow',
 }
 
 export const themes = {
@@ -496,8 +513,6 @@ export const themes = {
     colors: {
       ...blue,
       ...createThemeColors(blueTheme, true)
-      // ...pink,
-      // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
     },
   },
   violet: {
@@ -512,10 +527,14 @@ export const themes = {
     colors: {
       ...crimson,
       ...createThemeColors(lavendarBlushTheme, true)
-      // ...pink,
-      // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
     },
   },
+  matcha: {
+    colors: {
+      ...createThemeColors(matchaTheme, true)
+    }
+  }
+
 }
 
 const createdThemes = createAllThemes(themes, createTheme)
