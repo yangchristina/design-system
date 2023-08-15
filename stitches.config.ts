@@ -402,6 +402,7 @@ const avocadoVariables = {
 }
 
 const crimsonTheme: ColorTheme = {
+  ...crimsonA,
   primary: 'crimson',
   secondary: 'crimsonA',
   accent: 'crimsonDark',
