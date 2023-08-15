@@ -532,8 +532,8 @@ export const themes = {
   matcha: {
     colors: {
       ...createThemeColors(matchaTheme, true)
-    }
-  }
+    },
+  },
 
 }
 
