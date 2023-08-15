@@ -414,8 +414,8 @@ const crimsonTheme: ColorTheme = {
 
 const tealTheme: ColorTheme = {
   primary: 'teal',
-  secondary: 'teal',
-  accent: 'teal',
+  secondary: 'tealA',
+  accent: 'tealDark',
   gray: 'sage',
   error: 'red',
   success: 'green',
@@ -425,8 +425,8 @@ const tealTheme: ColorTheme = {
 
 const blueTheme: ColorTheme = {
   primary: 'indigo',
-  secondary: 'indigo',
-  accent: 'indigo',
+  secondary: 'indigoA',
+  accent: 'indigoDark',
   gray: 'slate',
   error: 'red',
   success: 'green',
@@ -448,8 +448,8 @@ const avocadoTheme: ColorTheme = {
 
 const violetTheme: ColorTheme = {
   primary: 'violet',
-  secondary: 'violet',
-  accent: 'violet',
+  secondary: 'violetA',
+  accent: 'violetDark',
   gray: 'mauve',
   error: 'red',
   success: 'green',
