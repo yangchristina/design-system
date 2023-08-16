@@ -43,7 +43,7 @@ export function mapColor(color: string, alias: string) {
  * Error, Success, Warning, Info, Primary, Secondary, Accent, GrayScale, Black White Overlay
  */
 
-export interface ColorTheme {
+export interface ColorBase {
     primary: string,
     secondary: string,
     accent: string,
@@ -53,6 +53,12 @@ export interface ColorTheme {
     info: string,
     warning: string,
 }
+
+export interface ColorTheme extends ColorBase {
+    isLight: boolean,
+    name?: string,
+}
+
 const lightDefaults = {
     hiContrast: 'black',
     loContrast: 'white',
@@ -201,13 +207,14 @@ const darkDefaults = {
 
     ...mapColor('blackA', 'overlayB'),
 }
-export function createThemeColors(theme: ColorTheme, isLight = true, variables?: Record<string, string>) {
+
+export function createThemeValue(theme: ColorTheme, variables?: Record<string, string>) {
     const {
         primary, secondary, accent, gray, error, success, info, warning,
     } = theme
-    const suffix = isLight ? '' : 'Dark'
-    return {
-        ...(isLight ? lightDefaults : darkDefaults),
+
+    const colors = {
+        ...(theme.isLight ? lightDefaults : darkDefaults),
         ...mapColor(error, 'error'),
         ...mapColor(success, 'success'),
         ...mapColor(info, 'info'),
@@ -222,4 +229,6 @@ export function createThemeColors(theme: ColorTheme, isLight = true, variables?:
         // ...(secondary && radixScales[secondary + suffix]),
         ...variables
     }
+
+    return { colors }
 }

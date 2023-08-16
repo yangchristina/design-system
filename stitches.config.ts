@@ -1,5 +1,5 @@
 import { createStitches, PropertyValue } from '@stitches/react';
-import { ColorTheme, createThemeColors, mapColor } from './utils/radixColors';
+import { ColorTheme, ColorBase, createThemeValue, mapColor } from './utils/radixColors';
 // TODO createStitches prevent style ejection
 import {
   gray,
@@ -118,7 +118,7 @@ import {
   goldDarkA,
 } from '@radix-ui/colors';
 import type * as Stitches from '@stitches/react';
-import { createAllThemes, toProviderThemes } from './utils';
+import { createAllThemes, mapObject, toProviderThemes, toThemeKey } from './utils';
 export type { VariantProps } from '@stitches/react';
 
 export const {
@@ -402,7 +402,7 @@ const avocadoVariables = {
   // darkgreen: '#547556',
 }
 
-const crimsonTheme: ColorTheme = {
+const crimsonTheme: ColorBase = {
   primary: 'crimson',
   secondary: 'crimsonA',
   accent: 'crimsonDark',
@@ -413,7 +413,7 @@ const crimsonTheme: ColorTheme = {
   warning: 'yellow',
 }
 
-const tealTheme: ColorTheme = {
+const tealTheme: ColorBase = {
   primary: 'teal',
   secondary: 'tealA',
   accent: 'tealDark',
@@ -424,7 +424,7 @@ const tealTheme: ColorTheme = {
   warning: 'yellow',
 }
 
-const blueTheme: ColorTheme = {
+const indigoTheme: ColorBase = {
   primary: 'indigo',
   secondary: 'indigoA',
   accent: 'indigoDark',
@@ -436,7 +436,7 @@ const blueTheme: ColorTheme = {
 }
 
 // (avocadoTheme, true, 'grass', 'olive', 'red', 'green', 'blue', 'yellow', avocadoVariables, 'gold')
-const avocadoTheme: ColorTheme = {
+const avocadoTheme: ColorBase = {
   primary: 'grass',
   secondary: 'gold',
   accent: 'grass',
@@ -447,7 +447,7 @@ const avocadoTheme: ColorTheme = {
   warning: 'yellow',
 }
 
-const violetTheme: ColorTheme = {
+const violetTheme: ColorBase = {
   primary: 'violet',
   secondary: 'violetA',
   accent: 'violetDark',
@@ -458,7 +458,7 @@ const violetTheme: ColorTheme = {
   warning: 'yellow',
 }
 
-const lavendarBlushTheme: ColorTheme = {
+const lavendarBlushTheme: ColorBase = {
   primary: 'pink',
   secondary: 'plum',
   accent: 'pinkDark',
@@ -469,7 +469,7 @@ const lavendarBlushTheme: ColorTheme = {
   warning: 'yellow',
 }
 
-const matchaTheme: ColorTheme = {
+const matchaTheme: ColorBase = {
   primary: 'grass',
   secondary: 'grassA',
   accent: 'grassDark',
@@ -480,63 +480,40 @@ const matchaTheme: ColorTheme = {
   warning: 'yellow',
 }
 
-export const themes = {
-  crimson: {
-    colors: {
-      ...createThemeColors(crimsonTheme, true)
-    },
-  },
-  crimsonDark: {
-    colors: {
-      ...createThemeColors(crimsonTheme, false)
-    },
-  },
-  teal: {
-    colors: {
-      ...createThemeColors(tealTheme, true)
-    },
-  },
-  tealDark: {
-    colors: {
-      ...createThemeColors(tealTheme, false)
-    },
-    // fonts: {
-    //   system: "Arial, Helvetica, sans-serif"
-    // },
-  },
-  avocado: {
-    colors: {
-      ...pinkDark,
-      ...createThemeColors(avocadoTheme, true, avocadoVariables)
-    },
-  },
-  blueberry: {
-    colors: {
-      ...blue,
-      ...createThemeColors(blueTheme, true)
-    },
-  },
-  violet: {
-    colors: {
-      ...blue,
-      ...createThemeColors(violetTheme, true)
-      // ...pink,
-      // ...createThemeColors(tealTheme, true, teal, sage, red, green, blue, yellow)
-    },
-  },
-  ['lavendar blush']: {
-    colors: {
-      ...crimson,
-      ...createThemeColors(lavendarBlushTheme, true)
-    },
-  },
-  matcha: {
-    colors: {
-      ...createThemeColors(matchaTheme, true)
-    },
-  },
-
+const baseThemes = {
+  crimson: crimsonTheme,
+  teal: tealTheme,
+  violet: violetTheme,
+  matcha: matchaTheme,
+  blueberry: indigoTheme,
+  lavendarBlush: lavendarBlushTheme,
+  avocado: avocadoTheme,
 }
+
+// shouldn't name change be easy? can you make variants of an existing theme from planda?
+const lightThemeConfigs = mapObject(baseThemes, (theme) => ({ ...theme, isLight: true }))
+
+const darkThemeConfigs = {
+  ...Object.entries(lightThemeConfigs).reduce((acc, [name, config]) => {
+    return {
+      ...acc,
+      [`${name}Dark`]: { ...config, isLight: false },
+    }
+  }, {} as Record<string, ColorTheme>),
+}
+
+export const allThemeConfigs = {
+  ...lightThemeConfigs,
+  ...darkThemeConfigs
+}
+
+export const themes: Record<string, any> = mapObject(allThemeConfigs, (config) => createThemeValue(config))
+
+export const themeKeyToName = Object.keys(themes).reduce((acc, name) => {
+  const key = toThemeKey(name)
+  acc[key] = name
+  return acc
+}, {} as Record<string, string>)
 
 const createdThemes = createAllThemes(themes, createTheme)
 
