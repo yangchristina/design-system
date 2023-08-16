@@ -15,7 +15,7 @@ export const isDarkTheme = (theme: string | undefined) => {
     return !!theme?.toLowerCase().includes('dark')
 }
 
-export const toThemeKey = (key: string) => key.replaceAll(" ", '-') + '-theme'
+const toThemeKey = (key: string) => key.replaceAll(" ", '-') + '-theme'
 
 type ThemeReturn = ReturnType<typeof createTheme>;  // string
 type CreatedThemes = Record<string, ThemeReturn>
