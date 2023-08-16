@@ -1,3 +1,4 @@
+'use client'
 import React, { ComponentProps } from 'react'
 import { Theme as RadixTheme } from '@radix-ui/themes'
 import { useTheme } from 'next-themes'
