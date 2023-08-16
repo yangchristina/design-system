@@ -36,7 +36,7 @@ import { TabLink } from '../components/TabLink';
 import { SimpleToggle } from '../components/SimpleToggle';
 import { ScrollArea } from '../components/Scrollbar';
 import { Tooltip } from '../components/Tooltip';
-import { Slider } from '../components/Slider';
+import { Slider, ThemePanel } from '@radix-ui/themes';
 import { Dialog, DialogTrigger, DialogContent } from '../components/Dialog';
 import { Sheet, SheetTrigger, SheetContent } from '../components/Sheet';
 import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '../components/Popover';
@@ -135,7 +135,7 @@ function Home() {
   return (
     <Box>
       <DarkThemeButton />
-
+      <ThemePanel />
       <AppBar size="2" color="loContrast" border sticky glass>
         <Button>Button</Button>
       </AppBar>
@@ -2481,11 +2481,11 @@ function Home() {
             </Box>
             <Heading css={{ mb: '$6' }}>Range</Heading>
             <Flex css={{ gap: '$4', width: '150px', mb: '$7' }}>
-              <Slider defaultValue={[25, 75]} />
+              <Slider style={{ width: '100%' }} defaultValue={[25, 75]} />
             </Flex>
             <Heading css={{ mb: '$6' }}>Vertical orientation</Heading>
             <Box css={{ mt: '$6' }}>
-              <Slider defaultValue={[50]} orientation="vertical" css={{ height: 75 }} />
+              <Slider defaultValue={[50]} orientation="vertical" style={{ height: 75, width: '100%' }} />
             </Box>
           </Container>
         </Section>

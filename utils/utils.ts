@@ -28,7 +28,7 @@ export function deepValue(obj: any, pathv: string) {
 };
 
 export function strIsInt(str: string) {
-    if (typeof str != "string") return false // we only process strings!  
+    if (typeof str != "string") return false // we only process strings!
     // @ts-expect-error type coercion
     return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
         !isNaN(parseInt(str)) // ...and ensure strings of whitespace fail
@@ -216,3 +216,9 @@ export function pick<T>(obj: Record<string, T>, arr: string[]) {
         .filter(key => key in obj) // line can be removed to make it inclusive
         .reduce((obj2, key) => (obj2[key] = obj[key], obj2), {} as Record<string, T>);
 }
+
+export const mapObject = <T, R>(object: Record<string, T>, fn: (value: T, key: string, i: number) => R) => Object.entries(object)
+    .reduce((result, [key, val], i) => {
+        result[key] = fn(val, key, i)
+        return result
+    }, {} as Record<string, R>)
