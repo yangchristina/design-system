@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { styled, keyframes, VariantProps, CSS } from '../stitches.shared';
+import { styled, keyframes, VariantProps, CSS } from '../stitches.config';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { Cross1Icon } from '@radix-ui/react-icons';
 import { overlayStyles } from './Overlay';

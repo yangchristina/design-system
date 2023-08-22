@@ -1,5 +1,5 @@
 "use client"
-import { styled } from '../stitches.shared';
+import { styled } from '../stitches.config';
 
 export const Status = styled('div', {
   borderRadius: '50%',

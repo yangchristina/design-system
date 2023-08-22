@@ -2,7 +2,7 @@
 import React from 'react';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
 import { ThemeProvider } from 'next-themes';
-import { providerThemes } from "../stitches.shared";
+import { providerThemes } from "../stitches.config";
 
 type TooltipProviderProps = React.ComponentProps<typeof TooltipProvider>;
 interface DesignSystemProviderProps extends TooltipProviderProps {

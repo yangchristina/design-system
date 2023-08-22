@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { styled, CSS } from '../stitches.shared';
+import { styled, CSS } from '../stitches.config';
 import * as SliderPrimitive from '@radix-ui/react-slider';
 
 const SliderTrack = styled(SliderPrimitive.Track, {

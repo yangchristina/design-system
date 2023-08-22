@@ -27,8 +27,7 @@
   "exclude": [
     "node_modules",
     "pages",
-    "dist",
-    "src"
+    "dist"
   ],
   "include": [
     "next-env.d.ts",

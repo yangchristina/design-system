@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { styled, CSS } from '../stitches.shared';
+import { styled, CSS } from '../stitches.config';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import { overlayStyles } from './Overlay';
 import { panelStyles } from './Panel';

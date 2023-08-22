@@ -6,7 +6,7 @@ import React, { ComponentProps, Fragment } from 'react'
 import * as SelectPrimitive from '@radix-ui/react-select';
 import Trigger from './components/Trigger';
 import Item, { ItemButton } from './components/Item';
-import { styled } from '../../stitches.shared';
+import { styled } from '../../stitches.config';
 import Content from './components/Content';
 import { isStringArray } from '../../utils';
 

@@ -1,6 +1,6 @@
 "use client";
 import React, { ComponentProps } from 'react'
-import { keyframes, styled } from '../stitches.shared'
+import { keyframes, styled } from '../stitches.config'
 
 export const spin = keyframes({
     "0%": { top: "8px", height: "64px" },

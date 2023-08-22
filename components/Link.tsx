@@ -1,5 +1,5 @@
 "use client"
-import { styled } from '../stitches.shared';
+import { styled } from '../stitches.config';
 import { Text } from './Text';
 
 export const Link = styled('a', {

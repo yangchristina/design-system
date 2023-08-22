@@ -19,7 +19,6 @@
     "node_modules",
     "pages",
     ".next",
-    "src"
   ],
   "include": [
     "next-env.d.ts",

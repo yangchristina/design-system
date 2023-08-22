@@ -1,6 +1,5 @@
 import { createStitches, PropertyValue } from '@stitches/react';
 import { ColorTheme, ColorBase, createThemeValue, mapColor } from './utils/radixColors';
-
 // TODO createStitches prevent style ejection
 import {
   gray,

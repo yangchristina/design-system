@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { Text } from './Text';
-import { VariantProps, CSS } from '../stitches.shared';
+import { VariantProps, CSS } from '../stitches.config';
 import { merge } from 'lodash';
 
 const DEFAULT_TAG = 'h1';

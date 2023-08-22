@@ -2,7 +2,7 @@
 import React, { forwardRef, ReactNode } from 'react'
 import * as SelectPrimitive from '@radix-ui/react-select';
 import { CheckIcon, PlusIcon } from '@radix-ui/react-icons';
-import { styled } from '../../../stitches.shared';
+import { styled } from '../../../stitches.config';
 import { selectColorVariants } from "../styles";
 
 interface Props {

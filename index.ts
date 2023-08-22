@@ -139,4 +139,4 @@ export {
   keyframes,
   config,
   globalStyles
-} from './stitches.shared';
+} from './stitches.config';
