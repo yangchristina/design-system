@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from '../stitches.shared';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 import { Separator } from './Separator';
 

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from '../stitches.shared';
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group';
 
 export const RadioCardGroup = styled(RadioGroupPrimitive.Root, {

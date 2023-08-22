@@ -1,5 +1,5 @@
 import { createTheme } from "@stitches/react";
-import { themes } from "../stitches.config";
+import { themes } from "../stitches.shared";
 import { mod } from "./math";
 
 export default function getNextTheme(theme = '', inc = 1, type?: 'light' | 'dark') {

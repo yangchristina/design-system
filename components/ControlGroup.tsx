@@ -1,5 +1,5 @@
 "use client"
-import { styled } from '../stitches.config';
+import { styled } from '../stitches.shared';
 import { Button } from '../components/Button';
 import { TextField } from './TextField';
 import { OldSelect } from '../components/OldSelect';

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from '../stitches.shared';
 import { CaretSortIcon } from '@radix-ui/react-icons';
 
 const SelectWrapper = styled('div', {

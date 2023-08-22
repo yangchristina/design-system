@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { CheckIcon } from '@radix-ui/react-icons';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from '../stitches.shared';
 import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
 import { menuCss, separatorCss, itemCss, labelCss } from './Menu';
 import { Box } from './Box';

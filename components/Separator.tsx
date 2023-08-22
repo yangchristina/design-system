@@ -1,5 +1,5 @@
 "use client"
-import { styled } from '../stitches.config';
+import { styled } from '../stitches.shared';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 
 export const Separator = styled(SeparatorPrimitive.Root, {

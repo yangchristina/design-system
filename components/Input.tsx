@@ -1,5 +1,5 @@
 "use client"
-import { styled } from '../stitches.config';
+import { styled } from '../stitches.shared';
 import React, { ComponentProps, forwardRef, useId } from "react";
 import { Label } from './Label';
 

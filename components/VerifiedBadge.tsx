@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from '../stitches.shared';
 import { Flex } from '../components/Flex';
 import { CheckIcon } from '@radix-ui/react-icons';
 

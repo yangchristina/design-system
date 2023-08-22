@@ -1,5 +1,5 @@
 "use client"
-import { styled } from '../stitches.config';
+import { styled } from '../stitches.shared';
 
 export const Sub = styled('sub', {
   fontFeatureSettings: '"subs"',
