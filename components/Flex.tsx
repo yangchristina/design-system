@@ -192,10 +192,10 @@ export const FlexForm = styled('form', {
       },
     }
   },
-  defaultVariants: {
-    direction: 'row',
-    align: 'stretch',
-    justify: 'start',
-    wrap: 'noWrap',
-  }
+  // defaultVariants: {
+  //   direction: 'row',
+  //   align: 'stretch',
+  //   justify: 'start',
+  //   wrap: 'noWrap',
+  // }
 });
