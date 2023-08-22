@@ -1,4 +1,5 @@
 export { AnnouncementsBar } from './custom/AnnouncementsBar';
+export type { DialogBrightness } from './components/Overlay';
 export * from "./hooks";
 export * from "./utils"
 export { Timeline } from "./custom/timeline/Timeline";

@@ -1,8 +1,29 @@
 "use client"
 import { styled, css } from '../stitches.config';
 
+export type DialogBrightness = 'dark' | 'medium' | 'medium-light' | 'light' | 'lighter';
+
 export const overlayStyles = css({
-  backgroundColor: 'rgba(0, 0, 0, .15)',
+  background: 'rgba(0, 0, 0, .15)',
+  variants: {
+    brightness: {
+      'dark': {
+        backgroundColor: '$overlay9',
+      },
+      'medium': {
+        backgroundColor: '$overlay8',
+      },
+      'medium-light': {
+        backgroundColor: '$overlay6',
+      },
+      'light': {
+        backgroundColor: '$overlay5',
+      },
+      'lighter': {
+        backgroundColor: '$overlay4',
+      },
+    }
+  }
 });
 
 export const Overlay = styled('div', overlayStyles);
