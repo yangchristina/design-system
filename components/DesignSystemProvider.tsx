@@ -29,7 +29,7 @@ export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ them
     attribute="class"
     defaultTheme={defaultTheme} // normally leave as system
     value={{ ...providerThemes, ...themes, }}
-  ><Theme><TooltipProvider {...props} /></Theme></ThemeProvider >;
+  ><TooltipProvider {...props} /></ThemeProvider >;
 };
 
 export const DesignSystemTooltipOnlyProvider: React.FC<DesignSystemProviderProps> = (props) => {
