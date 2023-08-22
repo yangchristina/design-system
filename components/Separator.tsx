@@ -4,7 +4,6 @@ import * as SeparatorPrimitive from '@radix-ui/react-separator';
 
 export const Separator = styled(SeparatorPrimitive.Root, {
   border: 'none',
-  margin: 0,
   flexShrink: 0,
   backgroundColor: '$slate6',
   cursor: 'default',
