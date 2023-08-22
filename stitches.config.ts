@@ -118,7 +118,8 @@ import {
   goldDarkA,
 } from '@radix-ui/colors';
 import type * as Stitches from '@stitches/react';
-import { createAllThemes, mapObject, toProviderThemes, toThemeKey } from './utils';
+import { createAllThemes, toProviderThemes, toThemeKey } from './utils/createTheme';
+import { mapObject } from './utils/utils';
 export type { VariantProps } from '@stitches/react';
 
 export const {
