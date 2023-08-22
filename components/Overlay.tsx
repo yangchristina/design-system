@@ -22,6 +22,9 @@ export const overlayStyles = css({
       'lighter': {
         backgroundColor: '$overlay4',
       },
+      'none': {
+        backgroundColor: 'transparent',
+      }
     }
   }
 });
