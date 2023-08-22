@@ -2,6 +2,7 @@
 import { styled } from '../stitches.config';
 
 export const Button = styled('button', {
+  position: 'relative',
   // Reset
   all: 'unset',
   alignItems: 'center',
