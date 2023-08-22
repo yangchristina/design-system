@@ -1,7 +1,7 @@
 "use client"
 import { styled, css } from '../stitches.config';
 
-export type DialogBrightness = 'dark' | 'medium' | 'medium-light' | 'light' | 'lighter';
+export type DialogBrightness = 'dark' | 'medium' | 'medium-light' | 'light' | 'lighter' | 'none';
 
 export const overlayStyles = css({
   background: 'rgba(0, 0, 0, .15)',
