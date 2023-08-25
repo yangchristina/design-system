@@ -48,6 +48,7 @@ export function Tooltip({
           <Text
             size="1"
             as="p"
+            variant={'loContrast'}
             css={{
               color: '$loContrast',
               lineHeight: multiline ? '20px' : (undefined as any),

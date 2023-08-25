@@ -99,6 +99,9 @@ export const Text = styled('span', {
       contrast: {
         color: '$hiContrast',
       },
+      loContrast: {
+        color: '$loContrast',
+      },
     },
     gradient: {
       true: {
@@ -230,6 +233,6 @@ export const Text = styled('span', {
   ],
   defaultVariants: {
     size: '3',
-    variant: 'contrast',
+    // variant: 'contrast',
   },
 });
