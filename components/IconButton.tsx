@@ -42,8 +42,6 @@ export const IconButton = styled('button', {
   '&::after': {
     boxSizing: 'border-box',
   },
-  backgroundColor: '$loContrast',
-  border: '1px solid $slate7',
   '@hover': {
     '&:hover': {
       borderColor: '$slate8',
@@ -87,6 +85,8 @@ export const IconButton = styled('button', {
     },
     variant: {
       solid: {
+        backgroundColor: '$loContrast',
+        border: '1px solid $slate7',
       },
       ghost: {
         backgroundColor: 'transparent',
