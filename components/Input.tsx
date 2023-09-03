@@ -81,13 +81,13 @@ const Col = styled('span', {
     flexDirection: 'column',
 })
 
-type InputProps = ComponentProps<typeof InputField> & { error?: boolean, valid?: boolean, label?: string, labelSize?: number }
-export const Input = forwardRef<HTMLInputElement, InputProps>(({ children, label, type = 'text', error, labelSize = 5, valid = false, ...props }, forwardedRef) => {
+type InputProps = ComponentProps<typeof InputField> & { outerCSS?: Record<string, any>, error?: boolean, valid?: boolean, label?: string, labelSize?: number }
+export const Input = forwardRef<HTMLInputElement, InputProps>(({ outerCSS, children, label, type = 'text', error, labelSize = 5, valid = false, ...props }, forwardedRef) => {
     const id = useId()
     return (
-        <InputWrapper>
+        <InputWrapper css={outerCSS} >
             {label && <Label size={labelSize} htmlFor={id}>{label}</Label>}
-            <Col>
+            <Col css={outerCSS} >
                 <InputField error={error} valid={valid} id={props.id ?? id} type={type} ref={forwardedRef} {...props} />
                 {children}
             </Col>
