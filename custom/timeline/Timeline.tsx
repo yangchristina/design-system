@@ -3,7 +3,7 @@ import React, { forwardRef, ReactNode, useRef, useCallback, useState } from 'rea
 import styles from "./Timeline.module.css";
 import { format } from 'date-fns'
 export interface TimelineItem {
-    date: Date;
+    date?: Date;
     header: ReactNode;
     content: ReactNode;
     completed: boolean;
@@ -49,7 +49,7 @@ export const Timeline = ({ items, offset = 0, grayOutCompleted = false }: { item
  * @returns
  */
 
-interface Props { date: Date, title: ReactNode, children: ReactNode, completed?: boolean, size?: number, grayOutCompleted: boolean }
+interface Props { date?: Date, title: ReactNode, children: ReactNode, completed?: boolean, size?: number, grayOutCompleted: boolean }
 const TimelineItem = forwardRef<any, Props>(
     ({ completed = false, children, title, date, size = 2, grayOutCompleted }, forwardedRef) => {
         const fontSize = (size + 2) * 8
@@ -57,7 +57,7 @@ const TimelineItem = forwardRef<any, Props>(
         return (
             <>
                 <dt data-gray={shouldGray} ref={forwardedRef} style={{ fontSize }} className={styles.dt}>
-                    <sub className={styles.label} >{format(date, 'MMM d')}</sub>
+                    <sub className={styles.label} >{date ? format(date, 'MMM d') : 'TBH'}</sub>
                     <div className={styles.circleWrapper}>
                         <div data-completed={completed} className={styles.circle} />
                     </div>
