@@ -57,7 +57,7 @@ const TimelineItem = forwardRef<any, Props>(
         return (
             <>
                 <dt data-gray={shouldGray} ref={forwardedRef} style={{ fontSize }} className={styles.dt}>
-                    <sub className={styles.label} >{date ? format(date, 'MMM d') : 'TBH'}</sub>
+                    <sub className={styles.label} >{date ? format(date, 'MMM d') : 'TBD'}</sub>
                     <div className={styles.circleWrapper}>
                         <div data-completed={completed} className={styles.circle} />
                     </div>
