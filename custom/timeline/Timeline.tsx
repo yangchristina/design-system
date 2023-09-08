@@ -11,7 +11,7 @@ export interface TimelineItem {
     id: string | number;
 }
 
-export const Timeline = ({ items, offset = 0, grayOutCompleted = false }: { items: TimelineItem[], offset?: number, grayOutCompleted?: boolean }) => {
+export const Timeline = ({ items, offset = 0, grayOutCompleted = false, style }: { items: TimelineItem[], offset?: number, grayOutCompleted?: boolean, style?: Record<string, any> }) => {
     const [progressHeight, setProgressHeight] = useState<string | number>(0)
     const lastCompletedIndex = items.findLastIndex(item => item.completed)
     if (progressHeight !== '100%' && lastCompletedIndex === items.length - 1) {
@@ -28,7 +28,7 @@ export const Timeline = ({ items, offset = 0, grayOutCompleted = false }: { item
     }, []); // adjust deps
 
     return (
-        <ul className={styles.timelineList}>
+        <ul style={style} className={styles.timelineList}>
             <div className={styles.bar}>
                 <div style={{ height: typeof progressHeight === 'string' ? progressHeight : progressHeight + offset }} className={styles.innerBar} />
                 {/* <ProgressBar css={{ height: '100%', width: '100%' }} orientation={'vertical'} thickness={3} variant={"blue"} max={100} value={50} /> */}

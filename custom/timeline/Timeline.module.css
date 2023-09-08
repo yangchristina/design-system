@@ -35,7 +35,9 @@
     gap: 5px;
     margin-block: 0px;
     position: relative;
-    padding: 0
+    padding: 0;
+    min-height: 100%;
+    height: max-content;
 }
 
 .timelineList ::marker {
