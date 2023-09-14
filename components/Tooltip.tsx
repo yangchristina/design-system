@@ -17,6 +17,7 @@ const StyledContent = styled(TooltipPrimitive.Content, {
   backgroundColor: '$transparentPanel',
   borderRadius: '$1',
   padding: '$1 $2',
+  zIndex: 9999,
 
   variants: {
     multiline: {
