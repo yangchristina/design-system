@@ -135,7 +135,7 @@ function Home() {
   return (
     <Box>
       <DarkThemeButton />
-      <ThemePanel />
+      {/* <ThemePanel /> */}
       <AppBar size="2" color="loContrast" border sticky glass>
         <Button>Button</Button>
       </AppBar>
