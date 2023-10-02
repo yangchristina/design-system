@@ -10,7 +10,7 @@ interface Props {
     value: string,
 }
 
-const itemStyle = {
+export const selectItemStyle = {
     all: 'unset',
     display: 'flex',
     alignItems: 'center',
@@ -44,7 +44,7 @@ const itemStyle = {
 }
 
 const SelectItem = styled(SelectPrimitive.Item, {
-    ...itemStyle,
+    ...selectItemStyle,
 });
 
 export const SelectItemButtonIndicator = styled('div', {
@@ -57,7 +57,7 @@ export const SelectItemButtonIndicator = styled('div', {
 });
 
 const SelectItemButton = styled('button', {
-    ...itemStyle,
+    ...selectItemStyle,
     width: 'stretch',
 });
 
