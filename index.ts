@@ -60,6 +60,7 @@ export {
   DialogTitle,
   DialogTrigger,
 } from './components/Dialog';
+export { AlertSheet, AlertSheetTrigger, AlertSheetContent, AlertSheetClose, AlertSheetTitle, AlertSheetDescription } from './components/AlertSheet';
 export {
   DropdownMenu,
   DropdownMenuTrigger,
