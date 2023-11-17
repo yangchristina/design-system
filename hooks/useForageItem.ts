@@ -10,12 +10,14 @@ export function useForageItem<T>(
     const [isLoading, setIsLoading] = useState(true)
     const [item, setItem] = useState(defaultValue)
 
+    async function init() {
+        const item = await localforage.getItem(key)
+        if (isValid(item)) setItem(item as T)
+        setIsLoading(false)
+        return item
+    }
+
     useEffect(() => {
-        async function init() {
-            const item = await localforage.getItem(key)
-            if (isValid(item)) setItem(item as T)
-            setIsLoading(false)
-        }
         init()
     }, [])
 
@@ -29,7 +31,8 @@ export function useForageItem<T>(
     return {
         isLoading,
         item,
-        set
+        set,
+        resync: init
     }
 }
 
