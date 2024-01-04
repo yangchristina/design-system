@@ -32,7 +32,7 @@ export { AspectRatio } from '@radix-ui/react-aspect-ratio';
 export { Badge } from './components/Badge';
 export { Banner } from './components/Banner';
 export { Box } from './components/Box';
-export { Button } from './components/Button';
+export { Button, buttonStyles } from './components/Button';
 export { Card } from './components/Card';
 export { Checkbox } from './components/Checkbox';
 export { Code } from './components/Code';

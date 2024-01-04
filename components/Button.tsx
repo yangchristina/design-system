@@ -1,7 +1,7 @@
 "use client"
 import { styled } from '../stitches.config';
 
-export const Button = styled('button', {
+export const buttonStyles = {
   position: 'relative',
   // Reset
   all: 'unset',
@@ -324,4 +324,6 @@ export const Button = styled('button', {
     size: '1',
     variant: 'gray',
   },
-});
+}
+
+export const Button = styled('button', buttonStyles);
