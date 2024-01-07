@@ -8,7 +8,7 @@ import React from 'react'
 
 export const Info = ({ text, style }: { text: string, style?: any }) => {
     return (
-        <Tooltip content={text}>
+        <Tooltip delayDuration={300} content={text}>
             <InfoCircledIcon style={{ transformOrigin: 'center', width: 'max-content', display: 'flex-inline', justifyContent: 'center', alignItems: 'center', verticalAlign: 'middle', ...style }} />
         </Tooltip>
     )
