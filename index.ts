@@ -34,6 +34,7 @@ export { Banner } from './components/Banner';
 export { Box } from './components/Box';
 export { Button, buttonStyles } from './components/Button';
 export { Card } from './components/Card';
+export { Checkbox as Checkbox1 } from './components/Checkbox1';
 export { Checkbox } from './components/Checkbox';
 export { Code } from './components/Code';
 export { Container } from './components/Container';
