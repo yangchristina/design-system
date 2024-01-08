@@ -124,10 +124,10 @@ export const Badge = styled('span', {
         },
       },
       green: {
-        backgroundColor: '$green3',
-        color: '$green11',
+        backgroundColor: '$success3',
+        color: '$success11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$green8, 0 0 0 1px $colors$green8',
+          boxShadow: 'inset 0 0 0 1px $colors$success8, 0 0 0 1px $colors$success8',
         },
       },
       lime: {
@@ -331,14 +331,14 @@ export const Badge = styled('span', {
       css: {
         '@hover': {
           '&:hover': {
-            backgroundColor: '$green4',
+            backgroundColor: '$success4',
           },
         },
         '&:active': {
-          backgroundColor: '$green5',
+          backgroundColor: '$success5',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$green5',
+          backgroundColor: '$success5',
         },
       },
     },

@@ -50,7 +50,7 @@ const Banner = styled('div', {
                 backgroundColor: '$info3',
             },
             green: {
-                backgroundColor: '$green3',
+                backgroundColor: '$success3',
             },
             red: {
                 backgroundColor: '$red3',

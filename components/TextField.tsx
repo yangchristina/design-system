@@ -112,9 +112,9 @@ export const TextField = styled('input', {
         },
       },
       valid: {
-        boxShadow: 'inset 0 0 0 1px $colors$green7',
+        boxShadow: 'inset 0 0 0 1px $colors$success7',
         '&:focus': {
-          boxShadow: 'inset 0px 0px 0px 1px $colors$green8, 0px 0px 0px 1px $colors$green8',
+          boxShadow: 'inset 0px 0px 0px 1px $colors$success8, 0px 0px 0px 1px $colors$success8',
         },
       },
     },

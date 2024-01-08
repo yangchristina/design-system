@@ -109,24 +109,24 @@ export const buttonStyles = {
         },
       },
       green: {
-        backgroundColor: '$green2',
-        boxShadow: 'inset 0 0 0 1px $colors$green7',
-        color: '$green11',
+        backgroundColor: '$success2',
+        boxShadow: 'inset 0 0 0 1px $colors$success7',
+        color: '$success11',
         '@hover': {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$green8',
+            boxShadow: 'inset 0 0 0 1px $colors$success8',
           },
         },
         '&:active': {
-          backgroundColor: '$green3',
-          boxShadow: 'inset 0 0 0 1px $colors$green8',
+          backgroundColor: '$success3',
+          boxShadow: 'inset 0 0 0 1px $colors$success8',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$green8, 0 0 0 1px $colors$green8',
+          boxShadow: 'inset 0 0 0 1px $colors$success8, 0 0 0 1px $colors$success8',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$green4',
-          boxShadow: 'inset 0 0 0 1px $colors$green8',
+          backgroundColor: '$success4',
+          boxShadow: 'inset 0 0 0 1px $colors$success8',
         },
       },
       red: {
@@ -280,18 +280,18 @@ export const buttonStyles = {
         backgroundColor: 'transparent',
         '@hover': {
           '&:hover': {
-            backgroundColor: '$greenA3',
+            backgroundColor: '$successA3',
             boxShadow: 'none',
           },
         },
         '&:active': {
-          backgroundColor: '$greenA4',
+          backgroundColor: '$successA4',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$greenA8, 0 0 0 1px $colors$greenA8',
+          boxShadow: 'inset 0 0 0 1px $colors$successA8, 0 0 0 1px $colors$successA8',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$greenA4',
+          backgroundColor: '$successA4',
           boxShadow: 'none',
         },
       },

@@ -76,7 +76,7 @@ export const Text = styled('span', {
         color: '$teal11',
       },
       green: {
-        color: '$green11',
+        color: '$success11',
       },
       lime: {
         color: '$lime11',
@@ -171,14 +171,14 @@ export const Text = styled('span', {
       variant: 'teal',
       gradient: 'true',
       css: {
-        background: 'linear-gradient(to right, $teal11, $green11)',
+        background: 'linear-gradient(to right, $teal11, $success11)',
       },
     },
     {
       variant: 'green',
       gradient: 'true',
       css: {
-        background: 'linear-gradient(to right, $green11, $lime11)',
+        background: 'linear-gradient(to right, $success11, $lime11)',
       },
     },
     {

@@ -118,12 +118,12 @@ export const TreeItem = styled('div', {
         },
       },
       green: {
-        backgroundColor: '$green3',
+        backgroundColor: '$success3',
         '&:hover': {
-          backgroundColor: '$green4',
+          backgroundColor: '$success4',
         },
         '&:active': {
-          backgroundColor: '$green5',
+          backgroundColor: '$success5',
         },
       },
       lime: {

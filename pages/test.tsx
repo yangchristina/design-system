@@ -439,7 +439,7 @@ function Test() {
                 <Heading css={{ color: '$teal12' }}>
                   This heading look balanced and slightly saturated
                 </Heading>
-                <Heading css={{ color: '$green12' }}>
+                <Heading css={{ color: '$success12' }}>
                   This heading look balanced and slightly saturated
                 </Heading>
                 <Heading css={{ color: '$lime12' }}>
@@ -474,7 +474,7 @@ function Test() {
                 <Heading css={{ color: '$info11' }}>This heading look balanced</Heading>
                 <Heading css={{ color: '$cyan11' }}>This heading look balanced</Heading>
                 <Heading css={{ color: '$teal11' }}>This heading look balanced</Heading>
-                <Heading css={{ color: '$green11' }}>This heading look balanced</Heading>
+                <Heading css={{ color: '$success11' }}>This heading look balanced</Heading>
                 <Heading css={{ color: '$lime11' }}>This heading look balanced</Heading>
                 <Heading css={{ color: '$yellow11' }}>This heading look balanced</Heading>
                 <Heading css={{ color: '$orange11' }}>This heading look balanced</Heading>

@@ -24,7 +24,7 @@ export const Status = styled('div', {
         backgroundColor: '$info9',
       },
       green: {
-        backgroundColor: '$green9',
+        backgroundColor: '$success9',
       },
       yellow: {
         backgroundColor: '$yellow9',
