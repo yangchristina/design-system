@@ -50,14 +50,14 @@ export const ControlGroup = styled('div', {
       'inset 0 1px $colors$gray7, inset -1px 0 $colors$gray7, inset 0 -1px $colors$gray7',
     '&:focus': {
       zIndex: 1,
-      boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+      boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
     },
     '&:first-child': {
       borderTopLeftRadius: '$1',
       borderBottomLeftRadius: '$1',
       boxShadow: 'inset 0 0 0 1px $colors$gray7',
       '&:focus': {
-        boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+        boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
       },
     },
     '&:last-child': {
@@ -66,7 +66,7 @@ export const ControlGroup = styled('div', {
       boxShadow:
         'inset 0 1px $colors$gray7, inset -1px 0 $colors$gray7, inset 0 -1px $colors$gray7',
       '&:focus': {
-        boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+        boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
       },
     },
   },
@@ -75,14 +75,14 @@ export const ControlGroup = styled('div', {
     boxShadow:
       'inset 0 1px $colors$gray7, inset -1px 0 $colors$gray7, inset 0 -1px $colors$gray7',
     '&:focus-within': {
-      boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+      boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
     },
     '&:first-child': {
       borderTopLeftRadius: '$1',
       borderBottomLeftRadius: '$1',
       boxShadow: 'inset 0 0 0 1px $colors$gray7',
       '&:focus-within': {
-        boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+        boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
       },
     },
     '&:last-child': {
@@ -91,7 +91,7 @@ export const ControlGroup = styled('div', {
       boxShadow:
         'inset 0 1px $colors$gray7, inset -1px 0 $colors$gray7, inset 0 -1px $colors$gray7',
       '&:focus-within': {
-        boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+        boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
       },
     },
   },

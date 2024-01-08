@@ -48,9 +48,9 @@ const StyledSwitch = styled(SwitchPrimitive.Root, {
   },
 
   '&[data-state="checked"]': {
-    backgroundColor: '$blue9',
+    backgroundColor: '$info9',
     '&:focus': {
-      boxShadow: '0 0 0 2px $colors$blue8',
+      boxShadow: '0 0 0 2px $colors$info8',
     },
   },
 

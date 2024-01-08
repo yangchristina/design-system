@@ -594,9 +594,9 @@ function Home() {
               Flex
             </Heading>
             <Flex direction="column" align="center" gap="6">
-              <Box css={{ width: '$8', height: '$8', bc: '$blue9' }}></Box>
-              <Box css={{ width: '$5', height: '$5', bc: '$blue9' }}></Box>
-              <Box css={{ width: '$7', height: '$7', bc: '$blue9' }}></Box>
+              <Box css={{ width: '$8', height: '$8', bc: '$info9' }}></Box>
+              <Box css={{ width: '$5', height: '$5', bc: '$info9' }}></Box>
+              <Box css={{ width: '$7', height: '$7', bc: '$info9' }}></Box>
             </Flex>
           </Container>
         </Section>
@@ -609,13 +609,13 @@ function Home() {
               Grid
             </Heading>
             <Grid columns="4" align="center" gapX="3" gapY="6">
-              <Box css={{ height: '$9', bc: '$blue9' }}></Box>
-              <Box css={{ height: '$7', bc: '$blue9' }}></Box>
-              <Box css={{ height: '$7', bc: '$blue9' }}></Box>
-              <Box css={{ height: '$7', bc: '$blue9' }}></Box>
-              <Box css={{ height: '$7', bc: '$blue9' }}></Box>
-              <Box css={{ height: '$7', bc: '$blue9' }}></Box>
-              <Box css={{ height: '$7', bc: '$blue9' }}></Box>
+              <Box css={{ height: '$9', bc: '$info9' }}></Box>
+              <Box css={{ height: '$7', bc: '$info9' }}></Box>
+              <Box css={{ height: '$7', bc: '$info9' }}></Box>
+              <Box css={{ height: '$7', bc: '$info9' }}></Box>
+              <Box css={{ height: '$7', bc: '$info9' }}></Box>
+              <Box css={{ height: '$7', bc: '$info9' }}></Box>
+              <Box css={{ height: '$7', bc: '$info9' }}></Box>
             </Grid>
           </Container>
         </Section>

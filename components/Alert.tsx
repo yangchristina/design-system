@@ -30,8 +30,8 @@ export const Alert = styled('div', {
         borderColor: '$gray6',
       },
       blue: {
-        backgroundColor: '$blue2',
-        borderColor: '$blue6',
+        backgroundColor: '$info2',
+        borderColor: '$info6',
       },
       green: {
         backgroundColor: '$green2',

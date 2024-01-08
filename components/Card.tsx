@@ -46,7 +46,7 @@ export const Card = styled('div', {
         },
         '&:focus': {
           '&::before': {
-            boxShadow: 'inset 0 0 0 1px $colors$blue8, 0 0 0 1px $colors$blue8',
+            boxShadow: 'inset 0 0 0 1px $colors$info8, 0 0 0 1px $colors$info8',
           },
         },
       },
@@ -79,7 +79,7 @@ export const Card = styled('div', {
           },
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$blue8, 0 0 0 1px $colors$blue8',
+          boxShadow: 'inset 0 0 0 1px $colors$info8, 0 0 0 1px $colors$info8',
         },
       },
       active: {
@@ -91,7 +91,7 @@ export const Card = styled('div', {
           opacity: '1',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$blue8, 0 0 0 1px $colors$blue8',
+          boxShadow: 'inset 0 0 0 1px $colors$info8, 0 0 0 1px $colors$info8',
         },
       },
     },

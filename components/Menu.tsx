@@ -28,7 +28,7 @@ export const itemCss = css(baseItemCss, {
 
   '&[data-highlighted]': {
     outline: 'none',
-    backgroundColor: '$blue9',
+    backgroundColor: '$info9',
     color: 'white',
   },
 

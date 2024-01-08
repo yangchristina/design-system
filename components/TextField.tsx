@@ -26,7 +26,7 @@ export const TextField = styled('input', {
   fontVariantNumeric: 'tabular-nums',
 
   '&:-webkit-autofill': {
-    boxShadow: 'inset 0 0 0 1px $colors$blue6, inset 0 0 0 100px $colors$blue3',
+    boxShadow: 'inset 0 0 0 1px $colors$info6, inset 0 0 0 100px $colors$info3',
   },
 
   '&:-webkit-autofill::first-line': {
@@ -35,10 +35,10 @@ export const TextField = styled('input', {
   },
 
   '&:focus': {
-    boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+    boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
     '&:-webkit-autofill': {
       boxShadow:
-        'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8, inset 0 0 0 100px $colors$blue3',
+        'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8, inset 0 0 0 100px $colors$info3',
     },
   },
   '&::placeholder': {
@@ -94,7 +94,7 @@ export const TextField = styled('input', {
         },
         '&:focus': {
           backgroundColor: '$loContrast',
-          boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+          boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
         },
         '&:disabled': {
           backgroundColor: 'transparent',

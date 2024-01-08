@@ -91,12 +91,12 @@ export const TreeItem = styled('div', {
         },
       },
       blue: {
-        backgroundColor: '$blue3',
+        backgroundColor: '$info3',
         '&:hover': {
-          backgroundColor: '$blue4',
+          backgroundColor: '$info4',
         },
         '&:active': {
-          backgroundColor: '$blue5',
+          backgroundColor: '$info5',
         },
       },
       cyan: {

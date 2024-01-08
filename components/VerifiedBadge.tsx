@@ -6,7 +6,7 @@ import { CheckIcon } from '@radix-ui/react-icons';
 
 const StyledVerifiedBadge = styled('div', Flex, {
   alignItems: 'center',
-  backgroundColor: '$blue9',
+  backgroundColor: '$info9',
   borderRadius: '$round',
   color: 'white',
   flexShrink: 0,

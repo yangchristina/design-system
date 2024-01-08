@@ -29,10 +29,10 @@ export const Link = styled('a', {
   variants: {
     variant: {
       blue: {
-        color: '$blue11',
-        textDecorationColor: '$blue4',
+        color: '$info11',
+        textDecorationColor: '$info4',
         '&:focus': {
-          outlineColor: '$blue8',
+          outlineColor: '$info8',
         },
       },
       subtle: {

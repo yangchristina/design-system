@@ -88,24 +88,24 @@ export const buttonStyles = {
         },
       },
       blue: {
-        backgroundColor: '$blue2',
-        boxShadow: 'inset 0 0 0 1px $colors$blue7',
-        color: '$blue11',
+        backgroundColor: '$info2',
+        boxShadow: 'inset 0 0 0 1px $colors$info7',
+        color: '$info11',
         '@hover': {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$blue8',
+            boxShadow: 'inset 0 0 0 1px $colors$info8',
           },
         },
         '&:active': {
-          backgroundColor: '$blue3',
-          boxShadow: 'inset 0 0 0 1px $colors$blue8',
+          backgroundColor: '$info3',
+          boxShadow: 'inset 0 0 0 1px $colors$info8',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$blue8, 0 0 0 1px $colors$blue8',
+          boxShadow: 'inset 0 0 0 1px $colors$info8, 0 0 0 1px $colors$info8',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$blue4',
-          boxShadow: 'inset 0 0 0 1px $colors$blue8',
+          backgroundColor: '$info4',
+          boxShadow: 'inset 0 0 0 1px $colors$info8',
         },
       },
       green: {
@@ -257,18 +257,18 @@ export const buttonStyles = {
         backgroundColor: 'transparent',
         '@hover': {
           '&:hover': {
-            backgroundColor: '$blueA3',
+            backgroundColor: '$infoA3',
             boxShadow: 'none',
           },
         },
         '&:active': {
-          backgroundColor: '$blueA4',
+          backgroundColor: '$infoA4',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$blueA8, 0 0 0 1px $colors$blueA8',
+          boxShadow: 'inset 0 0 0 1px $colors$infoA8, 0 0 0 1px $colors$infoA8',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$blueA4',
+          backgroundColor: '$infoA4',
           boxShadow: 'none',
         },
       },

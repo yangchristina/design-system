@@ -36,7 +36,7 @@ export const TabLink = styled('a', {
           bottom: 0,
           width: '100%',
           height: 2,
-          backgroundColor: '$blue9',
+          backgroundColor: '$info9',
         },
       },
     },

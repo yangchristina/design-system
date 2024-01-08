@@ -67,7 +67,7 @@ export const Text = styled('span', {
         color: '$indigo11',
       },
       blue: {
-        color: '$blue11',
+        color: '$info11',
       },
       cyan: {
         color: '$cyan11',
@@ -150,14 +150,14 @@ export const Text = styled('span', {
       variant: 'indigo',
       gradient: 'true',
       css: {
-        background: 'linear-gradient(to right, $indigo11, $blue11)',
+        background: 'linear-gradient(to right, $indigo11, $info11)',
       },
     },
     {
       variant: 'blue',
       gradient: 'true',
       css: {
-        background: 'linear-gradient(to right, $blue11, $cyan11)',
+        background: 'linear-gradient(to right, $info11, $cyan11)',
       },
     },
     {

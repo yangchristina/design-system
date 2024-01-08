@@ -17,7 +17,7 @@ const SelectWrapper = styled('div', {
 
   '&:focus-within': {
     zIndex: 1,
-    boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+    boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
   },
 });
 

@@ -31,7 +31,7 @@ export const Banner = styled('div', {
         backgroundColor: '$gray3',
       },
       blue: {
-        backgroundColor: '$blue3',
+        backgroundColor: '$info3',
       },
       green: {
         backgroundColor: '$green3',
@@ -63,7 +63,7 @@ export const Banner = styled('div', {
       border: 'true',
       variant: 'blue',
       css: {
-        borderColor: '$blue11',
+        borderColor: '$info11',
       },
     },
     {

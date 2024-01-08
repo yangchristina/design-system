@@ -556,7 +556,7 @@ function Buttons() {
             fontVariantNumeric: 'tabular-nums',
 
             '&:-webkit-autofill': {
-              boxShadow: 'inset 0 0 0 1px $colors$blue6, inset 0 0 0 100px $colors$blue3',
+              boxShadow: 'inset 0 0 0 1px $colors$info6, inset 0 0 0 100px $colors$info3',
             },
 
             '&:-webkit-autofill::first-line': {
@@ -565,10 +565,10 @@ function Buttons() {
             },
 
             '&:focus': {
-              boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
+              boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
               '&:-webkit-autofill': {
                 boxShadow:
-                  'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8, inset 0 0 0 100px $colors$blue3',
+                  'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8, inset 0 0 0 100px $colors$info3',
               },
             },
             '&::placeholder': {
@@ -586,7 +586,7 @@ function Buttons() {
             fontVariantNumeric: 'tabular-nums',
 
             '&:-webkit-autofill': {
-              boxShadow: 'inset 0 0 0 1px $colors$blueA6, inset 0 0 0 100px $colors$blueA3',
+              boxShadow: 'inset 0 0 0 1px $colors$infoA6, inset 0 0 0 100px $colors$infoA3',
             },
 
             '&:-webkit-autofill::first-line': {
@@ -595,10 +595,10 @@ function Buttons() {
             },
 
             '&:focus': {
-              boxShadow: 'inset 0px 0px 0px 1px $colors$blueA8, 0px 0px 0px 1px $colors$blueA8',
+              boxShadow: 'inset 0px 0px 0px 1px $colors$infoA8, 0px 0px 0px 1px $colors$infoA8',
               '&:-webkit-autofill': {
                 boxShadow:
-                  'inset 0px 0px 0px 1px $colors$blueA8, 0px 0px 0px 1px $colors$blueA8, inset 0 0 0 100px $colors$blueA3',
+                  'inset 0px 0px 0px 1px $colors$infoA8, 0px 0px 0px 1px $colors$infoA8, inset 0 0 0 100px $colors$infoA3',
               },
             },
             '&::placeholder': {

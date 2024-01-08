@@ -43,7 +43,7 @@ export const AppBar = styled('div', {
         backgroundColor: '$gray2',
       },
       accent: {
-        backgroundColor: '$blue9',
+        backgroundColor: '$info9',
       },
     },
   },
@@ -80,7 +80,7 @@ export const AppBar = styled('div', {
       border: 'true',
       color: 'accent',
       css: {
-        borderColor: '$blue11',
+        borderColor: '$info11',
       },
     },
     {
