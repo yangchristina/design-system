@@ -40,7 +40,7 @@ import { Slider, ThemePanel } from '@radix-ui/themes';
 import { Dialog, DialogTrigger, DialogContent } from '../components/Dialog';
 import { Sheet, SheetTrigger, SheetContent } from '../components/Sheet';
 import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '../components/Popover';
-import { Checkbox } from '../components/Checkbox';
+import { Checkbox } from '../components/Checkbox1';
 import { RadioGroup, Radio } from '../components/Radio';
 import { ProgressBar } from '../components/ProgressBar';
 import {
@@ -877,9 +877,9 @@ function Home() {
             </Flex>
             <Heading css={{ mb: '$6' }}>Variants</Heading>
             <Flex css={{ gap: '$5', fw: 'wrap', mb: '$6' }}>
-              <Badge size="2" variant="red">
+              <Badge size="2" variant="green">
                 <Box css={{ mr: 5 }}>
-                  <Status size="1" variant="red" />
+                  <Status size="1" variant="green" />
                 </Box>
                 Live
               </Badge>
@@ -895,23 +895,11 @@ function Home() {
               <Badge as="a" href="#" size="2" variant="red" interactive>
                 New
               </Badge>
-              <Badge as="button" size="2" variant="purple" interactive>
+              <Badge as="button" size="2" variant="red" interactive>
                 Failed
                 <Box css={{ ml: 5 }}>
                   <CaretDownIcon />
                 </Box>
-              </Badge>
-              <Badge as="button" size="2" variant="violet" interactive>
-                New
-              </Badge>
-              <Badge as="button" size="2" variant="indigo" interactive disabled>
-                Disabled
-              </Badge>
-              <Badge as="button" size="2" variant="blue" interactive>
-                Pending
-              </Badge>
-              <Badge as="button" size="2" variant="green" interactive>
-                Approved
               </Badge>
             </Flex>
           </Container>
