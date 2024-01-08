@@ -240,7 +240,7 @@ export function createThemeValue(theme: ColorTheme, variables?: Record<string, s
         ...mapColor(success, 'success'),
         ...mapColor(success + 'A', 'successA'),
         ...mapColor(info, 'info'),
-        ...mapColor(info + 'A', 'infoA')
+        ...mapColor(info + 'A', 'infoA'),
         ...mapColor(warning, 'warning'),
         ...mapColor(warning + 'A', 'warningA'),
         ...mapColor(gray, 'gray'),
