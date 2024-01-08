@@ -406,7 +406,7 @@ const avocadoVariables = {
 const crimsonTheme: ColorBase = {
   primary: 'crimson',
   secondary: 'ruby',
-  accent: 'crimsonDark',
+  accent: 'crimson',
   gray: 'mauve',
   error: 'red',
   success: 'green',
@@ -417,7 +417,7 @@ const crimsonTheme: ColorBase = {
 const tealTheme: ColorBase = {
   primary: 'teal',
   secondary: 'tealA',
-  accent: 'tealDark',
+  accent: 'teal',
   gray: 'sage',
   error: 'red',
   success: 'green',
@@ -428,7 +428,7 @@ const tealTheme: ColorBase = {
 const indigoTheme: ColorBase = {
   primary: 'indigo',
   secondary: 'jade',
-  accent: 'indigoDark',
+  accent: 'indigo',
   gray: 'slate',
   error: 'red',
   success: 'green',
@@ -451,7 +451,7 @@ const avocadoTheme: ColorBase = {
 const violetTheme: ColorBase = {
   primary: 'violet',
   secondary: 'violetA',
-  accent: 'violetDark',
+  accent: 'violet',
   gray: 'mauve',
   error: 'red',
   success: 'green',
@@ -462,7 +462,7 @@ const violetTheme: ColorBase = {
 const lavendarBlushTheme: ColorBase = {
   primary: 'pink',
   secondary: 'plum',
-  accent: 'pinkDark',
+  accent: 'pink',
   gray: 'mauve',
   error: 'red',
   success: 'green',
@@ -473,7 +473,7 @@ const lavendarBlushTheme: ColorBase = {
 const matchaTheme: ColorBase = {
   primary: 'grass',
   secondary: 'grassA',
-  accent: 'grassDark',
+  accent: 'grass',
   gray: 'sage',
   error: 'red',
   success: 'green',
