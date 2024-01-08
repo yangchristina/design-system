@@ -155,7 +155,7 @@ export const {
       mono: 'Söhne Mono, menlo, monospace',
     },
     shadows: {
-      border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay8',
+      border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay6',
       borderHiContrast: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay12',
       common: `0 1px calc(3px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.15)`,
       boxShadow: `$border, $common`,

@@ -46,7 +46,7 @@ const StyledTrigger = styled(SelectTrigger, {
 
     variants: {
         ...selectColorVariants,
-        border: {
+        border: { // TODO: these overlays need to be adjusted if using
             thin5: {
                 border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay5',
             },

@@ -8,19 +8,19 @@ export const overlayStyles = css({
   variants: {
     brightness: {
       'dark': {
-        backgroundColor: '$overlay9',
-      },
-      'medium': {
-        backgroundColor: '$overlay8',
-      },
-      'medium-light': {
-        backgroundColor: '$overlay6',
-      },
-      'light': {
         backgroundColor: '$overlay5',
       },
-      'lighter': {
+      'medium': {
         backgroundColor: '$overlay4',
+      },
+      'medium-light': {
+        backgroundColor: '$overlay3',
+      },
+      'light': {
+        backgroundColor: '$overlay2',
+      },
+      'lighter': {
+        backgroundColor: '$overlay1',
       },
       'none': {
         backgroundColor: 'transparent',

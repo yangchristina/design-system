@@ -50,7 +50,7 @@ const Outer = styled('div', {
         }
     },
     defaultVariants: {
-        color: 'overlay7',
+        color: 'overlay5',
     }
 })
 
