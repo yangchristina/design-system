@@ -132,22 +132,22 @@ export const buttonStyles = {
       red: {
         backgroundColor: '$loContrast',
         boxShadow: 'inset 0 0 0 1px $colors$gray7',
-        color: '$red11',
+        color: '$error11',
         '@hover': {
           '&:hover': {
             boxShadow: 'inset 0 0 0 1px $colors$gray8',
           },
         },
         '&:active': {
-          backgroundColor: '$red3',
-          boxShadow: 'inset 0 0 0 1px $colors$red8',
+          backgroundColor: '$error3',
+          boxShadow: 'inset 0 0 0 1px $colors$error8',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$red8, 0 0 0 1px $colors$red8',
+          boxShadow: 'inset 0 0 0 1px $colors$error8, 0 0 0 1px $colors$error8',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$red4',
-          boxShadow: 'inset 0 0 0 1px $colors$red8',
+          backgroundColor: '$error4',
+          boxShadow: 'inset 0 0 0 1px $colors$error8',
         },
       },
       transparentWhite: {
@@ -303,18 +303,18 @@ export const buttonStyles = {
         backgroundColor: 'transparent',
         '@hover': {
           '&:hover': {
-            backgroundColor: '$redA3',
+            backgroundColor: '$errorA3',
             boxShadow: 'none',
           },
         },
         '&:active': {
-          backgroundColor: '$redA4',
+          backgroundColor: '$errorA4',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$redA8, 0 0 0 1px $colors$redA8',
+          boxShadow: 'inset 0 0 0 1px $colors$errorA8, 0 0 0 1px $colors$errorA8',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$redA4',
+          backgroundColor: '$errorA4',
           boxShadow: 'none',
         },
       },

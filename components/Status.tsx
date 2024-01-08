@@ -30,7 +30,7 @@ export const Status = styled('div', {
         backgroundColor: '$yellow9',
       },
       red: {
-        backgroundColor: '$red9',
+        backgroundColor: '$error9',
       },
     },
   },

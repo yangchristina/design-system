@@ -106,9 +106,9 @@ export const TextField = styled('input', {
     },
     state: {
       invalid: {
-        boxShadow: 'inset 0 0 0 1px $colors$red7',
+        boxShadow: 'inset 0 0 0 1px $colors$error7',
         '&:focus': {
-          boxShadow: 'inset 0px 0px 0px 1px $colors$red8, 0px 0px 0px 1px $colors$red8',
+          boxShadow: 'inset 0px 0px 0px 1px $colors$error8, 0px 0px 0px 1px $colors$error8',
         },
       },
       valid: {

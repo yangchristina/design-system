@@ -701,50 +701,6 @@ function Home() {
                 <Text
                   size="9"
                   as="h2"
-                  variant="pink"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="purple"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="violet"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="indigo"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
                   variant="blue"
                   gradient
                   css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
@@ -756,84 +712,7 @@ function Home() {
                 <Text
                   size="9"
                   as="h2"
-                  variant="cyan"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="teal"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
                   variant="green"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="lime"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="yellow"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="orange"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="gold"
-                  gradient
-                  css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
-                >
-                  The quick brown fox jumped over the lazy dog
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text
-                  size="9"
-                  as="h2"
-                  variant="bronze"
                   gradient
                   css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
                 >
@@ -865,77 +744,12 @@ function Home() {
             </Flex>
             <Flex css={{ fd: 'column', gap: '$4', mt: '$6' }}>
               <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="h1" variant="red" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="h2" variant="crimson" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="h3" variant="pink" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="purple" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="violet" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="indigo" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
                 <Text size="6" as="p" variant="blue" css={{ lineHeight: '30px' }}>
                   The quick brown fox jumped over the lazy dog.
                 </Text>
               </Flex>
               <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="cyan" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="teal" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
                 <Text size="6" as="p" variant="green" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="lime" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="yellow" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="orange" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="gold" css={{ lineHeight: '30px' }}>
-                  The quick brown fox jumped over the lazy dog.
-                </Text>
-              </Flex>
-              <Flex css={{ ai: 'center' }}>
-                <Text size="6" as="p" variant="bronze" css={{ lineHeight: '30px' }}>
                   The quick brown fox jumped over the lazy dog.
                 </Text>
               </Flex>
@@ -1069,59 +883,17 @@ function Home() {
                 </Box>
                 Live
               </Badge>
-              <Badge size="2" variant="crimson">
-                Approved
-              </Badge>
-              <Badge size="2" variant="pink">
-                Pending
-              </Badge>
-              <Badge size="2" variant="purple">
-                Failed
-              </Badge>
-              <Badge size="2" variant="violet">
-                New
-              </Badge>
-              <Badge size="2" variant="indigo">
-                Approved
-              </Badge>
               <Badge size="2" variant="blue">
                 Pending
               </Badge>
-              <Badge size="2" variant="cyan">
-                Failed
-              </Badge>
-              <Badge size="2" variant="teal">
-                New
-              </Badge>
               <Badge size="2" variant="green">
                 Approved
-              </Badge>
-              <Badge size="2" variant="lime">
-                Pending
-              </Badge>
-              <Badge size="2" variant="yellow">
-                Failed
-              </Badge>
-              <Badge size="2" variant="orange">
-                Failed
-              </Badge>
-              <Badge size="2" variant="gold">
-                Winner
-              </Badge>
-              <Badge size="2" variant="bronze">
-                Runner-up
               </Badge>
             </Flex>
             <Heading css={{ mb: '$6' }}>Interactive variant</Heading>
             <Flex css={{ gap: '$5', fw: 'wrap', mt: '$6' }}>
               <Badge as="a" href="#" size="2" variant="red" interactive>
                 New
-              </Badge>
-              <Badge as="button" size="2" variant="crimson" interactive>
-                Approved
-              </Badge>
-              <Badge as="button" size="2" variant="pink" interactive>
-                Pending
               </Badge>
               <Badge as="button" size="2" variant="purple" interactive>
                 Failed
@@ -1132,38 +904,14 @@ function Home() {
               <Badge as="button" size="2" variant="violet" interactive>
                 New
               </Badge>
-              <Badge as="button" size="2" variant="indigo" interactive>
-                Approved
+              <Badge as="button" size="2" variant="indigo" interactive disabled>
+                Disabled
               </Badge>
               <Badge as="button" size="2" variant="blue" interactive>
                 Pending
               </Badge>
-              <Badge as="button" size="2" variant="cyan" interactive>
-                Failed
-              </Badge>
-              <Badge as="button" size="2" variant="teal" interactive>
-                New
-              </Badge>
               <Badge as="button" size="2" variant="green" interactive>
                 Approved
-              </Badge>
-              <Badge as="button" size="2" variant="lime" interactive>
-                Pending
-              </Badge>
-              <Badge as="button" size="2" variant="yellow" interactive>
-                Failed
-              </Badge>
-              <Badge as="button" size="2" variant="orange" interactive>
-                Failed
-              </Badge>
-              <Badge as="button" size="2" variant="gold" interactive>
-                Winner
-              </Badge>
-              <Badge as="button" size="2" variant="bronze" interactive>
-                Runner-up
-              </Badge>
-              <Badge as="button" size="2" variant="bronze" interactive disabled>
-                Disabled
               </Badge>
             </Flex>
           </Container>

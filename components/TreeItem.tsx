@@ -37,12 +37,12 @@ export const TreeItem = styled('div', {
         },
       },
       red: {
-        backgroundColor: '$red3',
+        backgroundColor: '$error3',
         '&:hover': {
-          backgroundColor: '$red4',
+          backgroundColor: '$error4',
         },
         '&:active': {
-          backgroundColor: '$red5',
+          backgroundColor: '$error5',
         },
       },
       crimson: {
@@ -52,15 +52,6 @@ export const TreeItem = styled('div', {
         },
         '&:active': {
           backgroundColor: '$crimson5',
-        },
-      },
-      pink: {
-        backgroundColor: '$pink3',
-        '&:hover': {
-          backgroundColor: '$pink4',
-        },
-        '&:active': {
-          backgroundColor: '$pink5',
         },
       },
       purple: {

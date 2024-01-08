@@ -71,7 +71,7 @@ export function Layers() {
           <Text size="1">TreeItem</Text>
         </TreeItem>
 
-        <TreeItem css={{ backgroundColor: '$red5' }}>
+        <TreeItem css={{ backgroundColor: '$error5' }}>
           <Box css={{ mr: '$2' }}>
             <RadiobuttonIcon />
           </Box>

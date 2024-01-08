@@ -61,24 +61,10 @@ export const Badge = styled('span', {
         },
       },
       red: {
-        backgroundColor: '$red3',
-        color: '$red11',
+        backgroundColor: '$error3',
+        color: '$error11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$red8, 0 0 0 1px $colors$red8',
-        },
-      },
-      crimson: {
-        backgroundColor: '$crimson3',
-        color: '$crimson11',
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$crimson8, 0 0 0 1px $colors$crimson8',
-        },
-      },
-      pink: {
-        backgroundColor: '$pink3',
-        color: '$pink11',
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$pink8, 0 0 0 1px $colors$pink8',
+          boxShadow: 'inset 0 0 0 1px $colors$error8, 0 0 0 1px $colors$error8',
         },
       },
       purple: {
@@ -178,14 +164,14 @@ export const Badge = styled('span', {
       css: {
         '@hover': {
           '&:hover': {
-            backgroundColor: '$red4',
+            backgroundColor: '$error4',
           },
         },
         '&:active': {
-          backgroundColor: '$red5',
+          backgroundColor: '$error5',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$red5',
+          backgroundColor: '$error5',
         },
       },
     },
@@ -203,23 +189,6 @@ export const Badge = styled('span', {
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$crimson5',
-        },
-      },
-    },
-    {
-      interactive: true,
-      variant: 'pink',
-      css: {
-        '@hover': {
-          '&:hover': {
-            backgroundColor: '$pink4',
-          },
-        },
-        '&:active': {
-          backgroundColor: '$pink5',
-        },
-        '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$pink5',
         },
       },
     },

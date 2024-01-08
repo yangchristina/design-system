@@ -53,7 +53,7 @@ const Banner = styled('div', {
                 backgroundColor: '$success3',
             },
             red: {
-                backgroundColor: '$red3',
+                backgroundColor: '$error3',
             },
             primary: {
                 backgroundColor: '$primary5',

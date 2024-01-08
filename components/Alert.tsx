@@ -38,8 +38,8 @@ export const Alert = styled('div', {
         borderColor: '$success6',
       },
       red: {
-        backgroundColor: '$red2',
-        borderColor: '$red6',
+        backgroundColor: '$error2',
+        borderColor: '$error6',
       },
     },
   },
