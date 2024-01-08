@@ -215,18 +215,20 @@ export function createThemeValue(theme: ColorTheme, variables?: Record<string, s
         primary, secondary, accent, gray, error, success, info, warning,
     } = theme
 
+    const suffix = theme.isLight ? '' : 'Dark'
+
     const colors = {
         ...(theme.isLight ? lightDefaults : darkDefaults),
-        ...radixScales[primary],
-        ...radixScales[primary + 'A'],
-        ...radixScales[secondary],
-        ...radixScales[secondary + 'A'],
-        ...radixScales[accent],
-        ...radixScales[gray],
-        ...radixScales[error],
-        ...radixScales[success],
-        ...radixScales[info],
-        ...radixScales[warning],
+        ...radixScales[primary + suffix],
+        ...radixScales[primary + suffix + 'A'],
+        ...radixScales[secondary + suffix],
+        ...radixScales[secondary + suffix + 'A'],
+        ...radixScales[accent + suffix],
+        ...radixScales[gray + suffix],
+        ...radixScales[error + suffix],
+        ...radixScales[success + suffix],
+        ...radixScales[info + suffix],
+        ...radixScales[warning + suffix],
         ...mapColor(error, 'error'),
         ...mapColor(success, 'success'),
         ...mapColor(info, 'info'),
