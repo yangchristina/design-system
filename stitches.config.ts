@@ -416,7 +416,7 @@ const crimsonTheme: ColorBase = {
 
 const tealTheme: ColorBase = {
   primary: 'teal',
-  secondary: 'tealA',
+  secondary: 'mint',
   accent: 'teal',
   gray: 'sage',
   error: 'red',
@@ -450,7 +450,7 @@ const avocadoTheme: ColorBase = {
 
 const violetTheme: ColorBase = {
   primary: 'violet',
-  secondary: 'violetA',
+  secondary: 'plum',
   accent: 'violet',
   gray: 'mauve',
   error: 'red',
@@ -472,7 +472,7 @@ const lavendarBlushTheme: ColorBase = {
 
 const matchaTheme: ColorBase = {
   primary: 'grass',
-  secondary: 'grassA',
+  secondary: 'bronze',
   accent: 'grass',
   gray: 'sage',
   error: 'red',
