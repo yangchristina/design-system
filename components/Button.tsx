@@ -31,9 +31,9 @@ export const buttonStyles = {
   fontVariantNumeric: 'tabular-nums',
 
   '&:disabled': {
-    backgroundColor: '$slate2',
-    boxShadow: 'inset 0 0 0 1px $colors$slate7',
-    color: '$slate8',
+    backgroundColor: '$gray2',
+    boxShadow: 'inset 0 0 0 1px $colors$gray7',
+    color: '$gray8',
     pointerEvents: 'none',
   },
 
@@ -68,23 +68,23 @@ export const buttonStyles = {
       },
       gray: {
         backgroundColor: '$loContrast',
-        boxShadow: 'inset 0 0 0 1px $colors$slate7',
+        boxShadow: 'inset 0 0 0 1px $colors$gray7',
         color: '$hiContrast',
         '@hover': {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$slate8',
+            boxShadow: 'inset 0 0 0 1px $colors$gray8',
           },
         },
         '&:active': {
-          backgroundColor: '$slate2',
-          boxShadow: 'inset 0 0 0 1px $colors$slate8',
+          backgroundColor: '$gray2',
+          boxShadow: 'inset 0 0 0 1px $colors$gray8',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$slate8, 0 0 0 1px $colors$slate8',
+          boxShadow: 'inset 0 0 0 1px $colors$gray8, 0 0 0 1px $colors$gray8',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$slate4',
-          boxShadow: 'inset 0 0 0 1px $colors$slate8',
+          backgroundColor: '$gray4',
+          boxShadow: 'inset 0 0 0 1px $colors$gray8',
         },
       },
       blue: {
@@ -131,11 +131,11 @@ export const buttonStyles = {
       },
       red: {
         backgroundColor: '$loContrast',
-        boxShadow: 'inset 0 0 0 1px $colors$slate7',
+        boxShadow: 'inset 0 0 0 1px $colors$gray7',
         color: '$red11',
         '@hover': {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$slate8',
+            boxShadow: 'inset 0 0 0 1px $colors$gray8',
           },
         },
         '&:active': {
@@ -183,38 +183,38 @@ export const buttonStyles = {
     },
     state: {
       active: {
-        backgroundColor: '$slate4',
-        boxShadow: 'inset 0 0 0 1px $colors$slate8',
-        color: '$slate11',
+        backgroundColor: '$gray4',
+        boxShadow: 'inset 0 0 0 1px $colors$gray8',
+        color: '$gray11',
         '@hover': {
           '&:hover': {
-            backgroundColor: '$slate5',
-            boxShadow: 'inset 0 0 0 1px $colors$slate8',
+            backgroundColor: '$gray5',
+            boxShadow: 'inset 0 0 0 1px $colors$gray8',
           },
         },
         '&:active': {
-          backgroundColor: '$slate5',
+          backgroundColor: '$gray5',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$slate8, 0 0 0 1px $colors$slate8',
+          boxShadow: 'inset 0 0 0 1px $colors$gray8, 0 0 0 1px $colors$gray8',
         },
       },
       waiting: {
-        backgroundColor: '$slate4',
-        boxShadow: 'inset 0 0 0 1px $colors$slate8',
+        backgroundColor: '$gray4',
+        boxShadow: 'inset 0 0 0 1px $colors$gray8',
         color: 'transparent',
         pointerEvents: 'none',
         '@hover': {
           '&:hover': {
-            backgroundColor: '$slate5',
-            boxShadow: 'inset 0 0 0 1px $colors$slate8',
+            backgroundColor: '$gray5',
+            boxShadow: 'inset 0 0 0 1px $colors$gray8',
           },
         },
         '&:active': {
-          backgroundColor: '$slate5',
+          backgroundColor: '$gray5',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$slate8',
+          boxShadow: 'inset 0 0 0 1px $colors$gray8',
         },
       },
     },
@@ -234,18 +234,18 @@ export const buttonStyles = {
         color: '$hiContrast',
         '@hover': {
           '&:hover': {
-            backgroundColor: '$slateA3',
+            backgroundColor: '$grayA3',
             boxShadow: 'none',
           },
         },
         '&:active': {
-          backgroundColor: '$slateA4',
+          backgroundColor: '$grayA4',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$slateA8, 0 0 0 1px $colors$slateA8',
+          boxShadow: 'inset 0 0 0 1px $colors$grayA8, 0 0 0 1px $colors$grayA8',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$slateA4',
+          backgroundColor: '$grayA4',
           boxShadow: 'none',
         },
       },

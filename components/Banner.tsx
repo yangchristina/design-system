@@ -28,7 +28,7 @@ export const Banner = styled('div', {
         backgroundColor: '$loContrast',
       },
       gray: {
-        backgroundColor: '$slate3',
+        backgroundColor: '$gray3',
       },
       blue: {
         backgroundColor: '$blue3',
@@ -56,7 +56,7 @@ export const Banner = styled('div', {
       border: 'true',
       variant: 'gray',
       css: {
-        borderColor: '$slate6',
+        borderColor: '$gray6',
       },
     },
     {
@@ -70,7 +70,7 @@ export const Banner = styled('div', {
       border: 'true',
       variant: 'loContrast',
       css: {
-        borderColor: '$slate6',
+        borderColor: '$gray6',
       },
     },
   ],

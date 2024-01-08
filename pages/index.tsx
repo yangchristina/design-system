@@ -481,17 +481,17 @@ function Home() {
               Section
             </Heading>
           </Container>
-          <Section size="1" css={{ bc: '$slate3' }}>
+          <Section size="1" css={{ bc: '$gray3' }}>
             <Text as="p" size="4" css={{ ta: 'center' }}>
               Section 1
             </Text>
           </Section>
-          <Section size="2" css={{ bc: '$slate3', my: '$1' }}>
+          <Section size="2" css={{ bc: '$gray3', my: '$1' }}>
             <Text as="p" size="4" css={{ ta: 'center' }}>
               Section 2
             </Text>
           </Section>
-          <Section size="3" css={{ bc: '$slate3' }}>
+          <Section size="3" css={{ bc: '$gray3' }}>
             <Text as="p" size="4" css={{ ta: 'center' }}>
               Section 3
             </Text>
@@ -510,7 +510,7 @@ function Home() {
             <Box
               css={{
                 p: '$5',
-                border: '1px solid $slate6',
+                border: '1px solid $gray6',
                 borderRadius: '$3',
               }}
             >
@@ -530,7 +530,7 @@ function Home() {
                   css={{ mb: '$3' }}
                 />
                 <Flex css={{ ai: 'center', jc: 'space-between' }}>
-                  <Text size="2" css={{ color: '$slate11' }}>
+                  <Text size="2" css={{ color: '$gray11' }}>
                     Forgot password
                   </Text>
                   <Button size="2" variant="blue">
@@ -580,7 +580,7 @@ function Home() {
             </Grid>
           </Container>
           <Container size="4">
-            <Text as="p" size="3" css={{ ta: 'center', bc: '$slate3', py: '$2' }}>
+            <Text as="p" size="3" css={{ ta: 'center', bc: '$gray3', py: '$2' }}>
               No max width
             </Text>
           </Container>
@@ -1563,7 +1563,7 @@ function Home() {
                 Colm Tuite
               </Text>
               <VerifiedBadge css={{ as: 'center', mx: '$1' }} />
-              <Text size="3" css={{ color: '$slate11' }}>
+              <Text size="3" css={{ color: '$gray11' }}>
                 @colmtuite
               </Text>
             </Flex>
@@ -1667,7 +1667,7 @@ function Home() {
                   <Heading css={{ mb: '$2' }}>
                     Modulz raises $4.2M to close the gap between design and code
                   </Heading>
-                  <Text size="3" css={{ color: '$slate11', lineHeight: '23px' }}>
+                  <Text size="3" css={{ color: '$gray11', lineHeight: '23px' }}>
                     Modulz is a visual code editor that empowers teams to design, develop, document
                     and deploy a design system, without writing code.
                   </Text>
@@ -1678,7 +1678,7 @@ function Home() {
                   <Heading css={{ mb: '$2' }}>
                     Modulz raises $4.2M to close the gap between design and code
                   </Heading>
-                  <Text size="3" css={{ color: '$slate11', lineHeight: '23px' }}>
+                  <Text size="3" css={{ color: '$gray11', lineHeight: '23px' }}>
                     Modulz is a visual code editor that empowers teams to design, develop, document
                     and deploy a design system, without writing code.
                   </Text>
@@ -1693,12 +1693,12 @@ function Home() {
                           mr: '$1',
                         }}
                       />
-                      <Text size="2" css={{ color: '$slate11' }}>
+                      <Text size="2" css={{ color: '$gray11' }}>
                         Colm Tuite
                       </Text>
                     </Flex>
                     <Box>
-                      <Text size="2" css={{ color: '$slate11' }}>
+                      <Text size="2" css={{ color: '$gray11' }}>
                         May 2020
                       </Text>
                     </Box>
@@ -1715,7 +1715,7 @@ function Home() {
                     <Heading css={{ mb: '$2' }}>
                       Modulz raises $4.2M to close the gap between design and code
                     </Heading>
-                    <Text size="3" css={{ color: '$slate11', lineHeight: '23px' }}>
+                    <Text size="3" css={{ color: '$gray11', lineHeight: '23px' }}>
                       Modulz is a visual code editor that empowers teams to design, develop,
                       document and deploy a design system, without writing code.
                     </Text>
@@ -1730,12 +1730,12 @@ function Home() {
                             mr: '$1',
                           }}
                         />
-                        <Text size="2" css={{ color: '$slate11' }}>
+                        <Text size="2" css={{ color: '$gray11' }}>
                           Colm Tuite
                         </Text>
                       </Flex>
                       <Box>
-                        <Text size="2" css={{ color: '$slate11' }}>
+                        <Text size="2" css={{ color: '$gray11' }}>
                           May 2020
                         </Text>
                       </Box>
@@ -1752,7 +1752,7 @@ function Home() {
                   <Heading css={{ mb: '$2' }}>
                     Modulz raises $4.2M to close the gap between design and code
                   </Heading>
-                  <Text size="3" css={{ color: '$slate11', lineHeight: '23px' }}>
+                  <Text size="3" css={{ color: '$gray11', lineHeight: '23px' }}>
                     Modulz is a visual code editor that empowers teams to design, develop, document
                     and deploy a design system, without writing code.
                   </Text>
@@ -1767,12 +1767,12 @@ function Home() {
                           mr: '$1',
                         }}
                       />
-                      <Text size="2" css={{ color: '$slate11' }}>
+                      <Text size="2" css={{ color: '$gray11' }}>
                         Colm Tuite
                       </Text>
                     </Flex>
                     <Box>
-                      <Text size="2" css={{ color: '$slate11' }}>
+                      <Text size="2" css={{ color: '$gray11' }}>
                         May 2020
                       </Text>
                     </Box>
@@ -1784,7 +1784,7 @@ function Home() {
                   <Text size="3" css={{ lineHeight: '23px', fontWeight: 500 }}>
                     Default Variants
                   </Text>
-                  <Text size="3" css={{ color: '$slate11', lineHeight: '23px' }}>
+                  <Text size="3" css={{ color: '$gray11', lineHeight: '23px' }}>
                     Modulz is a visual code.
                   </Text>
                 </Card>
@@ -2107,7 +2107,7 @@ function Home() {
             <Box css={{ mb: '$6' }}>
               <Text size="2">Download 50% complete</Text>
               <ProgressBar max={100} value={80} css={{ my: '$2' }} />
-              <Text size="1" css={{ color: '$slate11' }}>
+              <Text size="1" css={{ color: '$gray11' }}>
                 46 hours remaining
               </Text>
             </Box>
@@ -2409,7 +2409,7 @@ function Home() {
                 TabLink
               </Heading>
             </Container>
-            <Flex css={{ borderBottom: '1px solid $slate6' }}>
+            <Flex css={{ borderBottom: '1px solid $gray6' }}>
               <TabLink href="#" active>
                 <Box css={{ mr: '$1' }}>
                   <CodeIcon />
@@ -3304,8 +3304,8 @@ function Home() {
                     ai: 'center',
                     jc: 'center',
                     height: '$9',
-                    bc: '$slate2',
-                    border: '2px dashed $colors$slate6',
+                    bc: '$gray2',
+                    border: '2px dashed $colors$gray6',
                     br: '$2',
                   }}
                 >

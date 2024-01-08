@@ -94,7 +94,7 @@ export const Text = styled('span', {
         color: '$bronze11',
       },
       gray: {
-        color: '$slate11',
+        color: '$gray11',
       },
       contrast: {
         color: '$hiContrast',

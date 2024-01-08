@@ -31,26 +31,26 @@ export const SimpleToggle = styled(TogglePrimitive.Root, {
   backgroundColor: 'transparent',
   '@hover': {
     '&:hover': {
-      backgroundColor: '$slateA3',
+      backgroundColor: '$grayA3',
     },
   },
   '&:active': {
-    backgroundColor: '$slateA4',
+    backgroundColor: '$grayA4',
   },
   '&:focus': {
-    boxShadow: 'inset 0 0 0 1px $slateA8, 0 0 0 1px $slateA8',
+    boxShadow: 'inset 0 0 0 1px $grayA8, 0 0 0 1px $grayA8',
     zIndex: 1,
   },
 
   '&[data-state="on"]': {
-    backgroundColor: '$slateA5',
+    backgroundColor: '$grayA5',
     '@hover': {
       '&:hover': {
-        backgroundColor: '$slateA5',
+        backgroundColor: '$grayA5',
       },
     },
     '&:active': {
-      backgroundColor: '$slateA7',
+      backgroundColor: '$grayA7',
     },
   },
 

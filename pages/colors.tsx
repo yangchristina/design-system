@@ -550,9 +550,9 @@ function Buttons() {
           size="2"
           placeholder="Slate & Blue"
           css={{
-            ...darkThemeColor('$slate1'),
-            boxShadow: 'inset 0 0 0 1px $colors$slate7',
-            color: '$slate12',
+            ...darkThemeColor('$gray1'),
+            boxShadow: 'inset 0 0 0 1px $colors$gray7',
+            color: '$gray12',
             fontVariantNumeric: 'tabular-nums',
 
             '&:-webkit-autofill': {
@@ -572,7 +572,7 @@ function Buttons() {
               },
             },
             '&::placeholder': {
-              color: '$slate9',
+              color: '$gray9',
             },
           }}
         />
@@ -581,8 +581,8 @@ function Buttons() {
           placeholder="Slate & Blue (Alpha)"
           css={{
             bc: 'transparent',
-            boxShadow: 'inset 0 0 0 1px $colors$slateA7',
-            color: '$slateA12',
+            boxShadow: 'inset 0 0 0 1px $colors$grayA7',
+            color: '$grayA12',
             fontVariantNumeric: 'tabular-nums',
 
             '&:-webkit-autofill': {
@@ -602,7 +602,7 @@ function Buttons() {
               },
             },
             '&::placeholder': {
-              color: '$slateA9',
+              color: '$grayA9',
             },
           }}
         />

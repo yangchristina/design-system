@@ -68,7 +68,7 @@ const StyledAvatar = styled(AvatarPrimitive.Root, {
         color: '$loContrast',
       },
       gray: {
-        backgroundColor: '$slate5',
+        backgroundColor: '$gray5',
       },
       tomato: {
         backgroundColor: '$tomato5',

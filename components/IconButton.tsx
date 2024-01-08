@@ -44,20 +44,20 @@ export const IconButton = styled('button', {
   },
   '@hover': {
     '&:hover': {
-      borderColor: '$slate8',
+      borderColor: '$gray8',
     },
   },
   '&:active': {
-    backgroundColor: '$slate2',
+    backgroundColor: '$gray2',
   },
   '&:focus': {
-    borderColor: '$slate8',
-    boxShadow: '0 0 0 1px $colors$slate8',
+    borderColor: '$gray8',
+    boxShadow: '0 0 0 1px $colors$gray8',
   },
   '&:disabled': {
     pointerEvents: 'none',
     backgroundColor: 'transparent',
-    color: '$slate6',
+    color: '$gray6',
   },
 
   variants: {
@@ -86,24 +86,24 @@ export const IconButton = styled('button', {
     variant: {
       solid: {
         backgroundColor: '$loContrast',
-        border: '1px solid $slate7',
+        border: '1px solid $gray7',
       },
       ghost: {
         backgroundColor: 'transparent',
         borderWidth: '0',
         '@hover': {
           '&:hover': {
-            backgroundColor: '$slateA3',
+            backgroundColor: '$grayA3',
           },
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$slateA8, 0 0 0 1px $colors$slateA8',
+          boxShadow: 'inset 0 0 0 1px $colors$grayA8, 0 0 0 1px $colors$grayA8',
         },
         '&:active': {
-          backgroundColor: '$slateA4',
+          backgroundColor: '$grayA4',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$slateA4',
+          backgroundColor: '$grayA4',
         },
       },
       raised: {
@@ -116,18 +116,18 @@ export const IconButton = styled('button', {
           },
         },
         '&:focus': {
-          borderColor: '$slate8',
+          borderColor: '$gray8',
           boxShadow:
-            '0 0 0 1px $colors$slate8, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
+            '0 0 0 1px $colors$gray8, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
         },
         '&:active': {
-          backgroundColor: '$slate4',
+          backgroundColor: '$gray4',
         },
       },
     },
     state: {
       active: {
-        backgroundColor: '$slate4',
+        backgroundColor: '$gray4',
         boxShadow: 'inset 0 0 0 1px hsl(206,10%,76%)',
         '@hover': {
           '&:hover': {
@@ -135,11 +135,11 @@ export const IconButton = styled('button', {
           },
         },
         '&:active': {
-          backgroundColor: '$slate4',
+          backgroundColor: '$gray4',
         },
       },
       waiting: {
-        backgroundColor: '$slate4',
+        backgroundColor: '$gray4',
         boxShadow: 'inset 0 0 0 1px hsl(206,10%,76%)',
         '@hover': {
           '&:hover': {
@@ -147,7 +147,7 @@ export const IconButton = styled('button', {
           },
         },
         '&:active': {
-          backgroundColor: '$slate4',
+          backgroundColor: '$gray4',
         },
       },
     },

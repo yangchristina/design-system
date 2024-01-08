@@ -6,7 +6,7 @@ import { CaretSortIcon } from '@radix-ui/react-icons';
 const SelectWrapper = styled('div', {
   backgroundColor: '$loContrast',
   borderRadius: '$2',
-  boxShadow: 'inset 0 0 0 1px $colors$slate7',
+  boxShadow: 'inset 0 0 0 1px $colors$gray7',
   color: '$hiContrast',
   fontFamily: '$untitled',
   fontSize: '$1',

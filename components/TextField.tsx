@@ -21,7 +21,7 @@ export const TextField = styled('input', {
 
   // Custom
   backgroundColor: '$loContrast',
-  boxShadow: 'inset 0 0 0 1px $colors$slate7',
+  boxShadow: 'inset 0 0 0 1px $colors$gray7',
   color: '$hiContrast',
   fontVariantNumeric: 'tabular-nums',
 
@@ -42,21 +42,21 @@ export const TextField = styled('input', {
     },
   },
   '&::placeholder': {
-    color: '$slate9',
+    color: '$gray9',
   },
   '&:disabled': {
     pointerEvents: 'none',
-    backgroundColor: '$slate2',
-    color: '$slate8',
+    backgroundColor: '$gray2',
+    color: '$gray8',
     cursor: 'not-allowed',
     '&::placeholder': {
-      color: '$slate7',
+      color: '$gray7',
     },
   },
   '&:read-only': {
-    backgroundColor: '$slate2',
+    backgroundColor: '$gray2',
     '&:focus': {
-      boxShadow: 'inset 0px 0px 0px 1px $colors$slate7',
+      boxShadow: 'inset 0px 0px 0px 1px $colors$gray7',
     },
   },
 
@@ -89,7 +89,7 @@ export const TextField = styled('input', {
         backgroundColor: 'transparent',
         '@hover': {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$slateA7',
+            boxShadow: 'inset 0 0 0 1px $colors$grayA7',
           },
         },
         '&:focus': {

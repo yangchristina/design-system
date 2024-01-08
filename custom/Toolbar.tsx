@@ -34,7 +34,7 @@ import React from 'react';
 //           <Button ghost css={{ fontWeight: 400 }}>
 //             Drafts
 //           </Button>
-//           <Text css={{ color: '$slate6' }}>/</Text>
+//           <Text css={{ color: '$gray6' }}>/</Text>
 //           <Button ghost css={{ fontWeight: 400 }}>
 //             Untitled
 //           </Button>
@@ -231,7 +231,7 @@ import React from 'react';
 //             <PlayIcon />
 //           </IconButton>
 //           <Box css={{ width: '50px', flexShrink: 0, textAlign: 'center' }}>
-//             <Text size="1" css={{ color: '$slate11', userSelect: 'none' }}>
+//             <Text size="1" css={{ color: '$gray11', userSelect: 'none' }}>
 //               100%
 //             </Text>
 //           </Box>
@@ -326,7 +326,7 @@ export function Toolbar({ orientation = 'horizontal' }: { orientation?: 'horizon
           <Button ghost css={{ fontWeight: 400 }}>
             Drafts
           </Button>
-          <Text css={{ color: '$slate6' }}>/</Text>
+          <Text css={{ color: '$gray6' }}>/</Text>
           <Button ghost css={{ fontWeight: 400 }}>
             Untitled
           </Button>
@@ -522,7 +522,7 @@ export function Toolbar({ orientation = 'horizontal' }: { orientation?: 'horizon
             <PlayIcon />
           </IconButton>
           <Box css={{ width: '50px', flexShrink: 0, textAlign: 'center' }}>
-            <Text size="1" css={{ color: '$slate11', userSelect: 'none' }}>
+            <Text size="1" css={{ color: '$gray11', userSelect: 'none' }}>
               100%
             </Text>
           </Box>

@@ -28,12 +28,12 @@ export const TreeItem = styled('div', {
   variants: {
     variant: {
       gray: {
-        backgroundColor: '$slate3',
+        backgroundColor: '$gray3',
         '&:hover': {
-          backgroundColor: '$slate4',
+          backgroundColor: '$gray4',
         },
         '&:active': {
-          backgroundColor: '$slate5',
+          backgroundColor: '$gray5',
         },
       },
       red: {
