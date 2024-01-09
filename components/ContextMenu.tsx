@@ -84,7 +84,7 @@ export const ContextMenu = ({ units = [], children: child, title, }: { units?: C
 
 const contentStyles = {
   minWidth: 220,
-  backgroundColor: 'white',
+  backgroundColor: '$loContrast',
   borderRadius: 6,
   overflow: 'hidden',
   padding: 5,
@@ -175,7 +175,7 @@ export const RightSlot = styled('div', {
   marginLeft: 'auto',
   paddingLeft: 20,
   color: '$gray11',
-  '[data-highlighted] > &': { color: 'white' },
+  '[data-highlighted] > &': { color: '$loContrast' },
   '[data-disabled] &': { color: '$gray8' },
 });
 

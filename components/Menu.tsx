@@ -29,7 +29,7 @@ export const itemCss = css(baseItemCss, {
   '&[data-highlighted]': {
     outline: 'none',
     backgroundColor: '$info9',
-    color: 'white',
+    color: '$loContrast',
   },
 
   '&[data-disabled]': {

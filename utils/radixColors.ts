@@ -61,7 +61,7 @@ export interface ColorTheme extends ColorBase {
 
 const lightDefaults = {
     hiContrast: 'black',
-    loContrast: 'white',
+    loContrast: '$loContrast',
     transparentPanel: 'hsl(0 0% 0% / 97%)',
     ...blackOverlay,
     ...radixScales.whiteA,
@@ -193,13 +193,13 @@ const darkDefaults = {
     // ...radixScales.goldDarkA,
 
     // Semantic colors
-    hiContrast: 'white',
+    hiContrast: '$loContrast',
     loContrast: 'black',
 
     // // Semantic colors
     // hiContrast: '$gray12',
     // // loContrast: '$gray1',
-    // loContrast: 'white',
+    // loContrast: '$loContrast',
 
     canvas: 'hsl(0 0% 15%)',
     panel: '$gray3',

@@ -60,7 +60,7 @@ export const Fieldset = styled('fieldset', {
 export const CheckboxRoot = styled(CheckboxPrimitive.Root, {
     all: 'unset',
     boxSizing: 'border-box',
-    backgroundColor: 'white',
+    backgroundColor: '$loContrast',
     size: '1.25rem',
     borderRadius: '0.1rem',
     display: 'flex',

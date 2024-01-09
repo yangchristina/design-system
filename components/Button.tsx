@@ -152,7 +152,7 @@ export const buttonStyles = {
       },
       transparentWhite: {
         backgroundColor: 'hsla(0,100%,100%,.2)',
-        color: 'white',
+        color: '$loContrast',
         '@hover': {
           '&:hover': {
             backgroundColor: 'hsla(0,100%,100%,.25)',

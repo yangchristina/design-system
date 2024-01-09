@@ -185,7 +185,7 @@ function Sidebar() {
         top: 0,
         left: 0,
         bottom: 0,
-        bc: 'white',
+        bc: '$loContrast',
         overflowY: 'scroll',
         boxShadow: '1px 0 $colors$gray6',
         width: 240,
@@ -809,7 +809,7 @@ function Buttons() {
                 },
                 '&:active': {
                   boxShadow: 'none',
-                  color: 'white',
+                  color: '$loContrast',
                   backgroundColor: `$${color}11`,
                 },
                 '&:focus': {

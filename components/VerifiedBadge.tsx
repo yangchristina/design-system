@@ -8,7 +8,7 @@ const StyledVerifiedBadge = styled('div', Flex, {
   alignItems: 'center',
   backgroundColor: '$info9',
   borderRadius: '$round',
-  color: 'white',
+  color: '$loContrast',
   flexShrink: 0,
   justifyContent: 'center',
   width: '$3',
