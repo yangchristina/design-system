@@ -189,7 +189,7 @@ function Sidebar() {
         overflowY: 'scroll',
         boxShadow: '1px 0 $colors$gray6',
         width: 240,
-        ...darkThemeColor('black'),
+        ...darkThemeColor('$hiContrast'),
       }}
     >
       <ColorTools />

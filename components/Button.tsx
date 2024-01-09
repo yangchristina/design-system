@@ -167,7 +167,7 @@ export const buttonStyles = {
       },
       transparentBlack: {
         backgroundColor: 'hsla(0,0%,0%,.2)',
-        color: 'black',
+        color: '$hiContrast',
         '@hover': {
           '&:hover': {
             backgroundColor: 'hsla(0,0%,0%,.25)',

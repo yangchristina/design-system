@@ -395,7 +395,7 @@ const avocadoVariables = {
   // ltan2: '#faeccf',
   lbrownv: '#c9bea7',
   tanv: '#d6c9b6',
-  // text: 'black',
+  // text: '$hiContrast',
   // lightgreen: '#edf5e6',
   // green1: '#bdccaf',
   // lightgreen2: '#dfebd5',
