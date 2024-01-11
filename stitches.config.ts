@@ -474,9 +474,20 @@ const matchaTheme: ColorBase = {
   primary: 'grass',
   secondary: 'bronze',
   accent: 'grass',
-  gray: 'sage',
+  gray: 'olive',
   error: 'red',
   success: 'green',
+  info: 'blue',
+  warning: 'yellow',
+}
+
+const rubyTealTheme: ColorBase = {
+  primary: 'teal',
+  secondary: 'ruby',
+  accent: 'grass',
+  gray: 'sage',
+  error: 'red',
+  success: 'grass',
   info: 'blue',
   warning: 'yellow',
 }
@@ -489,6 +500,7 @@ const baseThemes = {
   blueberry: indigoTheme,
   lavendarBlush: lavendarBlushTheme,
   avocado: avocadoTheme,
+  rubyTeal: rubyTealTheme,
 }
 
 // shouldn't name change be easy? can you make variants of an existing theme from planda?
