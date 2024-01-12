@@ -437,7 +437,7 @@ const indigoTheme: ColorBase = {
 }
 
 // (avocadoTheme, true, 'grass', 'olive', 'red', 'green', 'blue', 'yellow', avocadoVariables, 'gold')
-const avocadoTheme: ColorBase = {
+const avocadoTheme = {
   primary: 'grass',
   secondary: 'gold',
   accent: 'grass',
@@ -446,6 +446,7 @@ const avocadoTheme: ColorBase = {
   success: 'green',
   info: 'blue',
   warning: 'yellow',
+  isLight: true,
 }
 
 const violetTheme: ColorBase = {
@@ -522,7 +523,6 @@ const baseThemes = {
   matcha: matchaTheme,
   blueberry: indigoTheme,
   lavendarBlush: lavendarBlushTheme,
-  avocado: avocadoTheme,
   // rubyTeal: rubyTealTheme,
   // bronzeTeal: bronzeTealTheme,
 }
@@ -543,6 +543,7 @@ export const allThemeConfigs = {
   ...lightThemeConfigs,
   ...darkThemeConfigs,
   cobalt: cobaltTheme,
+  avocado: avocadoTheme,
 }
 
 export const themes: Record<string, any> = mapObject(allThemeConfigs, (config) => createThemeValue(config))
