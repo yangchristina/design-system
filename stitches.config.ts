@@ -481,7 +481,7 @@ const matchaTheme: ColorBase = {
   warning: 'yellow',
 }
 
-const rubyTealTheme: ColorBase = {
+const rubyTealTheme: ColorBase = { // bad
   primary: 'teal',
   secondary: 'ruby',
   accent: 'grass',
@@ -492,7 +492,7 @@ const rubyTealTheme: ColorBase = {
   warning: 'yellow',
 }
 
-const bronzeTealTheme: ColorBase = {
+const bronzeTealTheme: ColorBase = { // bad
   primary: 'teal',
   secondary: 'bronze',
   accent: 'grass',
@@ -522,8 +522,8 @@ const baseThemes = {
   blueberry: indigoTheme,
   lavendarBlush: lavendarBlushTheme,
   avocado: avocadoTheme,
-  rubyTeal: rubyTealTheme,
-  bronzeTeal: bronzeTealTheme,
+  // rubyTeal: rubyTealTheme,
+  // bronzeTeal: bronzeTealTheme,
   cobalt: cobaltTheme,
 }
 
