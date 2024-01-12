@@ -512,6 +512,7 @@ const cobaltTheme = {
   success: 'grass',
   info: 'blue',
   warning: 'amber',
+  isLight: false,
 }
 
 const baseThemes = {
@@ -524,7 +525,6 @@ const baseThemes = {
   avocado: avocadoTheme,
   // rubyTeal: rubyTealTheme,
   // bronzeTeal: bronzeTealTheme,
-  cobalt: cobaltTheme,
 }
 
 // shouldn't name change be easy? can you make variants of an existing theme from planda?
@@ -541,7 +541,8 @@ const darkThemeConfigs = {
 
 export const allThemeConfigs = {
   ...lightThemeConfigs,
-  ...darkThemeConfigs
+  ...darkThemeConfigs,
+  cobalt: cobaltTheme,
 }
 
 export const themes: Record<string, any> = mapObject(allThemeConfigs, (config) => createThemeValue(config))
