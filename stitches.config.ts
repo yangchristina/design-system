@@ -456,7 +456,6 @@ const libraryTheme = {
   success: 'green',
   info: 'blue',
   warning: 'yellow',
-  isLight: true,
   accent: '',
   error: 'red',
   isLight: true,
