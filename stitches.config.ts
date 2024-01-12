@@ -503,6 +503,17 @@ const bronzeTealTheme: ColorBase = {
   warning: 'yellow',
 }
 
+const cobaltTheme = {
+  primary: 'slate',
+  secondary: 'blue',
+  accent: '',
+  gray: 'slate',
+  error: 'red',
+  success: 'grass',
+  info: 'blue',
+  warning: 'amber',
+}
+
 const baseThemes = {
   crimson: crimsonTheme,
   teal: tealTheme,
@@ -513,6 +524,7 @@ const baseThemes = {
   avocado: avocadoTheme,
   rubyTeal: rubyTealTheme,
   bronzeTeal: bronzeTealTheme,
+  cobalt: cobaltTheme,
 }
 
 // shouldn't name change be easy? can you make variants of an existing theme from planda?
