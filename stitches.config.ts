@@ -449,6 +449,19 @@ const avocadoTheme = {
   isLight: true,
 }
 
+const libraryTheme = {
+  primary: 'brown',
+  secondary: 'lime',
+  gray: 'olive',
+  success: 'green',
+  info: 'blue',
+  warning: 'yellow',
+  isLight: true,
+  accent: '',
+  error: 'red',
+  isLight: true,
+}
+
 const violetTheme: ColorBase = {
   primary: 'violet',
   secondary: 'plum',
@@ -544,6 +557,7 @@ export const allThemeConfigs = {
   ...darkThemeConfigs,
   cobalt: cobaltTheme,
   avocado: avocadoTheme,
+  library: libraryTheme,
 }
 
 export const themes: Record<string, any> = mapObject(allThemeConfigs, (config) => createThemeValue(config))
