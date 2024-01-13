@@ -527,7 +527,7 @@ const bronzeTealTheme: ColorBase = { // bad
   warning: 'yellow',
 }
 
-const cobaltTheme = {
+const caveTheme = {
   primary: 'slate',
   secondary: 'blue',
   accent: '',
@@ -566,7 +566,7 @@ const darkThemeConfigs = {
 export const allThemeConfigs = {
   ...lightThemeConfigs,
   ...darkThemeConfigs,
-  cobalt: cobaltTheme,
+  cave: caveTheme,
   avocado: avocadoTheme,
   library: libraryTheme,
 }
