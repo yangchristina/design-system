@@ -105,6 +105,7 @@ export { RadioCard, RadioCardGroup } from './components/RadioCard';
 export { Section } from './components/Section';
 export { OldSelect as OldSelect } from './components/OldSelect';
 export { Select } from './components/select';
+export type { ContentUnit, SelectGroup, SelectButton } from './components/select';
 export { Separator } from './components/Separator';
 export {
   Sheet,
