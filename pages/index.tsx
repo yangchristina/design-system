@@ -699,7 +699,7 @@ function Home() {
                 <Text
                   size="9"
                   as="h2"
-                  variant="crimson"
+                  // variant="crimson"
                   gradient
                   css={{ fontWeight: 500, lineHeight: '68px', WebkitBackgroundClip: 'text' }}
                 >
