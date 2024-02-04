@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../components/Button';
 import { OldSelect } from '../components/OldSelect';
-import { IconButton } from '../components/IconButton';
+import { GhostIconButton, IconButton } from '../components/IconButton';
 import { Container } from '../components/Container';
 import { Box } from '../components/Box';
 import { Flex } from '../components/Flex';
@@ -126,7 +126,9 @@ import {
   RocketIcon,
   CardStackPlusIcon,
   PlusCircledIcon,
-  ResetIcon
+  ResetIcon,
+  HomeIcon,
+  ListBulletIcon
 } from '@radix-ui/react-icons';
 import { Toolbar } from '../custom/Toolbar';
 import { DarkThemeButton } from '../custom/DarkThemeButton';
@@ -419,6 +421,13 @@ function Home() {
             <Link href="#trianglenav" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 TriangleNav
+              </Text>
+            </Link>
+          </Box>
+          <Box css={{ my: '$1' }}>
+            <Link href="#iconbutton" variant="subtle" css={{ display: 'inline-flex' }}>
+              <Text size="2" css={{ lineHeight: '20px' }}>
+                IconButton
               </Text>
             </Link>
           </Box>
@@ -1318,6 +1327,18 @@ function Home() {
               <TriangleNav direction="right" />
               <TriangleNav height={1.5} direction="left" />
               <TriangleNav height={1.5} direction="right" />
+            </Flex>
+          </Container>
+        </Section>
+        <Section size="3">
+          <Container size="2">
+            <Heading id="iconbutton" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+              Icon Buttons
+            </Heading>
+            <Flex css={{ fd: 'row', ai: 'center' }}>
+              <IconButton><HomeIcon /></IconButton>
+              <GhostIconButton><ListBulletIcon /></GhostIconButton>
+              <GhostIconButton inverted><RocketIcon /></GhostIconButton>
             </Flex>
           </Container>
         </Section>

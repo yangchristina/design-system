@@ -248,7 +248,16 @@ export const GhostIconButton = styled('button', {
         color: '$loContrast',
         '@hover': {
           '&:hover': {
-            backgroundColor: '$grayDarkA3',
+            '&::before': {
+              content: "",
+              display: 'block',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundColor: '$grayDarkA3', /* Change the color and opacity as needed */
+            }
           },
         },
       }

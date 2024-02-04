@@ -77,7 +77,7 @@ const lightDefaults = {
     ...mapColor('whiteA', 'overlayB'),
 
     // ...radixScales.grayDarkA,
-    ...mapColorObj(radixScales.grayDarkA, 'grayA', 'grayDarkA'),
+    ...mapColorObj(radixScales.grayDarkA, 'grayA', 'grayDarkA'), // grayDarkA3
 
     // ...radixScales.ruby,
 
@@ -152,7 +152,7 @@ const darkDefaults = {
     ...radixScales.sageDark,
     ...radixScales.oliveDark,
     ...radixScales.sandDark,
-    ...mapColorObj(radixScales.grayA, 'grayA', 'grayDarkA'),
+    ...mapColorObj(radixScales.grayA, 'grayA', 'grayDarkA'), // grayDarkA3
     // ...radixScales.tomatoDark,
     // ...radixScales.redDark,
     // ...radixScales.crimsonDark,
