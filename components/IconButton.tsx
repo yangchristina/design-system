@@ -151,6 +151,12 @@ export const IconButton = styled('button', {
         },
       },
     },
+    inverted: {
+      true: {
+        backgroundColor: '$hiContrast',
+        color: '$loContrast',
+      }
+    }
   },
   defaultVariants: {
     size: '1',
