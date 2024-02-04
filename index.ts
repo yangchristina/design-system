@@ -77,7 +77,7 @@ export {
 export { Flex, FlexForm } from './components/Flex';
 export { Grid } from './components/Grid';
 export { Heading } from './components/Heading';
-export { IconButton } from './components/IconButton';
+export { IconButton, GhostIconButton } from './components/IconButton';
 export { Image } from './components/Image';
 export { TextField } from './components/TextField';
 export { Kbd } from './components/Kbd';

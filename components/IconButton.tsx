@@ -42,11 +42,11 @@ export const IconButton = styled('button', {
   '&::after': {
     boxSizing: 'border-box',
   },
-  '@hover': {
-    '&:hover': {
-      borderColor: '$gray8',
-    },
-  },
+  // '@hover': {
+  //   '&:hover': {
+  //     borderColor: '$gray8',
+  //   },
+  // },
   '&:active': {
     backgroundColor: '$gray2',
   },
@@ -87,6 +87,11 @@ export const IconButton = styled('button', {
       solid: {
         backgroundColor: '$loContrast',
         border: '1px solid $gray7',
+        '@hover': {
+          '&:hover': {
+            borderColor: '$gray8',
+          },
+        },
       },
       ghost: {
         backgroundColor: 'transparent',
@@ -166,5 +171,87 @@ export const IconButton = styled('button', {
   defaultVariants: {
     size: '1',
     variant: 'ghost',
+  },
+});
+
+
+export const GhostIconButton = styled('button', {
+  // Reset
+  alignItems: 'center',
+  appearance: 'none',
+  boxSizing: 'border-box',
+  display: 'inline-flex',
+  flexShrink: 0,
+  fontFamily: 'inherit',
+  fontSize: '14px',
+  justifyContent: 'center',
+  lineHeight: '1',
+  outline: 'none',
+  padding: '0',
+  textDecoration: 'none',
+  userSelect: 'none',
+  WebkitTapHighlightColor: 'transparent',
+  color: '$hiContrast',
+  '&::before': {
+    boxSizing: 'border-box',
+  },
+  '&::after': {
+    boxSizing: 'border-box',
+  },
+  '&:disabled': {
+    pointerEvents: 'none',
+    backgroundColor: 'transparent',
+    color: '$gray6',
+  },
+  borderRadius: '$1',
+  height: '$5',
+  width: '$5',
+  backgroundColor: 'transparent',
+  borderWidth: '0',
+  '@hover': {
+    '&:hover': {
+      backgroundColor: '$grayA3',
+    },
+  },
+  '&:focus': {
+    boxShadow: 'inset 0 0 0 1px $colors$grayA8, 0 0 0 1px $colors$grayA8',
+  },
+  '&:active': {
+    backgroundColor: '$grayA4',
+  },
+  '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
+    backgroundColor: '$grayA4',
+  },
+
+  variants: {
+    size: {
+      '1': {},
+      '2': {
+        borderRadius: '$2',
+        height: '$6',
+        width: '$6',
+      },
+      '3': {
+        borderRadius: '$2',
+        height: '$7',
+        width: '$7',
+      },
+      '4': {
+        borderRadius: '$3',
+        height: '$8',
+        width: '$8',
+      },
+    },
+    inverted: {
+      true: {
+        backgroundColor: '$hiContrast',
+        color: '$loContrast',
+        '@hover': {
+          '&:hover': {
+            backgroundColor: '$grayDarkA3',
+          },
+        },
+      }
+    }
   },
 });
