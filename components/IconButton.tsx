@@ -155,6 +155,11 @@ export const IconButton = styled('button', {
       true: {
         backgroundColor: '$hiContrast',
         color: '$loContrast',
+        '@hover': {
+          '&:hover': {
+            backgroundColor: '$grayA3',
+          },
+        },
       }
     }
   },

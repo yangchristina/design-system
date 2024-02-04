@@ -38,6 +38,14 @@ export function mapColor(color: string, alias: string) {
     return obj
 }
 
+export function mapColorObj(color: Record<string, string>, originalPrefix: string, alias: string) {
+    const obj: { [key: string]: string } = {}
+    for (let i = 1; i <= 12; i++) {
+        obj[alias + i] = color[originalPrefix + i]
+    }
+    return obj
+}
+
 /**
  * THEME:
  * Error, Success, Warning, Info, Primary, Secondary, Accent, GrayScale, Black White Overlay
@@ -67,6 +75,9 @@ const lightDefaults = {
     ...radixScales.whiteA,
     ...radixScales.pink,
     ...mapColor('whiteA', 'overlayB'),
+
+    // ...radixScales.grayDarkA,
+    ...mapColorObj(radixScales.grayDarkA, 'grayA', 'grayDarkA'),
 
     // ...radixScales.ruby,
 
@@ -141,6 +152,7 @@ const darkDefaults = {
     ...radixScales.sageDark,
     ...radixScales.oliveDark,
     ...radixScales.sandDark,
+    ...mapColorObj(radixScales.grayA, 'grayA', 'grayDarkA'),
     // ...radixScales.tomatoDark,
     // ...radixScales.redDark,
     // ...radixScales.crimsonDark,
