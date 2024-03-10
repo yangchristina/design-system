@@ -4,6 +4,7 @@ export type { DialogBrightness } from './components/Overlay';
 export * from "./hooks";
 export * from "./utils"
 export * from "./constants"
+export * from "./types"
 export { Timeline } from "./custom/timeline/Timeline";
 export type { TimelineItem } from "./custom/timeline/Timeline";
 export { Spinner } from "./components/Spinner";
