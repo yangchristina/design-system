@@ -124,8 +124,8 @@ export function makeMatrix<T>(w: number, h: number, val: T): T[][] {
     return Array.from({ length: h }, () => Array.from({ length: w }, () => val));
 }
 
-export function makeScheduleMatrix<T>(val: T) {
-    return makeMatrix(7, 48, val) // 28
+export function makeScheduleMatrix<T>(val: T, incrementInMin: number = 30): T[][] {
+    return makeMatrix(24 * (60 / incrementInMin), 7, val)
 }
 
 export function roundToTenths(num: number) {
