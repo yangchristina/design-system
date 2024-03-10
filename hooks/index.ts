@@ -9,3 +9,5 @@ export * from "./useForageSortedArray";
 export * from "./usePreciseClick";
 export * from "./useRemToPx";
 export * from "./useTraceUpdate";
+export * from "./useWindowSize";
+export * from "./useCurrentState";

@@ -21,5 +21,5 @@ export const useWindowSize = (handleWindowResize?: (size: { height: number, widt
         }
     }, [])
 
-    return { windowSize, setWindowSize, isLoading: typeof window === "undefined"}
+    return { windowSize, setWindowSize, isLoading: typeof window === "undefined" }
 }
