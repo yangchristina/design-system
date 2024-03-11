@@ -149,24 +149,15 @@ export const {
       panel: '$loContrast',
       shadowLight: 'hsl(206 22% 7% / 35%)',
       shadowDark: 'hsl(206 22% 7% / 20%)',
+
+      border: '$borderWidths$medium solid $primary12',
+      borderThin: '$borderWidths$thin solid $primary12',
+      borderThick: '$borderWidths$thick solid $primary12',
+      borderFocus: `0 0 0 2px $colors$focus`,
     },
     fonts: {
       untitled: 'Untitled Sans, -apple-system, system-ui, sans-serif',
       mono: 'Söhne Mono, menlo, monospace',
-    },
-    shadows: {
-      border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay6',
-      borderHiContrast: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay12',
-      common: `0 1px calc(3px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.15)`,
-      boxShadow: `$border, $common`,
-      error: `0px 0px 3px $colors$error11`,
-      success: `0px 0px 3px $colors$success11`,
-      // Should focus be info or secondary?
-      focus: `0 0 0 2px $colors$info7`, // or if want gray focus: `0 0 0 2px $colors$gray7`
-      focusBottom: `0 2px 0px 0px $colors$info7`,
-      focusPrimary: `0 0 0 2px $colors$primary7`,
-      // light: '0 0 0 2px $colors$gray1',
-      strong: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
     },
     space: {
       1: '5px',
@@ -189,6 +180,31 @@ export const {
       7: '45px',
       8: '65px',
       9: '80px',
+    },
+    borderWidths: {
+      thin: '1px',
+      medium: '2px',
+      thick: '3px',
+    },
+    shadows: {
+      borderHiContrast: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay12',
+      success: `0px 0px 3px $colors$success11`,
+      // Should focus be info or secondary?
+      // focus: `0 0 0 2px $colors$info7`, // or if want gray focus: `0 0 0 2px $colors$gray7`
+      // focusBottom: `0 2px 0px 0px $colors$info7`,
+      focusPrimary: `0 0 0 2px $colors$primary7`,
+      // light: '0 0 0 2px $colors$gray1',
+      // strong: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+
+      border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay2',
+      common: `0 1px calc(3px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.15)`,
+      boxShadow: `$border, $common`,
+      error: `0px 0px 3px $colors$error11`,
+      focus: `0 0 0 2px $colors$primary7`, // or if want gray focus: `0 0 0 2px $colors$gray7`
+      focusBottom: `0 2px 0px 0px $colors$primary7`,
+      // light: '0 0 0 2px $colors$gray1',
+      medium: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
+      strong: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
     },
     // space: {
     //   1: '4px',
