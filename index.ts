@@ -5,6 +5,7 @@ export * from "./hooks";
 export * from "./utils"
 export * from "./constants"
 export * from "./types"
+export * from "./commonStyles"
 export { Timeline } from "./custom/timeline/Timeline";
 export type { TimelineItem } from "./custom/timeline/Timeline";
 export { Spinner } from "./components/Spinner";
