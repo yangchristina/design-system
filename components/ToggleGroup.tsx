@@ -5,6 +5,7 @@ import * as ToggleGroupPrimative from '@radix-ui/react-toggle-group'
 interface ToggleGroupItem {
     value: string,
     label: string,
+    style?: any
 }
 
 
@@ -18,7 +19,7 @@ export const ToggleGroup = forwardRef<HTMLDivElement, { items: ToggleGroupItem[]
                 id={id}
             >
                 {
-                    items.map(item => <ToggleItem key={item.value} value={item.value}>{item.label}</ToggleItem>)
+                    items.map(item => <ToggleItem style={item.style} key={item.value} value={item.value}>{item.label}</ToggleItem>)
                 }
             </ToggleGroupRoot>
             {error}
