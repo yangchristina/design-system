@@ -200,7 +200,7 @@ export const {
       common: `0 1px calc(3px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.15)`,
       boxShadow: `$border, $common`,
       error: `0px 0px 3px $colors$error11`,
-      focus: `0 0 0 2px $colors$primary7`, // or if want gray focus: `0 0 0 2px $colors$gray7`
+      focus: `0 0 0 2px $colors$hiContrast`, // or if want gray focus: `0 0 0 2px $colors$gray7`
       focusBottom: `0 2px 0px 0px $colors$primary7`,
       // light: '0 0 0 2px $colors$gray1',
       medium: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
