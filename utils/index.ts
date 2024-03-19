@@ -6,3 +6,5 @@ export * from './createTheme';
 export * from './stitches';
 export * from './date';
 export * from './cast';
+export * from './json';
+export * from './fetch';

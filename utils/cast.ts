@@ -1,4 +1,4 @@
-import { fetchGet } from "../lib/fetch"
+import { fetchGet } from "./fetch"
 
 export const castPromiseToUndefined = (promise: Promise<any>) => promise.then(() => undefined)
 
