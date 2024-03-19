@@ -5,7 +5,8 @@ import { useEffect, useState } from "react"
 export function useForageItem<T>(
     key: string,
     isValid: (x: unknown) => boolean,
-    defaultValue: T
+    defaultValue: T,
+    onLoad?: (x: T) => void
 ) {
     const [isLoading, setIsLoading] = useState(true)
     const [item, setItem] = useState(defaultValue)
@@ -14,6 +15,7 @@ export function useForageItem<T>(
         const item = await localforage.getItem(key)
         if (isValid(item)) setItem(item as T)
         setIsLoading(false)
+        onLoad?.(item as T)
         return item
     }
 
