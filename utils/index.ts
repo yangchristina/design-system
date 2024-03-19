@@ -5,3 +5,4 @@ export * from './utils';
 export * from './createTheme';
 export * from './stitches';
 export * from './date';
+export * from './cast';
