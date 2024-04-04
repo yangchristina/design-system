@@ -1,8 +1,17 @@
 'use client'
 import { useEffect, useState } from "react"
 
-export const useWindowSize = (handleWindowResize?: (size: { height: number, width: number }) => void) => {
-    const [windowSize, setWindowSize] = useState({ height: typeof window === "undefined" ? 0 : window.innerHeight, width: typeof window === "undefined" ? 0 : window.innerWidth || 0 });
+const DEFAULT_SIZES = {
+    mobile: { height: 667, width: 375 },
+    tablet: { height: 1024, width: 768 },
+    desktop: { height: 900, width: 1440 }
+}
+
+export const useWindowSize = (handleWindowResize?: (size: { height: number, width: number }) => void, defaultSize?: 'mobile' | 'tablet' | 'desktop') => {
+    const [windowSize, setWindowSize] = useState(typeof window === "undefined" ? DEFAULT_SIZES[defaultSize || 'desktop'] : {
+        height: window.innerHeight,
+        width: window.innerWidth || 0
+    });
 
     useEffect(() => {
         setWindowSize({ height: typeof window === "undefined" ? 0 : window.innerHeight, width: typeof window === "undefined" ? 0 : window.innerWidth || 0 })
@@ -21,5 +30,7 @@ export const useWindowSize = (handleWindowResize?: (size: { height: number, widt
         }
     }, [])
 
-    return { windowSize, setWindowSize, isLoading: typeof window === "undefined" }
+    const isMobile = windowSize.width <= 768;
+
+    return { windowSize, setWindowSize, isLoading: typeof window === "undefined", isMobile }
 }
