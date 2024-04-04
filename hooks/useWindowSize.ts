@@ -7,7 +7,7 @@ const DEFAULT_SIZES = {
     desktop: { height: 900, width: 1440 }
 }
 
-export const useWindowSize = (handleWindowResize?: (size: { height: number, width: number }) => void, defaultSize?: 'mobile' | 'tablet' | 'desktop') => {
+export const useWindowSize = (defaultSize?: 'mobile' | 'tablet' | 'desktop', handleWindowResize?: (size: { height: number, width: number }) => void) => {
     const [windowSize, setWindowSize] = useState(typeof window === "undefined" ? DEFAULT_SIZES[defaultSize || 'desktop'] : {
         height: window.innerHeight,
         width: window.innerWidth || 0
