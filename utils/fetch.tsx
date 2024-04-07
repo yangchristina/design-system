@@ -7,7 +7,8 @@ export function paramsToQueryString(params = {}) {
         .map(param => `${param[0]}=${param[1]}`)
         .join("&")
 }
-const fixUrl = (url: string) => url.replaceAll('#', '%23')
+const fixUrl = (url: string) => url.replace(/#/g, '%23')
+// url.replaceAll('#', '%23')
 
 export async function fetchGet<ResType>(url: string, params = {}, options?: {
     fallback?: ResType

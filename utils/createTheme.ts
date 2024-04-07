@@ -13,4 +13,5 @@ export const toProviderThemes = (createdThemes: CreatedThemes) => Object.entries
     return acc
 }, {} as Record<string, string>)
 
-export const toThemeKey = (key: string) => key.replaceAll(" ", '-') + '-theme'
+export const toThemeKey = (key: string) => key.replace(/ /g, '-').toLowerCase() + '-theme'
+// key.replaceAll(" ", '-') + '-theme'
