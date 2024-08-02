@@ -136,7 +136,7 @@ const itemStyles = {
     backgroundColor: '$primary9',
     color: '$primary1',
   },
-};
+} as const;
 
 const StyledItem = styled(ContextMenuPrimitive.Item, { ...itemStyles });
 const StyledCheckboxItem = styled(ContextMenuPrimitive.CheckboxItem, { ...itemStyles });

@@ -25,7 +25,7 @@ import { Text } from '../src/components/Text';
 import { TextField } from '../src/components/TextField';
 import { TreeItem } from '../src/components/TreeItem';
 import { ColorTools } from '../src/custom/ColorTools';
-import { ThemeProvider, useTheme } from "next-themes";
+import { useTheme } from "next-themes";
 import getNextTheme, { isDarkTheme } from '../src/utils/theme';
 
 const sidebarWidth = 240;
@@ -1506,13 +1506,6 @@ function Checkbox({
   );
 }
 
-export function getHiContrast(color: string) {
-  if (loContrasts.includes(color)) {
-    return 'hsl(0, 0%, 0%)';
-  }
-
-  return 'hsl(0, 0%, 100%)';
-}
 
 // https://usehooks.com/useLocalStorage/
 function useLocalStorage(key: string, initialValue: any) {

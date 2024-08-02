@@ -45,6 +45,7 @@ export function Tooltip({
     <TooltipPrimitive.Root {...rootProps}>
       <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
       <TooltipPrimitive.Portal>
+        {/* @ts-expect-error */}
         <StyledContent side="top" align="center" sideOffset={5} {...props} multiline={multiline}>
           <Text
             size="1"

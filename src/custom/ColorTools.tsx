@@ -18,7 +18,8 @@ import {
   TextAlignJustifyIcon,
 } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
-import { colors, getHiContrast, loContrasts } from '../../pages/colors';
+import { colors, getHiContrast, loContrasts } from '../utils/colors';
+// import { colors, getHiContrast, loContrasts } from '../../pages/colors';
 
 const steps = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
 

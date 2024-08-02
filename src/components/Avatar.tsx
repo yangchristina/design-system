@@ -281,7 +281,7 @@ export const Avatar = React.forwardRef<React.ElementRef<typeof StyledAvatar>, Av
               mb: '-3px',
             }}
           >
-            <Status size={size && size > 2 ? '2' : '1'} variant={status} />
+            <Status size={size && Number(size) > 2 ? '2' : '1'} variant={status} />
           </Box>
         )}
       </Box>

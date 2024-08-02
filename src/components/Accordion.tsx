@@ -12,6 +12,7 @@ type AccordionProps = AccordionPrimitiveProps & { css?: CSS };
 export const Accordion = React.forwardRef<React.ElementRef<typeof StyledAccordion>, AccordionProps>(
   ({ children, ...props }, forwardedRef) => (
     <StyledAccordion
+      // @ts-expect-error
       ref={forwardedRef}
       {...props}
       {...(props.type === 'single' ? { collapsible: true } : {})}

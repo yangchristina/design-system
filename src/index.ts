@@ -130,7 +130,7 @@ export {
 } from './components/Sheet';
 export { SimpleToggle } from './components/SimpleToggle';
 export { Skeleton } from './components/Skeleton';
-export { Slider } from '@radix-ui/themes';
+// export { Slider } from '@radix-ui/themes';
 export { Status } from './components/Status';
 export { Sup } from './components/Sup';
 export { Sub } from './components/Sub';

@@ -41,7 +41,7 @@ export const selectItemStyle = {
     variants: {
         ...selectColorVariants
     }
-}
+} as const
 
 const SelectItem = styled(SelectPrimitive.Item, {
     ...selectItemStyle,

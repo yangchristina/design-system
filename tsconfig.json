@@ -7,7 +7,8 @@
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
-    // "noEmit": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
     "outDir": "dist",
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -17,8 +18,9 @@
     "noImplicitAny": false,
     "lib": ["dom", "dom.iterable", "es2017", "esnext"],
     "allowJs": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "incremental": true
   },
-  "include": ["src", "constants.ts", "commonStyles.ts", "stitches.config.ts"],
+  "include": ["src", "**/*.module.css"],
   "exclude": ["node_modules", "pages", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
 }

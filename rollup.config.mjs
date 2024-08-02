@@ -8,7 +8,7 @@ export default {
   input: './src/index.ts',
   output: {
     dir: 'dist',
-    // preserveModules: true,
+    preserveModules: true,
     // banner: "'use client'",
   },
   // [
