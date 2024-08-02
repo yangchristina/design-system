@@ -17,7 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "ds:build": "rollup -c",
     "ds:release": "yarn ds:build && np",
-    "prerelease": "npm version prerelease --preid=canary && npm publish --tag canary",
+    "prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
     "release": "npm run ds:build && npm version patch && npm publish",
     "minor-release": "npm run ds:build && npm version minor && npm publish"
   },
