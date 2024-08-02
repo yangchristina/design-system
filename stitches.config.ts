@@ -1,5 +1,5 @@
 import { createStitches, PropertyValue } from '@stitches/react';
-import { ColorTheme, ColorBase, createThemeValue, mapColor } from './utils/radixColors';
+import { ColorTheme, ColorBase, createThemeValue, mapColor } from './src/utils/radixColors';
 // TODO createStitches prevent style ejection
 import {
   // gray,
@@ -118,8 +118,8 @@ import {
   // goldDarkA,
 } from '@radix-ui/colors';
 import type * as Stitches from '@stitches/react';
-import { createAllThemes, toProviderThemes, toThemeKey } from './utils/createTheme';
-import { mapObject } from './utils/utils';
+import { createAllThemes, toProviderThemes, toThemeKey } from './src/utils/createTheme';
+import { mapObject } from './src/utils/utils';
 export type { VariantProps } from '@stitches/react';
 
 export const {
@@ -392,11 +392,10 @@ export const {
   },
 });
 
-const { prefix, ...rest } = rawConfig
-export const config = rest
+const { prefix, ...rest } = rawConfig;
+export const config = rest;
 
 export type CSS = Stitches.CSS<typeof config>;
-
 
 // #region color themes
 const avocadoVariables = {
@@ -417,7 +416,7 @@ const avocadoVariables = {
   // lightgreen2: '#dfebd5',
   lightgreen3v: '#d2e0c5',
   // darkgreen: '#547556',
-}
+};
 
 const crimsonTheme: ColorBase = {
   primary: 'crimson',
@@ -428,7 +427,7 @@ const crimsonTheme: ColorBase = {
   success: 'green',
   info: 'blue',
   warning: 'yellow',
-}
+};
 
 const tealTheme: ColorBase = {
   primary: 'teal',
@@ -439,7 +438,7 @@ const tealTheme: ColorBase = {
   success: 'green',
   info: 'blue',
   warning: 'yellow',
-}
+};
 
 const indigoTheme: ColorBase = {
   primary: 'indigo',
@@ -450,7 +449,7 @@ const indigoTheme: ColorBase = {
   success: 'green',
   info: 'blue',
   warning: 'yellow',
-}
+};
 
 // (avocadoTheme, true, 'grass', 'olive', 'red', 'green', 'blue', 'yellow', avocadoVariables, 'gold')
 const avocadoTheme = {
@@ -463,7 +462,7 @@ const avocadoTheme = {
   info: 'blue',
   warning: 'yellow',
   isLight: true,
-}
+};
 
 const libraryTheme = {
   primary: 'brown',
@@ -475,7 +474,7 @@ const libraryTheme = {
   accent: '',
   error: 'red',
   isLight: true,
-}
+};
 
 const violetTheme: ColorBase = {
   primary: 'violet',
@@ -486,7 +485,7 @@ const violetTheme: ColorBase = {
   success: 'green',
   info: 'blue',
   warning: 'yellow',
-}
+};
 
 const lavendarBlushTheme: ColorBase = {
   primary: 'pink',
@@ -497,7 +496,7 @@ const lavendarBlushTheme: ColorBase = {
   success: 'green',
   info: 'blue',
   warning: 'yellow',
-}
+};
 
 const matchaTheme: ColorBase = {
   primary: 'grass',
@@ -508,7 +507,7 @@ const matchaTheme: ColorBase = {
   success: 'green',
   info: 'blue',
   warning: 'yellow',
-}
+};
 
 const greyTheme: ColorBase = {
   primary: 'gray',
@@ -519,9 +518,10 @@ const greyTheme: ColorBase = {
   success: 'grass',
   info: 'blue',
   warning: 'amber',
-}
+};
 
-const rubyTealTheme: ColorBase = { // bad
+const rubyTealTheme: ColorBase = {
+  // bad
   primary: 'teal',
   secondary: 'ruby',
   accent: 'grass',
@@ -530,9 +530,10 @@ const rubyTealTheme: ColorBase = { // bad
   success: 'grass',
   info: 'blue',
   warning: 'yellow',
-}
+};
 
-const bronzeTealTheme: ColorBase = { // bad
+const bronzeTealTheme: ColorBase = {
+  // bad
   primary: 'teal',
   secondary: 'bronze',
   accent: 'grass',
@@ -541,7 +542,7 @@ const bronzeTealTheme: ColorBase = { // bad
   success: 'grass',
   info: 'blue',
   warning: 'yellow',
-}
+};
 
 const caveTheme = {
   primary: 'slate',
@@ -553,7 +554,7 @@ const caveTheme = {
   info: 'blue',
   warning: 'amber',
   isLight: false,
-}
+};
 
 const baseThemes = {
   crimson: crimsonTheme,
@@ -565,19 +566,19 @@ const baseThemes = {
   grey: greyTheme,
   // rubyTeal: rubyTealTheme,
   // bronzeTeal: bronzeTealTheme,
-}
+};
 
 // shouldn't name change be easy? can you make variants of an existing theme from planda?
-const lightThemeConfigs = mapObject(baseThemes, (theme) => ({ ...theme, isLight: true }))
+const lightThemeConfigs = mapObject(baseThemes, (theme) => ({ ...theme, isLight: true }));
 
 const darkThemeConfigs = {
   ...Object.entries(lightThemeConfigs).reduce((acc, [name, config]) => {
     return {
       ...acc,
       [`${name}Dark`]: { ...config, isLight: false },
-    }
+    };
   }, {} as Record<string, ColorTheme>),
-}
+};
 
 export const allThemeConfigs = {
   ...lightThemeConfigs,
@@ -585,19 +586,21 @@ export const allThemeConfigs = {
   cave: caveTheme,
   avocado: avocadoTheme,
   library: libraryTheme,
-}
+};
 
-export const themes: Record<string, any> = mapObject(allThemeConfigs, (config) => createThemeValue(config))
+export const themes: Record<string, any> = mapObject(allThemeConfigs, (config) =>
+  createThemeValue(config)
+);
 
 export const themeKeyToName = Object.keys(themes).reduce((acc, name) => {
-  const key = toThemeKey(name)
-  acc[key] = name
-  return acc
-}, {} as Record<string, string>)
+  const key = toThemeKey(name);
+  acc[key] = name;
+  return acc;
+}, {} as Record<string, string>);
 
-const createdThemes = createAllThemes(themes, createTheme)
+const createdThemes = createAllThemes(themes, createTheme);
 
-export const providerThemes = toProviderThemes(createdThemes)
+export const providerThemes = toProviderThemes(createdThemes);
 // #endregion
 
 export const globalStyles = {
@@ -612,19 +615,19 @@ export const globalStyles = {
   ':root': {
     margin: 0,
     fontFamily: '$system',
-    height: "100%",
-    color: "$primary12",
-    boxSizing: "border-box",
-    '-moz-box-sizing': "border-box",
-    '-webkit-box-sizing': "border-box",
+    height: '100%',
+    color: '$primary12',
+    boxSizing: 'border-box',
+    '-moz-box-sizing': 'border-box',
+    '-webkit-box-sizing': 'border-box',
     scrollBehavior: 'smooth',
     scrollbarColor: 'auto transparent',
     background: '$primary1',
-    fontSize: "1em",
+    fontSize: '1em',
   },
   body: {
-    minHeight: "100vh",
-    minWidth: "100vw",
+    minHeight: '100vh',
+    minWidth: '100vw',
     fontSize: '1em',
     margin: 0,
     padding: 0,
@@ -635,12 +638,13 @@ export const globalStyles = {
   'h1, h2, h3, h4, h5, h6': {
     color: '$primary11',
     margin: 0,
-    display: "block",
-    fontWeight: "bold"
+    display: 'block',
+    fontWeight: 'bold',
   },
-  main: { // TODO: delete this when done testing
+  main: {
+    // TODO: delete this when done testing
     backgroundColor: '$primary1',
-    width: '100vw'
+    width: '100vw',
   },
   sub: {
     verticalAlign: 'bottom',
@@ -659,15 +663,15 @@ export const globalStyles = {
       // border: '$focus',
       outline: 'none !important',
       // border: '1px solid red',. .
-      boxShadow: '$focus'
-    }
+      boxShadow: '$focus',
+    },
   },
   a: {
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   '.gap': {
     display: 'flex',
-    gap: 15
+    gap: 15,
   },
   '.center': {
     display: 'flex',
@@ -675,6 +679,6 @@ export const globalStyles = {
     justifyContent: 'center',
   },
   li: {
-    marginInline: 40
-  }
-}
+    marginInline: 40,
+  },
+};

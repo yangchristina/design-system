@@ -10,23 +10,23 @@ import {
   LineHeightIcon,
 } from '@radix-ui/react-icons';
 import React from 'react';
-import { Box } from '../components/Box';
-import { Button } from '../components/Button';
-import { Code } from '../components/Code';
-import { Container } from '../components/Container';
-import { Flex } from '../components/Flex';
-import { Grid } from '../components/Grid';
-import { Heading } from '../components/Heading';
-import { IconButton } from '../components/IconButton';
-import { Paragraph } from '../components/Paragraph';
-import { Section } from '../components/Section';
-import { Separator } from '../components/Separator';
-import { Text } from '../components/Text';
-import { TextField } from '../components/TextField';
-import { TreeItem } from '../components/TreeItem';
-import { ColorTools } from '../custom/ColorTools';
+import { Box } from '../src/components/Box';
+import { Button } from '../src/components/Button';
+import { Code } from '../src/components/Code';
+import { Container } from '../src/components/Container';
+import { Flex } from '../src/components/Flex';
+import { Grid } from '../src/components/Grid';
+import { Heading } from '../src/components/Heading';
+import { IconButton } from '../src/components/IconButton';
+import { Paragraph } from '../src/components/Paragraph';
+import { Section } from '../src/components/Section';
+import { Separator } from '../src/components/Separator';
+import { Text } from '../src/components/Text';
+import { TextField } from '../src/components/TextField';
+import { TreeItem } from '../src/components/TreeItem';
+import { ColorTools } from '../src/custom/ColorTools';
 import { ThemeProvider, useTheme } from "next-themes";
-import getNextTheme, { isDarkTheme } from '../utils/theme';
+import getNextTheme, { isDarkTheme } from '../src/utils/theme';
 
 const sidebarWidth = 240;
 
