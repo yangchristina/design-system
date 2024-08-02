@@ -5,10 +5,10 @@ import preserveDirectives from "rollup-plugin-preserve-directives";
 import postcss from 'rollup-plugin-postcss';
 
 export default {
-  input: './index.ts',
+  input: './src/index.ts',
   output: {
     dir: 'dist',
-    preserveModules: true,
+    // preserveModules: true,
     // banner: "'use client'",
   },
   // [

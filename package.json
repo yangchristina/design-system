@@ -87,6 +87,7 @@
     "chroma-js": "^2.1.1",
     "esbuild": "0.23.0",
     "esbuild-node-externals": "^1.14.0",
+    "esbuild-plugin-react18": "^0.2.5",
     "husky": ">=4",
     "lint-staged": ">=10",
     "next": "^14.2.5",

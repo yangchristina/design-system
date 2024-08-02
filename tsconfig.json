@@ -19,6 +19,6 @@
     "allowJs": true,
     "isolatedModules": true
   },
-  "include": ["index.ts", "src", "components", "hooks", "types", "utils", "custom", "global.d.ts"],
-  "exclude": ["node_modules", "pages", "dist", "**/*.test.ts", "**/*.test.tsx"]
+  "include": ["src"],
+  "exclude": ["node_modules", "pages", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
 }

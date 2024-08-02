@@ -1,13 +1,13 @@
 import React from 'react';
-import { Box } from '../components/Box';
-import { Avatar } from '../components/Avatar';
-import { Text } from '../components/Text';
-import { Button } from '../components/Button';
-import { Badge } from '../components/Badge';
-import { Flex } from '../components/Flex';
-import { Checkbox } from '../components/Checkbox';
-import { IconButton } from '../components/IconButton';
-import { Dialog, DialogTrigger, DialogContent, DialogClose } from '../components/Dialog';
+import { Box } from '../src/components/Box';
+import { Avatar } from '../src/components/Avatar';
+import { Text } from '../src/components/Text';
+import { Button } from '../src/components/Button';
+import { Badge } from '../src/components/Badge';
+import { Flex } from '../src/components/Flex';
+import { Checkbox } from '../src/components/Checkbox';
+import { IconButton } from '../src/components/IconButton';
+import { Dialog, DialogTrigger, DialogContent, DialogClose } from '../src/components/Dialog';
 import {
   AlertDialog,
   AlertDialogTrigger,
@@ -15,39 +15,39 @@ import {
   AlertDialogTitle,
   AlertDialogAction,
   AlertDialogCancel,
-} from '../components/AlertDialog';
-import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '../components/Popover';
-import { Tooltip } from '../components/Tooltip';
-import { ProgressBar } from '../components/ProgressBar';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '../components/Tabs';
+} from '../src/components/AlertDialog';
+import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '../src/components/Popover';
+import { Tooltip } from '../src/components/Tooltip';
+import { ProgressBar } from '../src/components/ProgressBar';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../src/components/Tabs';
 import {
   Accordion,
   AccordionTrigger,
   AccordionItem,
   AccordionContent,
-} from '../components/Accordion';
-import { Label } from '../components/Label';
-import { Switch } from '../components/Switch';
-import { SimpleToggle } from '../components/SimpleToggle';
-import { Slider } from '../components/Slider';
+} from '../src/components/Accordion';
+import { Label } from '../src/components/Label';
+import { Switch } from '../src/components/Switch';
+import { SimpleToggle } from '../src/components/SimpleToggle';
+import { Slider } from '../src/components/Slider';
 import { Cross2Icon } from '@radix-ui/react-icons';
-import { Radio, RadioGroup } from '../components/Radio';
-import { RadioCard, RadioCardGroup } from '../components/RadioCard';
-import { Heading } from '../components/Heading';
+import { Radio, RadioGroup } from '../src/components/Radio';
+import { RadioCard, RadioCardGroup } from '../src/components/RadioCard';
+import { Heading } from '../src/components/Heading';
 import { Menus } from '../custom/Menus';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from '../components/DropdownMenu';
+} from '../src/components/DropdownMenu';
 
 import {
   ContextMenu,
   ContextMenuTrigger,
   ContextMenuContent,
   ContextMenuItem,
-} from '../components/ContextMenu';
+} from '../src/components/ContextMenu';
 
 export default function Closed() {
   return (
