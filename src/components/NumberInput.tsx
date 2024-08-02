@@ -1,7 +1,7 @@
 'use client'
 import React, { MutableRefObject, useRef } from 'react'
 import { useEdit } from '../hooks/useEdit'
-import { debounce, isNil } from "lodash"
+import { debounce, isNil } from "lodash-es"
 import { ChangeEvent, forwardRef, useCallback, useId, ComponentProps } from "react"
 import { Input } from './Input'
 import { round } from 'lodash-es'
