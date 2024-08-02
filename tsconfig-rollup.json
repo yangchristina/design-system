@@ -7,7 +7,7 @@
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmit": true,
+    "noEmit": false,
     "outDir": "dist",
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -15,14 +15,6 @@
     "strict": true,
     "target": "es6"
   },
-  "exclude": [
-    "node_modules",
-    "pages",
-    ".next",
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "include": ["src", "**/*.module.css", "next-env.d.ts"],
+  "exclude": ["node_modules", "pages", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
 }

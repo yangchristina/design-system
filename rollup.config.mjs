@@ -1,7 +1,7 @@
 // import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json' assert { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
-import preserveDirectives from "rollup-plugin-preserve-directives";
+import preserveDirectives from 'rollup-plugin-preserve-directives';
 import postcss from 'rollup-plugin-postcss';
 
 export default {
@@ -9,6 +9,7 @@ export default {
   output: {
     dir: 'dist',
     preserveModules: true,
+    format: 'esm',
     // banner: "'use client'",
   },
   // [
