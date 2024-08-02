@@ -2,7 +2,7 @@
 import React, { ComponentProps } from 'react'
 import { Theme as RadixTheme } from '@radix-ui/themes'
 import { useTheme } from 'next-themes'
-import { allThemeConfigs } from '../../stitches.config'
+import { allThemeConfigs } from '../stitches.config'
 // Theme component must take in secondary and primary, and other stitches variables
 
 type ThemeProps = Omit<ComponentProps<typeof RadixTheme>, 'grayColor'>

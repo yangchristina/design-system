@@ -1,5 +1,5 @@
 "use client"
-import { styled } from '../../stitches.config';
+import { styled } from '../stitches.config';
 
 export const Kbd = styled('kbd', {
   boxSizing: 'border-box',

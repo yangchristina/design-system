@@ -1,5 +1,5 @@
 "use client"
-import { styled, keyframes } from '../../stitches.config';
+import { styled, keyframes } from '../stitches.config';
 
 const pulse = keyframes({
   '0%': { opacity: 0 },

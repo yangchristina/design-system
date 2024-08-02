@@ -1,5 +1,5 @@
 "use client"
-import { css, styled } from '../../stitches.config';
+import { css, styled } from '../stitches.config';
 
 export const panelStyles = css({
   backgroundColor: '$panel',

@@ -1,5 +1,5 @@
 import { createStitches, PropertyValue } from '@stitches/react';
-import { ColorTheme, ColorBase, createThemeValue, mapColor } from './src/utils/radixColors';
+import { ColorTheme, ColorBase, createThemeValue, mapColor } from './utils/radixColors';
 // TODO createStitches prevent style ejection
 import {
   // gray,
@@ -118,8 +118,8 @@ import {
   // goldDarkA,
 } from '@radix-ui/colors';
 import type * as Stitches from '@stitches/react';
-import { createAllThemes, toProviderThemes, toThemeKey } from './src/utils/createTheme';
-import { mapObject } from './src/utils/utils';
+import { createAllThemes, toProviderThemes, toThemeKey } from './utils/createTheme';
+import { mapObject } from './utils/utils';
 export type { VariantProps } from '@stitches/react';
 
 export const {

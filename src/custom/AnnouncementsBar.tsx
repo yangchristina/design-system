@@ -2,7 +2,7 @@
 import React from 'react'
 import { Cross1Icon } from '@radix-ui/react-icons';
 import { IconButton } from '../components/IconButton';
-import { styled } from '../../stitches.config';
+import { styled } from '../stitches.config';
 
 const Container = styled('div', {
     position: 'absolute',

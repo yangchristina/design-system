@@ -1,6 +1,6 @@
 'use client'
 import React, { ComponentProps, forwardRef } from 'react'
-import { styled } from '../../stitches.config';
+import { styled } from '../stitches.config';
 import * as ToggleGroupPrimative from '@radix-ui/react-toggle-group'
 interface ToggleGroupItem {
     value: string,

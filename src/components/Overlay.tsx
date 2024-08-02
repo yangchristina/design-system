@@ -1,5 +1,5 @@
 "use client"
-import { styled, css } from '../../stitches.config';
+import { styled, css } from '../stitches.config';
 
 export type DialogBrightness = 'dark' | 'medium' | 'medium-light' | 'light' | 'lighter' | 'none';
 

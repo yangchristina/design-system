@@ -1,7 +1,7 @@
 'use client'
 import React, { ReactNode, useId } from 'react'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import { styled } from '../../stitches.config';
+import { styled } from '../stitches.config';
 import { CheckIcon } from '@radix-ui/react-icons';
 import InputLabel from './InputLabel';
 import { VariantProps } from '@stitches/react';

@@ -2,7 +2,7 @@
 import React from 'react';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
 import { ThemeProvider } from 'next-themes';
-import { providerThemes } from "../../stitches.config";
+import { providerThemes } from "../stitches.config";
 // import '@radix-ui/themes/styles.css';
 // import Theme from './Theme';
 

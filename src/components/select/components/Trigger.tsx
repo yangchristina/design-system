@@ -1,6 +1,6 @@
 'use client';
 import React, { ComponentProps } from 'react'
-import { styled } from '../../../../stitches.config';
+import { styled } from '../../../stitches.config';
 import { SelectTrigger, Value, SelectIcon } from '@radix-ui/react-select';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import { selectColorVariants } from "../styles";

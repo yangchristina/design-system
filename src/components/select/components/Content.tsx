@@ -1,7 +1,7 @@
 'use client';
 import React from 'react'
 import * as SelectPrimitive from '@radix-ui/react-select';
-import { styled } from '../../../../stitches.config';
+import { styled } from '../../../stitches.config';
 import { ChevronUpIcon, ChevronDownIcon } from '@radix-ui/react-icons';
 
 const SelectViewport = styled(SelectPrimitive.Viewport, {
