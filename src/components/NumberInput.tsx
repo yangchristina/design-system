@@ -4,7 +4,7 @@ import { useEdit } from '../hooks/useEdit'
 import { debounce, isNil } from "lodash"
 import { ChangeEvent, forwardRef, useCallback, useId, ComponentProps } from "react"
 import { Input } from './Input'
-import { round } from 'lodash'
+import { round } from 'lodash-es'
 import { useOutsideAlerter } from '../hooks/useOutsideAlerter'
 
 
