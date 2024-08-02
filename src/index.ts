@@ -14,12 +14,13 @@ export { TriangleNav } from './components/TriangleNav';
 export { DirectionNav } from './components/DirectionNav';
 export { MultiToggleGroup, ToggleGroup } from './components/ToggleGroup';
 export { NumberInput } from './components/NumberInput';
-export {
+import {
   Accordion,
   AccordionTrigger,
   AccordionItem,
   AccordionContent,
 } from './components/Accordion';
+export { Accordion, AccordionTrigger, AccordionItem, AccordionContent };
 export { Alert } from './components/Alert';
 export {
   AlertDialog,
