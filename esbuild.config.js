@@ -10,7 +10,7 @@ esbuild
     entryPoints: ['src/index.ts'],
     outdir: 'dist',
     bundle: true,
-    minify: false,
+    minify: true,
     treeShaking: true,
     // sourcemap: true,
     format: 'esm',
