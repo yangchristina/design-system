@@ -13,7 +13,7 @@ esbuild
     minify: true,
     treeShaking: true,
     // sourcemap: true,
-    format: 'esm',
+    format: 'cjs',
     target: ['es6'],
     loader: {
       '.module.css': 'local-css',
