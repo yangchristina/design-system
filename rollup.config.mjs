@@ -12,7 +12,7 @@ export default {
   output: {
     dir: 'dist',
     preserveModules: true,
-    format: 'esm',
+    format: 'cjs',
     // banner: "'use client'",
   },
   // [
@@ -41,7 +41,7 @@ export default {
     babel({
       include: 'src/**',
       exclude: 'node_modules/**', // Only transpile our source code
-      babelHelpers: 'bundled'
+      babelHelpers: 'bundled',
     }),
     // typescript({
     //   clean: true,
