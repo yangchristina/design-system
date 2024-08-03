@@ -33,6 +33,7 @@ export default {
     resolve(),
     typescript(),
     postcss({
+      minimize: true,
       extract: false,
       modules: true,
       use: ['sass'],
