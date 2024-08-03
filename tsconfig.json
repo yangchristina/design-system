@@ -9,7 +9,6 @@
     "moduleResolution": "node",
     "emitDeclarationOnly": true,
     "noEmit": false,
-    "rootDir": "src",
     "outDir": "dist",
     "resolveJsonModule": true,
     "skipLibCheck": true,

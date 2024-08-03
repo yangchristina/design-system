@@ -31,7 +31,9 @@ export default {
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
   plugins: [
     resolve(),
-    typescript(),
+    typescript({
+      
+    }),
     postcss({
       minimize: true,
       extract: false,
