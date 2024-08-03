@@ -3,6 +3,9 @@ import pkg from './package.json' assert { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
 import preserveDirectives from 'rollup-plugin-preserve-directives';
 import postcss from 'rollup-plugin-postcss';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import babel from '@rollup/plugin-babel';
 
 export default {
   input: './src/index.ts',
@@ -26,6 +29,7 @@ export default {
   // ],
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
   plugins: [
+    resolve(),
     typescript(),
     postcss({
       extract: false,
@@ -33,6 +37,12 @@ export default {
       use: ['sass'],
     }),
     preserveDirectives(),
+    commonjs(),
+    babel({
+      include: 'src/**',
+      exclude: 'node_modules/**', // Only transpile our source code
+      babelHelpers: 'bundled'
+    }),
     // typescript({
     //   clean: true,
     //   tsconfig: 'tsconfig.json',
