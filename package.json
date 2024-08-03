@@ -1,6 +1,6 @@
 {
   "name": "@planda/design-system",
-  "version": "1.1.38-canary.7",
+  "version": "1.1.38-canary.8",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
