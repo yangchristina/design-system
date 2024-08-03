@@ -6,6 +6,13 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "require": "./dist/src/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "next dev --port 3001",
     "types": "tsc --noEmit",
