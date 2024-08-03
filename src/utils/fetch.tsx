@@ -1,4 +1,4 @@
-import { forOwn, isEmpty, isPlainObject } from "lodash-es"
+import { forOwn, isEmpty, isPlainObject } from "lodash"
 import { jsonParse, jsonStringify } from "./json"
 
 export function paramsToQueryString(params = {}) {
