@@ -15,7 +15,7 @@ export default {
     format: 'cjs',
     // banner: "'use client'",
   },
-  exports: 'named',
+  // exports: 'named',
   // [
   //   {
   //     file: pkg.main,
