@@ -10,6 +10,7 @@ type TooltipProviderProps = React.ComponentProps<typeof TooltipProvider>;
 interface DesignSystemProviderProps extends TooltipProviderProps {
   themes?: any;
   defaultTheme?: string;
+  enableSystem?: boolean;
 }
 
 const mergeThemes = (themes1: Record<string, string>, themes2: Record<string, string>) => {
@@ -24,10 +25,11 @@ const mergeThemes = (themes1: Record<string, string>, themes2: Record<string, st
   return mergedThemes;
 }
 
-export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, defaultTheme = 'teal', ...props }) => {
+export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, defaultTheme = 'teal', enableSystem = false, ...props }) => {
   return <ThemeProvider
     attribute="class"
     defaultTheme={defaultTheme} // normally leave as system
+    enableSystem={enableSystem}
     value={{ ...providerThemes, ...themes, }}
   ><TooltipProvider {...props} /></ThemeProvider >;
 };
