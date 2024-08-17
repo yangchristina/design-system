@@ -1,18 +1,12 @@
-import { allThemeConfigs } from '../../stitches.config';
+import { allThemeConfigs, lightThemeConfigs } from '../../stitches.config';
 import { mapObject } from '../utils';
 import type { ExtendableOptions, ThemeVariantsMap } from '@pandacss/types';
 
 import * as radixScales from '@radix-ui/colors';
 import { stitchesToPandaTokens } from './stitchesConvert';
 import { defineThemeContract } from '@pandacss/dev';
-
-const defineTheme = defineThemeContract({
-    tokens: {
-        colors: {
-            red: { value: '' }, // theme implementations must have a red color
-        },
-    },
-});
+import { mapColor } from '../radixColors';
+import { Tokens } from '@planda/styled-system/tokens';
 
 export const blackOverlay = {
     overlay1: radixScales.blackA.blackA1,
@@ -44,7 +38,7 @@ export const whiteOverlay = {
     overlay12: radixScales.whiteA.whiteA12,
 };
 
-export function mapColor(color: string, alias: string) {
+export function mapColorPanda(color: string, alias: string) {
     const obj: { [key: string]: string } = {};
     for (let i = 1; i <= 12; i++) {
         obj[alias + i] = `{colors.${color}${i}}`;
@@ -81,48 +75,33 @@ export interface ColorTheme extends ColorBase {
     name?: string;
 }
 
-const lightDefaults = {
+const crimsonTheme: ColorBase = {
+    primary: 'crimson',
+    secondary: 'ruby',
+    accent: 'crimson',
+    gray: 'mauve',
+    error: 'red',
+    success: 'green',
+    info: 'blue',
+    warning: 'yellow',
+};
+
+export const lightDefaults = {
     hiContrast: 'black',
     loContrast: 'white',
     transparentPanel: 'hsl(0 0% 0% / 97%)',
     ...blackOverlay,
-    ...radixScales.whiteA,
-    ...radixScales.pink,
-    ...mapColor('whiteA', 'overlayB'),
-
-    // ...radixScales.grayDarkA,
-    ...mapColorObj(radixScales.grayDarkA, 'grayA', 'grayDarkA'), // grayDarkA3
-
-    // ...radixScales.ruby,
-
     ...radixScales.gray,
     ...radixScales.mauve,
     ...radixScales.slate,
     ...radixScales.sage,
     ...radixScales.olive,
     ...radixScales.sand,
-    // ...radixScales.tomato,
-    // ...radixScales.red,
-    // ...radixScales.crimson,
-    // ...radixScales.pink,
-    // ...radixScales.plum,
-    // ...radixScales.purple,
+    ...mapColorObj(radixScales.grayDarkA, 'grayA', 'grayDarkA'), // grayDarkA3
+
     ...radixScales.violet,
     ...radixScales.indigo,
     ...radixScales.blue,
-    // ...radixScales.sky,
-    // ...radixScales.mint,
-    // ...radixScales.cyan,
-    // ...radixScales.teal,
-    // ...radixScales.green,
-    // ...radixScales.grass,
-    // ...radixScales.lime,
-    // ...radixScales.yellow,
-    // ...radixScales.amber,
-    // ...radixScales.orange,
-    // ...radixScales.brown,
-    // ...radixScales.bronze,
-    // ...radixScales.gold,
 
     ...radixScales.grayA,
     ...radixScales.mauveA,
@@ -130,36 +109,22 @@ const lightDefaults = {
     ...radixScales.sageA,
     ...radixScales.oliveA,
     ...radixScales.sandA,
-    // ...radixScales.tomatoA,
-    // ...radixScales.redA,
-    // ...radixScales.crimsonA,
-    // ...radixScales.pinkA,
-    // ...radixScales.plumA,
-    // ...radixScales.purpleA,
-    ...radixScales.violetA,
-    // ...radixScales.indigoA,
-    // ...radixScales.blueA,
-    // ...radixScales.skyA,
-    // ...radixScales.mintA,
-    // ...radixScales.cyanA,
-    // ...radixScales.tealA,
-    // ...radixScales.greenA,
-    // ...radixScales.grassA,
-    // ...radixScales.limeA,
-    // ...radixScales.yellowA,
-    // ...radixScales.amberA,
-    // ...radixScales.orangeA,
-    // ...radixScales.brownA,
-    // ...radixScales.bronzeA,
-    // ...radixScales.goldA,
 
-    // ...radixScales.whiteA,
-    // ...radixScales.blackA,
+    ...radixScales.violetA,
+    ...mapColor('whiteA', 'overlayB'),
+
+    canvas: 'hsl(0 0% 93%)',
+    panel: '$loContrast',
+    shadowLight: 'hsl(206 22% 7% / 35%)',
+    shadowDark: 'hsl(206 22% 7% / 20%)',
 };
-const darkDefaults = {
+
+export const darkDefaults = {
+    hiContrast: 'white',
+    loContrast: 'black',
+    transparentPanel: 'hsl(0 100% 100% / 97%)',
+
     ...whiteOverlay,
-    // ...radixScales.blackA,
-    // ...radixScales.pinkDark,
     ...radixScales.grayDark,
     ...radixScales.mauveDark,
     ...radixScales.slateDark,
@@ -167,73 +132,80 @@ const darkDefaults = {
     ...radixScales.oliveDark,
     ...radixScales.sandDark,
     ...mapColorObj(radixScales.grayA, 'grayA', 'grayDarkA'), // grayDarkA3
-    // ...radixScales.tomatoDark,
-    // ...radixScales.redDark,
-    // ...radixScales.crimsonDark,
-    // ...radixScales.pinkDark,
-    // ...radixScales.plumDark,
-    // ...radixScales.purpleDark,
+
     ...radixScales.violetDark,
     ...radixScales.indigoDark,
     ...radixScales.blueDark,
-    // ...radixScales.skyDark,
-    // ...radixScales.mintDark,
-    // ...radixScales.cyanDark,
-    // ...radixScales.tealDark,
-    // ...radixScales.greenDark,
-    // ...radixScales.grassDark,
-    // ...radixScales.limeDark,
-    // ...radixScales.yellowDark,
-    // ...radixScales.amberDark,
-    // ...radixScales.orangeDark,
-    // ...radixScales.brownDark,
-    // ...radixScales.bronzeDark,
-    // ...radixScales.goldDark,
+
     ...radixScales.grayDarkA,
     ...radixScales.mauveDarkA,
     ...radixScales.slateDarkA,
     ...radixScales.sageDarkA,
     ...radixScales.oliveDarkA,
     ...radixScales.sandDarkA,
-    // ...radixScales.tomatoDarkA,
-    // ...radixScales.redDarkA,
-    // ...radixScales.crimsonDarkA,
-    // ...radixScales.pinkDarkA,
-    // ...radixScales.plumDarkA,
-    // ...radixScales.purpleDarkA,
+
     ...radixScales.violetDarkA,
-    // ...radixScales.indigoDarkA,
-    // ...radixScales.blueDarkA,
-    // ...radixScales.skyDarkA,
-    // ...radixScales.mintDarkA,
-    // ...radixScales.cyanDarkA,
-    // ...radixScales.tealDarkA,
-    // ...radixScales.greenDarkA,
-    // ...radixScales.grassDarkA,
-    // ...radixScales.limeDarkA,
-    // ...radixScales.yellowDarkA,
-    // ...radixScales.amberDarkA,
-    // ...radixScales.orangeDarkA,
-    // ...radixScales.brownDarkA,
-    // ...radixScales.bronzeDarkA,
-    // ...radixScales.goldDarkA,
-
-    // Semantic colors
-    hiContrast: 'white',
-    loContrast: 'black',
-
-    // // Semantic colors
-    // hiContrast: '$gray12',
-    // // loContrast: '$gray1',
-    // loContrast: '$loContrast',
+    ...mapColor('blackA', 'overlayB'),
 
     canvas: 'hsl(0 0% 15%)',
     panel: '$gray3',
-    transparentPanel: 'hsl(0 100% 100% / 97%)',
     shadowLight: 'hsl(206 22% 7% / 35%)',
     shadowDark: 'hsl(206 22% 7% / 20%)',
+} as const;
 
-    ...mapColor('blackA', 'overlayB'),
+export function mapColorToContract(alias: string) {
+    const obj: { [key: string]: { value: string } } = {};
+    for (let i = 1; i <= 12; i++) {
+        obj[alias + i] = { value: '' };
+    }
+    return obj;
+}
+
+export function mapColorObjValue(originalPrefix: string, alias: string, { isLight = true, suffix = '' }: { isLight?: boolean; suffix?: string }) {
+    const darkLight = isLight ? '' : 'Dark';
+    console.log(originalPrefix + darkLight + suffix, originalPrefix + suffix);
+    const obj: { [key: string]: { value: string } } = {};
+    for (let i = 1; i <= 12; i++) {
+        obj[alias + i] = { value: radixScales[originalPrefix + darkLight + suffix][originalPrefix + suffix + i] };
+    }
+    return obj;
+}
+const tealTheme: ColorBase = {
+    primary: 'teal',
+    secondary: 'mint',
+    accent: 'teal',
+    gray: 'sage',
+    error: 'red',
+    success: 'green',
+    info: 'blue',
+    warning: 'yellow',
+};
+
+const themeColorTypes = ['primary', 'primary', 'secondary', 'accent', 'gray', 'error', 'success', 'info', 'warning'] as const;
+export const colorsToContract = () => {
+    return themeColorTypes.reduce((acc, key) => {
+        return { ...acc, ...mapColorToContract(key), ...mapColorToContract(key + 'A') };
+    }, {});
+};
+
+const colorsToTheme = ({ isLight, ...theme }: ColorBase & { isLight?: boolean }) => {
+    return Object.entries(theme).reduce((acc, [key, val]) => {
+        return { ...acc, ...mapColorObjValue(val, key, { isLight }), ...mapColorObjValue(val, key, { isLight, suffix: 'A' }) };
+    }, stitchesToPandaTokens(isLight ? lightDefaults : darkDefaults) as Record<string, { value: string }>);
+};
+
+const defineTheme = defineThemeContract({
+    tokens: {
+        colors: {
+            ...colorsToContract(),
+        },
+    },
+});
+
+export const theme1 = {
+    tokens: {
+        colors: colorsToTheme(tealTheme),
+    },
 };
 
 export function createThemeValue(theme: ColorTheme, variables?: Record<string, string>): ThemeVariantsMap {
@@ -263,22 +235,22 @@ export function createThemeValue(theme: ColorTheme, variables?: Record<string, s
     };
 
     const semanticColors = {
-        ...mapColor(error, 'error'),
-        ...mapColor(error + 'A', 'errorA'),
-        ...mapColor(success, 'success'),
-        ...mapColor(success + 'A', 'successA'),
-        ...mapColor(info, 'info'),
-        ...mapColor(info + 'A', 'infoA'),
-        ...mapColor(warning, 'warning'),
-        ...mapColor(warning + 'A', 'warningA'),
-        ...mapColor(gray, 'gray'),
-        ...mapColor(gray + 'A', 'grayA'),
-        ...mapColor(primary, 'primary'),
-        ...mapColor(primary + 'A', 'primaryA'),
-        ...mapColor(accent, 'accent'),
-        ...mapColor(accent + 'A', 'accentA'),
-        ...mapColor(secondary, 'secondary'),
-        ...mapColor(secondary + 'A', 'secondaryA'),
+        ...mapColorPanda(error, 'error'),
+        ...mapColorPanda(error + 'A', 'errorA'),
+        ...mapColorPanda(success, 'success'),
+        ...mapColorPanda(success + 'A', 'successA'),
+        ...mapColorPanda(info, 'info'),
+        ...mapColorPanda(info + 'A', 'infoA'),
+        ...mapColorPanda(warning, 'warning'),
+        ...mapColorPanda(warning + 'A', 'warningA'),
+        ...mapColorPanda(gray, 'gray'),
+        ...mapColorPanda(gray + 'A', 'grayA'),
+        ...mapColorPanda(primary, 'primary'),
+        ...mapColorPanda(primary + 'A', 'primaryA'),
+        ...mapColorPanda(accent, 'accent'),
+        ...mapColorPanda(accent + 'A', 'accentA'),
+        ...mapColorPanda(secondary, 'secondary'),
+        ...mapColorPanda(secondary + 'A', 'secondaryA'),
     };
 
     return {
@@ -293,9 +265,16 @@ export function createThemeValue(theme: ColorTheme, variables?: Record<string, s
     };
 }
 
-export const themes: Record<string, any> = mapObject(allThemeConfigs, (config) => createThemeValue(config));
+export const themes: ThemeVariantsMap = mapObject(allThemeConfigs, (config) => ({
+    tokens: {
+        colors: colorsToTheme(config),
+    },
+}));
 
 export const allThemeNames = Object.keys(allThemeConfigs);
 export const presetConditions = Object.fromEntries(allThemeNames.map((key) => [key, `.${key} &, [data-color-mode=${key}] &`]));
 
+// const defineTheme = defineThemeContract(createThemeValue(allThemeConfigs.avocado));
+
 console.log('themes', JSON.stringify(themes.library));
+console.log('presetConditions', JSON.stringify(presetConditions));

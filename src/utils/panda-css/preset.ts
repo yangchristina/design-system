@@ -1,14 +1,14 @@
 import { definePreset } from '@pandacss/dev';
-import { stitchesToPandaTokens } from './stitchesConvert';
+import { lightDarkToPandaTokens, stitchesToPandaTokens } from './stitchesConvert';
 import { crimsonA } from '@radix-ui/colors';
-import { allThemeNames, presetConditions, themes } from './themes';
+import { allThemeNames, darkDefaults, lightDefaults, presetConditions, theme1, themes, whiteOverlay } from './themes';
 import { textRecipe } from '../../components/recipes/text';
 
 export const plandaPreset = definePreset({
     name: 'planda',
     staticCss: {
         extend: {
-            themes: allThemeNames,
+            themes: [...allThemeNames, 'test'],
         },
     },
     theme: {
@@ -34,11 +34,6 @@ export const plandaPreset = definePreset({
                         unimportant: '$gray11',
                         important: '$primary11',
                         highlight: '$warning9',
-
-                        canvas: 'hsl(0 0% 93%)',
-                        panel: '$loContrast',
-                        shadowLight: 'hsl(206 22% 7% / 35%)',
-                        shadowDark: 'hsl(206 22% 7% / 20%)',
 
                         border: '$borderWidths$medium solid $primary12',
                         borderThin: '$borderWidths$thin solid $primary12',
@@ -125,7 +120,6 @@ export const plandaPreset = definePreset({
                     max: '999',
                 }),
             },
-            semanticTokens: {},
             keyframes: {
                 fadeIn: {
                     from: { opacity: '0' },
@@ -165,5 +159,5 @@ export const plandaPreset = definePreset({
         },
     },
     conditions: presetConditions,
-    presets: ['@pandacss/preset-panda'],
+    // presets: ['@pandacss/preset-panda'],
 });

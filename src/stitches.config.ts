@@ -471,7 +471,7 @@ const libraryTheme = {
     success: 'green',
     info: 'blue',
     warning: 'yellow',
-    accent: '',
+    accent: 'yellow', // TODO: random value, dunno what to do
     error: 'red',
     isLight: true,
 };
@@ -512,7 +512,7 @@ const matchaTheme: ColorBase = {
 const greyTheme: ColorBase = {
     primary: 'gray',
     secondary: 'jade',
-    accent: '',
+    accent: 'yellow', // TODO: random value, dunno what to do
     gray: 'sand',
     error: 'tomato',
     success: 'grass',
@@ -547,7 +547,7 @@ const bronzeTealTheme: ColorBase = {
 const caveTheme = {
     primary: 'slate',
     secondary: 'blue',
-    accent: '',
+    accent: 'grass', // TODO: this is a random value
     gray: 'slate',
     error: 'red',
     success: 'grass',
@@ -569,7 +569,7 @@ const baseThemes = {
 };
 
 // shouldn't name change be easy? can you make variants of an existing theme from planda?
-const lightThemeConfigs = mapObject(baseThemes, (theme) => ({ ...theme, isLight: true }));
+export const lightThemeConfigs = mapObject(baseThemes, (theme) => ({ ...theme, isLight: true }));
 
 const darkThemeConfigs = {
     ...Object.entries(lightThemeConfigs).reduce((acc, [name, config]) => {
