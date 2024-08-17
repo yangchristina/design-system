@@ -163,7 +163,6 @@ export function mapColorToContract(alias: string) {
 
 export function mapColorObjValue(originalPrefix: string, alias: string, { isLight = true, suffix = '' }: { isLight?: boolean; suffix?: string }) {
     const darkLight = isLight ? '' : 'Dark';
-    console.log(originalPrefix + darkLight + suffix, originalPrefix + suffix);
     const obj: { [key: string]: { value: string } } = {};
     for (let i = 1; i <= 12; i++) {
         obj[alias + i] = { value: radixScales[originalPrefix + darkLight + suffix][originalPrefix + suffix + i] };
@@ -276,5 +275,3 @@ export const presetConditions = Object.fromEntries(allThemeNames.map((key) => [k
 
 // const defineTheme = defineThemeContract(createThemeValue(allThemeConfigs.avocado));
 
-console.log('themes', JSON.stringify(themes.library));
-console.log('presetConditions', JSON.stringify(presetConditions));

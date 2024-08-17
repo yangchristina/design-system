@@ -39,7 +39,7 @@ export default {
       minimize: true,
       extract: false,
       modules: true,
-      use: ['sass'],
+      // use: ['sass'],
     }),
     preserveDirectives(),
     commonjs(),

@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { Cross1Icon } from '@radix-ui/react-icons';
 import { IconButton } from '../components/IconButton';
@@ -113,7 +112,7 @@ export interface Announcement {
 
 export type AnnouncementProps = {
     announcements: Announcement[],
-    setAnnouncements: (value: React.SetStateAction<Announcement[]>) => void
+    setAnnouncements: (x: Announcement[]) => void
 }
 
 export const AnnouncementsBar = ({ announcements, setAnnouncements }: AnnouncementProps) => {

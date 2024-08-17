@@ -21,8 +21,9 @@
         "start": "next start",
         "prettier": "prettier --write .",
         "test": "echo \"Error: no test specified\" && exit 0",
-        "ds:build": "rollup -c",
+        "ds:build": "rm -rf dist && rollup -c",
         "prepare": "panda codegen",
+        "tsup": "tsup",
         "ds:release": "yarn ds:build && np",
         "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
         "prerelease": "npm version prerelease --preid=canary && npm publish --tag canary",
@@ -35,7 +36,7 @@
         "react-dom": "^18.x"
     },
     "dependencies": {
-        "@planda/styled-system": "file:packages/styled-system",
+        "@planda/styled-system": "^0.1.1-canary.0",
         "@radix-ui/colors": "^3.0.0",
         "@radix-ui/react-accordion": "1.0.0",
         "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -101,6 +102,7 @@
         "rollup": "^3.29.4",
         "rollup-plugin-postcss": "^4.0.2",
         "rollup-plugin-preserve-directives": "^0.2.0",
+        "tsup": "^8.2.4",
         "typescript": "^5.5.4",
         "vitest": "^2.0.5"
     },

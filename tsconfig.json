@@ -4,7 +4,7 @@
         "declaration": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "jsx": "preserve",
+        "jsx": "react",
         "module": "esnext",
         "moduleResolution": "node",
         "emitDeclarationOnly": true,
@@ -21,6 +21,6 @@
         "isolatedModules": true,
         "incremental": true
     },
-    "include": ["src", "**/*.module.css", "panda.config.ts", "pages/Toolbar.tsx", "pages/ColorTools.tsx"],
+    "include": ["src/", "**/*.module.css"],
     "exclude": ["node_modules", "pages", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
 }
