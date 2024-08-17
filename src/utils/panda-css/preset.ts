@@ -1,7 +1,7 @@
 import { definePreset } from '@pandacss/dev';
-import { lightDarkToPandaTokens, stitchesToPandaTokens } from './stitchesConvert';
+import { stitchesToPandaTokens } from './stitchesConvert';
 import { crimsonA } from '@radix-ui/colors';
-import { allThemeNames, darkDefaults, lightDefaults, presetConditions, theme1, themes, whiteOverlay } from './themes';
+import { allThemeNames, presetConditions, themes } from './themes';
 import { textRecipe } from '../../components/recipes/text';
 
 export const plandaPreset = definePreset({
@@ -156,8 +156,18 @@ export const plandaPreset = definePreset({
                     };
                 },
             },
+            ta: {
+                className: 'text',
+                values: ['left', 'center', 'right', 'justify', 'start', 'end', 'inherit'],
+                transform(value) {
+                    return {
+                        textAlign: value,
+                    };
+                },
+            },
         },
     },
     conditions: presetConditions,
+    presets: ['@pandacss/preset-base'],
     // presets: ['@pandacss/preset-panda'],
 });
