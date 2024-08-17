@@ -1,19 +1,18 @@
-"use client"
-import { styled } from '../stitches.config';
+import { cva } from "@planda/styled-system/css";
 
-export const Alert = styled('div', {
-  // Reset
-  boxSizing: 'border-box',
-  '&::before': {
+export const alert = cva({
+  base: {// Reset
     boxSizing: 'border-box',
-  },
-  '&::after': {
-    boxSizing: 'border-box',
-  },
+    '&::before': {
+      boxSizing: 'border-box',
+    },
+    '&::after': {
+      boxSizing: 'border-box',
+    },
 
-  border: '1px solid',
-  borderRadius: '$2',
-
+    border: '1px solid',
+    borderRadius: '$2',
+  },
   variants: {
     size: {
       '1': {

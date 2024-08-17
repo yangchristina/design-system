@@ -17,7 +17,7 @@ export { MultiToggleGroup, ToggleGroup } from './components/ToggleGroup';
 export { NumberInput } from './components/NumberInput';
 import { Accordion, AccordionTrigger, AccordionItem, AccordionContent } from './components/Accordion';
 export { Accordion, AccordionTrigger, AccordionItem, AccordionContent };
-export { Alert } from './components/Alert';
+export { alert } from './components/Alert';
 export { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogTitle, AlertDialogTrigger } from './components/AlertDialog';
 export { Avatar, AvatarGroup, AvatarNestedItem } from './components/Avatar';
 export { AspectRatio } from '@radix-ui/react-aspect-ratio';

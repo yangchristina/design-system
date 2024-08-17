@@ -7,17 +7,19 @@ import postcss from 'rollup-plugin-postcss';
 // import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 // import babel from '@rollup/plugin-babel';
+import terser from '@rollup/plugin-terser';
 
 const plugins = [
   resolve(),
   // typescript({
+    terser({ sourceMap: true }),
   // }),
   postcss({
     minimize: true,
     extract: false,
     modules: true,
     // use: ['sass'],
-  }),
+    }),
   preserveDirectives(),
   // commonjs(),
   // babel({
@@ -87,6 +89,7 @@ export default [
       sourcemap: true,
       preserveModules: true,
       preserveModulesRoot: 'src',
+      minifyInternalExports: true,
       }
     ],
     plugins: [typescript({ declaration: true }), ...plugins]
@@ -99,6 +102,7 @@ export default [
       format: 'cjs',
       exports: 'named',
       sourcemap: true,
+      minifyInternalExports: true,
       }
     ],
     plugins: [typescript({ declaration: false }), ...plugins]
