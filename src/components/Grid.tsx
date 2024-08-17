@@ -1,9 +1,11 @@
 "use client"
-import { styled } from '../stitches.config';
+import { styled } from "@planda/styled-system/jsx";
 
 export const Grid = styled('div', {
-  boxSizing: 'border-box',
-  display: 'grid',
+  base: {
+    boxSizing: 'border-box',
+    display: 'grid',
+  },
 
   variants: {
     align: {

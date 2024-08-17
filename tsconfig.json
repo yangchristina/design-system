@@ -4,7 +4,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "module": "esnext",
     "moduleResolution": "node",
     "emitDeclarationOnly": true,
@@ -16,11 +16,27 @@
     "strict": true,
     "target": "es6",
     "noImplicitAny": false,
-    "lib": ["dom", "dom.iterable", "es2017", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2017",
+      "esnext"
+    ],
     "allowJs": true,
     "isolatedModules": true,
     "incremental": true
   },
-  "include": ["src", "**/*.module.css"],
-  "exclude": ["node_modules", "pages", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
+  "include": [
+    "src",
+    "**/*.module.css",
+    "panda.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "pages",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Timeline, TimelineItem } from '../custom/timeline/Timeline'
+import { Timeline, TimelineItem } from '../src/custom/timeline/Timeline'
 
 const TimelineDemo = () => {
     const defaultItems: TimelineItem[] = [

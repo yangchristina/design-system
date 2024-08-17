@@ -1,6 +1,6 @@
 import React from 'react';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
-import { getCssText, reset } from '../stitches.config';
+import { getCssText, reset } from '../src/stitches.config';
 
 /**
  * Get the css and reset the internal css representation.

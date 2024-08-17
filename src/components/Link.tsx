@@ -1,6 +1,5 @@
 "use client"
 import { styled } from '../stitches.config';
-import { Text } from './Text';
 
 export const Link = styled('a', {
   alignItems: 'center',
@@ -23,7 +22,7 @@ export const Link = styled('a', {
     outlineOffset: '2px',
     textDecorationLine: 'none',
   },
-  [`& ${Text}`]: {
+  [`& h1`]: {
     color: 'inherit',
   },
   variants: {

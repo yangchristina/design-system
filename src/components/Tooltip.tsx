@@ -4,6 +4,7 @@ import { styled } from '../stitches.config';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import { Box } from './Box';
 import { Text } from './Text';
+import { token } from '@planda/styled-system/tokens';
 
 type TooltipPrimitiveProps = React.ComponentProps<typeof TooltipPrimitive.Root>;
 type TooltipProps = TooltipPrimitiveProps &
@@ -49,10 +50,9 @@ export function Tooltip({
         <StyledContent side="top" align="center" sideOffset={5} {...props} multiline={multiline}>
           <Text
             size="1"
-            as="p"
             variant={'loContrast'}
-            css={{
-              color: '$loContrast',
+            style={{
+              color: token(`colors.$loContrast`),
               lineHeight: multiline ? '20px' : (undefined as any),
             }}
           >

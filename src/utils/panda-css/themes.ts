@@ -1,4 +1,18 @@
+import { allThemeConfigs } from '../../stitches.config';
+import { mapObject } from '../utils';
+import type { ExtendableOptions, ThemeVariantsMap } from '@pandacss/types';
+
 import * as radixScales from '@radix-ui/colors';
+import { stitchesToPandaTokens } from './stitchesConvert';
+import { defineThemeContract } from '@pandacss/dev';
+
+const defineTheme = defineThemeContract({
+    tokens: {
+        colors: {
+            red: { value: '' }, // theme implementations must have a red color
+        },
+    },
+});
 
 export const blackOverlay = {
     overlay1: radixScales.blackA.blackA1,
@@ -13,7 +27,7 @@ export const blackOverlay = {
     overlay10: radixScales.blackA.blackA10,
     overlay11: radixScales.blackA.blackA11,
     overlay12: radixScales.blackA.blackA12,
-}
+};
 
 export const whiteOverlay = {
     overlay1: radixScales.whiteA.whiteA1,
@@ -28,22 +42,22 @@ export const whiteOverlay = {
     overlay10: radixScales.whiteA.whiteA10,
     overlay11: radixScales.whiteA.whiteA11,
     overlay12: radixScales.whiteA.whiteA12,
-}
+};
 
 export function mapColor(color: string, alias: string) {
-    const obj: { [key: string]: string } = {}
+    const obj: { [key: string]: string } = {};
     for (let i = 1; i <= 12; i++) {
-        obj[alias + i] = '$' + color + i
+        obj[alias + i] = `{colors.${color}${i}}`;
     }
-    return obj
+    return obj;
 }
 
 export function mapColorObj(color: Record<string, string>, originalPrefix: string, alias: string) {
-    const obj: { [key: string]: string } = {}
+    const obj: { [key: string]: string } = {};
     for (let i = 1; i <= 12; i++) {
-        obj[alias + i] = color[originalPrefix + i]
+        obj[alias + i] = color[originalPrefix + i];
     }
-    return obj
+    return obj;
 }
 
 /**
@@ -52,19 +66,19 @@ export function mapColorObj(color: Record<string, string>, originalPrefix: strin
  */
 
 export interface ColorBase {
-    primary: string,
-    secondary: string,
-    accent: string,
-    gray: string,
-    error: string,
-    success: string,
-    info: string,
-    warning: string,
+    primary: string;
+    secondary: string;
+    accent: string;
+    gray: string;
+    error: string;
+    success: string;
+    info: string;
+    warning: string;
 }
 
 export interface ColorTheme extends ColorBase {
-    isLight: boolean,
-    name?: string,
+    isLight: boolean;
+    name?: string;
 }
 
 const lightDefaults = {
@@ -141,7 +155,7 @@ const lightDefaults = {
 
     // ...radixScales.whiteA,
     // ...radixScales.blackA,
-}
+};
 const darkDefaults = {
     ...whiteOverlay,
     // ...radixScales.blackA,
@@ -220,14 +234,12 @@ const darkDefaults = {
     shadowDark: 'hsl(206 22% 7% / 20%)',
 
     ...mapColor('blackA', 'overlayB'),
-}
+};
 
-export function createThemeValue(theme: ColorTheme, variables?: Record<string, string>) {
-    const {
-        primary, secondary, accent, gray, error, success, info, warning,
-    } = theme
+export function createThemeValue(theme: ColorTheme, variables?: Record<string, string>): ThemeVariantsMap {
+    const { primary, secondary, accent, gray, error, success, info, warning } = theme;
 
-    const suffix = theme.isLight ? '' : 'Dark'
+    const suffix = theme.isLight ? '' : 'Dark';
 
     const colors = {
         ...(theme.isLight ? lightDefaults : darkDefaults),
@@ -247,6 +259,10 @@ export function createThemeValue(theme: ColorTheme, variables?: Record<string, s
         ...radixScales[info + suffix + 'A'],
         ...radixScales[warning + suffix],
         ...radixScales[warning + suffix + 'A'],
+        ...variables,
+    };
+
+    const semanticColors = {
         ...mapColor(error, 'error'),
         ...mapColor(error + 'A', 'errorA'),
         ...mapColor(success, 'success'),
@@ -263,12 +279,23 @@ export function createThemeValue(theme: ColorTheme, variables?: Record<string, s
         ...mapColor(accent + 'A', 'accentA'),
         ...mapColor(secondary, 'secondary'),
         ...mapColor(secondary + 'A', 'secondaryA'),
-        // const primary
-        // ...radixScales[(primary + suffix) as keyof typeof radixScales], ...radixScales[gray + suffix], ...radixScales[error + suffix], ...radixScales[success + suffix],
-        // ...radixScales[warning + suffix], ...radixScales[info + suffix], ...radixScales[success + suffix],
-        // ...(secondary && radixScales[secondary + suffix]),
-        ...variables
-    }
+    };
 
-    return { colors }
+    return {
+        extend: {
+            tokens: {
+                colors: stitchesToPandaTokens(colors),
+            },
+            semanticTokens: {
+                colors: stitchesToPandaTokens(semanticColors),
+            },
+        },
+    };
 }
+
+export const themes: Record<string, any> = mapObject(allThemeConfigs, (config) => createThemeValue(config));
+
+export const allThemeNames = Object.keys(allThemeConfigs);
+export const presetConditions = Object.fromEntries(allThemeNames.map((key) => [key, `.${key} &, [data-color-mode=${key}] &`]));
+
+console.log('themes', JSON.stringify(themes.library));

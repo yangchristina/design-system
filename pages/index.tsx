@@ -1,48 +1,45 @@
 import React from 'react';
-import { Button } from '../components/Button';
-import { OldSelect } from '../components/OldSelect';
-import { GhostIconButton, IconButton } from '../components/IconButton';
-import { Container } from '../components/Container';
-import { Box } from '../components/Box';
-import { Flex } from '../components/Flex';
-import { Grid } from '../components/Grid';
-import { Badge } from '../components/Badge';
-import { Info } from '../components/Info';
-import { Switch } from '../components/Switch';
-import { ControlGroup } from '../components/ControlGroup';
-import { Text } from '../components/Text';
-import { Link } from '../components/Link';
-import { AppBar } from '../components/AppBar';
-import { NumberInput } from '../components/NumberInput';
-import { Alert } from '../components/Alert';
-import { Input } from '../components/Input';
-import { Kbd } from '../components/Kbd';
-import { Separator } from '../components/Separator';
-import { Table, Caption, Thead, Tbody, Tfoot, Tr, Th, Td } from '../components/Table';
-import { VerifiedBadge } from '../components/VerifiedBadge';
-import { Card } from '../components/Card';
-import { ContentUnit, Select } from '../components/select';
-import { TextArea } from '../components/TextArea';
-import { Image } from '../components/Image';
-import { Code } from '../components/Code';
-import { Sup } from '../components/Sup';
-import { Sub } from '../components/Sub';
-import { TriangleNav } from '../components/TriangleNav';
-import { TextField } from '../components/TextField';
-import { Section } from '../components/Section';
-import { Spinner } from '../components/Spinner';
-import { Avatar } from '../components/Avatar';
-import { TabLink } from '../components/TabLink';
-import { SimpleToggle } from '../components/SimpleToggle';
-import { ScrollArea } from '../components/Scrollbar';
-import { Tooltip } from '../components/Tooltip';
-import { Slider, ThemePanel } from '@radix-ui/themes';
-import { Dialog, DialogTrigger, DialogContent } from '../components/Dialog';
-import { Sheet, SheetTrigger, SheetContent } from '../components/Sheet';
-import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '../components/Popover';
-import { Checkbox } from '../components/Checkbox1';
-import { RadioGroup, Radio } from '../components/Radio';
-import { ProgressBar } from '../components/ProgressBar';
+import { Button } from '../src/components/Button';
+import { OldSelect } from '../src/components/OldSelect';
+import { GhostIconButton, IconButton } from '../src/components/IconButton';
+import { Container } from '../src/components/Container';
+import { Box } from '../src/components/Box';
+import { Flex } from '../src/components/Flex';
+import { Grid } from '../src/components/Grid';
+import { Badge } from '../src/components/Badge';
+import { Info } from '../src/components/Info';
+import { Switch } from '../src/components/Switch';
+import { Text } from '../src/components/Text';
+import { Link } from '../src/components/Link';
+import { AppBar } from '../src/components/AppBar';
+import { NumberInput } from '../src/components/NumberInput';
+import { Alert } from '../src/components/Alert';
+import { Input } from '../src/components/Input';
+import { Kbd } from '../src/components/Kbd';
+import { Separator } from '../src/components/Separator';
+import { Table, Caption, Thead, Tbody, Tfoot, Tr, Th, Td } from '../src/components/Table';
+import { VerifiedBadge } from '../src/components/VerifiedBadge';
+import { Card } from '../src/components/Card';
+import { ContentUnit, Select } from '../src/components/select';
+import { TextArea } from '../src/components/TextArea';
+import { Image } from '../src/components/Image';
+import { Code } from '../src/components/Code';
+import { Sup } from '../src/components/Sup';
+import { Sub } from '../src/components/Sub';
+import { TriangleNav } from '../src/components/TriangleNav';
+import { TextField } from '../src/components/TextField';
+import { Section } from '../src/components/Section';
+import { Spinner } from '../src/components/Spinner';
+import { Avatar } from '../src/components/Avatar';
+import { TabLink } from '../src/components/TabLink';
+import { SimpleToggle } from '../src/components/SimpleToggle';
+import { Tooltip } from '../src/components/Tooltip';
+import { Dialog, DialogTrigger, DialogContent } from '../src/components/Dialog';
+import { Sheet, SheetTrigger, SheetContent } from '../src/components/Sheet';
+import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '../src/components/Popover';
+import { Checkbox } from '../src/components/Checkbox1';
+import { RadioGroup, Radio } from '../src/components/Radio';
+import { ProgressBar } from '../src/components/ProgressBar';
 import {
   AlertDialog,
   AlertDialogTrigger,
@@ -51,24 +48,23 @@ import {
   AlertDialogDescription,
   AlertDialogAction,
   AlertDialogCancel,
-} from '../components/AlertDialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '../components/Tabs';
-import { Label } from '../components/Label';
-import { Skeleton } from '../components/Skeleton';
-import { RadioCardGroup, RadioCard } from '../components/RadioCard';
+} from '../src/components/AlertDialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../src/components/Tabs';
+import { Label } from '../src/components/Label';
+import { Skeleton } from '../src/components/Skeleton';
+import { RadioCardGroup, RadioCard } from '../src/components/RadioCard';
 import {
   Accordion,
   AccordionTrigger,
   AccordionItem,
   AccordionContent,
-} from '../components/Accordion';
-import { Heading } from '../components/Heading';
-import { Paragraph } from '../components/Paragraph';
-// import { Color } from '../custom/Color';
-import { Avatars } from '../custom/Avatars';
-import { Kbds } from '../custom/Kbds';
-import { Menus } from '../custom/Menus';
-import { Status } from '../components/Status';
+} from '../src/components/Accordion';
+import { Heading } from '../src/components/Heading';
+import { Paragraph } from '../src/components/Paragraph';
+// import { Color } from '../src/custom/Color';
+import { Kbds } from '../src/custom/Kbds';
+import { Menus } from '../src/custom/Menus';
+import { Status } from '../src/components/Status';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -80,7 +76,7 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-} from '../components/DropdownMenu';
+} from '../src/components/DropdownMenu';
 import {
   ContextMenu,
   ContextMenuTrigger,
@@ -92,9 +88,9 @@ import {
   ContextMenuRadioGroup,
   ContextMenuLabel,
   ContextMenuSeparator,
-} from '../components/ContextMenu2';
-import { ContextMenu as ContextMenu1 } from '../components/ContextMenu';
-import { DirectionNav } from '../components/DirectionNav';
+} from '../src/components/ContextMenu2';
+import { ContextMenu as ContextMenu1 } from '../src/components/ContextMenu';
+import { DirectionNav } from '../src/components/DirectionNav';
 import {
   ActivityLogIcon,
   ArrowRightIcon,
@@ -130,8 +126,8 @@ import {
   HomeIcon,
   ListBulletIcon
 } from '@radix-ui/react-icons';
-import { Toolbar } from '../custom/Toolbar';
-import { DarkThemeButton } from '../custom/DarkThemeButton';
+import { Toolbar } from '../src/custom/Toolbar';
+import { DarkThemeButton } from '../src/custom/DarkThemeButton';
 
 function Home() {
   return (
@@ -246,13 +242,6 @@ function Home() {
             <Link href="#contextmenu2" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Context Menu
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#controlgroup" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Control Group
               </Text>
             </Link>
           </Box>
@@ -1160,53 +1149,6 @@ function Home() {
               <TextField placeholder="Disabled placeholder" disabled />
               <TextField placeholder="Disabled value" defaultValue="100" disabled />
             </Flex>
-          </Container>
-        </Section>
-        <Flex css={{ jc: 'center' }}>
-          <Separator size="2" />
-        </Flex>
-        <Section size="3">
-          <Container size="2">
-            <Heading id="controlgroup" css={{ mb: '$6', scrollMarginTop: '$7' }}>
-              ControlGroup
-            </Heading>
-            <ControlGroup>
-              <Button>Button</Button>
-              <Button>Button</Button>
-              <Button>Button</Button>
-              <Button>Button</Button>
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <Button>Button</Button>
-              <Button>Button</Button>
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <Button>Button</Button>
-              <TextField placeholder="Hello world" />
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <TextField placeholder="Hello world" />
-              <Button>Button</Button>
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <TextField size="1" placeholder="Hello world" />
-              <OldSelect>
-                <option>Button</option>
-                <option>Button</option>
-                <option>Button</option>
-                <option>Button</option>
-                <option>Button</option>
-              </OldSelect>
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <TextField placeholder="Hello world" />
-              <TextField placeholder="Hello world" />
-              <TextField placeholder="Hello world" />
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <TextField size="2" placeholder="Hello world" />
-              <Button size="2">Button</Button>
-            </ControlGroup>
           </Container>
         </Section>
 

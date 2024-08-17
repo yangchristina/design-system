@@ -41,3 +41,10 @@ yarn-error.log*
 /dist
 
 .parcel-cache
+
+## Panda
+styled-system
+styled-system-studio
+## Panda
+./packages/styled-system
+./packages/styled-system-studio

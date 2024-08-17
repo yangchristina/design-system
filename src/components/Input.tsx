@@ -2,6 +2,7 @@
 import { styled } from '../stitches.config';
 import React, { ComponentProps, forwardRef, useId } from "react";
 import { Label } from './Label';
+import { TextVariantProps } from '@planda/styled-system/recipes';
 
 export const inputLayoutStyle = {
     display: 'inline-flex',
@@ -84,9 +85,11 @@ const Col = styled('span', {
 type InputProps = ComponentProps<typeof InputField> & { outerCSS?: Record<string, any>, error?: boolean, valid?: boolean, label?: string, labelSize?: number }
 export const Input = forwardRef<HTMLInputElement, InputProps>(({ outerCSS, children, label, type = 'text', error, labelSize = 5, valid = false, ...props }, forwardedRef) => {
     const id = useId()
+
+    const size = labelSize.toString() as TextVariantProps['size']
     return (
         <InputWrapper css={outerCSS} >
-            {label && <Label size={labelSize} htmlFor={id}>{label}</Label>}
+            {label && <Label size={size} htmlFor={id}>{label}</Label>}
             <Col css={outerCSS} >
                 <InputField error={error} valid={valid} id={props.id ?? id} type={type} ref={forwardedRef} {...props} />
                 {children}

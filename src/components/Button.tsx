@@ -1,5 +1,6 @@
 "use client"
-import { styled } from '../stitches.config';
+import { styled } from "@planda/styled-system/jsx";
+import { cva } from "@planda/styled-system/css";
 
 const baseButtonStyles = {
   position: 'relative',
@@ -38,8 +39,8 @@ const baseButtonStyles = {
   },
 } as const
 
-export const buttonStyles = {
-  ...baseButtonStyles,
+export const buttonStyles = cva({
+  base: baseButtonStyles,
   variants: {
     size: {
       '1': {
@@ -73,7 +74,7 @@ export const buttonStyles = {
         backgroundColor: '$loContrast',
         boxShadow: 'inset 0 0 0 1px $colors$gray7',
         color: '$hiContrast',
-        '@hover': {
+        _hover: {
           '&:hover': {
             boxShadow: 'inset 0 0 0 1px $colors$gray8',
           },
@@ -94,7 +95,7 @@ export const buttonStyles = {
         backgroundColor: '$info2',
         boxShadow: 'inset 0 0 0 1px $colors$info7',
         color: '$info11',
-        '@hover': {
+        _hover: {
           '&:hover': {
             boxShadow: 'inset 0 0 0 1px $colors$info8',
           },
@@ -115,7 +116,7 @@ export const buttonStyles = {
         backgroundColor: '$success2',
         boxShadow: 'inset 0 0 0 1px $colors$success7',
         color: '$success11',
-        '@hover': {
+        _hover: {
           '&:hover': {
             boxShadow: 'inset 0 0 0 1px $colors$success8',
           },
@@ -136,7 +137,7 @@ export const buttonStyles = {
         backgroundColor: '$loContrast',
         boxShadow: 'inset 0 0 0 1px $colors$gray7',
         color: '$error11',
-        '@hover': {
+        _hover: {
           '&:hover': {
             boxShadow: 'inset 0 0 0 1px $colors$gray8',
           },
@@ -156,7 +157,7 @@ export const buttonStyles = {
       transparentWhite: {
         backgroundColor: 'hsla(0,100%,100%,.2)',
         color: '$loContrast',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: 'hsla(0,100%,100%,.25)',
           },
@@ -171,7 +172,7 @@ export const buttonStyles = {
       transparentBlack: {
         backgroundColor: 'hsla(0,0%,0%,.2)',
         color: '$hiContrast',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: 'hsla(0,0%,0%,.25)',
           },
@@ -189,7 +190,7 @@ export const buttonStyles = {
         backgroundColor: '$gray4',
         boxShadow: 'inset 0 0 0 1px $colors$gray8',
         color: '$gray11',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: '$gray5',
             boxShadow: 'inset 0 0 0 1px $colors$gray8',
@@ -207,7 +208,7 @@ export const buttonStyles = {
         boxShadow: 'inset 0 0 0 1px $colors$gray8',
         color: 'transparent',
         pointerEvents: 'none',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: '$gray5',
             boxShadow: 'inset 0 0 0 1px $colors$gray8',
@@ -231,11 +232,11 @@ export const buttonStyles = {
   compoundVariants: [
     {
       variant: 'gray',
-      ghost: 'true',
+      ghost: true,
       css: {
         backgroundColor: 'transparent',
         color: '$hiContrast',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: '$grayA3',
             boxShadow: 'none',
@@ -255,10 +256,10 @@ export const buttonStyles = {
     },
     {
       variant: 'blue',
-      ghost: 'true',
+      ghost: true,
       css: {
         backgroundColor: 'transparent',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: '$infoA3',
             boxShadow: 'none',
@@ -278,10 +279,10 @@ export const buttonStyles = {
     },
     {
       variant: 'green',
-      ghost: 'true',
+      ghost: true,
       css: {
         backgroundColor: 'transparent',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: '$successA3',
             boxShadow: 'none',
@@ -301,10 +302,10 @@ export const buttonStyles = {
     },
     {
       variant: 'red',
-      ghost: 'true',
+      ghost: true,
       css: {
         backgroundColor: 'transparent',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: '$errorA3',
             boxShadow: 'none',
@@ -327,6 +328,6 @@ export const buttonStyles = {
     size: '1',
     variant: 'gray',
   } as const,
-}
+})
 
 export const Button = styled('button', buttonStyles);

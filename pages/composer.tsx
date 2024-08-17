@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box } from '../components/Box';
-import { Layers } from '../custom/Layers';
-import { Properties } from '../custom/Properties';
-import { Toolbar } from '../custom/Toolbar';
+import { Box } from '../src/components/Box';
+import { Layers } from '../src/custom/Layers';
+import { Properties } from '../src/custom/Properties';
+import { Toolbar } from '../src/custom/Toolbar';
 
 function Home() {
   return (
