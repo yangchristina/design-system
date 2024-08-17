@@ -8,14 +8,43 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 
+// console.log( '\n\n\n\n\n', dirname(pkg.main), '\n\n\n\n\n')
 export default {
   input: './src/index.ts',
-  output: {
-    dir: 'dist',
-    preserveModules: true,
-    format: 'cjs',
-    // banner: "'use client'",
-  },
+  output:
+  [
+    {
+      file: pkg.main,
+      format: 'cjs',
+      exports: 'named',
+      sourcemap: true,
+    },
+    {
+      dir: 'dist',
+      format: 'esm',
+      exports: 'named',
+      sourcemap: true,
+      preserveModules: true,
+      preserveModulesRoot: 'src',
+    },
+    // {
+    //     format: 'esm', // set ES modules
+    //     // dir: 'dist',
+    //     dir: `dist/${dirname(pkg.main)}`,
+    //     preserveModules: true, // indicate not create a single-file
+    //     preserveModulesRoot: 'src', // optional but useful to create a more plain folder structure
+    //     sourcemap: true, //optional
+    //     entryFileNames: '[name].js',
+    // },
+    // {
+    //   format: 'cjs',
+    //   // dir: 'dist',
+    //   dir: `dist/${dirname(pkg.module)}`,
+    //   preserveModules: true,
+    //   preserveModulesRoot: 'src', // optional but useful to create a more plain folder structure
+    //   entryFileNames: '[name].mjs',
+    // },
+],
   // exports: 'named',
   // [
   //   {
