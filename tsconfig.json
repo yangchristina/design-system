@@ -1,42 +1,26 @@
 {
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "preserve",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "emitDeclarationOnly": true,
-    "noEmit": false,
-    "outDir": "dist",
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "es6",
-    "noImplicitAny": false,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2017",
-      "esnext"
-    ],
-    "allowJs": true,
-    "isolatedModules": true,
-    "incremental": true
-  },
-  "include": [
-    "src",
-    "**/*.module.css",
-    "panda.config.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "pages",
-    "dist",
-    "build",
-    "**/*.test.ts",
-    "**/*.test.tsx"
-  ]
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "preserve",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "emitDeclarationOnly": true,
+        "noEmit": false,
+        "outDir": "dist",
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es6",
+        "noImplicitAny": false,
+        "lib": ["dom", "dom.iterable", "es2017", "esnext"],
+        "allowJs": true,
+        "isolatedModules": true,
+        "incremental": true
+    },
+    "include": ["src", "**/*.module.css", "panda.config.ts", "pages/Toolbar.tsx", "pages/ColorTools.tsx"],
+    "exclude": ["node_modules", "pages", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
 }

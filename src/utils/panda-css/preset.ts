@@ -3,6 +3,7 @@ import { stitchesToPandaTokens } from './stitchesConvert';
 import { crimsonA } from '@radix-ui/colors';
 import { allThemeNames, presetConditions, themes } from './themes';
 import { textRecipe } from '../../components/recipes/text';
+import { globalStyles } from '../../stitches.config';
 
 export const plandaPreset = definePreset({
     name: 'planda',
@@ -169,5 +170,6 @@ export const plandaPreset = definePreset({
     },
     conditions: presetConditions,
     presets: ['@pandacss/preset-base'],
+    globalCss: globalStyles,
     // presets: ['@pandacss/preset-panda'],
 });

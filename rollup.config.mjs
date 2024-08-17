@@ -1,5 +1,6 @@
 // import typescript from 'rollup-plugin-typescript2';
-import pkg from './package.json' assert { type: 'json' };
+// If using node-22, use with instead of assert
+import pkg from './package.json' with { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
 import preserveDirectives from 'rollup-plugin-preserve-directives';
 import postcss from 'rollup-plugin-postcss';
@@ -32,7 +33,7 @@ export default {
   plugins: [
     resolve(),
     typescript({
-      
+
     }),
     postcss({
       minimize: true,

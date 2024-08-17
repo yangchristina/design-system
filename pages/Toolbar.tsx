@@ -1,13 +1,13 @@
 "use client"
 import React from 'react';
-import { Avatar } from '../components/Avatar';
-import { Box } from '../components/Box';
-import { Button } from '../components/Button';
-import { Flex } from '../components/Flex';
-import { IconButton } from '../components/IconButton';
-import { Separator } from '../components/Separator';
-import { Text } from '../components/Text';
-import { Tooltip } from '../components/Tooltip';
+import { Avatar } from '../src/components/Avatar';
+import { Box } from '../src/components/Box';
+import { Button } from '../src/components/Button';
+import { Flex } from '../src/components/Flex';
+import { IconButton } from '../src/components/IconButton';
+import { Separator } from '../src/components/Separator';
+import { Text } from '../src/components/Text';
+import { Tooltip } from '../src/components/Tooltip';
 import { HamburgerMenuIcon, PlayIcon, Share1Icon } from '@radix-ui/react-icons';
 import { ReactNode } from 'react'
 // export function ToolbarOld() {

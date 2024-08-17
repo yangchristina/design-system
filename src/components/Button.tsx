@@ -39,7 +39,7 @@ const baseButtonStyles = {
   },
 } as const
 
-export const buttonStyles = cva({
+export const button = cva({
   base: baseButtonStyles,
   variants: {
     size: {
@@ -330,4 +330,4 @@ export const buttonStyles = cva({
   } as const,
 })
 
-export const Button = styled('button', buttonStyles);
+export const Button = styled('button', button);

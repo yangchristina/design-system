@@ -10,6 +10,9 @@ export default defineConfig({
 
     // Files to exclude
     exclude: [],
+    minify: true,
+    clean: true,
+    // lightningcss: true,
 
     // Useful for theme customization
     theme: {

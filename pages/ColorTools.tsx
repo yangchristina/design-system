@@ -2,11 +2,11 @@
 import React from 'react';
 import chroma from 'chroma-js';
 import bezier from 'bezier-easing';
-import { Box } from '../components/Box';
-import { Flex } from '../components/Flex';
-import { Grid } from '../components/Grid';
-import { TextField } from '../components/TextField';
-import { Text } from '../components/Text';
+import { Box } from '../src/components/Box';
+import { Flex } from '../src/components/Flex';
+import { Grid } from '../src/components/Grid';
+import { TextField } from '../src/components/TextField';
+import { Text } from '../src/components/Text';
 import { BezierCurveEditor } from 'react-bezier-curve-editor';
 import {
   TriangleDownIcon,
@@ -18,7 +18,7 @@ import {
   TextAlignJustifyIcon,
 } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
-import { colors, getHiContrast, loContrasts } from '../utils/colors';
+import { colors, getHiContrast, loContrasts } from '../src/utils/colors';
 // import { colors, getHiContrast, loContrasts } from '../../pages/colors';
 
 const steps = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
