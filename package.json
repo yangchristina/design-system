@@ -30,6 +30,7 @@
         "ship": "panda ship --outfile dist/panda.buildinfo.json",
         "tsup": "tsup",
         "ds:release": "yarn ds:build && np",
+        "release-style-canary": "cd packages/styled-system && npm run prerelease",
         "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
         "prerelease": "npm version prerelease --preid=canary && npm publish --tag canary",
         "release": "npm run ds:build && npm version patch && npm publish",
