@@ -47,5 +47,6 @@ styled-system
 styled-system-studio
 ## Panda
 ./packages/styled-system
+!./packages/styled-system/package.json
 ./packages/styled-system-studio
 tsconfig.tsbuildinfo
