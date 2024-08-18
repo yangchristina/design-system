@@ -165,10 +165,11 @@ export function mapColorObjValue(originalPrefix: string, alias: string, { isLigh
     const darkLight = isLight ? '' : 'Dark';
     const obj: { [key: string]: { value: string } } = {};
     for (let i = 1; i <= 12; i++) {
-        obj[alias + i] = { value: radixScales[originalPrefix + darkLight + suffix][originalPrefix + suffix + i] };
+        obj['$' + alias + i] = { value: radixScales[originalPrefix + darkLight + suffix][originalPrefix + suffix + i] };
     }
     return obj;
 }
+
 const tealTheme: ColorBase = {
     primary: 'teal',
     secondary: 'mint',
@@ -271,7 +272,6 @@ export const themes: ThemeVariantsMap = mapObject(allThemeConfigs, (config) => (
 }));
 
 export const allThemeNames = Object.keys(allThemeConfigs);
-export const presetConditions = Object.fromEntries(allThemeNames.map((key) => [key, `.${key} &, [data-color-mode=${key}] &`]));
+export const presetConditions = Object.fromEntries(allThemeNames.map((key) => [key, `.${key} &, [data-theme=${key}] &`]));
 
 // const defineTheme = defineThemeContract(createThemeValue(allThemeConfigs.avocado));
-
