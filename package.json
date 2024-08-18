@@ -16,6 +16,7 @@
         }
     },
     "scripts": {
+        "i-style": "npm i @planda/styled-system@canary",
         "dev": "next dev --port 3001",
         "types": "tsc --noEmit",
         "ship": "panda ship --outfile dist/panda.buildinfo.json",
@@ -29,6 +30,8 @@
         "ds:build": "rm -rf dist && rollup -c",
         "prepare": "panda codegen",
         "tsup": "tsup",
+        "style-end": "npm cache clean --force && npm run i-style && npm run build",
+        "style": "cd packages/styled-system && npm run prerelease && cd ../.. && sleep 5 && npm run style-end",
         "ds:release": "yarn ds:build && np",
         "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
         "prerelease": "npm run ship && npm version prerelease --preid=canary && npm publish --tag canary",
@@ -41,7 +44,7 @@
         "react-dom": "^18.x"
     },
     "dependencies": {
-        "@planda/styled-system": "^0.1.1-canary.1",
+        "@planda/styled-system": "^0.1.1-canary.7",
         "@radix-ui/colors": "^3.0.0",
         "@radix-ui/react-accordion": "1.0.0",
         "@radix-ui/react-alert-dialog": "^1.0.5",
