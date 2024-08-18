@@ -18,7 +18,8 @@
     "scripts": {
         "dev": "next dev --port 3001",
         "types": "tsc --noEmit",
-        "build": "rm -rf dist && rollup -c && panda ship --outfile dist/panda.buildinfo.json",
+        "ship": "panda ship --outfile dist/panda.buildinfo.json",
+        "build": "rm -rf dist && rollup -c && npm run ship",
         "size": "source-map-explorer dist/**/*.js",
         "next:build": "next build",
         "build2": "rm -rf dist && node ./esbuild.config.js && tsc",
@@ -27,13 +28,12 @@
         "test": "echo \"Error: no test specified\" && exit 0",
         "ds:build": "rm -rf dist && rollup -c",
         "prepare": "panda codegen",
-        "ship": "panda ship --outfile dist/panda.buildinfo.json",
         "tsup": "tsup",
         "ds:release": "yarn ds:build && np",
         "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
-        "prerelease": "npm version prerelease --preid=canary && npm publish --tag canary",
-        "release": "npm run ds:build && npm version patch && npm publish",
-        "minor-release": "npm run ds:build && npm version minor && npm publish"
+        "prerelease": "npm run ship && npm version prerelease --preid=canary && npm publish --tag canary",
+        "release": "npm run ship && npm run build && npm version patch && npm publish",
+        "minor-release": "npm run build && npm version minor && npm publish"
     },
     "peerDependencies": {
         "next": "^14.x",
