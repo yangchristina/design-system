@@ -18,7 +18,7 @@
     "scripts": {
         "dev": "next dev --port 3001",
         "types": "tsc --noEmit",
-        "build": "rm -rf dist && rollup -c",
+        "build": "rm -rf dist && rollup -c && panda ship --outfile dist/panda.buildinfo.json",
         "size": "source-map-explorer dist/**/*.js",
         "next:build": "next build",
         "build2": "rm -rf dist && node ./esbuild.config.js && tsc",
