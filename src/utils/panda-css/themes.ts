@@ -190,7 +190,7 @@ export const colorsToContract = () => {
 
 const colorsToTheme = ({ isLight, ...theme }: ColorBase & { isLight?: boolean }) => {
     return Object.entries(theme).reduce((acc, [key, val]) => {
-        return { ...acc, ...mapColorObjValue(val, key, { isLight }), ...mapColorObjValue(val, key, { isLight, suffix: 'A' }) };
+        return { ...acc, ...mapColorObjValue(val, key, { isLight }), ...mapColorObjValue(val, key + 'A', { isLight, suffix: 'A' }) };
     }, stitchesToPandaTokens(isLight ? lightDefaults : darkDefaults) as Record<string, { value: string }>);
 };
 

@@ -1,7 +1,8 @@
 "use client"
-import { styled } from '../stitches.config';
+
+import { styled } from "@planda/styled-system/jsx";
 
 export const Box = styled('div', {
   // Reset
-  boxSizing: 'border-box',
+  base: { boxSizing: 'border-box', }
 });

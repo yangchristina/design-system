@@ -1,5 +1,6 @@
 "use client"
-import { styled } from '../stitches.config';
+
+import { styled } from "@planda/styled-system/jsx";
 
 // export const IconButton = styled('button', {
 //   all: 'unset',
@@ -19,47 +20,49 @@ import { styled } from '../stitches.config';
 // });
 
 export const IconButton = styled('button', {
-  // Reset
-  alignItems: 'center',
-  appearance: 'none',
-  borderWidth: '0',
-  boxSizing: 'border-box',
-  display: 'inline-flex',
-  flexShrink: 0,
-  fontFamily: 'inherit',
-  fontSize: '14px',
-  justifyContent: 'center',
-  lineHeight: '1',
-  outline: 'none',
-  padding: '0',
-  textDecoration: 'none',
-  userSelect: 'none',
-  WebkitTapHighlightColor: 'transparent',
-  color: '$hiContrast',
-  '&::before': {
+  base: {
+    // Reset
+    alignItems: 'center',
+    appearance: 'none',
+    borderWidth: '0',
     boxSizing: 'border-box',
-  },
-  '&::after': {
-    boxSizing: 'border-box',
-  },
-  // '@hover': {
-  //   '&:hover': {
-  //     borderColor: '$gray8',
-  //   },
-  // },
-  '&:active': {
-    backgroundColor: '$gray2',
-  },
-  '&:focus': {
-    borderColor: '$gray8',
-    boxShadow: '0 0 0 1px $colors$gray8',
-  },
-  '&:disabled': {
-    pointerEvents: 'none',
-    backgroundColor: 'transparent',
-    color: '$gray6',
-  },
+    display: 'inline-flex',
+    flexShrink: 0,
+    fontFamily: 'inherit',
+    fontSize: '14px',
+    justifyContent: 'center',
+    lineHeight: '1',
+    outline: 'none',
+    padding: '0',
+    textDecoration: 'none',
+    userSelect: 'none',
+    WebkitTapHighlightColor: 'transparent',
+    color: '$hiContrast',
+    '&::before': {
+      boxSizing: 'border-box',
+    },
+    '&::after': {
+      boxSizing: 'border-box',
+    },
+    // _hover: {
+    //   '&:hover': {
+    //     borderColor: '$gray8',
+    //   },
+    // },
+    '&:active': {
+      backgroundColor: '$gray2',
+    },
+    '&:focus': {
+      borderColor: '$gray8',
+      boxShadow: '0 0 0 1px $colors$gray8',
+    },
+    '&:disabled': {
+      pointerEvents: 'none',
+      backgroundColor: 'transparent',
+      color: '$gray6',
+    },
 
+  },
   variants: {
     size: {
       '1': {
@@ -87,7 +90,7 @@ export const IconButton = styled('button', {
       solid: {
         backgroundColor: '$loContrast',
         border: '1px solid $gray7',
-        '@hover': {
+        _hover: {
           '&:hover': {
             borderColor: '$gray8',
           },
@@ -96,7 +99,7 @@ export const IconButton = styled('button', {
       ghost: {
         backgroundColor: 'transparent',
         borderWidth: '0',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: '$grayA3',
           },
@@ -114,7 +117,7 @@ export const IconButton = styled('button', {
       raised: {
         boxShadow:
           '0 0 transparent, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
-        '@hover': {
+        _hover: {
           '&:hover': {
             boxShadow:
               '0 0 transparent, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
@@ -134,7 +137,7 @@ export const IconButton = styled('button', {
       active: {
         backgroundColor: '$gray4',
         boxShadow: 'inset 0 0 0 1px hsl(206,10%,76%)',
-        '@hover': {
+        _hover: {
           '&:hover': {
             boxShadow: 'inset 0 0 0 1px hsl(206,10%,76%)',
           },
@@ -146,7 +149,7 @@ export const IconButton = styled('button', {
       waiting: {
         backgroundColor: '$gray4',
         boxShadow: 'inset 0 0 0 1px hsl(206,10%,76%)',
-        '@hover': {
+        _hover: {
           '&:hover': {
             boxShadow: 'inset 0 0 0 1px hsl(206,10%,76%)',
           },
@@ -160,7 +163,7 @@ export const IconButton = styled('button', {
       true: {
         backgroundColor: '$hiContrast',
         color: '$loContrast',
-        '@hover': {
+        _hover: {
           '&:hover': {
             backgroundColor: '$grayDarkA3',
           },
@@ -176,53 +179,54 @@ export const IconButton = styled('button', {
 
 
 export const GhostIconButton = styled('button', {
-  // Reset
-  alignItems: 'center',
-  appearance: 'none',
-  boxSizing: 'border-box',
-  display: 'inline-flex',
-  flexShrink: 0,
-  fontFamily: 'inherit',
-  fontSize: '14px',
-  justifyContent: 'center',
-  lineHeight: '1',
-  outline: 'none',
-  padding: '0',
-  textDecoration: 'none',
-  userSelect: 'none',
-  WebkitTapHighlightColor: 'transparent',
-  color: '$hiContrast',
-  '&::before': {
+  base: {
+    // Reset
+    alignItems: 'center',
+    appearance: 'none',
     boxSizing: 'border-box',
-  },
-  '&::after': {
-    boxSizing: 'border-box',
-  },
-  '&:disabled': {
-    pointerEvents: 'none',
+    display: 'inline-flex',
+    flexShrink: 0,
+    fontFamily: 'inherit',
+    fontSize: '14px',
+    justifyContent: 'center',
+    lineHeight: '1',
+    outline: 'none',
+    padding: '0',
+    textDecoration: 'none',
+    userSelect: 'none',
+    WebkitTapHighlightColor: 'transparent',
+    color: '$hiContrast',
+    '&::before': {
+      boxSizing: 'border-box',
+    },
+    '&::after': {
+      boxSizing: 'border-box',
+    },
+    '&:disabled': {
+      pointerEvents: 'none',
+      backgroundColor: 'transparent',
+      color: '$gray6',
+    },
+    borderRadius: '$1',
+    height: '$5',
+    width: '$5',
     backgroundColor: 'transparent',
-    color: '$gray6',
-  },
-  borderRadius: '$1',
-  height: '$5',
-  width: '$5',
-  backgroundColor: 'transparent',
-  borderWidth: '0',
-  '@hover': {
-    '&:hover': {
-      backgroundColor: '$grayA3',
+    borderWidth: '0',
+    _hover: {
+      '&:hover': {
+        backgroundColor: '$grayA3',
+      },
+    },
+    '&:focus': {
+      boxShadow: 'inset 0 0 0 1px $colors$grayA8, 0 0 0 1px $colors$grayA8',
+    },
+    '&:active': {
+      backgroundColor: '$grayA4',
+    },
+    '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
+      backgroundColor: '$grayA4',
     },
   },
-  '&:focus': {
-    boxShadow: 'inset 0 0 0 1px $colors$grayA8, 0 0 0 1px $colors$grayA8',
-  },
-  '&:active': {
-    backgroundColor: '$grayA4',
-  },
-  '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-    backgroundColor: '$grayA4',
-  },
-
   variants: {
     size: {
       '1': {},
@@ -246,7 +250,7 @@ export const GhostIconButton = styled('button', {
       true: {
         backgroundColor: '$hiContrast',
         color: '$loContrast',
-        '@hover': {
+        _hover: {
           '&:hover': {
             '&::before': {
               content: "",
