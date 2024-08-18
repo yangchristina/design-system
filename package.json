@@ -27,6 +27,7 @@
         "test": "echo \"Error: no test specified\" && exit 0",
         "ds:build": "rm -rf dist && rollup -c",
         "prepare": "panda codegen",
+        "ship": "panda ship --outfile dist/panda.buildinfo.json",
         "tsup": "tsup",
         "ds:release": "yarn ds:build && np",
         "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",

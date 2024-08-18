@@ -9,7 +9,7 @@ export const plandaPreset = definePreset({
     name: 'planda',
     staticCss: {
         extend: {
-            themes: [...allThemeNames, 'test'],
+            themes: [...allThemeNames],
         },
     },
     theme: {
