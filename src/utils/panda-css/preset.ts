@@ -1,10 +1,11 @@
-import { definePreset } from '@pandacss/dev';
+import { defineGlobalStyles, definePreset } from '@pandacss/dev';
 import { stitchesToPandaTokens } from './stitchesConvert';
 import { crimsonA } from '@radix-ui/colors';
 import { allThemeNames, presetConditions, themes } from './themes';
 import { textRecipe } from '../../components/recipes/text';
 import { globalStyles } from '../../stitches.config';
 
+const globalCss = defineGlobalStyles(globalStyles);
 export const plandaPreset = definePreset({
     name: 'planda',
     staticCss: {
@@ -170,6 +171,6 @@ export const plandaPreset = definePreset({
     },
     conditions: presetConditions,
     presets: ['@pandacss/preset-base'],
-    globalCss: globalStyles,
+    globalCss,
     // presets: ['@pandacss/preset-panda'],
 });

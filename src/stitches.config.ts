@@ -568,14 +568,25 @@ const baseThemes = {
     // bronzeTeal: bronzeTealTheme,
 };
 
-// shouldn't name change be easy? can you make variants of an existing theme from planda?
-export const lightThemeConfigs = mapObject(baseThemes, (theme) => ({ ...theme, isLight: true }));
+const baseConfigs = mapObject(baseThemes, (theme) => ({ ...theme, isLight: true }));
 
-const darkThemeConfigs = {
-    ...Object.entries(lightThemeConfigs).reduce((acc, [name, config]) => {
+// shouldn't name change be easy? can you make variants of an existing theme from planda?
+// export const lightThemeConfigs = mapObject(baseThemes, (theme) => ({ ...theme, isLight: true }));
+
+export const lightThemeConfigs = {
+    ...Object.entries(baseConfigs).reduce((acc, [name, config]) => {
         return {
             ...acc,
-            [`${name}Dark`]: { ...config, isLight: false },
+            [`${name}`]: { ...config, isLight: true },
+        };
+    }, {} as Record<string, ColorTheme>),
+};
+
+const darkThemeConfigs = {
+    ...Object.entries(baseConfigs).reduce((acc, [name, config]) => {
+        return {
+            ...acc,
+            [`dark-${name}`]: { ...config, isLight: false },
         };
     }, {} as Record<string, ColorTheme>),
 };

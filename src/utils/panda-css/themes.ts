@@ -181,7 +181,7 @@ const tealTheme: ColorBase = {
     warning: 'yellow',
 };
 
-const themeColorTypes = ['primary', 'primary', 'secondary', 'accent', 'gray', 'error', 'success', 'info', 'warning'] as const;
+const themeColorTypes = ['primary', 'secondary', 'accent', 'gray', 'error', 'success', 'info', 'warning'] as const;
 export const colorsToContract = () => {
     return themeColorTypes.reduce((acc, key) => {
         return { ...acc, ...mapColorToContract(key), ...mapColorToContract(key + 'A') };
@@ -202,76 +202,15 @@ const defineTheme = defineThemeContract({
     },
 });
 
-export const theme1 = {
-    tokens: {
-        colors: colorsToTheme(tealTheme),
-    },
-};
-
-export function createThemeValue(theme: ColorTheme, variables?: Record<string, string>): ThemeVariantsMap {
-    const { primary, secondary, accent, gray, error, success, info, warning } = theme;
-
-    const suffix = theme.isLight ? '' : 'Dark';
-
-    const colors = {
-        ...(theme.isLight ? lightDefaults : darkDefaults),
-        ...radixScales[primary + suffix],
-        ...radixScales[primary + suffix + 'A'],
-        ...radixScales[secondary + suffix],
-        ...radixScales[secondary + suffix + 'A'],
-        ...radixScales[accent + suffix],
-        ...radixScales[accent + suffix + 'A'],
-        ...radixScales[gray + suffix],
-        ...radixScales[gray + suffix + 'A'],
-        ...radixScales[error + suffix],
-        ...radixScales[error + suffix + 'A'],
-        ...radixScales[success + suffix],
-        ...radixScales[success + suffix + 'A'],
-        ...radixScales[info + suffix],
-        ...radixScales[info + suffix + 'A'],
-        ...radixScales[warning + suffix],
-        ...radixScales[warning + suffix + 'A'],
-        ...variables,
-    };
-
-    const semanticColors = {
-        ...mapColorPanda(error, 'error'),
-        ...mapColorPanda(error + 'A', 'errorA'),
-        ...mapColorPanda(success, 'success'),
-        ...mapColorPanda(success + 'A', 'successA'),
-        ...mapColorPanda(info, 'info'),
-        ...mapColorPanda(info + 'A', 'infoA'),
-        ...mapColorPanda(warning, 'warning'),
-        ...mapColorPanda(warning + 'A', 'warningA'),
-        ...mapColorPanda(gray, 'gray'),
-        ...mapColorPanda(gray + 'A', 'grayA'),
-        ...mapColorPanda(primary, 'primary'),
-        ...mapColorPanda(primary + 'A', 'primaryA'),
-        ...mapColorPanda(accent, 'accent'),
-        ...mapColorPanda(accent + 'A', 'accentA'),
-        ...mapColorPanda(secondary, 'secondary'),
-        ...mapColorPanda(secondary + 'A', 'secondaryA'),
-    };
-
-    return {
-        extend: {
-            tokens: {
-                colors: stitchesToPandaTokens(colors),
-            },
-            semanticTokens: {
-                colors: stitchesToPandaTokens(semanticColors),
-            },
-        },
-    };
-}
-
 export const themes: ThemeVariantsMap = mapObject(allThemeConfigs, (config) => ({
     tokens: {
         colors: colorsToTheme(config),
     },
 }));
 
+// console.log(JSON.stringify(themes.tealLight.tokens?.colors?.$gray1, null, 2));
 export const allThemeNames = Object.keys(allThemeConfigs);
+// console.log("allThemeNames", allThemeNames);
 export const presetConditions = Object.fromEntries(allThemeNames.map((key) => [key, `.${key} &, [data-theme=${key}] &`]));
-
+// console.log("presetConditions", presetConditions);
 // const defineTheme = defineThemeContract(createThemeValue(allThemeConfigs.avocado));
