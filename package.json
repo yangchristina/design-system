@@ -31,7 +31,7 @@
         "prepare": "panda codegen",
         "tsup": "tsup",
         "style-end": "npm cache clean --force && npm run i-style && npm run build && npm run prerelease",
-        "style": "npm run prepare && cd packages/styled-system && npm run prerelease && cd ../.. && sleep 5 && npm run style-end",
+        "style": "npm run prepare && npm run ship && cd packages/styled-system && npm run prerelease && cd ../.. && sleep 5 && npm run style-end",
         "ds:release": "yarn ds:build && np",
         "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
         "prerelease": "npm run ship && npm version prerelease --preid=canary && npm publish --tag canary",

@@ -1,6 +1,6 @@
 {
     "name": "@planda/styled-system",
-    "version": "0.1.1-canary.10",
+    "version": "0.1.1-canary.11",
     "scripts": {
         "prerelease": "npm version prerelease --preid=canary && npm publish --tag canary",
         "release": "npm run ds:build && npm version patch && npm publish",
