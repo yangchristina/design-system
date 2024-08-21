@@ -37,9 +37,9 @@ export const plandaPreset = definePreset({
                         important: '$primary11',
                         highlight: '$warning9',
 
-                        border: '$borderWidths$medium solid $primary12',
-                        borderThin: '$borderWidths$thin solid $primary12',
-                        borderThick: '$borderWidths$thick solid $primary12',
+                        border: 'borderWidths.$medium solid $primary12',
+                        borderThin: 'borderWidths.$thin solid $primary12',
+                        borderThick: 'borderWidths.$thick solid $primary12',
                         borderFocus: `0 0 0 2px colors.$focus`,
                     }),
                 },
