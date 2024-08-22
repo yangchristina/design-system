@@ -36,16 +36,17 @@ export const plandaPreset = definePreset({
                         unimportant: '$gray11',
                         important: '$primary11',
                         highlight: '$warning9',
-
-                        border: 'borderWidths.$medium solid $primary12',
-                        borderThin: 'borderWidths.$thin solid $primary12',
-                        borderThick: 'borderWidths.$thick solid $primary12',
-                        borderFocus: `0 0 0 2px colors.$focus`,
                     }),
                 },
                 fonts: stitchesToPandaTokens({
                     untitled: 'Untitled Sans, -apple-system, system-ui, sans-serif',
                     mono: 'Söhne Mono, menlo, monospace',
+                }),
+                borders: stitchesToPandaTokens({
+                    border: 'borderWidths.$medium solid $primary12',
+                    borderThin: 'borderWidths.$thin solid $primary12',
+                    borderThick: 'borderWidths.$thick solid $primary12',
+                    borderFocus: `0 0 0 2px colors.$focus`,
                 }),
                 spacing: stitchesToPandaTokens({
                     1: '5px',
