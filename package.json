@@ -44,7 +44,7 @@
         "react-dom": "^18.x"
     },
     "dependencies": {
-        "@planda/styled-system": "^0.1.1-canary.12",
+        "@planda/styled-system": "^0.1.1-canary.13",
         "@radix-ui/colors": "^3.0.0",
         "@radix-ui/react-accordion": "1.0.0",
         "@radix-ui/react-alert-dialog": "^1.0.5",
