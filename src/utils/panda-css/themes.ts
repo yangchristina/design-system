@@ -1,12 +1,12 @@
-import { allThemeConfigs, lightThemeConfigs } from '../../stitches.config';
+import { allThemeConfigs } from '../../stitches.config';
 import { mapObject } from '../utils';
-import type { ExtendableOptions, ThemeVariantsMap } from '@pandacss/types';
+import type { ThemeVariantsMap } from '@pandacss/types';
 
 import * as radixScales from '@radix-ui/colors';
 import { stitchesToPandaTokens } from './stitchesConvert';
 import { defineThemeContract } from '@pandacss/dev';
 import { mapColor } from '../radixColors';
-import { Tokens } from '@planda/styled-system/tokens';
+import { merge } from 'lodash';
 
 export const blackOverlay = {
     overlay1: radixScales.blackA.blackA1,
@@ -202,11 +202,18 @@ const defineTheme = defineThemeContract({
     },
 });
 
-export const themes: ThemeVariantsMap = mapObject(allThemeConfigs, (config) => ({
-    tokens: {
-        colors: colorsToTheme(config),
-    },
-}));
+export const createThemeValue = (config: ColorTheme, variables?: ThemeVariantsMap['tokens']) => {
+    return merge(
+        {
+            tokens: {
+                colors: colorsToTheme(config),
+            },
+        },
+        variables
+    );
+};
+
+export const themes: ThemeVariantsMap = mapObject(allThemeConfigs, (config) => createThemeValue(config));
 
 // console.log(JSON.stringify(themes.tealLight.tokens?.colors?.$gray1, null, 2));
 export const allThemeNames = Object.keys(allThemeConfigs);
