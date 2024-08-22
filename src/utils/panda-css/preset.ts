@@ -43,9 +43,9 @@ export const plandaPreset = definePreset({
                     mono: 'Söhne Mono, menlo, monospace',
                 }),
                 borders: stitchesToPandaTokens({
-                    border: 'borderWidths.$medium solid $primary12',
-                    borderThin: 'borderWidths.$thin solid $primary12',
-                    borderThick: 'borderWidths.$thick solid $primary12',
+                    border: 'borderWidths.$medium solid colors.$primary12',
+                    borderThin: 'borderWidths.$thin solid colors.$primary12',
+                    borderThick: 'borderWidths.$thick solid colors.$primary12',
                     borderFocus: `0 0 0 2px colors.$focus`,
                 }),
                 spacing: stitchesToPandaTokens({
