@@ -35,7 +35,7 @@
         "ds:release": "yarn ds:build && np",
         "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
         "prerelease": "npm run ship && npm version prerelease --preid=canary && npm publish --tag canary",
-        "release": "npm run ship && npm run build && npm version patch && npm publish",
+        "release": "npm run ship && npm run build && npm run ship && npm version patch && npm publish",
         "minor-release": "npm run build && npm version minor && npm publish"
     },
     "peerDependencies": {
