@@ -46,18 +46,6 @@ export { ContextMenu } from './components/ContextMenu';
 export { DesignSystemProvider, DesignSystemTooltipOnlyProvider } from './components/DesignSystemProvider';
 export { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from './components/Dialog';
 export { AlertSheet, AlertSheetTrigger, AlertSheetContent, AlertSheetClose, AlertSheetTitle, AlertSheetDescription } from './components/AlertSheet';
-export {
-    DropdownMenu,
-    DropdownMenuTrigger,
-    DropdownMenuContent,
-    DropdownMenuCheckboxItem,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuRadioGroup,
-    DropdownMenuRadioItem,
-    DropdownMenuSeparator,
-} from './components/DropdownMenu';
 export { Flex, FlexForm } from './components/Flex';
 export { Grid } from './components/Grid';
 export { Heading } from './components/Heading';
@@ -66,7 +54,6 @@ export { Image } from './components/Image';
 export { TextField } from './components/TextField';
 export { Kbd } from './components/Kbd';
 export { Link } from './components/Link';
-export { Menu, MenuCheckboxItem, MenuGroup, MenuItem, MenuLabel, MenuRadioGroup, MenuRadioItem, MenuSeparator } from './components/Menu';
 export { Overlay } from './components/Overlay';
 export { Paragraph } from './components/Paragraph';
 export { Panel } from './components/Panel';

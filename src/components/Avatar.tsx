@@ -247,7 +247,7 @@ type AvatarVariants = VariantProps<typeof StyledAvatar>;
 type AvatarPrimitiveProps = React.ComponentProps<typeof AvatarPrimitive.Root>;
 type AvatarOwnProps = AvatarPrimitiveProps &
   AvatarVariants & {
-    css?: CSS;
+    css?: React.CSSProperties;
     alt?: string;
     src?: string;
     fallback?: React.ReactNode;
@@ -258,7 +258,7 @@ export const Avatar = React.forwardRef<React.ElementRef<typeof StyledAvatar>, Av
   ({ alt, src, fallback, size, variant, shape, css, status, ...props }, forwardedRef) => {
     return (
       <Box
-        css={{
+        style={{
           ...css,
           position: 'relative',
           height: 'fit-content',
