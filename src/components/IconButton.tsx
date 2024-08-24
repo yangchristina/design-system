@@ -65,22 +65,22 @@ export const IconButton = styled('button', {
   },
   variants: {
     size: {
-      '1': {
+      1: {
         borderRadius: '$1',
         height: '$5',
         width: '$5',
       },
-      '2': {
+      2: {
         borderRadius: '$2',
         height: '$6',
         width: '$6',
       },
-      '3': {
+      3: {
         borderRadius: '$2',
         height: '$7',
         width: '$7',
       },
-      '4': {
+      4: {
         borderRadius: '$3',
         height: '$8',
         width: '$8',
@@ -172,7 +172,7 @@ export const IconButton = styled('button', {
     }
   },
   defaultVariants: {
-    size: '1',
+    size: 1,
     variant: 'ghost',
   },
 });
@@ -229,18 +229,18 @@ export const GhostIconButton = styled('button', {
   },
   variants: {
     size: {
-      '1': {},
-      '2': {
+      1: {},
+      2: {
         borderRadius: '$2',
         height: '$6',
         width: '$6',
       },
-      '3': {
+      3: {
         borderRadius: '$2',
         height: '$7',
         width: '$7',
       },
-      '4': {
+      4: {
         borderRadius: '$3',
         height: '$8',
         width: '$8',

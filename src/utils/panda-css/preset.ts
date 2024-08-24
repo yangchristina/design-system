@@ -37,6 +37,7 @@ export const plandaPreset = definePreset({
                 }),
                 shadows: {
                     boxShadow: { value: `{shadows.$border}, {shadows.$common}` },
+                    $boxShadow: { value: `{shadows.$border}, {shadows.$common}` },
                 },
             },
             tokens: {
