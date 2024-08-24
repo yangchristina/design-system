@@ -1,6 +1,6 @@
 {
     "name": "@planda/design-system",
-    "version": "1.4.1",
+    "version": "1.4.2-canary.0",
     "files": [
         "dist"
     ],
