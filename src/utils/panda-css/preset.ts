@@ -163,6 +163,18 @@ export const plandaPreset = definePreset({
                     };
                 },
             },
+            center: {
+                className: 'flex-center',
+                values: ['row', 'column'],
+                transform(style) {
+                    return {
+                        display: 'flex',
+                        flexDirection: style,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }
+                },
+            },
             userSelect: {
                 className: 'userSelect',
                 values: 'userSelect', // TODO: not sure if this works
@@ -180,6 +192,16 @@ export const plandaPreset = definePreset({
                     return {
                         textAlign: value,
                     };
+                },
+            },
+            minSize: {
+                className: 'min-size',
+                values: 'sizes',
+                transform(style) {
+                    return {
+                        minWidth: style,
+                        minHeight: style,
+                    }
                 },
             },
         },
