@@ -76,7 +76,6 @@
         "date-fns": "^2.30.0",
         "localforage": "^1.10.0",
         "lodash": "^4.17.21",
-        "next-themes": "^0.2.1",
         "react-bezier-curve-editor": "^1.1.2",
         "tslib": "^2.5.3"
     },
