@@ -21,6 +21,6 @@
         "isolatedModules": true,
         "incremental": true
     },
-    "include": ["src/", "**/*.module.css"],
+    "include": ["src/", "**/*.module.css", "pending/components/Tabs.tsx"],
     "exclude": ["node_modules", "pages", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
 }

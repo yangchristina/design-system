@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import * as LabelPrimitive from '@radix-ui/react-label';
-import { TextProps } from './Text';
+import { TextProps } from '../../pending/components/Text';
 import { text } from '@planda/styled-system/recipes';
 import { css, cx } from '@planda/styled-system/css';
 

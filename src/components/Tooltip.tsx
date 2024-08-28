@@ -3,7 +3,7 @@ import React from 'react';
 import { styled } from '../stitches.config';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import { Box } from './Box';
-import { Text } from './Text';
+import { Text } from '../../pending/components/Text';
 import { token } from '@planda/styled-system/tokens';
 
 type TooltipPrimitiveProps = React.ComponentProps<typeof TooltipPrimitive.Root>;

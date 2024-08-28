@@ -79,7 +79,7 @@ export { Sub } from './components/Sub';
 export { Switch } from './components/Switch';
 export { Caption, Tbody, Tfoot, Tr, Th, Td, Thead, Table } from './components/Table';
 export { TabLink } from './components/TabLink';
-export { Tabs, TabsList, TabsContent, TabsTrigger } from './components/Tabs';
+export { Tabs, TabsList, TabsContent, TabsTrigger } from '../pending/components/Tabs';
 export { Text } from './components/Text';
 export { TextArea } from './components/TextArea';
 export { Tooltip } from './components/Tooltip';
