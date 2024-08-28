@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
-import { styled } from '../stitches.config';
+import { styled } from '@planda/styled-system/jsx'
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 /**
@@ -93,7 +93,7 @@ const contentStyles = {
   // boxShadow: '$colors$shadowLight 0px 10px 38px -10px, $colors$shadowDark 0px 10px 20px -15px'
 };
 
-const StyledContent = styled(ContextMenuPrimitive.Content, { ...contentStyles });
+const StyledContent = styled(ContextMenuPrimitive.Content, { base: { ...contentStyles } });
 
 function Content(props: any) {
   return (
@@ -103,7 +103,7 @@ function Content(props: any) {
   );
 }
 
-const StyledSubContent = styled(ContextMenuPrimitive.SubContent, { ...contentStyles, minWidth: contentStyles.minWidth / 2, width: 'max-content' });
+const StyledSubContent = styled(ContextMenuPrimitive.SubContent, { base: { ...contentStyles, minWidth: contentStyles.minWidth / 2, width: 'max-content' } });
 
 function SubContent(props: any) {
   return (
@@ -138,49 +138,65 @@ const itemStyles = {
   },
 } as const;
 
-const StyledItem = styled(ContextMenuPrimitive.Item, { ...itemStyles });
-const StyledCheckboxItem = styled(ContextMenuPrimitive.CheckboxItem, { ...itemStyles });
-const StyledRadioItem = styled(ContextMenuPrimitive.RadioItem, { ...itemStyles });
+const StyledItem = styled(ContextMenuPrimitive.Item, { base: { ...itemStyles } });
+const StyledCheckboxItem = styled(ContextMenuPrimitive.CheckboxItem, { base: { ...itemStyles } });
+const StyledRadioItem = styled(ContextMenuPrimitive.RadioItem, { base: { ...itemStyles } });
 const StyledSubTrigger = styled(ContextMenuPrimitive.SubTrigger, {
-  '&[data-state="open"]': {
-    backgroundColor: '$primary4',
-    color: '$primary11',
-  },
-  ...itemStyles,
+  base: {
+    '&[data-state="open"]': {
+      backgroundColor: '$primary4',
+      color: '$primary11',
+    },
+    ...itemStyles,
+  }
 });
 
 const StyledLabel = styled(ContextMenuPrimitive.Label, {
-  paddingLeft: 25,
-  fontSize: 12,
-  lineHeight: '25px',
-  color: '$gray11',
+  base: {
+    paddingLeft: 25,
+    fontSize: 12,
+    lineHeight: "25px",
+    color: "$gray11"
+  }
 });
 
 const StyledSeparator = styled(ContextMenuPrimitive.Separator, {
-  height: 1,
-  backgroundColor: '$primary6',
-  margin: 5,
+  base: {
+    height: 1,
+    backgroundColor: "$primary6",
+    margin: 5
+  }
 });
 
 const StyledItemIndicator = styled(ContextMenuPrimitive.ItemIndicator, {
-  position: 'absolute',
-  left: 0,
-  width: 25,
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  base: {
+    position: "absolute",
+    left: 0,
+    width: 25,
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
 
 export const RightSlot = styled('div', {
-  marginLeft: 'auto',
-  paddingLeft: 20,
-  color: '$gray11',
-  '[data-highlighted] > &': { color: '$loContrast' },
-  '[data-disabled] &': { color: '$gray8' },
+  base: {
+    marginLeft: "auto",
+    paddingLeft: 20,
+    color: "$gray11",
+    "[data-highlighted] > &": {
+      color: "$loContrast"
+    },
+    "[data-disabled] &": {
+      color: "$gray8"
+    }
+  }
 });
 
 // Exports
-export const ContextMenuRoot = styled(ContextMenuPrimitive.Root, {});
+export const ContextMenuRoot = styled(ContextMenuPrimitive.Root, {
+  base: {}
+});
 export const ContextMenuTrigger = ContextMenuPrimitive.Trigger;
 export const ContextMenuContent = Content;
 export const ContextMenuItem = StyledItem;

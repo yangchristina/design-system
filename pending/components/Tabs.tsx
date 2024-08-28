@@ -2,7 +2,7 @@
 import React from 'react';
 import { styled, CSS } from '../../src/stitches.config';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
-import { Separator } from './Separator';
+import { Separator } from '../../src/components/Separator';
 
 export const Tabs = styled(TabsPrimitive.Root, {
   display: 'flex',

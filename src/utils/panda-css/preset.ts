@@ -1,11 +1,11 @@
-import { defineGlobalStyles, definePreset } from '@pandacss/dev';
+import { definePreset } from '@pandacss/dev';
 import { stitchesToPandaTokens } from './stitchesConvert';
 import { crimsonA } from '@radix-ui/colors';
 import { allThemeNames, presetConditions, themes } from './themes';
-import { textRecipe } from '../../components/recipes/text';
-import { globalStyles } from '../../stitches.config';
+import { textRecipe } from '../../recipes/text';
+import { keyframes } from '../../keyframes';
+import { globalStyles } from './globalStyles';
 
-const globalCss = defineGlobalStyles(globalStyles);
 export const plandaPreset = definePreset({
     name: 'planda',
     staticCss: {
@@ -137,16 +137,7 @@ export const plandaPreset = definePreset({
                     max: '999',
                 }),
             },
-            keyframes: {
-                fadeIn: {
-                    from: { opacity: '0' },
-                    to: { opacity: '1' },
-                },
-                fadeOut: {
-                    from: { opacity: '1' },
-                    to: { opacity: '0' },
-                },
-            },
+            keyframes,
             recipes: { text: textRecipe },
         },
     },
@@ -172,7 +163,7 @@ export const plandaPreset = definePreset({
                         flexDirection: style,
                         alignItems: 'center',
                         justifyContent: 'center',
-                    }
+                    };
                 },
             },
             userSelect: {
@@ -201,13 +192,28 @@ export const plandaPreset = definePreset({
                     return {
                         minWidth: style,
                         minHeight: style,
-                    }
+                    };
+                },
+            },
+            textStyle: {
+                className: 'text-style',
+                values: ['important', 'unimportant', 'unimportantCategory'],
+                transform(style) {
+                    return style.startsWith('important')
+                        ? {
+                              fontSize: '1.1rem', // TODO: not sure what fontSize to do yet
+                              color: '$important',
+                          }
+                        : {
+                              fontSize: '0.7rem',
+                              color: style.endsWith('Category') ? '$unimportantCategory' : '$unimportant',
+                          };
                 },
             },
         },
     },
     conditions: presetConditions,
     presets: ['@pandacss/preset-base'],
-    globalCss,
+    globalCss: globalStyles,
     // presets: ['@pandacss/preset-panda'],
 });

@@ -1,4 +1,3 @@
-import { allThemeConfigs } from '../../stitches.config';
 import { mapObject } from '../utils';
 import type { ThemeVariantsMap } from '@pandacss/types';
 
@@ -7,6 +6,8 @@ import { stitchesToPandaTokens } from './stitchesConvert';
 import { defineThemeContract } from '@pandacss/dev';
 import { mapColor } from '../radixColors';
 import { merge } from 'lodash';
+import { allThemeConfigs } from './colorThemes';
+import { ColorBase, ColorTheme } from './types';
 
 export const blackOverlay = {
     overlay1: radixScales.blackA.blackA1,
@@ -52,27 +53,6 @@ export function mapColorObj(color: Record<string, string>, originalPrefix: strin
         obj[alias + i] = color[originalPrefix + i];
     }
     return obj;
-}
-
-/**
- * THEME:
- * Error, Success, Warning, Info, Primary, Secondary, Accent, GrayScale, Black White Overlay
- */
-
-export interface ColorBase {
-    primary: string;
-    secondary: string;
-    accent: string;
-    gray: string;
-    error: string;
-    success: string;
-    info: string;
-    warning: string;
-}
-
-export interface ColorTheme extends ColorBase {
-    isLight: boolean;
-    name?: string;
 }
 
 const crimsonTheme: ColorBase = {

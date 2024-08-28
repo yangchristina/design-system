@@ -11,18 +11,6 @@ interface DesignSystemProviderProps extends TooltipProviderProps {
   enableSystem?: boolean;
 }
 
-const mergeThemes = (themes1: Record<string, string>, themes2: Record<string, string>) => {
-  const mergedThemes = { ...themes1 };
-  Object.entries(themes2).forEach(([key, val]) => {
-    if (mergedThemes[key]) {
-      mergedThemes[key] = `${mergedThemes[key]} ${val}`;
-    } else {
-      mergedThemes[key] = val;
-    }
-  });
-  return mergedThemes;
-}
-
 export const DesignSystemProvider: React.FC<DesignSystemProviderProps> = ({ themes, defaultTheme = 'teal', enableSystem, ...props }) => {
   return <TooltipProvider {...props} />
 };

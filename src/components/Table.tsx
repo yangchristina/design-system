@@ -1,109 +1,133 @@
 "use client"
-import { styled } from '../stitches.config';
+import { sva } from '@planda/styled-system/css';
 
-export const Caption = styled('caption', {
-  textAlign: 'start',
-  marginBottom: '$5',
-});
-
-export const Tbody = styled('tbody', {
-  width: '100%',
-});
-
-export const Tfoot = styled('tfoot', {});
-
-export const Tr = styled('tr', {});
-
-export const Th = styled('th', {
-  fontWeight: 'unset',
-  textAlign: 'start',
-  fontSize: '$2',
-  py: '$2',
-  borderBottom: '1px solid $gray4',
-  variants: {
-    align: {
-      start: {
-        textAlign: 'start',
-      },
-      center: {
-        textAlign: 'center',
-      },
-      end: {
-        textAlign: 'end',
-      },
+export const table = sva({
+  slots: ['th', 'td', 'table', 'thead', 'tr', 'tfoot', 'tbody', 'caption'],
+  className: 'table',
+  base: {
+    table: {
+      width: '100%',
+      tableLayout: 'fixed',
+      borderSpacing: 0,
     },
-    border: {
-      solid: {
-        borderBottom: '1px solid $gray4',
-      },
-      dashed: {
-        borderBottom: '1px dashed $gray8',
-      },
+    tbody: {
+      width: "100%"
     },
-  },
-  defaultVariants: {
-    align: 'start',
-    border: 'solid',
-  },
-});
-
-export const Td = styled('td', {
-  py: '$2',
-  borderBottom: '1px solid $gray4',
-  fontSize: '$2',
-  variants: {
-    align: {
-      start: {
-        textAlign: 'start',
-      },
-      center: {
-        textAlign: 'center',
-      },
-      end: {
-        textAlign: 'end',
-      },
+    caption: {
+      textAlign: "start",
+      marginBottom: "$5"
     },
-    border: {
-      solid: {
-        borderBottom: '1px solid $gray4',
-      },
-      dashed: {
-        borderBottom: '1px dashed $gray8',
-      },
+    th: {
+      fontWeight: "unset",
+      textAlign: "start",
+      fontSize: "$2",
+      py: "$2",
+      borderBottom: "1px solid $gray4"
     },
+    td: {
+      py: "$2",
+      borderBottom: "1px solid $gray4",
+      fontSize: "$2"
+    }
   },
-  defaultVariants: {
-    align: 'start',
-    border: 'solid',
-  },
-});
-
-export const Thead = styled('thead', {
-  [`& ${Th}`]: {
-    fontSize: '$1',
-    color: '$gray11',
-  },
-  [`& ${Td}`]: {
-    fontSize: '$1',
-    color: '$gray11',
-  },
-});
-
-export const Table = styled('table', {
-  width: '100%',
-  tableLayout: 'fixed',
-  borderSpacing: 0,
   variants: {
     striped: {
       true: {
-        [`& ${Tbody}`]: {
-          [`& ${Tr}`]: {
+        tbody: {
+          [`& table__tr`]: {
             '&:nth-child(odd)': {
-              bc: '$gray2',
+              backgroundColor: '$gray2',
             },
           },
         },
+        thead: {
+          [`& table__th`]: {
+            fontSize: '$1',
+            color: '$gray11',
+          },
+          [`& table__td`]: {
+            fontSize: '$1',
+            color: '$gray11',
+          },
+        },
+      }
+    },
+    align: {
+      start: {
+        th: {
+          textAlign: "start"
+        },
+        td: {
+          textAlign: "start"
+        }
+      },
+      center: {
+        th: {
+          textAlign: "center"
+        },
+        td: {
+          textAlign: "center"
+        }
+      },
+      end: {
+        th: {
+          textAlign: "center"
+        },
+        td: {
+          textAlign: "end"
+        }
       },
     },
+    border: {
+      solid: {
+        th: {
+          borderBottom: "1px solid $gray4"
+        },
+        td: {
+          borderBottom: "1px solid $gray4"
+        }
+      },
+      dashed: {
+        th: {
+          borderBottom: "1px dashed $gray8"
+        },
+        td: {
+          borderBottom: "1px dashed $gray8"
+        }
+      }
+    },
+    alignTh: {
+      start: {
+        th: {
+          textAlign: "start"
+        },
+      },
+      center: {
+        th: {
+          textAlign: "center"
+        },
+      },
+      end: {
+        th: {
+          textAlign: "center"
+        },
+      },
+    },
+    borderTh: {
+      solid: {
+        th: {
+          borderBottom: "1px solid $gray4"
+        },
+      },
+      dashed: {
+        th: {
+          borderBottom: "1px dashed $gray8"
+        },
+      }
+    }
   },
-});
+  defaultVariants: {
+    // align: "start",
+    border: "solid"
+  },
+})

@@ -1,9 +1,9 @@
 "use client"
 import React from 'react';
-import { styled } from '../stitches.config';
+import { styled } from '@planda/styled-system/jsx'
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import { Box } from './Box';
-import { Text } from '../../pending/components/Text';
+import { Text } from './Text';
 import { token } from '@planda/styled-system/tokens';
 
 type TooltipPrimitiveProps = React.ComponentProps<typeof TooltipPrimitive.Root>;
@@ -15,19 +15,20 @@ type TooltipProps = TooltipPrimitiveProps &
   };
 
 const StyledContent = styled(TooltipPrimitive.Content, {
-  backgroundColor: '$transparentPanel',
-  borderRadius: '$1',
-  padding: '$1 $2',
-  zIndex: 9999,
-
   variants: {
     multiline: {
       true: {
         maxWidth: 250,
-        pb: 7,
-      },
-    },
+        pb: 7
+      }
+    }
   },
+  base: {
+    backgroundColor: "$transparentPanel",
+    borderRadius: "$1",
+    padding: "$1 $2",
+    zIndex: 9999
+  }
 });
 
 export function Tooltip({
@@ -58,7 +59,7 @@ export function Tooltip({
           >
             {content}
           </Text>
-          <Box css={{ color: '$transparentExtreme' }}>
+          <Box style={{ color: '$transparentExtreme' }}>
             <TooltipPrimitive.Arrow width={11} height={5} style={{ fill: 'currentColor' }} />
           </Box>
         </StyledContent>

@@ -1,5 +1,5 @@
 "use client"
-import { styled } from '../stitches.config';
+import { styled } from '@planda/styled-system/jsx'
 import React, { ComponentProps, forwardRef, useId } from "react";
 import { Label } from './Label';
 import { TextVariantProps } from '@planda/styled-system/recipes';
@@ -23,22 +23,25 @@ export const inputCSSVarStyle = {
 }
 
 export const InputWrapper = styled('span', {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: 10,
-    position: 'relative',
-    background: 'inherit',
-    gridArea: 'input',
+    base: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 10,
+        position: "relative",
+        background: "inherit",
+        gridArea: "input"
+    }
 })
 
 export const InputField = styled('input', {
-    all: 'unset',
-    ...inputLayoutStyle,
-    boxShadow: '$boxShadow',
-    backgroundColor: '$overlayB11',
-    color: '$primary12',
-    '&:focus': { boxShadow: `$focus`, scale: 1.02, },
-
+    base: {
+        all: 'unset',
+        ...inputLayoutStyle,
+        boxShadow: '$boxShadow',
+        backgroundColor: '$overlayB11',
+        color: '$primary12',
+        '&:focus': { boxShadow: `$focus`, scale: 1.02, },
+    },
     variants: {
         size: {
             'small': {
@@ -66,7 +69,6 @@ export const InputField = styled('input', {
             },
             native: {
                 all: 'revert',
-                // margin: '5px',
                 padding: 3,
                 '&:focus': { boxShadow: 'initial', scale: 'initial' },
             }
@@ -75,11 +77,13 @@ export const InputField = styled('input', {
 });
 
 const Col = styled('span', {
-    position: 'relative',
-    padding: 0,
-    margin: 0,
-    display: 'inline-flex',
-    flexDirection: 'column',
+    base: {
+        position: "relative",
+        padding: 0,
+        margin: 0,
+        display: "inline-flex",
+        flexDirection: "column"
+    }
 })
 
 type InputProps = ComponentProps<typeof InputField> & { outerCSS?: Record<string, any>, error?: boolean, valid?: boolean, label?: string, labelSize?: number }

@@ -1,97 +1,98 @@
 import React from 'react'
 import { Cross1Icon } from '@radix-ui/react-icons';
 import { IconButton } from '../components/IconButton';
-import { styled } from '../stitches.config';
+import { styled } from '@planda/styled-system/jsx'
 
 const Container = styled('div', {
-    position: 'absolute',
-    display: 'flex',
-    top: 0,
-    flexDirection: 'column',
-    gap: 1,
-    backgroundColor: '$primary8',
-    alignItems: 'stretch',
-    border: '1px solid $primary8',
-    height: 'max-content',
-    width: '100%',
+    base: {
+        position: "absolute",
+        display: "flex",
+        top: 0,
+        flexDirection: "column",
+        gap: 1,
+        backgroundColor: "$primary8",
+        alignItems: "stretch",
+        border: "1px solid $primary8",
+        height: "max-content",
+        width: "100%"
+    }
 })
 
 const Banner = styled('div', {
-    // Reset
-    boxSizing: 'border-box',
-    '&::before': {
-        boxSizing: 'border-box',
+    base: {
+        boxSizing: "border-box",
+        _before: {
+            boxSizing: "border-box"
+        },
+        _after: {
+            boxSizing: "border-box"
+        },
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "$3"
     },
-    '&::after': {
-        boxSizing: 'border-box',
-    },
-
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '$3',
-
     variants: {
         size: {
-            '1': {
-                py: '$1',
-                px: '$4',
-            },
+            "1": {
+                py: "$1",
+                px: "$4"
+            }
         },
         variant: {
             loContrast: {
-                backgroundColor: '$loContrast',
+                backgroundColor: "$loContrast"
             },
             gray: {
-                backgroundColor: '$gray3',
+                backgroundColor: "$gray3"
             },
             blue: {
-                backgroundColor: '$info3',
+                backgroundColor: "$info3"
             },
             green: {
-                backgroundColor: '$success3',
+                backgroundColor: "$success3"
             },
             red: {
-                backgroundColor: '$error3',
+                backgroundColor: "$error3"
             },
             primary: {
-                backgroundColor: '$primary5',
-            },
+                backgroundColor: "$primary5"
+            }
         },
-        rounded: {
-            true: {
-                borderRadius: '$pill',
-            },
-        },
-        border: {
-            true: {
-                borderRadius: '$pill',
-            },
-        },
+        // rounded: {
+        //     true: {
+        //         borderRadius: "$pill"
+        //     }
+        // },
+        // border: {
+        //     true: {
+        //         borderRadius: "$pill"
+        //     }
+        // }
     },
-    compoundVariants: [
-        {
-            border: 'true',
-            variant: 'gray',
-            css: {
-                borderColor: '$gray6',
-            },
-        },
-        {
-            border: 'true',
-            variant: 'blue',
-            css: {
-                borderColor: '$info11',
-            },
-        },
-        {
-            border: 'true',
-            variant: 'loContrast',
-            css: {
-                borderColor: '$gray6',
-            },
-        },
-    ],
+    // compoundVariants: [
+    //     {
+    //         border: 'true',
+    //         variant: 'gray',
+    //         css: {
+    //             borderColor: '$gray6',
+    //         },
+    //     },
+    //     {
+    //         border: 'true',
+    //         variant: 'blue',
+    //         css: {
+    //             borderColor: '$info11',
+    //         },
+    //     },
+    //     {
+    //         border: 'true',
+    //         variant: 'loContrast',
+    //         css: {
+    //             borderColor: '$gray6',
+    //         },
+    //     },
+    // ],
     defaultVariants: {
         size: '1',
         variant: 'primary',
@@ -99,8 +100,10 @@ const Banner = styled('div', {
 });
 
 const IconContainer = styled(IconButton, {
-    position: 'absolute',
-    right: '$1',
+    base: {
+        position: "absolute",
+        right: "$1"
+    }
 })
 
 export interface Announcement {
