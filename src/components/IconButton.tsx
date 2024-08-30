@@ -1,5 +1,6 @@
 "use client"
 
+import { cva } from "@planda/styled-system/css";
 import { styled } from "@planda/styled-system/jsx";
 
 // export const IconButton = styled('button', {
@@ -19,7 +20,7 @@ import { styled } from "@planda/styled-system/jsx";
 //   '&:focus': { boxShadow: `0 0 0 2px $colors$gray7` },
 // });
 
-export const IconButton = styled('button', {
+export const iconButton = cva({
   base: {
     // Reset
     alignItems: 'center',
@@ -175,7 +176,9 @@ export const IconButton = styled('button', {
     size: 1,
     variant: 'ghost',
   },
-});
+})
+
+export const IconButton = styled('button', iconButton);
 
 
 export const GhostIconButton = styled('button', {
