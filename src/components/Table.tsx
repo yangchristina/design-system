@@ -1,5 +1,6 @@
 "use client"
 import { sva } from '@planda/styled-system/css';
+import { createStyleContext } from '../createStyleContext';
 
 export const table = sva({
   slots: ['th', 'td', 'table', 'thead', 'tr', 'tfoot', 'tbody', 'caption'],
@@ -131,3 +132,15 @@ export const table = sva({
     border: "solid"
   },
 })
+
+
+const { withProvider, withContext } = createStyleContext(table)
+
+export const Table = withProvider('table', 'table')
+export const Th = withContext('th', 'th')
+export const Td = withContext('td', 'td')
+export const Thead = withContext('thead', 'thead')
+export const Tr = withContext('tr', 'tr')
+export const Tfoot = withContext('tfoot', 'tfoot')
+export const Tbody = withContext('tbody', 'tbody')
+export const Caption = withContext('caption', 'caption')

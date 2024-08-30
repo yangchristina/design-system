@@ -1,6 +1,6 @@
 'use client';
 import React, { ComponentProps } from 'react'
-import { styled } from '../../../stitches.config';
+import { styled } from '@planda/styled-system/jsx'
 import { SelectTrigger, Value, SelectIcon } from '@radix-ui/react-select';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import { selectColorVariants } from "../styles";
@@ -21,29 +21,29 @@ const Trigger = ({ placeholder = 'Select a category', error = false, ...props }:
 export default Trigger
 
 const StyledTrigger = styled(SelectTrigger, {
-    all: 'unset',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 4,
-    padding: '0 15px',
-    fontSize: 13,
-    lineHeight: 1,
-    height: 35,
-    gap: 5,
-    backgroundColor: '$loContrast',
-    boxShadow: '$border',
-    color: '$primary12',
-    // boxShadow: `0px 0px 3px $colors$gray8`,
-    // boxShadow: '$boxShadow',
-    '&:hover': { backgroundColor: '$gray3' },
-    '&:focus': { boxShadow: `$focus` },
-    '&[data-placeholder]': { color: '$gray12' },
+    base: {
+        all: 'unset',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 4,
+        padding: '0 15px',
+        fontSize: 13,
+        lineHeight: 1,
+        height: 35,
+        gap: 5,
+        backgroundColor: '$loContrast',
+        boxShadow: '$border',
+        color: '$primary12',
+        '&:hover': { backgroundColor: '$gray3' },
+        '&:focus': { boxShadow: `$focus` },
+        '&[data-placeholder]': { color: '$gray12' },
 
-    gridArea: 'category',
+        gridArea: 'category',
 
-    border: '$boxShadow',
+        border: '$boxShadow',
 
+    },
     variants: {
         ...selectColorVariants,
         border: { // TODO: these overlays need to be adjusted if using

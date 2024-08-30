@@ -16,6 +16,8 @@ export { DirectionNav } from './components/DirectionNav';
 export { NumberInput } from './components/NumberInput';
 export { AspectRatio } from '@radix-ui/react-aspect-ratio';
 export { Button, button } from './components/Button';
+export { Box } from './components/Box';
+export * from './components/Table';
 // export {
 //   ContextMenu,
 //   ContextMenuTrigger,

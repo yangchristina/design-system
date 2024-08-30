@@ -1,8 +1,8 @@
 'use client';
 import React, { forwardRef, ReactNode } from 'react'
 import * as SelectPrimitive from '@radix-ui/react-select';
-import { CheckIcon, PlusIcon } from '@radix-ui/react-icons';
-import { styled } from '../../../stitches.config';
+import { CheckIcon } from '@radix-ui/react-icons';
+import { styled } from '@planda/styled-system/jsx'
 import { selectColorVariants } from "../styles";
 
 interface Props {
@@ -43,31 +43,35 @@ export const selectItemStyle = {
     }
 } as const
 
-const SelectItem = styled(SelectPrimitive.Item, {
+const SelectItem = styled(SelectPrimitive.Item, { base: {
     ...selectItemStyle,
-});
+} });
 
 export const SelectItemButtonIndicator = styled('div', {
-    position: 'absolute',
-    left: 0,
-    width: 25,
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    base: {
+        position: "absolute",
+        left: 0,
+        width: 25,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center"
+    }
 });
 
-const SelectItemButton = styled('button', {
+const SelectItemButton = styled('button', { base: {
     ...selectItemStyle,
     width: 'stretch',
-});
+} });
 
 const Indicator = styled(SelectPrimitive.ItemIndicator, {
-    position: 'absolute',
-    left: 0,
-    width: 25,
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    base: {
+        position: "absolute",
+        left: 0,
+        width: 25,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center"
+    }
 });
 
 const Item = forwardRef<HTMLInputElement, Props>(({ children, ...props }, forwardedRef) => {

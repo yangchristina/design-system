@@ -6,7 +6,7 @@ import React, { ComponentProps, Fragment } from 'react'
 import * as SelectPrimitive from '@radix-ui/react-select';
 import Trigger from './components/Trigger';
 import Item, { ItemButton } from './components/Item';
-import { styled } from '../../stitches.config';
+import { styled } from '@planda/styled-system/jsx'
 import Content from './components/Content';
 import { isStringArray } from '../../utils';
 
@@ -27,17 +27,23 @@ export interface SelectGroup { type: 'group', label: string, items: (SelectItem 
 
 export type ContentUnit = SelectGroup | SelectItem | SelectButton
 
-const SelectGroupEl = styled(SelectPrimitive.Group, {})
+const SelectGroupEl = styled(SelectPrimitive.Group, {
+    base: {}
+})
 const Separator = styled(SelectPrimitive.Separator, {
-    height: 1,
-    backgroundColor: '$gray6',
-    margin: 5,
+    base: {
+        height: 1,
+        backgroundColor: "$gray6",
+        margin: 5
+    }
 });
 const GroupLabel = styled(SelectPrimitive.Label, {
-    padding: '0 25px',
-    fontSize: 12,
-    lineHeight: '25px',
-    color: '$gray11',
+    base: {
+        padding: "0 25px",
+        fontSize: 12,
+        lineHeight: "25px",
+        color: "$gray11"
+    }
 });
 
 function handleType(obj: ContentUnit | ContentUnit[]): JSX.Element {
