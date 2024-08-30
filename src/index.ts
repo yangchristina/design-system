@@ -47,3 +47,4 @@ export { TextArea } from './components/TextArea';
 export { Tooltip } from './components/Tooltip';
 export { Input } from './components/Input';
 export { Separator } from './components/Separator';
+export * from './components/select';
