@@ -11,7 +11,7 @@ export const globalStyles = defineGlobalStyles({
     },
     ':root': {
         margin: 0,
-        fontFamily: '$system',
+        fontFamily: 'system',
         height: '100%',
         color: '$primary12',
         boxSizing: 'border-box',
@@ -51,7 +51,7 @@ export const globalStyles = defineGlobalStyles({
         fontSize: '0.65em',
     },
     textarea: {
-        fontFamily: '$system',
+        fontFamily: 'system',
         padding: 5,
         letterSpacing: 0.8,
         boxSizing: 'border-box',

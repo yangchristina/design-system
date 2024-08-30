@@ -53,10 +53,11 @@ export const plandaPreset = definePreset({
                         highlight: '$warning9',
                     }),
                 },
-                fonts: stitchesToPandaTokens({
-                    untitled: 'Untitled Sans, -apple-system, system-ui, sans-serif',
-                    mono: 'Söhne Mono, menlo, monospace',
-                }),
+                fonts: {
+                    system: { value: `"Monaco", "Lucida Console", monospace` },
+                    untitled: { value: 'Untitled Sans, -apple-system, system-ui, sans-serif' },
+                    mono: { value: 'Söhne Mono, menlo, monospace' },
+                },
                 borders: stitchesToPandaTokens({
                     border: '{borderWidths.$medium} solid {colors.$primary12}',
                     borderThin: '{borderWidths.$thin} solid {colors.$primary12}',

@@ -47,24 +47,24 @@ const styledContent = cva({
   variants: {
     side: {
       top: {
-        $$transformValue: 'translate3d(0,-100%,0)',
+        '--transformValue': 'translate3d(0,-100%,0)',
         width: '100%',
         height: 300,
         bottom: 'auto',
       },
       right: {
-        $$transformValue: 'translate3d(100%,0,0)',
+        '--transformValue': 'translate3d(100%,0,0)',
         right: 0,
       },
       bottom: {
-        $$transformValue: 'translate3d(0,100%,0)',
+        '--transformValue': 'translate3d(0,100%,0)',
         width: '100%',
         height: 300,
         bottom: 0,
         top: 'auto',
       },
       left: {
-        $$transformValue: 'translate3d(-100%,0,0)',
+        '--transformValue': 'translate3d(-100%,0,0)',
         left: 0,
       },
     },

@@ -10,12 +10,12 @@ export const keyframes = defineKeyframes({
         '100%': { opacity: '0' },
     },
     slideIn: {
-        from: { transform: '$$transformValue' },
+        from: { transform: 'var(--transformValue)' },
         to: { transform: 'translate3d(0,0,0)' },
     },
     slideOut: {
         from: { transform: 'translate3d(0,0,0)' },
-        to: { transform: '$$transformValue' },
+        to: { transform: 'var(--transformValue)' },
     },
     indeterminateProgress: {
         '0%': {
