@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        // "emitDeclarationOnly": true,
+        "noEmit": true,
+        "outDir": "dist",
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es6",
+        "noImplicitAny": false,
+        "lib": ["dom", "dom.iterable", "es2017", "esnext"],
+        "allowJs": true,
+        "isolatedModules": true,
+        "incremental": true
+    },
+    "include": ["src/"],
+    "exclude": ["node_modules", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
+}
