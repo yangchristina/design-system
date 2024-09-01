@@ -19,7 +19,7 @@ export default defineConfig({
         extend: {},
     },
     // The output directory for your css system
-    outdir: './packages/styled-system',
+    outdir: '../styled-system',
     importMap: '@planda/styled-system',
     // The JSX framework to use
     jsxFramework: 'react',
