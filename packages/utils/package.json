@@ -15,6 +15,10 @@
     "dependencies": {
         "date-fns": "^3.6.0",
         "date-fns-tz": "^3.1.3",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "tslib": "^2.7.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.5.4"
     }
 }
