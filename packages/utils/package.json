@@ -1,10 +1,13 @@
 {
     "name": "@planda/utils",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Planda utilities",
     "main": "dist/cjs/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "rm -rf dist && rollup -c",
         "release": "npm run build && npm version patch && npm publish",
@@ -20,5 +23,12 @@
     },
     "devDependencies": {
         "typescript": "^5.5.4"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yangchristina/design-system.git"
     }
 }
