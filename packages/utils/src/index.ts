@@ -6,3 +6,5 @@ export * from './json';
 export * from './fetch';
 export * from './constants';
 export * from './string';
+export * from './types';
+export * from './general';
