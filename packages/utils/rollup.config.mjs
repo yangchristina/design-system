@@ -2,7 +2,6 @@
 // If using node-22, use with instead of assert
 import pkg from './package.json' with { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
-import preserveDirectives from 'rollup-plugin-preserve-directives';
 // import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 // import babel from '@rollup/plugin-babel';
@@ -13,7 +12,6 @@ const plugins = [
   // typescript({
     terser({ sourceMap: true }),
   // }),
-  preserveDirectives(),
 ]
 
 const commonConfig = {
