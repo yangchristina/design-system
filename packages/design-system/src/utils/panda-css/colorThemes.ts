@@ -1,4 +1,4 @@
-import { mapObject } from '../utils';
+import { mapObject } from '@planda/utils';
 import { ColorBase, ColorTheme } from './types';
 
 const avocadoVariables = {

@@ -1,4 +1,4 @@
-import { mapObject } from '../utils';
+import { mapObject } from '@planda/utils';
 import type { ThemeVariantsMap } from '@pandacss/types';
 
 import * as radixScales from '@radix-ui/colors';

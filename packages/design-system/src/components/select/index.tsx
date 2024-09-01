@@ -8,7 +8,7 @@ import Trigger from './components/Trigger';
 import Item, { ItemButton } from './components/Item';
 import { styled } from '@planda/styled-system/jsx'
 import Content from './components/Content';
-import { isStringArray } from '../../utils';
+import { isStringArray } from '@planda/utils';
 
 export interface SelectItem {
     type: 'item',

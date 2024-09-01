@@ -1,4 +1,4 @@
-import { mod } from './math';
+import { mod } from '@planda/utils';
 import { allThemeNames } from './panda-css';
 
 export default function getNextTheme(theme = '', inc = 1, type?: 'light' | 'dark') {

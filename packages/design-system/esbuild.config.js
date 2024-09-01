@@ -7,7 +7,7 @@ const CssModulesPlugin = require('esbuild-css-modules-plugin');
 
 esbuild
   .build({
-    entryPoints: ['src/index.ts'],
+    entryPoints: ['./src/index.ts'],
     outdir: 'dist',
     bundle: true,
     minify: true,

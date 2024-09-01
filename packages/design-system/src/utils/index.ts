@@ -1,10 +1,7 @@
 export * from './theme';
-export * from './math';
 // export * from './radixColors';
-export * from './utils';
 export * from './stitches';
 export * from './date';
-export * from './cast';
 export * from './lib/json';
 export * from './lib/nanoid';
 export * from './lib/fetch';
