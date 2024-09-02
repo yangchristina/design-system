@@ -1,9 +1,12 @@
 import { differenceInCalendarDays, differenceInCalendarWeeks, differenceInMonths, differenceInYears, endOfDay, format, Interval, isSameDay, isSameYear, startOfDay } from 'date-fns';
 import { DAYS_OF_WEEK, MS_PER_HOUR } from './constants';
 import { getTimezoneOffset } from 'date-fns-tz';
+import { DayOfWeekNum } from './types';
 
 export const millisecondsInHour = 60 * 60 * 1000;
 export const millisecondsInMinute = 60 * 1000;
+
+export const castDayOfWeek = (day: number) => (day % 7) as DayOfWeekNum;
 
 export function getDayStringFormat(date: Date | number) {
     return format(date, 'yyyy-MM-dd');
