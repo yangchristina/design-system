@@ -1,11 +1,11 @@
-import { defineSlotRecipe } from "@pandacss/dev";
+import { defineSlotRecipe } from '@pandacss/dev';
 
 export const table = defineSlotRecipe({
     slots: ['th', 'td', 'table', 'thead', 'tr', 'tfoot', 'tbody', 'caption'],
     className: 'table',
     base: {
         table: {
-            width: '100%',
+            // width: '100%',
             tableLayout: 'fixed',
             borderSpacing: 0,
         },
