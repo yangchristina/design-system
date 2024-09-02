@@ -34,6 +34,7 @@ export const plandaPreset = definePreset({
                     unimportant: '{colors.$gray11}',
                     important: '{colors.$primary11}',
                     highlight: '{colors.$warning9}',
+                    panel: '{colors.$loContrast}',
                 }),
                 shadows: {
                     boxShadow: { value: `{shadows.$border}, {shadows.$common}` },

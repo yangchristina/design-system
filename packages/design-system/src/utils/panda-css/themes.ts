@@ -91,12 +91,11 @@ export const lightDefaults = {
     ...radixScales.sandA,
 
     ...radixScales.violetA,
-    ...mapColor('whiteA', 'overlayB'),
 
     canvas: 'hsl(0 0% 93%)',
-    panel: '$loContrast',
     shadowLight: 'hsl(206 22% 7% / 35%)',
     shadowDark: 'hsl(206 22% 7% / 20%)',
+    ...mapColorObj(radixScales.whiteA, 'whiteA', 'overlayB'),
 };
 
 export const darkDefaults = {
@@ -128,7 +127,7 @@ export const darkDefaults = {
     ...mapColor('blackA', 'overlayB'),
 
     canvas: 'hsl(0 0% 15%)',
-    panel: '$gray3',
+    // panel: '$gray3', // moved to semantic
     shadowLight: 'hsl(206 22% 7% / 35%)',
     shadowDark: 'hsl(206 22% 7% / 20%)',
 } as const;
