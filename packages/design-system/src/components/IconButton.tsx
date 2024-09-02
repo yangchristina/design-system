@@ -17,7 +17,7 @@ import { styled } from "@planda/styled-system/jsx";
 //   right: 10,
 
 //   '&:hover': { backgroundColor: '$overlay4' },
-//   '&:focus': { boxShadow: `0 0 0 2px $colors$gray7` },
+//   '&:focus': { boxShadow: `0 0 0 2px {colors.$gray7}` },
 // });
 
 export const iconButton = cva({
@@ -55,7 +55,7 @@ export const iconButton = cva({
     },
     '&:focus': {
       borderColor: '$gray8',
-      boxShadow: '0 0 0 1px $colors$gray8',
+      boxShadow: '0 0 0 1px {colors.$gray8}',
     },
     '&:disabled': {
       pointerEvents: 'none',
@@ -106,7 +106,7 @@ export const iconButton = cva({
           },
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$grayA8, 0 0 0 1px $colors$grayA8',
+          boxShadow: 'inset 0 0 0 1px {colors.$grayA8}, 0 0 0 1px {colors.$grayA8}',
         },
         '&:active': {
           backgroundColor: '$grayA4',
@@ -127,7 +127,7 @@ export const iconButton = cva({
         '&:focus': {
           borderColor: '$gray8',
           boxShadow:
-            '0 0 0 1px $colors$gray8, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
+            '0 0 0 1px {colors.$gray8}, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
         },
         '&:active': {
           backgroundColor: '$gray4',
@@ -221,7 +221,7 @@ export const GhostIconButton = styled('button', {
       },
     },
     '&:focus': {
-      boxShadow: 'inset 0 0 0 1px $colors$grayA8, 0 0 0 1px $colors$grayA8',
+      boxShadow: 'inset 0 0 0 1px {colors.$grayA8}, 0 0 0 1px {colors.$grayA8}',
     },
     '&:active': {
       backgroundColor: '$grayA4',

@@ -48,28 +48,28 @@ const StyledTrigger = styled(SelectTrigger, {
         ...selectColorVariants,
         border: { // TODO: these overlays need to be adjusted if using
             thin5: {
-                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay5',
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) {colors.$overlay5}',
             },
             thin6: {
-                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay6',
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) {colors.$overlay6}',
             },
             thin7: {
-                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay7',
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) {colors.$overlay7}',
             },
             thin8: {
-                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay8',
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) {colors.$overlay8}',
             },
             thin9: {
-                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay9',
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) {colors.$overlay9}',
             },
             thin10: {
-                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay10',
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) {colors.$overlay10}',
             },
             thin11: {
-                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay11',
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) {colors.$overlay11}',
             },
             thin12: {
-                border: '0 0 0 calc(1px / var(--scale-x, 1)) $colors$overlay12',
+                border: '0 0 0 calc(1px / var(--scale-x, 1)) {colors.$overlay12}',
             },
         }
     },

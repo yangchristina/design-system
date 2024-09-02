@@ -46,13 +46,13 @@ const styledSwitch = cva({
     borderRadius: '$pill',
     position: 'relative',
     '&:focus': {
-      boxShadow: '0 0 0 2px $colors$gray8',
+      boxShadow: '0 0 0 2px {colors.$gray8}',
     },
 
     '&[data-state="checked"]': {
       backgroundColor: '$info9',
       '&:focus': {
-        boxShadow: '0 0 0 2px $colors$info8',
+        boxShadow: '0 0 0 2px {colors.$info8}',
       },
     },
 

@@ -90,7 +90,7 @@ const contentStyles = {
   padding: 5,
   zIndex: 500,
   boxShadow: '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
-  // boxShadow: '$colors$shadowLight 0px 10px 38px -10px, $colors$shadowDark 0px 10px 20px -15px'
+  // boxShadow: '{colors.$shadowLight} 0px 10px 38px -10px, {colors.$shadowDark} 0px 10px 20px -15px'
 };
 
 const StyledContent = styled(ContextMenuPrimitive.Content, { base: { ...contentStyles } });

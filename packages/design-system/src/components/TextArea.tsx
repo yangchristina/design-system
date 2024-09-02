@@ -25,15 +25,15 @@ export const TextArea = styled('textarea', {
     },
     state: {
       invalid: {
-        boxShadow: "inset 0 0 0 1px $colors$error7",
+        boxShadow: "inset 0 0 0 1px {colors.$error7}",
         "&:focus": {
-          boxShadow: "inset 0px 0px 0px 1px $colors$error8, 0px 0px 0px 1px $colors$error8"
+          boxShadow: "inset 0px 0px 0px 1px {colors.$error8}, 0px 0px 0px 1px {colors.$error8}"
         }
       },
       valid: {
-        boxShadow: "inset 0 0 0 1px $colors$success7",
+        boxShadow: "inset 0 0 0 1px {colors.$success7}",
         "&:focus": {
-          boxShadow: "inset 0px 0px 0px 1px $colors$success8, 0px 0px 0px 1px $colors$success8"
+          boxShadow: "inset 0px 0px 0px 1px {colors.$success8}, 0px 0px 0px 1px {colors.$success8}"
         }
       }
     },
@@ -62,14 +62,14 @@ export const TextArea = styled('textarea', {
     width: "100%",
     WebkitTapHighlightColor: "rgba(0,0,0,0)",
     backgroundColor: "$loContrast",
-    boxShadow: "inset 0 0 0 1px $colors$gray7",
+    boxShadow: "inset 0 0 0 1px {colors.$gray7}",
     color: "$hiContrast",
     fontVariantNumeric: "tabular-nums",
     position: "relative",
     minHeight: 80,
     resize: "vertical",
     "&:focus": {
-      boxShadow: "inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8",
+      boxShadow: "inset 0px 0px 0px 1px {colors.$info8}, 0px 0px 0px 1px {colors.$info8}",
       zIndex: "1"
     },
     "&::placeholder": {
@@ -88,7 +88,7 @@ export const TextArea = styled('textarea', {
     "&:read-only": {
       backgroundColor: "$gray2",
       "&:focus": {
-        boxShadow: "inset 0px 0px 0px 1px $colors$gray7"
+        boxShadow: "inset 0px 0px 0px 1px {colors.$gray7}"
       }
     }
   }

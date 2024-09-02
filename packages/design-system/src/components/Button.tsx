@@ -33,7 +33,7 @@ const baseButtonStyles = {
 
   '&:disabled': {
     backgroundColor: '$gray2',
-    boxShadow: 'inset 0 0 0 1px $colors$gray7',
+    boxShadow: 'inset 0 0 0 1px {colors.$gray7}',
     color: '$gray8',
     pointerEvents: 'none',
   },
@@ -68,90 +68,90 @@ export const button = cva({
     variant: {
       primary: {
         backgroundColor: '$primary3',
-        boxShadow: 'inset 0 0 0 1px $colors$primary11',
+        boxShadow: 'inset 0 0 0 1px {colors.$primary11}',
       },
       gray: {
         backgroundColor: '$loContrast',
-        boxShadow: 'inset 0 0 0 1px $colors$gray7',
+        boxShadow: 'inset 0 0 0 1px {colors.$gray7}',
         color: '$hiContrast',
         _hover: {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$gray8',
+            boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
           },
         },
         '&:active': {
           backgroundColor: '$gray2',
-          boxShadow: 'inset 0 0 0 1px $colors$gray8',
+          boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$gray8, 0 0 0 1px $colors$gray8',
+          boxShadow: 'inset 0 0 0 1px {colors.$gray8}, 0 0 0 1px {colors.$gray8}',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$gray4',
-          boxShadow: 'inset 0 0 0 1px $colors$gray8',
+          boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
         },
       },
       blue: {
         backgroundColor: '$info2',
-        boxShadow: 'inset 0 0 0 1px $colors$info7',
+        boxShadow: 'inset 0 0 0 1px {colors.$info7}',
         color: '$info11',
         _hover: {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$info8',
+            boxShadow: 'inset 0 0 0 1px {colors.$info8}',
           },
         },
         '&:active': {
           backgroundColor: '$info3',
-          boxShadow: 'inset 0 0 0 1px $colors$info8',
+          boxShadow: 'inset 0 0 0 1px {colors.$info8}',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$info8, 0 0 0 1px $colors$info8',
+          boxShadow: 'inset 0 0 0 1px {colors.$info8}, 0 0 0 1px {colors.$info8}',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$info4',
-          boxShadow: 'inset 0 0 0 1px $colors$info8',
+          boxShadow: 'inset 0 0 0 1px {colors.$info8}',
         },
       },
       green: {
         backgroundColor: '$success2',
-        boxShadow: 'inset 0 0 0 1px $colors$success7',
+        boxShadow: 'inset 0 0 0 1px {colors.$success7}',
         color: '$success11',
         _hover: {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$success8',
+            boxShadow: 'inset 0 0 0 1px {colors.$success8}',
           },
         },
         '&:active': {
           backgroundColor: '$success3',
-          boxShadow: 'inset 0 0 0 1px $colors$success8',
+          boxShadow: 'inset 0 0 0 1px {colors.$success8}',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$success8, 0 0 0 1px $colors$success8',
+          boxShadow: 'inset 0 0 0 1px {colors.$success8}, 0 0 0 1px {colors.$success8}',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$success4',
-          boxShadow: 'inset 0 0 0 1px $colors$success8',
+          boxShadow: 'inset 0 0 0 1px {colors.$success8}',
         },
       },
       red: {
         backgroundColor: '$loContrast',
-        boxShadow: 'inset 0 0 0 1px $colors$gray7',
+        boxShadow: 'inset 0 0 0 1px {colors.$gray7}',
         color: '$error11',
         _hover: {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$gray8',
+            boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
           },
         },
         '&:active': {
           backgroundColor: '$error3',
-          boxShadow: 'inset 0 0 0 1px $colors$error8',
+          boxShadow: 'inset 0 0 0 1px {colors.$error8}',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$error8, 0 0 0 1px $colors$error8',
+          boxShadow: 'inset 0 0 0 1px {colors.$error8}, 0 0 0 1px {colors.$error8}',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$error4',
-          boxShadow: 'inset 0 0 0 1px $colors$error8',
+          boxShadow: 'inset 0 0 0 1px {colors.$error8}',
         },
       },
       transparentWhite: {
@@ -188,37 +188,37 @@ export const button = cva({
     state: {
       active: {
         backgroundColor: '$gray4',
-        boxShadow: 'inset 0 0 0 1px $colors$gray8',
+        boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
         color: '$gray11',
         _hover: {
           '&:hover': {
             backgroundColor: '$gray5',
-            boxShadow: 'inset 0 0 0 1px $colors$gray8',
+            boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
           },
         },
         '&:active': {
           backgroundColor: '$gray5',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$gray8, 0 0 0 1px $colors$gray8',
+          boxShadow: 'inset 0 0 0 1px {colors.$gray8}, 0 0 0 1px {colors.$gray8}',
         },
       },
       waiting: {
         backgroundColor: '$gray4',
-        boxShadow: 'inset 0 0 0 1px $colors$gray8',
+        boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
         color: 'transparent',
         pointerEvents: 'none',
         _hover: {
           '&:hover': {
             backgroundColor: '$gray5',
-            boxShadow: 'inset 0 0 0 1px $colors$gray8',
+            boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
           },
         },
         '&:active': {
           backgroundColor: '$gray5',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$gray8',
+          boxShadow: 'inset 0 0 0 1px {colors.$gray8}',
         },
       },
     },
@@ -246,7 +246,7 @@ export const button = cva({
           backgroundColor: '$grayA4',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$grayA8, 0 0 0 1px $colors$grayA8',
+          boxShadow: 'inset 0 0 0 1px {colors.$grayA8}, 0 0 0 1px {colors.$grayA8}',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$grayA4',
@@ -269,7 +269,7 @@ export const button = cva({
           backgroundColor: '$infoA4',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$infoA8, 0 0 0 1px $colors$infoA8',
+          boxShadow: 'inset 0 0 0 1px {colors.$infoA8}, 0 0 0 1px {colors.$infoA8}',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$infoA4',
@@ -292,7 +292,7 @@ export const button = cva({
           backgroundColor: '$successA4',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$successA8, 0 0 0 1px $colors$successA8',
+          boxShadow: 'inset 0 0 0 1px {colors.$successA8}, 0 0 0 1px {colors.$successA8}',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$successA4',
@@ -315,7 +315,7 @@ export const button = cva({
           backgroundColor: '$errorA4',
         },
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$errorA8, 0 0 0 1px $colors$errorA8',
+          boxShadow: 'inset 0 0 0 1px {colors.$errorA8}, 0 0 0 1px {colors.$errorA8}',
         },
         '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
           backgroundColor: '$errorA4',
