@@ -15,14 +15,15 @@ export async function fetchGet<ResType>(
     params = {},
     options?: {
         fallback?: ResType;
+        init?: RequestInit;
     }
 ): Promise<ResType> {
     if (url.includes('undefined')) console.log(url);
-    const { fallback } = options || {};
+    const { fallback, init = {} } = options || {};
     const queryString = paramsToQueryString(params);
     const urlWithParams = `${url}${queryString ? (url.includes('?') ? '&' : '?') + queryString : ''}`;
     // console.log('fetchGet', urlWithParams)
-    return fetch(fixUrl(urlWithParams), { method: 'GET', cache: 'no-store' }).then(async (res) => {
+    return fetch(fixUrl(urlWithParams), { method: 'GET', cache: 'no-store', ...init }).then(async (res) => {
         if (res.ok) {
             return jsonParse(await res.text());
         } else {
