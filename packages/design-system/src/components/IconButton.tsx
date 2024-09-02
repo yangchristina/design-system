@@ -90,7 +90,7 @@ export const iconButton = cva({
     variant: {
       solid: {
         backgroundColor: '$loContrast',
-        border: '1px solid $gray7',
+        border: '1px solid {colors.$gray7}',
         _hover: {
           '&:hover': {
             borderColor: '$gray8',

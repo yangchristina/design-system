@@ -23,11 +23,11 @@ export const table = sva({
       textAlign: "start",
       fontSize: "$2",
       py: "$2",
-      borderBottom: "1px solid $gray4"
+      borderBottom: "1px solid {colors.$gray4}"
     },
     td: {
       py: "$2",
-      borderBottom: "1px solid $gray4",
+      borderBottom: "1px solid {colors.$gray4}",
       fontSize: "$2"
     }
   },
@@ -82,18 +82,18 @@ export const table = sva({
     border: {
       solid: {
         th: {
-          borderBottom: "1px solid $gray4"
+          borderBottom: "1px solid {colors.$gray4}"
         },
         td: {
-          borderBottom: "1px solid $gray4"
+          borderBottom: "1px solid {colors.$gray4}"
         }
       },
       dashed: {
         th: {
-          borderBottom: "1px dashed $gray8"
+          borderBottom: "1px dashed {colors.$gray8}"
         },
         td: {
-          borderBottom: "1px dashed $gray8"
+          borderBottom: "1px dashed {colors.$gray8}"
         }
       }
     },
@@ -117,12 +117,12 @@ export const table = sva({
     borderTh: {
       solid: {
         th: {
-          borderBottom: "1px solid $gray4"
+          borderBottom: "1px solid {colors.$gray4}"
         },
       },
       dashed: {
         th: {
-          borderBottom: "1px dashed $gray8"
+          borderBottom: "1px dashed {colors.$gray8}"
         },
       }
     }

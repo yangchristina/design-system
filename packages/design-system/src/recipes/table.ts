@@ -21,11 +21,11 @@ export const table = defineSlotRecipe({
             textAlign: 'start',
             fontSize: '$2',
             py: '$2',
-            borderBottom: '1px solid $gray4',
+            borderBottom: '1px solid {colors.$gray4}',
         },
         td: {
             py: '$2',
-            borderBottom: '1px solid $gray4',
+            borderBottom: '1px solid {colors.$gray4}',
             fontSize: '$2',
         },
     },
