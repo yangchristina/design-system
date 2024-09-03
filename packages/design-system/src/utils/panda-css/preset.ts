@@ -5,6 +5,8 @@ import { allThemeNames, presetConditions, themes } from './themes';
 import { textRecipe } from '../../recipes/text';
 import { keyframes } from '../../keyframes';
 import { globalStyles } from './globalStyles';
+import { buttonRecipe } from '../../recipes/button';
+import { flexRecipe } from '../../recipes/flex';
 
 export const plandaPreset = definePreset({
     name: 'planda',
@@ -140,7 +142,11 @@ export const plandaPreset = definePreset({
                 }),
             },
             keyframes,
-            recipes: { text: textRecipe },
+            recipes: {
+                text: textRecipe,
+                button: buttonRecipe,
+                flex: flexRecipe,
+            },
         },
     },
     themes,

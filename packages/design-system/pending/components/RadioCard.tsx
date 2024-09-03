@@ -14,7 +14,7 @@ const StyledRadioButton = styled('div', {
   borderRadius: '$round',
   width: 25,
   height: 25,
-  boxShadow: 'inset 0 0 0 1px $colors$gray7',
+  boxShadow: 'inset 0 0 0 1px  {colors.$gray7}',
   flexShrink: 0,
   mr: '$3',
 });
@@ -40,15 +40,15 @@ const StyledRadio = styled(RadioGroupPrimitive.Item, {
   display: 'flex',
   alignItems: 'center',
   borderRadius: '$2',
-  boxShadow: 'inset 0 0 0 1px $colors$gray7',
+  boxShadow: 'inset 0 0 0 1px  {colors.$gray7}',
   p: '$3',
   '@hover': {
     '&:hover': {
-      boxShadow: 'inset 0 0 0 1px $colors$gray8',
+      boxShadow: 'inset 0 0 0 1px  {colors.$gray8}',
     },
   },
   '&[data-state="checked"]': {
-    boxShadow: 'inset 0 0 0 1px $colors$info8, 0 0 0 1px $colors$info8 !important',
+    boxShadow: 'inset 0 0 0 1px  {colors.$info8}, 0 0 0 1px  {colors.$info8} !important',
     [`& ${StyledRadioIndicator}`]: {
       transform: 'scale(1)',
     },

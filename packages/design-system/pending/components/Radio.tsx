@@ -47,17 +47,17 @@ const StyledRadio = styled(RadioGroupPrimitive.Item, {
 
   borderRadius: '50%',
   color: '$hiContrast',
-  boxShadow: 'inset 0 0 0 1px $colors$gray7',
+  boxShadow: 'inset 0 0 0 1px  {colors.$gray7}',
   overflow: 'hidden',
   '@hover': {
     '&:hover': {
-      boxShadow: 'inset 0 0 0 1px $colors$gray8',
+      boxShadow: 'inset 0 0 0 1px  {colors.$gray8}',
     },
   },
   '&:focus': {
     outline: 'none',
     borderColor: '$error7',
-    boxShadow: 'inset 0 0 0 1px $colors$info9, 0 0 0 1px $colors$info9',
+    boxShadow: 'inset 0 0 0 1px  {colors.$info9}, 0 0 0 1px  {colors.$info9}',
   },
 
   variants: {

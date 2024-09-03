@@ -21,12 +21,12 @@ export const TextField = styled('input', {
 
   // Custom
   backgroundColor: '$loContrast',
-  boxShadow: 'inset 0 0 0 1px $colors$gray7',
+  boxShadow: 'inset 0 0 0 1px  {colors.$gray7}',
   color: '$hiContrast',
   fontVariantNumeric: 'tabular-nums',
 
   '&:-webkit-autofill': {
-    boxShadow: 'inset 0 0 0 1px $colors$info6, inset 0 0 0 100px $colors$info3',
+    boxShadow: 'inset 0 0 0 1px  {colors.$info6}, inset 0 0 0 100px  {colors.$info3}',
   },
 
   '&:-webkit-autofill::first-line': {
@@ -35,10 +35,10 @@ export const TextField = styled('input', {
   },
 
   '&:focus': {
-    boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
+    boxShadow: 'inset 0px 0px 0px 1px  {colors.$info8}, 0px 0px 0px 1px  {colors.$info8}',
     '&:-webkit-autofill': {
       boxShadow:
-        'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8, inset 0 0 0 100px $colors$info3',
+        'inset 0px 0px 0px 1px  {colors.$info8}, 0px 0px 0px 1px  {colors.$info8}, inset 0 0 0 100px  {colors.$info3}',
     },
   },
   '&::placeholder': {
@@ -56,7 +56,7 @@ export const TextField = styled('input', {
   '&:read-only': {
     backgroundColor: '$gray2',
     '&:focus': {
-      boxShadow: 'inset 0px 0px 0px 1px $colors$gray7',
+      boxShadow: 'inset 0px 0px 0px 1px  {colors.$gray7}',
     },
   },
 
@@ -67,7 +67,7 @@ export const TextField = styled('input', {
         height: '$5',
         fontSize: '$1',
         px: '$1',
-        lineHeight: '$sizes$5',
+        lineHeight: ' {sizes.$5}',
         '&:-webkit-autofill::first-line': {
           fontSize: '$1',
         },
@@ -77,7 +77,7 @@ export const TextField = styled('input', {
         height: '$6',
         fontSize: '$3',
         px: '$2',
-        lineHeight: '$sizes$6',
+        lineHeight: ' {sizes.$6}',
         '&:-webkit-autofill::first-line': {
           fontSize: '$3',
         },
@@ -89,12 +89,12 @@ export const TextField = styled('input', {
         backgroundColor: 'transparent',
         '@hover': {
           '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$grayA7',
+            boxShadow: 'inset 0 0 0 1px  {colors.$grayA7}',
           },
         },
         '&:focus': {
           backgroundColor: '$loContrast',
-          boxShadow: 'inset 0px 0px 0px 1px $colors$info8, 0px 0px 0px 1px $colors$info8',
+          boxShadow: 'inset 0px 0px 0px 1px  {colors.$info8}, 0px 0px 0px 1px  {colors.$info8}',
         },
         '&:disabled': {
           backgroundColor: 'transparent',
@@ -106,15 +106,15 @@ export const TextField = styled('input', {
     },
     state: {
       invalid: {
-        boxShadow: 'inset 0 0 0 1px $colors$error7',
+        boxShadow: 'inset 0 0 0 1px  {colors.$error7}',
         '&:focus': {
-          boxShadow: 'inset 0px 0px 0px 1px $colors$error8, 0px 0px 0px 1px $colors$error8',
+          boxShadow: 'inset 0px 0px 0px 1px  {colors.$error8}, 0px 0px 0px 1px  {colors.$error8}',
         },
       },
       valid: {
-        boxShadow: 'inset 0 0 0 1px $colors$success7',
+        boxShadow: 'inset 0 0 0 1px  {colors.$success7}',
         '&:focus': {
-          boxShadow: 'inset 0px 0px 0px 1px $colors$success8, 0px 0px 0px 1px $colors$success8',
+          boxShadow: 'inset 0px 0px 0px 1px  {colors.$success8}, 0px 0px 0px 1px  {colors.$success8}',
         },
       },
     },

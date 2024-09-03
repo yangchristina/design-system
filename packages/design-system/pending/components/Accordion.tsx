@@ -23,10 +23,10 @@ export const Accordion = React.forwardRef<React.ElementRef<typeof StyledAccordio
 );
 
 const StyledItem = styled(AccordionPrimitive.Item, {
-  borderTop: '1px solid $colors$gray6',
+  borderTop: '1px solid  {colors.$gray6}',
 
   '&:last-of-type': {
-    borderBottom: '1px solid $colors$gray6',
+    borderBottom: '1px solid  {colors.$gray6}',
   },
 });
 
@@ -60,7 +60,7 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
 
   '&:focus': {
     outline: 'none',
-    boxShadow: 'inset 0 0 0 1px $colors$gray8, 0 0 0 1px $colors$gray8',
+    boxShadow: 'inset 0 0 0 1px  {colors.$gray8}, 0 0 0 1px  {colors.$gray8}',
   },
 
   svg: {

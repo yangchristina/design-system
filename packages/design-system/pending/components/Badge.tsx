@@ -58,98 +58,98 @@ const badge = cva({
         backgroundColor: '$gray3',
         color: '$gray11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$gray8, 0 0 0 1px $colors$gray8',
+          boxShadow: 'inset 0 0 0 1px  {colors.$gray8}, 0 0 0 1px  {colors.$gray8}',
         },
       },
       // red: {
       //   backgroundColor: '$error3',
       //   color: '$error11',
       //   '&:focus': {
-      //     boxShadow: 'inset 0 0 0 1px $colors$error8, 0 0 0 1px $colors$error8',
+      //     boxShadow: 'inset 0 0 0 1px  {colors.$error8}, 0 0 0 1px  {colors.$error8}',
       //   },
       // },
       // purple: {
       //   backgroundColor: '$purple3',
       //   color: '$purple11',
       //   '&:focus': {
-      //     boxShadow: 'inset 0 0 0 1px $colors$purple8, 0 0 0 1px $colors$purple8',
+      //     boxShadow: 'inset 0 0 0 1px  {colors.$purple8}, 0 0 0 1px  {colors.$purple8}',
       //   },
       // },
       // violet: {
       //   backgroundColor: '$violet3',
       //   color: '$violet11',
       //   '&:focus': {
-      //     boxShadow: 'inset 0 0 0 1px $colors$violet8, 0 0 0 1px $colors$violet8',
+      //     boxShadow: 'inset 0 0 0 1px  {colors.$violet8}, 0 0 0 1px  {colors.$violet8}',
       //   },
       // },
       indigo: {
         backgroundColor: '$indigo3',
         color: '$indigo11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$indigo8, 0 0 0 1px $colors$indigo8',
+          boxShadow: 'inset 0 0 0 1px  {colors.$indigo8}, 0 0 0 1px  {colors.$indigo8}',
         },
       },
       blue: {
         backgroundColor: '$info3',
         color: '$info11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$info8, 0 0 0 1px $colors$info8',
+          boxShadow: 'inset 0 0 0 1px  {colors.$info8}, 0 0 0 1px  {colors.$info8}',
         },
       },
       cyan: {
         backgroundColor: '$cyan3',
         color: '$cyan11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$cyan8, 0 0 0 1px $colors$cyan8',
+          boxShadow: 'inset 0 0 0 1px  {colors.$cyan8}, 0 0 0 1px  {colors.$cyan8}',
         },
       },
       teal: {
         backgroundColor: '$teal3',
         color: '$teal11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$teal8, 0 0 0 1px $colors$teal8',
+          boxShadow: 'inset 0 0 0 1px  {colors.$teal8}, 0 0 0 1px  {colors.$teal8}',
         },
       },
       green: {
         backgroundColor: '$success3',
         color: '$success11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$success8, 0 0 0 1px $colors$success8',
+          boxShadow: 'inset 0 0 0 1px  {colors.$success8}, 0 0 0 1px  {colors.$success8}',
         },
       },
       // lime: {
       //   backgroundColor: '$lime3',
       //   color: '$lime11',
       //   '&:focus': {
-      //     boxShadow: 'inset 0 0 0 1px $colors$lime8, 0 0 0 1px $colors$lime8',
+      //     boxShadow: 'inset 0 0 0 1px  {colors.$lime8}, 0 0 0 1px  {colors.$lime8}',
       //   },
       // },
       // yellow: {
       //   backgroundColor: '$yellow3',
       //   color: '$yellow11',
       //   '&:focus': {
-      //     boxShadow: 'inset 0 0 0 1px $colors$yellow8, 0 0 0 1px $colors$yellow8',
+      //     boxShadow: 'inset 0 0 0 1px  {colors.$yellow8}, 0 0 0 1px  {colors.$yellow8}',
       //   },
       // },
       // orange: {
       //   backgroundColor: '$orange3',
       //   color: '$orange11',
       //   '&:focus': {
-      //     boxShadow: 'inset 0 0 0 1px $colors$orange8, 0 0 0 1px $colors$orange8',
+      //     boxShadow: 'inset 0 0 0 1px  {colors.$orange8}, 0 0 0 1px  {colors.$orange8}',
       //   },
       // },
       gold: {
         backgroundColor: '$gold3',
         color: '$gold11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$gold8, 0 0 0 1px $colors$gold8',
+          boxShadow: 'inset 0 0 0 1px  {colors.$gold8}, 0 0 0 1px  {colors.$gold8}',
         },
       },
       bronze: {
         backgroundColor: '$bronze3',
         color: '$bronze11',
         '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$bronze8, 0 0 0 1px $colors$bronze8',
+          boxShadow: 'inset 0 0 0 1px  {colors.$bronze8}, 0 0 0 1px  {colors.$bronze8}',
         },
       },
     },

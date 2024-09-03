@@ -20,18 +20,18 @@ export const RadioGrid = styled(RadioGroupPrimitive.Item, {
     boxSizing: 'border-box',
   },
   borderRadius: '$2',
-  boxShadow: 'inset 0 0 0 1px $colors$gray7',
+  boxShadow: 'inset 0 0 0 1px  {colors.$gray7}',
   px: '$1',
   height: '$6',
-  lineHeight: '$sizes$6',
+  lineHeight: ' {sizes.$6}',
   fontSize: '$3',
   '@hover': {
     '&:hover': {
-      boxShadow: 'inset 0 0 0 1px $colors$gray8',
+      boxShadow: 'inset 0 0 0 1px  {colors.$gray8}',
     },
   },
   '&[data-state="checked"]': {
-    boxShadow: 'inset 0 0 0 1px $colors$gray8',
+    boxShadow: 'inset 0 0 0 1px  {colors.$gray8}',
     backgroundColor: '$gray4',
   },
 });

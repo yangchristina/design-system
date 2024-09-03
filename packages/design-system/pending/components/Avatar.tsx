@@ -228,7 +228,7 @@ const StyledAvatarFallback = styled(AvatarPrimitive.Fallback, {
 });
 
 export const AvatarNestedItem = styled('div', {
-  boxShadow: '0 0 0 2px $colors$loContrast',
+  boxShadow: '0 0 0 2px  {colors.$loContrast}',
   borderRadius: '50%',
 });
 
@@ -275,7 +275,7 @@ export const Avatar = React.forwardRef<React.ElementRef<typeof StyledAvatar>, Av
               position: 'absolute',
               bottom: '0',
               right: '0',
-              boxShadow: '0 0 0 3px $colors$loContrast',
+              boxShadow: '0 0 0 3px  {colors.$loContrast}',
               borderRadius: '$round',
               mr: '-3px',
               mb: '-3px',

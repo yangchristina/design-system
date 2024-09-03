@@ -21,7 +21,7 @@ export const TabLink = styled('a', {
     },
   },
   '&:focus': {
-    boxShadow: 'inset 0 0 0 1px $colors$gray8, 0 0 0 1px $colors$gray8',
+    boxShadow: 'inset 0 0 0 1px  {colors.$gray8}, 0 0 0 1px  {colors.$gray8}',
   },
 
   variants: {
