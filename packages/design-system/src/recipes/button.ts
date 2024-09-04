@@ -37,6 +37,9 @@ const baseButtonStyles = {
         color: '$gray8',
         pointerEvents: 'none',
     },
+    '&:hover': {
+        cursor: 'pointer',
+    },
 } as const;
 
 export const buttonRecipe = defineRecipe({

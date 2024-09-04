@@ -86,6 +86,9 @@ export const textRecipe = defineRecipe({
         variant: 'contrast',
     },
     jsx: ['Text'],
+    staticCss: [{
+        size: true,
+    }]
 });
 
 
