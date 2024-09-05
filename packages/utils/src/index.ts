@@ -10,3 +10,4 @@ export * from './string';
 export * from './types';
 export * from './general';
 export * from './duration';
+export * from './array';
