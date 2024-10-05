@@ -26,7 +26,7 @@ const StyledContent = styled(TooltipPrimitive.Content, {
   base: {
     backgroundColor: "$transparentPanel",
     borderRadius: "$1",
-    padding: "$1 $2",
+    padding: "{spacing.$1} {spacing.$2}",
     zIndex: 9999
   }
 });
