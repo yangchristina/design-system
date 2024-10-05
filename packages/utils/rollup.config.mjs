@@ -47,6 +47,6 @@ export default [
       minifyInternalExports: true,
       }
     ],
-    plugins: [typescript({ declaration: false }), ...plugins]
+    plugins: [typescript({ declaration: false, outDir: "./dist/cjs" }), ...plugins]
   }
 ];

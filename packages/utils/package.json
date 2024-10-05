@@ -25,6 +25,9 @@
         "tslib": "^2.7.0"
     },
     "devDependencies": {
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@rollup/plugin-typescript": "^12.1.0",
         "typescript": "^5.5.4"
     },
     "publishConfig": {
