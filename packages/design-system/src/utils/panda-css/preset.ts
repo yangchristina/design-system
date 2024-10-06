@@ -7,7 +7,7 @@ import { keyframes } from '../../keyframes';
 import { globalStyles } from './globalStyles';
 import { buttonRecipe } from '../../recipes/button';
 import { flexRecipe } from '../../recipes/flex';
-import { merge } from 'lodash';
+import iconButtonRecipe from '../../recipes/iconButton';
 
 export const plandaPreset = definePreset({
     name: 'planda',
@@ -17,7 +17,8 @@ export const plandaPreset = definePreset({
         },
     },
     theme: {
-        extend: merge(themes.teal, {
+        tokens: themes.teal.tokens,
+        extend: {
             breakpoints: {
                 // bp1: '(min-width: 520px)',
                 // bp2: '(min-width: 900px)',
@@ -147,8 +148,9 @@ export const plandaPreset = definePreset({
                 text: textRecipe,
                 button: buttonRecipe,
                 flex: flexRecipe,
+                iconButton: iconButtonRecipe,
             },
-        }),
+        },
     },
     themes,
     utilities: {
