@@ -75,6 +75,7 @@ type SelectProps = {
     error?: boolean,
     allowSelectNone?: boolean,
     noneValue?: string,
+    contentClassName?: string,
 } & { onChange: (value: string) => void; } & Omit<ComponentProps<typeof SelectPrimitive.Root>, 'onChange'> & Omit<ComponentProps<typeof Trigger>, 'onChange'>
 
 /**
@@ -83,7 +84,7 @@ type SelectProps = {
  */
 
 export const Select = React.forwardRef<React.ElementRef<typeof SelectPrimitive.Root>, SelectProps>(
-    ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, noneValue = '/', color, className, ...props }, forwardedRef) => {
+    ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, noneValue = '/', color, className, contentClassName, ...props }, forwardedRef) => {
         const noCategoryItem: ContentUnit = {
             type: 'item',
             label: placeholder,
@@ -93,8 +94,8 @@ export const Select = React.forwardRef<React.ElementRef<typeof SelectPrimitive.R
         data = allowSelectNone ? [noCategoryItem, ...data] : [...data]
         return (
             <SelectPrimitive.Root ref={forwardedRef} {...props} value={value} onValueChange={onChange}>
-                <Trigger color={color} error={error} placeholder={placeholder} />
-                <Content className={className}>
+                <Trigger className={className} color={color} error={error} placeholder={placeholder} />
+                <Content className={contentClassName}>
                     <>
                         {handleType(data)}
                     </>
