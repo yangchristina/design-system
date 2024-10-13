@@ -83,7 +83,7 @@ type SelectProps = {
  */
 
 export const Select = React.forwardRef<React.ElementRef<typeof SelectPrimitive.Root>, SelectProps>(
-    ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, noneValue = '/', color, ...props }, forwardedRef) => {
+    ({ placeholder = 'Select a category', data, value, onChange, error, allowSelectNone = false, noneValue = '/', color, className, ...props }, forwardedRef) => {
         const noCategoryItem: ContentUnit = {
             type: 'item',
             label: placeholder,
@@ -94,7 +94,7 @@ export const Select = React.forwardRef<React.ElementRef<typeof SelectPrimitive.R
         return (
             <SelectPrimitive.Root ref={forwardedRef} {...props} value={value} onValueChange={onChange}>
                 <Trigger color={color} error={error} placeholder={placeholder} />
-                <Content>
+                <Content className={className}>
                     <>
                         {handleType(data)}
                     </>

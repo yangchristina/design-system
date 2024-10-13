@@ -39,10 +39,10 @@ const SelectScrollUpButton = styled(SelectPrimitive.ScrollUpButton, scrollButton
 const SelectScrollDownButton = styled(SelectPrimitive.ScrollDownButton, scrollButtonStyles);
 
 
-const Content = ({ children }: { children: JSX.Element, }) => {
+const Content = ({ children, className }: { children: JSX.Element, className?: string }) => {
     return (
         <SelectPrimitive.Portal>
-            <SelectContent>
+            <SelectContent className={className}>
                 <SelectScrollUpButton>
                     <ChevronUpIcon />
                 </SelectScrollUpButton>
