@@ -152,7 +152,7 @@ export const plandaPreset = definePreset({
                 iconButton: iconButtonRecipe,
             },
             slotRecipes: {
-                table: tableRecipe,
+                tableSlots: tableRecipe,
             },
         },
     },
