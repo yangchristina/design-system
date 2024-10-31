@@ -17,7 +17,7 @@ export { NumberInput } from './components/NumberInput';
 export { AspectRatio } from '@radix-ui/react-aspect-ratio';
 export * from './components/Button';
 export { Box } from './components/Box';
-export * from './components/Table';
+export { Table, Th, Td, Thead, Tr, Tfoot, Tbody, Caption } from './components/Table';
 // export {
 //   ContextMenu,
 //   ContextMenuTrigger,
