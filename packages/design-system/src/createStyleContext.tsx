@@ -1,5 +1,5 @@
 import React, { createContext, forwardRef, useContext, type ComponentProps, type ElementType } from 'react';
-import { Override } from './types';
+import { NotUndefined, Override } from './types';
 type Props = Record<string, unknown>;
 type Recipe = {
     (props?: Props): Record<string, string>;
@@ -15,7 +15,7 @@ export const createStyleContext = <R extends Recipe>(recipe: R) => {
     const StyleContext = createContext<SlotRecipe<R> | null>(null);
 
     const withProvider = <C extends ElementType>(Component: C, slot?: Slot<R>) => {
-        const Comp = forwardRef<any, Override<ComponentProps<C>, NonNullable<VariantProps<R>>>>((props, ref) => {
+        const Comp = forwardRef<any, Override<ComponentProps<C>, NotUndefined<VariantProps<R>>>>((props, ref) => {
             const [variantProps, localProps] = recipe.splitVariantProps(props);
             const slotRecipe = recipe(variantProps) as SlotRecipe<R>;
             return (

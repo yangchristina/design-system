@@ -7,3 +7,5 @@ export type Nullable<T> = {
 };
 
 export type Override<What, With> = Omit<What, keyof With> & With;
+
+export type NotUndefined<T> = T extends undefined ? never : T;
