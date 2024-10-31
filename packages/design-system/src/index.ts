@@ -41,7 +41,6 @@ export { Portal } from '@radix-ui/react-portal';
 export { ProgressBar } from './components/ProgressBar';
 export { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from './components/Sheet';
 export { Switch } from './components/Switch';
-export { table } from './components/Table';
 export { Text } from './components/Text';
 export { TextArea } from './components/TextArea';
 export { Tooltip } from './components/Tooltip';

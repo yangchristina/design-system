@@ -8,6 +8,7 @@ import { globalStyles } from './globalStyles';
 import { buttonRecipe } from '../../recipes/button';
 import { flexRecipe } from '../../recipes/flex';
 import iconButtonRecipe from '../../recipes/iconButton';
+import { tableRecipe } from '../../recipes/table';
 
 export const plandaPreset = definePreset({
     name: 'planda',
@@ -149,6 +150,9 @@ export const plandaPreset = definePreset({
                 button: buttonRecipe,
                 flex: flexRecipe,
                 iconButton: iconButtonRecipe,
+            },
+            slotRecipes: {
+                table: tableRecipe,
             },
         },
     },

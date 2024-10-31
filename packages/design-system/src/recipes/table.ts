@@ -1,11 +1,12 @@
 import { defineSlotRecipe } from '@pandacss/dev';
 
-export const table = defineSlotRecipe({
+export const tableRecipe = defineSlotRecipe({
     slots: ['th', 'td', 'table', 'thead', 'tr', 'tfoot', 'tbody', 'caption'],
     className: 'table',
     base: {
         table: {
-            // width: '100%',
+            position: 'relative',
+            width: '100%',
             tableLayout: 'fixed',
             borderSpacing: 0,
         },
@@ -80,18 +81,18 @@ export const table = defineSlotRecipe({
         border: {
             solid: {
                 th: {
-                    borderBottom: '1px solid $gray4',
+                    borderBottom: '1px solid {colors.$gray4}',
                 },
                 td: {
-                    borderBottom: '1px solid $gray4',
+                    borderBottom: '1px solid {colors.$gray4}',
                 },
             },
             dashed: {
                 th: {
-                    borderBottom: '1px dashed $gray8',
+                    borderBottom: '1px dashed {colors.$gray8}',
                 },
                 td: {
-                    borderBottom: '1px dashed $gray8',
+                    borderBottom: '1px dashed {colors.$gray8}',
                 },
             },
         },
@@ -115,12 +116,12 @@ export const table = defineSlotRecipe({
         borderTh: {
             solid: {
                 th: {
-                    borderBottom: '1px solid $gray4',
+                    borderBottom: '1px solid {colors.$gray4}',
                 },
             },
             dashed: {
                 th: {
-                    borderBottom: '1px dashed $gray8',
+                    borderBottom: '1px dashed {colors.$gray8}',
                 },
             },
         },
