@@ -1,8 +1,8 @@
 'use client';
-import { table } from '@planda/styled-system/recipes';
+import { tableSlots } from '@planda/styled-system/recipes';
 import { createStyleContext } from '../createStyleContext';
 
-const { withProvider, withContext } = createStyleContext(table);
+const { withProvider, withContext } = createStyleContext(tableSlots);
 
 export const Table = withProvider('table', 'table');
 export const Th = withContext('th', 'th');

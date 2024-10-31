@@ -130,4 +130,5 @@ export const tableRecipe = defineSlotRecipe({
         // align: "start",
         border: 'solid',
     },
+    staticCss: ['*'],
 });
