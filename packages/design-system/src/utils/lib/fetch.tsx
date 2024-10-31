@@ -1,6 +1,10 @@
 import { forOwn, isEmpty, isPlainObject } from "lodash"
 import { jsonParse, jsonStringify } from "./json"
 
+/**
+ * Convert an object to a query string. Ex. { a: 1, b: 2 } => "a=1&b=2"
+ * Filters out undefined values.
+ */
 export function paramsToQueryString(params = {}) {
     return Object.entries(params)
         .filter(param => param[1] !== undefined)
