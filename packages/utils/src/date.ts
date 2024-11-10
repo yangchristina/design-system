@@ -11,7 +11,7 @@ export const castNearestMinutes = (minutes: number) => {
     return Math.round(minutes % 30) as NearestMinutes;
 };
 
-export function getDayStringFormat(date: Date | number) {
+export function toDayStringFormat(date: Date | number) {
     return format(date, 'yyyy-MM-dd');
 }
 
