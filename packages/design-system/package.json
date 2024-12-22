@@ -20,7 +20,7 @@
         "dev": "next dev --port 3001",
         "types": "tsc --noEmit",
         "ship": "panda ship --outfile dist/panda.buildinfo.json",
-        "build": "rm -rf dist && rollup -c && npm run ship",
+        "build": "npm run ship && rm -rf dist && rollup -c && npm run ship",
         "size": "source-map-explorer dist/**/*.js",
         "next:build": "next build",
         "build2": "rm -rf dist && node ./esbuild.config.js && tsc",
@@ -36,7 +36,8 @@
         "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
         "prerelease": "npm run ship && npm version prerelease --preid=canary && npm publish --tag canary",
         "release": "npm run ship && npm run build && npm run ship && npm version patch && npm publish",
-        "minor-release": "npm run build && npm version minor && npm publish"
+        "minor-release": "npm run build && npm version minor && npm publish",
+        "major-release": "npm run build && npm version minor && npm publish"
     },
     "peerDependencies": {
         "next": "^14.x",
