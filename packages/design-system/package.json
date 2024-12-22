@@ -37,7 +37,7 @@
         "prerelease": "npm run ship && npm version prerelease --preid=canary && npm publish --tag canary",
         "release": "npm run ship && npm run build && npm run ship && npm version patch && npm publish",
         "minor-release": "npm run build && npm version minor && npm publish",
-        "major-release": "npm run build && npm version minor && npm publish"
+        "major-release": "npm run build && npm version major && npm publish"
     },
     "peerDependencies": {
         "next": "^14.x",
