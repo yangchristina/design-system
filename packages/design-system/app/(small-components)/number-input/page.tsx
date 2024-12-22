@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { NumberInput } from '../../../components/NumberInput'
+import { NumberInput } from '../../../src'
 
 const Page = () => {
   const [value, setValue] = React.useState<number | undefined>(undefined)
