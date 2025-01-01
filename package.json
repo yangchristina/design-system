@@ -9,5 +9,8 @@
     "description": "",
     "workspaces": [
         "packages/*"
-    ]
+    ],
+    "dependencies": {
+        "chrono-node": "^2.7.7"
+    }
 }
