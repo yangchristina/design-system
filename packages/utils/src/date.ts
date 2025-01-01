@@ -1,4 +1,16 @@
-import { differenceInCalendarDays, differenceInCalendarWeeks, differenceInMonths, differenceInYears, endOfDay, format, Interval, isSameDay, isSameYear, NearestMinutes, startOfDay } from 'date-fns';
+import {
+    differenceInCalendarDays,
+    differenceInCalendarWeeks,
+    differenceInMonths,
+    differenceInYears,
+    endOfDay,
+    format,
+    Interval,
+    isSameDay,
+    isSameYear,
+    NearestMinutes,
+    startOfDay,
+} from 'date-fns';
 import { DAYS_OF_WEEK, MS_PER_HOUR } from './constants';
 import { getTimezoneOffset } from 'date-fns-tz';
 import { DayOfWeekNum } from './types';
@@ -188,3 +200,21 @@ export const isAlmostStartOfDay = (date: Date | number, ref?: Date | number, tol
 export const isAlmostEndOfDay = (date: Date | number, ref?: Date | number, tol = MS_PER_HOUR) => Math.abs(new Date(date).getTime() - endOfDay(ref || date).getTime()) <= tol;
 
 export const isAlmostFullDay = (start: Date | number, end: Date | number, ref?: Date | number, tol = MS_PER_HOUR) => isAlmostStartOfDay(start, ref, tol) && isAlmostEndOfDay(end, ref || start, tol);
+
+/**
+ * @param startedTrackingOn
+ * @param end
+ * @returns number[] array of dates between start and end (inclusive)
+ */
+export const daysInRange = (startedTrackingOn: number, end = Date.now()) => {
+    const start = new Date(startedTrackingOn);
+    const days: number[] = [];
+    while (start.getTime() < end && !isSameDay(start, end)) {
+        days.push(startOfDay(start).getTime());
+        start.setDate(start.getDate() + 1);
+    }
+    if (isSameDay(start, end)) {
+        days.push(startOfDay(start).getTime());
+    }
+    return days;
+};
