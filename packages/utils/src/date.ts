@@ -18,10 +18,12 @@ import {
 import { DAYS_OF_WEEK, MS_PER_HOUR } from './constants';
 import { getTimezoneOffset } from 'date-fns-tz';
 import { DayOfWeekNum } from './types';
-import { parseDate } from 'chrono-node'
+import { parseDate } from 'chrono-node';
 
 export const millisecondsInHour = 60 * 60 * 1000;
 export const millisecondsInMinute = 60 * 1000;
+
+type DateValue = Date | number | string;
 
 export const castDayOfWeek = (day: number) => (day % 7) as DayOfWeekNum;
 export const castNearestMinutes = (minutes: number) => {
@@ -36,8 +38,8 @@ export function isSameTime(first: Date, second: Date) {
     return first.getHours() === second.getHours() && first.getMinutes() === second.getMinutes();
 }
 
-// make d1 match time of d2
-export function changeTime(d1: Date | number, d2: Date | number) {
+/** make d1 match time of d2 */
+export function changeTime(d1: DateValue, d2: DateValue) {
     const date = new Date(d1);
     const time = new Date(d2);
     date.setHours(time.getHours(), time.getMinutes(), time.getSeconds(), 0);
@@ -50,20 +52,20 @@ export function changeTime(d1: Date | number, d2: Date | number) {
  * @param d2
  * @returns
  */
-export function changeDay(d1: Date | number, d2: Date | number) {
+export function changeDay(d1: DateValue, d2: DateValue) {
     return changeTime(d2, d1);
 }
 
-export const formatTime = (date: Date | number | string) => {
+export const formatTime = (date: DateValue) => {
     const TIME_FORMAT = `h:mmaaa`;
     return format(date, TIME_FORMAT);
 };
 
-export function formatDay(date: Date | number) {
+export function formatDay(date: DateValue) {
     return format(date, 'yyyy-MM-dd');
 }
 
-export function formatDate(date: Date | number) {
+export function formatDate(date: DateValue) {
     return format(date, 'yyyy-MM-dd h:mmaaa');
 }
 
@@ -93,7 +95,7 @@ export const formatDateRange = ({ start, end }: Interval) => {
 };
 
 // TODO: days of week, ex. NEXT MONDAY
-export function distanceFromNow(date: Date | number) {
+export function distanceFromNow(date: DateValue) {
     const years = differenceInYears(date, Date.now());
     if (years) {
         if (years < 0) {
@@ -201,10 +203,10 @@ export const endOfDayInTimezone = (timezone: string, year: number, monthIndex: n
     return new Date(Date.UTC(year, monthIndex, date, 23, 59, 59, 999) - getTimezoneOffset(timezone, utcDate));
 };
 
-export const isAlmostStartOfDay = (date: Date | number, ref?: Date | number, tol = MS_PER_HOUR) => Math.abs(new Date(date).getTime() - startOfDay(ref || date).getTime()) <= tol;
-export const isAlmostEndOfDay = (date: Date | number, ref?: Date | number, tol = MS_PER_HOUR) => Math.abs(new Date(date).getTime() - endOfDay(ref || date).getTime()) <= tol;
+export const isAlmostStartOfDay = (date: DateValue, ref?: DateValue, tol = MS_PER_HOUR) => Math.abs(new Date(date).getTime() - startOfDay(ref || date).getTime()) <= tol;
+export const isAlmostEndOfDay = (date: DateValue, ref?: DateValue, tol = MS_PER_HOUR) => Math.abs(new Date(date).getTime() - endOfDay(ref || date).getTime()) <= tol;
 
-export const isAlmostFullDay = (start: Date | number, end: Date | number, ref?: Date | number, tol = MS_PER_HOUR) => isAlmostStartOfDay(start, ref, tol) && isAlmostEndOfDay(end, ref || start, tol);
+export const isAlmostFullDay = (start: DateValue, end: DateValue, ref?: DateValue, tol = MS_PER_HOUR) => isAlmostStartOfDay(start, ref, tol) && isAlmostEndOfDay(end, ref || start, tol);
 
 /**
  * @param startedTrackingOn
