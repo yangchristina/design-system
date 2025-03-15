@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev';
 
 export const flexRecipe = defineRecipe({
-    className: 'flex',
+    className: 'flex-recipe',
     description: 'The styles for the Flex component',
     base: {
         boxSizing: 'border-box',

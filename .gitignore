@@ -50,3 +50,4 @@ styled-system-studio
 !./packages/styled-system/package.json
 ./packages/styled-system-studio
 tsconfig.tsbuildinfo
+.qodo
