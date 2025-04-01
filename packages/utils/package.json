@@ -23,7 +23,7 @@
         "tslib": "^2.7.0"
     },
     "peerDependencies": {
-        "date-fns": "^3.x",
+        "date-fns": ">=^3.x",
         "date-fns-tz": "^3.x",
         "lodash": "^4.x"
     },
