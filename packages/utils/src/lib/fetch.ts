@@ -23,7 +23,7 @@ export async function fetchGet<ResType>(
     const queryString = paramsToQueryString(params);
     const urlWithParams = `${url}${queryString ? (url.includes('?') ? '&' : '?') + queryString : ''}`;
     // console.log('fetchGet', urlWithParams)
-    return fetch(fixUrl(urlWithParams), { method: 'GET', cache: 'no-store', ...init }).then(async (res) => {
+    return fetch(fixUrl(urlWithParams), { method: 'GET', ...init }).then(async (res) => {
         if (res.ok) {
             return jsonParse(await res.text());
         } else {
