@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { type JSX } from 'react';
 import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
 import { styled } from '@planda/styled-system/jsx'
 import { ChevronRightIcon } from '@radix-ui/react-icons';

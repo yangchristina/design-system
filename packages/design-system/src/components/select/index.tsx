@@ -2,7 +2,7 @@
 /**
  * Author: Christina Yang
  */
-import React, { ComponentProps, Fragment } from 'react'
+import React, { ComponentProps, Fragment, type JSX } from 'react';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import Trigger from './components/Trigger';
 import Item, { ItemButton } from './components/Item';

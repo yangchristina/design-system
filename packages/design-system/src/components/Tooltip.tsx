@@ -9,7 +9,7 @@ import { token } from '@planda/styled-system/tokens';
 type TooltipPrimitiveProps = React.ComponentProps<typeof TooltipPrimitive.Root>;
 type TooltipProps = TooltipPrimitiveProps &
   React.ComponentProps<typeof TooltipPrimitive.Content> & {
-    children: React.ReactElement;
+    children: React.ReactElement<any>;
     content: React.ReactNode;
     multiline?: boolean;
   };

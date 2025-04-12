@@ -2,7 +2,7 @@
 import { useRef } from "react";
 
 export const usePreciseClick = (onSingleClick: () => void, onDoubleClick?: () => void) => {
-    const timer = useRef<any>()
+    const timer = useRef<any>(undefined)
 
     const onClickHandler = (event: any) => {
         clearTimeout(timer.current);

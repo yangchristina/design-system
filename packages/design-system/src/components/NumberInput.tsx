@@ -1,58 +1,66 @@
-'use client'
-import React, { MutableRefObject, useRef } from 'react'
-import { useEdit } from '../hooks/useEdit'
-import { isNil } from "lodash"
-import { ChangeEvent, forwardRef, useCallback, ComponentProps } from "react"
-import { Input } from './Input'
-import { round } from 'lodash'
-import { useOutsideAlerter } from '../hooks/useOutsideAlerter'
-import useDebouncedCallback from '../hooks/useDebouncedCallback'
+'use client';
+import React, { FC, ReactNode, RefObject, useRef } from 'react';
+import { useEdit } from '../hooks/useEdit';
+import { isNil } from 'lodash';
+import { ChangeEvent, forwardRef, useCallback, ComponentProps } from 'react';
+import { Input } from './Input';
+import { round } from 'lodash';
+import { useOutsideAlerter } from '../hooks/useOutsideAlerter';
+import useDebouncedCallback from '../hooks/useDebouncedCallback';
 
-
-type OmitOverlap<Type> = Omit<Type, 'type' | 'min' | 'max' | 'onChange' | 'value'>
+type OmitOverlap<Type> = Omit<Type, 'type' | 'min' | 'max' | 'onChange' | 'value'>;
 
 interface ValidNumberOptions {
-    precision?: number, min?: number, max?: number
+    precision?: number;
+    min?: number;
+    max?: number;
 }
 
-type InputProps = OmitOverlap<ComponentProps<typeof Input>> & OmitOverlap<React.InputHTMLAttributes<HTMLInputElement>> & ValidNumberOptions & {
-    error?: boolean, label?: string,
-    value?: number, integerOnly?: boolean,
-    /**
-     * number of ms until the input fixes itself if invalid.
-     *
-     * Default = 500.
-     *
-     * Since this is an input, you always want to debounce it
-     *
-     * */
-    debounceWait?: number,
-} & ({
-    allowUndefined: true,
-    onChange: (value: number | undefined) => void
-} | {
-    allowUndefined?: false,
-    onChange: (value: number) => void
-})
+type InputProps = OmitOverlap<ComponentProps<typeof Input>> &
+    OmitOverlap<React.InputHTMLAttributes<HTMLInputElement>> &
+    ValidNumberOptions & {
+        error?: boolean;
+        label?: string;
+        value?: number;
+        integerOnly?: boolean;
+        /**
+         * number of ms until the input fixes itself if invalid.
+         *
+         * Default = 500.
+         *
+         * Since this is an input, you always want to debounce it
+         *
+         * */
+        debounceWait?: number;
+    } & (
+        | {
+              allowUndefined: true;
+              onChange: (value: number | undefined) => void;
+          }
+        | {
+              allowUndefined?: false;
+              onChange: (value: number) => void;
+          }
+    );
 
-const castNumberString = (s: unknown): string => (typeof s !== 'string' && typeof s !== 'number') ? '' : s.toString()
+const castNumberString = (s: unknown): string => (typeof s !== 'string' && typeof s !== 'number' ? '' : s.toString());
 
 const calculateChange = (val: string, { allowUndefined, precision, max, min }: { allowUndefined?: boolean } & ValidNumberOptions) => {
-    const int = precision !== undefined ? round(parseFloat(val), precision) : parseFloat(val)
+    const int = precision !== undefined ? round(parseFloat(val), precision) : parseFloat(val);
     if (allowUndefined && !val) {
-        return undefined
+        return undefined;
     }
     if (max !== undefined && int > max) {
-        return max
+        return max;
     }
     if (min !== undefined && int < min) {
-        return min
+        return min;
     }
     if (!val || Number.isNaN(int)) {
-        return 'revert'
+        return 'revert';
     }
-    return int
-}
+    return int;
+};
 
 // export const NumberInputNative = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
 //     <span>
@@ -63,49 +71,57 @@ const calculateChange = (val: string, { allowUndefined, precision, max, min }: {
 //     </span>
 // })
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput = forwardRef<any, InputProps>(({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 500, ...props }, forwardedRef) => {
-    const [state, setState, revert] = useEdit<number | string | undefined>(value ?? '')
-    if (integerOnly) {
-        precision = 0
-    }
-
-    const applyChange = useCallback((val: string) => {
-        const newValue = calculateChange(val, { allowUndefined, precision, max, min })
-        if (newValue === 'revert') {
-            onChange(revert())
-            return
+export const NumberInput: FC<InputProps> = forwardRef<any, InputProps>(
+    ({ children, label, error, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 500, ...props }, forwardedRef): ReactNode => {
+        const [state, setState, revert] = useEdit<number | string | undefined>(value ?? '');
+        if (integerOnly) {
+            precision = 0;
         }
-        setState(newValue)
-        // @ts-expect-error
-        onChange(newValue)
-    }, [min, max, allowUndefined, precision, onChange]);
 
-    const ref = (forwardedRef as MutableRefObject<any>) || useRef(null)
+        const applyChange = useCallback(
+            (val: string) => {
+                const newValue = calculateChange(val, { allowUndefined, precision, max, min });
+                if (newValue === 'revert') {
+                    onChange(revert());
+                    return;
+                }
+                setState(newValue);
+                // @ts-expect-error
+                onChange(newValue);
+            },
+            [min, max, allowUndefined, precision, onChange]
+        );
 
-    const outsideCallback = useCallback(() => applyChange(castNumberString(state)), [min, max, allowUndefined, precision, onChange, state]);
-    useOutsideAlerter(ref, outsideCallback)
+        const internalRef = useRef(null);
+        const ref = (forwardedRef as RefObject<any>) || internalRef;
 
-    const debouncedChangeHandler = useDebouncedCallback(applyChange, debounceWait);
+        const outsideCallback = useCallback(() => applyChange(castNumberString(state)), [min, max, allowUndefined, precision, onChange, state]);
+        useOutsideAlerter(ref, outsideCallback);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setState(e.target.value)
-        debouncedChangeHandler(e.target.value)
+        const debouncedChangeHandler = useDebouncedCallback(applyChange, debounceWait);
+
+        const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+            setState(e.target.value);
+            debouncedChangeHandler(e.target.value);
+        };
+
+        return (
+            <span>
+                <Input
+                    label={label}
+                    ref={ref}
+                    min={min && min - 10}
+                    max={max && max + 10}
+                    onChange={handleChange}
+                    type="number"
+                    value={state ?? ''}
+                    id={id}
+                    step={!isNil(precision) ? 10 ** (-1 * precision) : 'any'}
+                    {...props}
+                />
+            </span>
+        );
     }
+);
 
-    return (
-        <span>
-            <Input
-                label={label}
-                ref={ref}
-                min={min && min - 10}
-                max={max && max + 10} onChange={handleChange}
-                type="number"
-                value={state ?? ''}
-                id={id}
-                step={!isNil(precision) ? 10 ** (-1 * precision) : "any"}
-                {...props} />
-        </span>
-    )
-})
-
-NumberInput.displayName = 'NumberInput'
+NumberInput.displayName = 'NumberInput';
