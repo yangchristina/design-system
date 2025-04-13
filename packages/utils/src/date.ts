@@ -65,7 +65,7 @@ export function formatDay(date: DateValue) {
     return format(date, 'yyyy-MM-dd');
 }
 
-export function formatDate(date: DateValue) {
+export function formatDateTime(date: DateValue) {
     return format(date, 'yyyy-MM-dd h:mmaaa');
 }
 
@@ -75,7 +75,7 @@ export function dayStringToLocalDate(isoString: string) {
 }
 
 // TODO: fix/improve this function
-export const formatDateRange = ({ start, end }: Interval) => {
+export const formatDateTimeRange = ({ start, end }: Interval) => {
     const TIME_FORMAT = 'h:mmaaa';
     if (isSameDay(start, end)) {
         const day = format(start, 'MMM. d, y');
