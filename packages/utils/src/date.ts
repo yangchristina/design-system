@@ -12,6 +12,7 @@ import {
     isSameYear,
     NearestMinutes,
     nextDay,
+    parse,
     previousDay,
     startOfDay,
 } from 'date-fns';
@@ -32,6 +33,10 @@ export const castNearestMinutes = (minutes: number) => {
 
 export function toDayStringFormat(date: Date | number) {
     return format(date, 'yyyy-MM-dd');
+}
+
+export function parseDayStringFormat(dateString: string, referenceDate?: Date | string | number) {
+    return parse(dateString, 'yyyy-MM-dd', referenceDate ?? new Date());
 }
 
 export function isSameTime(first: Date, second: Date) {
