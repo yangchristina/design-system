@@ -1,6 +1,6 @@
 import { defineRecipe } from '@pandacss/dev';
 
-export const flexRecipe = defineRecipe({
+export const flexBoxRecipe = defineRecipe({
     className: 'flex-recipe',
     description: 'The styles for the Flex component',
     base: {

@@ -6,7 +6,7 @@ import { textRecipe } from '../../recipes/text';
 import { keyframes } from '../../keyframes';
 import { globalStyles } from './globalStyles';
 import { buttonRecipe } from '../../recipes/button';
-import { flexRecipe } from '../../recipes/flex';
+import { flexBoxRecipe } from '../../recipes/flex';
 import iconButtonRecipe from '../../recipes/iconButton';
 import { tableRecipe } from '../../recipes/table';
 
@@ -148,7 +148,7 @@ export const plandaPreset = definePreset({
             recipes: {
                 text: textRecipe,
                 button: buttonRecipe,
-                flex: flexRecipe,
+                flexBox: flexBoxRecipe,
                 iconButton: iconButtonRecipe,
             },
             slotRecipes: {
