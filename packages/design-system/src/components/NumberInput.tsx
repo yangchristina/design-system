@@ -1,10 +1,10 @@
 'use client';
 import React, { FC, ReactNode, RefObject, useRef } from 'react';
 import { useEdit } from '../hooks/useEdit';
-import { isNil } from 'lodash';
+import { isNil } from 'lodash-es';
 import { ChangeEvent, forwardRef, useCallback, ComponentProps } from 'react';
 import { Input } from './Input';
-import { round } from 'lodash';
+import { round } from 'lodash-es';
 import { useOutsideAlerter } from '../hooks/useOutsideAlerter';
 import useDebouncedCallback from '../hooks/useDebouncedCallback';
 

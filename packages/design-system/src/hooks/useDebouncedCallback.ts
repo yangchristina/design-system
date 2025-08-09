@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 
 /**
  * A custom hook to create a debounced function.

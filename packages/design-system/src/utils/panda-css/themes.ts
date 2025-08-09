@@ -5,7 +5,7 @@ import * as radixScales from '@radix-ui/colors';
 import { stitchesToPandaTokens } from './stitchesConvert';
 import { defineThemeContract } from '@pandacss/dev';
 import { mapColor } from '../radixColors';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import { allThemeConfigs } from './colorThemes';
 import { ColorBase, ColorTheme } from './types';
 
