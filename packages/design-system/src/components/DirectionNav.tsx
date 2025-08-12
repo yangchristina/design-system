@@ -1,6 +1,6 @@
 'use client'
 import { CaretLeftIcon, CaretRightIcon } from '@radix-ui/react-icons'
-import React, { ReactNode, ComponentProps } from 'react'
+import React, { ReactNode } from 'react'
 import { styled } from '@planda/styled-system/jsx'
 import { TriangleNav } from './TriangleNav'
 import { cva } from '@planda/styled-system/css'

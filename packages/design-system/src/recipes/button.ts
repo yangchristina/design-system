@@ -74,6 +74,10 @@ export const buttonRecipe = defineRecipe({
                 backgroundColor: '$primary3',
                 boxShadow: 'inset 0 0 0 1px {colors.$primary11}',
             },
+            success: {
+                backgroundColor: '$success3',
+                boxShadow: 'inset 0 0 0 1px {colors.$success11}',
+            },
             gray: {
                 backgroundColor: '$loContrast',
                 boxShadow: 'inset 0 0 0 1px {colors.$gray7}',
