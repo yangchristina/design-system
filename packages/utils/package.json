@@ -19,7 +19,6 @@
     "author": "Christina Yang",
     "license": "MIT",
     "dependencies": {
-        "chrono-node": "^2.7.7",
         "tslib": "^2.7.0"
     },
     "peerDependencies": {

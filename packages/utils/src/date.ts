@@ -1,6 +1,4 @@
 import {
-    addDays,
-    addWeeks,
     differenceInCalendarDays,
     differenceInCalendarWeeks,
     differenceInMonths,
@@ -11,15 +9,12 @@ import {
     isSameDay,
     isSameYear,
     NearestMinutes,
-    nextDay,
     parse,
-    previousDay,
     startOfDay,
 } from 'date-fns';
 import { DAYS_OF_WEEK, MS_PER_HOUR } from './constants';
 import { getTimezoneOffset } from 'date-fns-tz';
 import { DayOfWeekNum } from './types';
-import { parseDate } from 'chrono-node';
 
 export const millisecondsInHour = 60 * 60 * 1000;
 export const millisecondsInMinute = 60 * 1000;
@@ -231,33 +226,33 @@ export const daysInRange = (startedTrackingOn: number, end = Date.now()) => {
     return days;
 };
 
-const testStart = (input: string, prefix: string) => input.toLowerCase().startsWith(prefix);
-export const parseFromDateString = (input: string) => {
-    if (testStart(input, 'tod')) {
-        return endOfDay(new Date());
-    }
-    if (testStart(input, 'tom')) {
-        return endOfDay(addDays(new Date(), 1));
-    }
-    if (testStart(input, 'yes')) {
-        return endOfDay(addDays(new Date(), -1));
-    }
-    if (testStart(input, 'next week')) {
-        return endOfDay(addWeeks(new Date(), 1));
-    }
-    if (testStart(input, 'last week')) {
-        return endOfDay(addWeeks(new Date(), -1));
-    }
-    for (let i = 0; i < DAYS_OF_WEEK.length; i++) {
-        if (testStart(input, 'next ' + DAYS_OF_WEEK[i].slice(0, 3).toLowerCase())) {
-            return endOfDay(nextDay(new Date(), castDayOfWeek(i % 7)));
-        }
-    }
-    for (let i = 0; i < DAYS_OF_WEEK.length; i++) {
-        if (testStart(input, 'last ' + DAYS_OF_WEEK[i].slice(0, 3).toLowerCase())) {
-            return endOfDay(previousDay(new Date(), castDayOfWeek(i % 7)));
-        }
-    }
+// const testStart = (input: string, prefix: string) => input.toLowerCase().startsWith(prefix);
+// export const parseFromDateString = (input: string) => {
+//     if (testStart(input, 'tod')) {
+//         return endOfDay(new Date());
+//     }
+//     if (testStart(input, 'tom')) {
+//         return endOfDay(addDays(new Date(), 1));
+//     }
+//     if (testStart(input, 'yes')) {
+//         return endOfDay(addDays(new Date(), -1));
+//     }
+//     if (testStart(input, 'next week')) {
+//         return endOfDay(addWeeks(new Date(), 1));
+//     }
+//     if (testStart(input, 'last week')) {
+//         return endOfDay(addWeeks(new Date(), -1));
+//     }
+//     for (let i = 0; i < DAYS_OF_WEEK.length; i++) {
+//         if (testStart(input, 'next ' + DAYS_OF_WEEK[i].slice(0, 3).toLowerCase())) {
+//             return endOfDay(nextDay(new Date(), castDayOfWeek(i % 7)));
+//         }
+//     }
+//     for (let i = 0; i < DAYS_OF_WEEK.length; i++) {
+//         if (testStart(input, 'last ' + DAYS_OF_WEEK[i].slice(0, 3).toLowerCase())) {
+//             return endOfDay(previousDay(new Date(), castDayOfWeek(i % 7)));
+//         }
+//     }
 
-    return parseDate(input);
-};
+//     return parseDate(input);
+// };
