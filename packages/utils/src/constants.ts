@@ -10,3 +10,4 @@ export const DAYS_OF_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursd
 export const FORMAT_DAY = 'MMM. d, y'
 export const FORMAT_TIME = 'h:mm aaa'
 export const DB_FORMAT_DAY = 'yyyy-MM-dd'
+export const ISO_DAY_FORMAT = 'yyyy-MM-dd'
