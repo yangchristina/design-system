@@ -32,7 +32,7 @@
     "tsup": "tsup",
     "style-end": "npm run build && npm run prerelease",
     "style": "npm run build && npm run prepare && npm run ship && cd ../styled-system && npm run prerelease && cd ../design-system && sleep 5 && npm run style-end",
-    "ds:release": "yarn ds:build && np",
+    "ds:release": "npm run ds:build && np",
     "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
     "prerelease": "npm run ship && npm version prerelease --preid=canary && npm publish --tag canary",
     "release": "npm run ship && npm run build && npm run ship && npm version patch && npm publish",
