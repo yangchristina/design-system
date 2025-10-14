@@ -4,12 +4,11 @@
         "declaration": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "jsx": "react",
         "module": "esnext",
         "moduleResolution": "node",
         // "emitDeclarationOnly": true,
         "noEmit": true,
-        "outDir": "dist",
+        "outDir": "./dist",
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "sourceMap": true,
@@ -19,13 +18,8 @@
         "lib": ["dom", "dom.iterable", "es2017", "esnext"],
         "allowJs": true,
         "isolatedModules": true,
-        "incremental": true,
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ]
+        "incremental": true
     },
-    "include": ["src/", "**/*.module.css", "../hooks/src/useCurrentState.ts"],
-    "exclude": ["node_modules", "pages", "dist", "build", "**/*.test.ts", "**/*.test.tsx", ".next/types/**/*.ts"]
+    "include": ["src/"],
+    "exclude": ["node_modules", "dist", "build", "**/*.test.ts", "**/*.test.tsx"]
 }

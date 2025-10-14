@@ -1,7 +1,7 @@
 "use client"
 import localforage from "localforage"
 import { useEffect, useState } from "react"
-import useDebouncedCallback from "./useDebouncedCallback"
+import { useDebouncedCallback } from "./useDebouncedCallback"
 
 type SetValueArgs<T> = T | ((x: T) => T)
 

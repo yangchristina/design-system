@@ -1,12 +1,12 @@
 'use client';
 import React, { FC, ReactNode, RefObject, useRef } from 'react';
-import { useEdit } from '../hooks/useEdit';
+import { useEdit } from '@planda/hooks';
 import { isNil } from 'lodash-es';
 import { ChangeEvent, forwardRef, useCallback, ComponentProps } from 'react';
 import { Input } from './Input';
 import { round } from 'lodash-es';
-import { useOutsideAlerter } from '../hooks/useOutsideAlerter';
-import useDebouncedCallback from '../hooks/useDebouncedCallback';
+import { useOutsideAlerter } from '@planda/hooks';
+import { useDebouncedCallback } from '@planda/hooks';
 
 type OmitOverlap<Type> = Omit<Type, 'type' | 'min' | 'max' | 'onChange' | 'value'>;
 

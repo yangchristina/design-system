@@ -1,4 +1,3 @@
-"use client"
 export * from "./useDebounce";
 export * from "./useDoubleTap";
 export * from "./useEdit";
@@ -11,3 +10,5 @@ export * from "./useRemToPx";
 export * from "./useTraceUpdate";
 export * from "./useWindowSize";
 export * from "./useCurrentState";
+export * from "./useOutsideAlerter";
+export * from "./useDebouncedCallback";

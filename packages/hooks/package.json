@@ -1,0 +1,40 @@
+{
+    "name": "@planda/hooks",
+    "version": "1.0.0",
+    "description": "Planda utilities",
+    "main": "dist/cjs/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "browser": {
+        "crypto": false
+    },
+    "scripts": {
+        "build": "rm -rf dist && rollup -c",
+        "release": "npm run build && npm version patch && npm publish",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Christina Yang",
+    "license": "MIT",
+    "dependencies": {
+        "tslib": "^2.7.0"
+    },
+    "peerDependencies": {
+        "lodash-es": "^4.x"
+    },
+    "devDependencies": {
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@rollup/plugin-typescript": "^12.1.0",
+        "typescript": "^5.5.4"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yangchristina/design-system.git"
+    }
+}

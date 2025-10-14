@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 
 /**
  * A custom hook to create a debounced function.
@@ -10,7 +10,7 @@ import { debounce } from 'lodash';
  *
  * @returns The debounced version of the callback function.
  */
-function useDebouncedCallback<T extends (...args: any[]) => any>(callback: T, delay: number, dependencies?: React.DependencyList): (...args: Parameters<T>) => void {
+export function useDebouncedCallback<T extends (...args: any[]) => any>(callback: T, delay: number, dependencies?: React.DependencyList): (...args: Parameters<T>) => void {
     const debounced = useMemo(
         () => debounce(callback, delay),
         // Include the dependencies passed to the hook
@@ -26,5 +26,3 @@ function useDebouncedCallback<T extends (...args: any[]) => any>(callback: T, de
 
     return debounced;
 }
-
-export default useDebouncedCallback;
