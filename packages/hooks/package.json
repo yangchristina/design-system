@@ -1,6 +1,6 @@
 {
     "name": "@planda/hooks",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Planda utilities",
     "main": "dist/cjs/index.js",
     "module": "dist/index.js",
