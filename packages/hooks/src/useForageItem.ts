@@ -32,10 +32,12 @@ export function useForageItem<T>(
     }, debounceDelay)
 
     const set = useCallback((value: SetValueArgs<T>) => {
-        let v = (typeof value === 'function') ? (value  as (prev: T) => T)(item) : value
-        if (!isValid(v)) throw new Error("invalid set value")
-        debouncedSet(v)
-        setItem(v)
+        setItem((item) => {
+            let v = (typeof value === 'function') ? (value  as (prev: T) => T)(item) : value
+            if (!isValid(v)) throw new Error("invalid set value")
+            debouncedSet(v)
+            return v
+        })
     }, [item, debouncedSet])
 
     return {
