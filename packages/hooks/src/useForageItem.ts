@@ -38,7 +38,7 @@ export function useForageItem<T>(
             debouncedSet(v)
             return v
         })
-    }, [item, debouncedSet])
+    }, [debouncedSet])
 
     return {
         isLoading,
