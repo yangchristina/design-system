@@ -1,12 +1,13 @@
 "use client"
 import localforage from "localforage"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { useDebouncedCallback } from "./useDebouncedCallback"
 
 type SetValueArgs<T> = T | ((x: T) => T)
 
 export function useForageItem<T>(
     key: string,
+    /** Changes are not detected; the initial validator is always used. */
     isValid: (x: unknown) => boolean,
     defaultValue: T,
     { onLoad, debounceDelay = 0 }: { onLoad?: (x: T) => void, debounceDelay?: number } = {}
@@ -30,12 +31,12 @@ export function useForageItem<T>(
         localforage.setItem(key, value)
     }, debounceDelay)
 
-    function set(value: SetValueArgs<T>) {
+    const set = useCallback((value: SetValueArgs<T>) => {
         let v = (typeof value === 'function') ? (value  as (prev: T) => T)(item) : value
         if (!isValid(v)) throw new Error("invalid set value")
         debouncedSet(v)
         setItem(v)
-    }
+    }, [item, debouncedSet])
 
     return {
         isLoading,
