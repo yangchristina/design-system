@@ -13,8 +13,8 @@ import { debounce } from 'lodash-es';
 export function useDebouncedCallback<T extends (...args: any[]) => any>(callback: T, delay: number, dependencies?: React.DependencyList): (...args: Parameters<T>) => void {
     const debounced = useMemo(
         () => debounce(callback, delay),
-        // Include the dependencies passed to the hook
-        [callback, delay, ...(dependencies || [])]
+        // DO NOT INCLUDE callback in dependencies
+        [delay, ...(dependencies || [])]
     );
 
     useEffect(() => {
