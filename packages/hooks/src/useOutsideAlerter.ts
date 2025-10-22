@@ -1,7 +1,8 @@
-import { MutableRefObject, useEffect, useState } from "react";
+import { MutableRefObject, useEffect } from "react";
 
 /**
  * Hook that alerts clicks outside of the passed ref
+ * callback should be memoized.
  */
 export function useOutsideAlerter(ref: MutableRefObject<any>, fn: () => void) {
   useEffect(() => {
