@@ -1,18 +1,21 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
+const getClone = <T,>(obj: T): T => {
+    return JSON.parse(JSON.stringify(obj));
+}
 export function useEdit<T>(initialState: T) {
-    const initialClone = JSON.parse(JSON.stringify(initialState));
-    const [state, setState] = useState<T>(initialClone);
+    const [state, setState] = useState<T>(getClone(initialState));
 
     useEffect(() => {
-        setState(initialClone);
+        setState(getClone(initialState));
     }, [initialState]);
 
-    function revert() {
+    const revert = useCallback(() => {
+        const initialClone = getClone(initialState);
         setState(initialClone);
-        return JSON.parse(JSON.stringify(initialClone));
-    }
+        return initialClone;
+    }, [initialState])
 
     return [state, setState, revert] as const;
 }

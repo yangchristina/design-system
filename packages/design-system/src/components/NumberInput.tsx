@@ -1,5 +1,5 @@
 'use client';
-import React, { FC, RefObject, useRef } from 'react';
+import React, { FC } from 'react';
 import { useEdit } from '@planda/hooks';
 import { isNil } from 'lodash-es';
 import { ChangeEvent, useCallback, ComponentProps } from 'react';
@@ -74,24 +74,7 @@ const calculateChange = (val: string, { allowUndefined, precision, max, min }: {
 //     </span>
 // })
 // TODO: allow decimal values, what does size even do??? not in use currently
-export const NumberInput: FC<InputProps> = ({
-    children,
-    label,
-    error,
-    onChange,
-    value,
-    id,
-    min,
-    max,
-    precision,
-    integerOnly,
-    size,
-    allowUndefined,
-    debounceWait = 500,
-    ref: forwardedRef,
-    debug,
-    ...props
-}) => {
+export const NumberInput: FC<InputProps> = ({ label, onChange, value, id, min, max, precision, integerOnly, size, allowUndefined, debounceWait = 500, ref, debug, ...props }) => {
     const [state, setState, revert] = useEdit<number | string | undefined>(value ?? '');
     if (integerOnly) {
         precision = 0;
@@ -111,11 +94,8 @@ export const NumberInput: FC<InputProps> = ({
             // @ts-expect-error
             onChange(newValue);
         },
-        [min, max, allowUndefined, precision, onChange]
+        [min, max, allowUndefined, precision, onChange, revert]
     );
-
-    const internalRef = useRef(null);
-    const ref = (forwardedRef as RefObject<any>) || internalRef;
 
     const debouncedChangeHandler = useDebouncedCallback(applyChange, debounceWait, [applyChange]);
 
@@ -132,8 +112,8 @@ export const NumberInput: FC<InputProps> = ({
             <Input
                 label={label}
                 ref={ref}
-                min={min && min - 10}
-                max={max && max + 10}
+                min={min === undefined ? min : min - 10}
+                max={max === undefined ? max : max + 10}
                 onChange={handleChange}
                 type="number"
                 value={state ?? ''}
