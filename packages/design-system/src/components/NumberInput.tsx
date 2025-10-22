@@ -5,7 +5,6 @@ import { isNil } from 'lodash-es';
 import { ChangeEvent, useCallback, ComponentProps } from 'react';
 import { Input } from './Input';
 import { round } from 'lodash-es';
-import { useOutsideAlerter } from '@planda/hooks';
 import { useDebouncedCallback } from '@planda/hooks';
 
 type OmitOverlap<Type> = Omit<Type, 'type' | 'min' | 'max' | 'onChange' | 'value'>;
@@ -118,10 +117,7 @@ export const NumberInput: FC<InputProps> = ({
     const internalRef = useRef(null);
     const ref = (forwardedRef as RefObject<any>) || internalRef;
 
-    const outsideCallback = useCallback(() => applyChange(castNumberString(state)), [applyChange, state]);
-    useOutsideAlerter(ref, outsideCallback);
-
-    const debouncedChangeHandler = useDebouncedCallback(applyChange, debounceWait);
+    const debouncedChangeHandler = useDebouncedCallback(applyChange, debounceWait, [applyChange]);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         if (debug) {
@@ -143,6 +139,9 @@ export const NumberInput: FC<InputProps> = ({
                 value={state ?? ''}
                 id={id}
                 step={!isNil(precision) ? 10 ** (-1 * precision) : 'any'}
+                onBlur={() => {
+                    applyChange(castNumberString(state));
+                }}
                 {...props}
             />
         </span>
