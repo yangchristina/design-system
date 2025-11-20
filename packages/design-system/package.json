@@ -42,7 +42,8 @@
     "peerDependencies": {
         "next": ">=15.0.0",
         "react": ">=19.0.0 <20.0.0",
-        "react-dom": ">=19.0.0 <20.0.0"
+        "react-dom": ">=19.0.0 <20.0.0",
+        "date-fns": ">=3.x"
     },
     "dependencies": {
         "@planda/hooks": "*",
@@ -75,7 +76,6 @@
         "@radix-ui/react-toggle-group": "^1.0.4",
         "@radix-ui/react-tooltip": "^1.0.7",
         "@radix-ui/react-use-layout-effect": "^1.0.1",
-        "date-fns": "^3.6.0",
         "localforage": "^1.10.0",
         "lodash-es": "^4.17.21",
         "react-bezier-curve-editor": "^1.1.2",
