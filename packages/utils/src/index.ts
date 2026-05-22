@@ -1,6 +1,7 @@
 export * from './math';
 export * from './utils';
 export * from './date';
+export * from './date-nlp';
 export * from './cast';
 export * from './lib/json';
 export * from './lib/fetch';

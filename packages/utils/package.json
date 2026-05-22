@@ -5,6 +5,25 @@
     "main": "dist/cjs/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/cjs/index.js"
+        },
+        "./date": {
+            "types": "./dist/date.d.ts",
+            "import": "./dist/date.js",
+            "require": "./dist/cjs/index.js"
+        },
+        "./date-nlp": {
+            "types": "./dist/date-nlp.d.ts",
+            "import": "./dist/date-nlp.js",
+            "require": "./dist/cjs/index.js"
+        },
+        "./package.json": "./package.json"
+    },
     "files": [
         "dist"
     ],
@@ -19,6 +38,7 @@
     "author": "Christina Yang",
     "license": "MIT",
     "dependencies": {
+        "chrono-node": "^2.7.0",
         "tslib": "^2.7.0"
     },
     "peerDependencies": {
