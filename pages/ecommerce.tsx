@@ -1,34 +1,34 @@
 import React from 'react';
-import { Container } from '../components/Container';
-import { Box } from '../components/Box';
-import { Flex } from '../components/Flex';
-import { Text } from '../components/Text';
-import { Grid } from '../components/Grid';
-import { RadioGrid, RadioGridGroup } from '../components/RadioGrid';
-// import { Select } from '../components/Select';
-import { Separator } from '../components/Separator';
-import { Card } from '../components/Card';
-import { Image } from '../components/Image';
-import { Link } from '../components/Link';
-import { Section } from '../components/Section';
+import { Container } from '../src/components/Container';
+import { Box } from '../src/components/Box';
+import { Flex } from '../src/components/Flex';
+import { Text } from '../src/components/Text';
+import { Grid } from '../src/components/Grid';
+import { RadioGrid, RadioGridGroup } from '../src/components/RadioGrid';
+// import { Select } from '../src/components/Select';
+import { Separator } from '../src/components/Separator';
+import { Card } from '../src/components/Card';
+import { Image } from '../src/components/Image';
+import { Link } from '../src/components/Link';
+import { Section } from '../src/components/Section';
 import {
   Accordion,
   AccordionTrigger,
   AccordionItem,
   AccordionContent,
-} from '../components/Accordion';
-import { ScrollArea } from '../components/Scrollbar';
-import { Heading } from '../components/Heading';
-import { Paragraph } from '../components/Paragraph';
-import { TextField } from '../components/TextField';
-import { Button } from '../components/Button';
-import { IconButton } from '../components/IconButton';
-import { Badge } from '../components/Badge';
+} from '../src/components/Accordion';
+import { ScrollArea } from '../src/components/Scrollbar';
+import { Heading } from '../src/components/Heading';
+import { Paragraph } from '../src/components/Paragraph';
+import { TextField } from '../src/components/TextField';
+import { Button } from '../src/components/Button';
+import { IconButton } from '../src/components/IconButton';
+import { Badge } from '../src/components/Badge';
 
-import { Layers } from '../custom/Layers';
-import { Properties } from '../custom/Properties';
-import { Color } from '../custom/Color';
-import { Toolbar } from '../custom/Toolbar';
+import { Layers } from '../src/custom/Layers';
+import { Properties } from '../src/custom/Properties';
+import { Color } from '../src/custom/Color';
+import { Toolbar } from '../src/custom/Toolbar';
 
 import {
   Cross1Icon,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table, Td, Tbody, Th, Thead, Tfoot, Tr, Caption } from '../components/Table'
+import { Table, Td, Tbody, Th, Thead, Tfoot, Tr, Caption } from '../src/components/Table'
 
 const TableDemo = () => {
     return (

@@ -1,48 +1,45 @@
 import React from 'react';
-import { Button } from '../components/Button';
-import { OldSelect } from '../components/OldSelect';
-import { GhostIconButton, IconButton } from '../components/IconButton';
-import { Container } from '../components/Container';
-import { Box } from '../components/Box';
-import { Flex } from '../components/Flex';
-import { Grid } from '../components/Grid';
-import { Badge } from '../components/Badge';
-import { Info } from '../components/Info';
-import { Switch } from '../components/Switch';
-import { ControlGroup } from '../components/ControlGroup';
-import { Text } from '../components/Text';
-import { Link } from '../components/Link';
-import { AppBar } from '../components/AppBar';
-import { NumberInput } from '../components/NumberInput';
-import { Alert } from '../components/Alert';
-import { Input } from '../components/Input';
-import { Kbd } from '../components/Kbd';
-import { Separator } from '../components/Separator';
-import { Table, Caption, Thead, Tbody, Tfoot, Tr, Th, Td } from '../components/Table';
-import { VerifiedBadge } from '../components/VerifiedBadge';
-import { Card } from '../components/Card';
-import { ContentUnit, Select } from '../components/select';
-import { TextArea } from '../components/TextArea';
-import { Image } from '../components/Image';
-import { Code } from '../components/Code';
-import { Sup } from '../components/Sup';
-import { Sub } from '../components/Sub';
-import { TriangleNav } from '../components/TriangleNav';
-import { TextField } from '../components/TextField';
-import { Section } from '../components/Section';
-import { Spinner } from '../components/Spinner';
-import { Avatar } from '../components/Avatar';
-import { TabLink } from '../components/TabLink';
-import { SimpleToggle } from '../components/SimpleToggle';
-import { ScrollArea } from '../components/Scrollbar';
-import { Tooltip } from '../components/Tooltip';
-import { Slider, ThemePanel } from '@radix-ui/themes';
-import { Dialog, DialogTrigger, DialogContent } from '../components/Dialog';
-import { Sheet, SheetTrigger, SheetContent } from '../components/Sheet';
-import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '../components/Popover';
-import { Checkbox } from '../components/Checkbox1';
-import { RadioGroup, Radio } from '../components/Radio';
-import { ProgressBar } from '../components/ProgressBar';
+import { Button } from '../src/components/Button';
+import { OldSelect } from '../src/components/OldSelect';
+import { GhostIconButton, IconButton } from '../src/components/IconButton';
+import { Container } from '../src/components/Container';
+import { Box } from '../src/components/Box';
+import { Flex } from '../src/components/Flex';
+import { Grid } from '../src/components/Grid';
+import { Badge } from '../src/components/Badge';
+import { Info } from '../src/components/Info';
+import { Switch } from '../src/components/Switch';
+import { Text } from '../src/components/Text';
+import { Link } from '../src/components/Link';
+import { AppBar } from '../src/components/AppBar';
+import { NumberInput } from '../src/components/NumberInput';
+import { Alert } from '../src/components/Alert';
+import { Input } from '../src/components/Input';
+import { Kbd } from '../src/components/Kbd';
+import { Separator } from '../src/components/Separator';
+import { Table, Caption, Thead, Tbody, Tfoot, Tr, Th, Td } from '../src/components/Table';
+import { VerifiedBadge } from '../src/components/VerifiedBadge';
+import { Card } from '../src/components/Card';
+import { ContentUnit, Select } from '../src/components/select';
+import { TextArea } from '../src/components/TextArea';
+import { Image } from '../src/components/Image';
+import { Code } from '../src/components/Code';
+import { Sup } from '../src/components/Sup';
+import { Sub } from '../src/components/Sub';
+import { TriangleNav } from '../src/components/TriangleNav';
+import { TextField } from '../src/components/TextField';
+import { Section } from '../src/components/Section';
+import { Spinner } from '../src/components/Spinner';
+import { Avatar } from '../src/components/Avatar';
+import { TabLink } from '../src/components/TabLink';
+import { SimpleToggle } from '../src/components/SimpleToggle';
+import { Tooltip } from '../src/components/Tooltip';
+import { Dialog, DialogTrigger, DialogContent } from '../src/components/Dialog';
+import { Sheet, SheetTrigger, SheetContent } from '../src/components/Sheet';
+import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '../src/components/Popover';
+import { Checkbox } from '../src/components/Checkbox1';
+import { RadioGroup, Radio } from '../src/components/Radio';
+import { ProgressBar } from '../src/components/ProgressBar';
 import {
   AlertDialog,
   AlertDialogTrigger,
@@ -51,24 +48,23 @@ import {
   AlertDialogDescription,
   AlertDialogAction,
   AlertDialogCancel,
-} from '../components/AlertDialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '../components/Tabs';
-import { Label } from '../components/Label';
-import { Skeleton } from '../components/Skeleton';
-import { RadioCardGroup, RadioCard } from '../components/RadioCard';
+} from '../src/components/AlertDialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../src/components/Tabs';
+import { Label } from '../src/components/Label';
+import { Skeleton } from '../src/components/Skeleton';
+import { RadioCardGroup, RadioCard } from '../src/components/RadioCard';
 import {
   Accordion,
   AccordionTrigger,
   AccordionItem,
   AccordionContent,
-} from '../components/Accordion';
-import { Heading } from '../components/Heading';
-import { Paragraph } from '../components/Paragraph';
-// import { Color } from '../custom/Color';
-import { Avatars } from '../custom/Avatars';
-import { Kbds } from '../custom/Kbds';
-import { Menus } from '../custom/Menus';
-import { Status } from '../components/Status';
+} from '../src/components/Accordion';
+import { Heading } from '../src/components/Heading';
+import { Paragraph } from '../src/components/Paragraph';
+// import { Color } from '../src/custom/Color';
+import { Kbds } from '../src/custom/Kbds';
+import { Menus } from '../src/custom/Menus';
+import { Status } from '../src/components/Status';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -80,7 +76,7 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-} from '../components/DropdownMenu';
+} from '../src/components/DropdownMenu';
 import {
   ContextMenu,
   ContextMenuTrigger,
@@ -92,9 +88,9 @@ import {
   ContextMenuRadioGroup,
   ContextMenuLabel,
   ContextMenuSeparator,
-} from '../components/ContextMenu2';
-import { ContextMenu as ContextMenu1 } from '../components/ContextMenu';
-import { DirectionNav } from '../components/DirectionNav';
+} from '../src/components/ContextMenu2';
+import { ContextMenu as ContextMenu1 } from '../src/components/ContextMenu';
+import { DirectionNav } from '../src/components/DirectionNav';
 import {
   ActivityLogIcon,
   ArrowRightIcon,
@@ -130,8 +126,20 @@ import {
   HomeIcon,
   ListBulletIcon
 } from '@radix-ui/react-icons';
-import { Toolbar } from '../custom/Toolbar';
-import { DarkThemeButton } from '../custom/DarkThemeButton';
+import { Toolbar } from '../src/custom/Toolbar';
+import { DarkThemeButton } from '../src/custom/DarkThemeButton';
+import { css } from '@planda/styled-system/css';
+
+const NavItem = ({ id, name }: { id?: string, name: string }) => {
+  if (!id) id = name.toLowerCase().replace(/\s/g, '')
+  return <Box key={id} css={{ my: '$1' }}>
+    <Link href={`#${id}`} variant="subtle" className={css({ display: 'inline-flex' })}>
+      <Text size="2" className={css({ lineHeight: '20px' })}>
+        {name}
+      </Text>
+    </Link>
+  </Box>
+}
 
 function Home() {
   return (
@@ -165,307 +173,145 @@ function Home() {
               {
                 id: 'info',
                 name: 'Info',
-              }
-            ].map((item) => {
-              return <Box key={item.id} css={{ my: '$1' }}>
-                <Link href={`#${item.id}`} variant="subtle" css={{ display: 'inline-flex' }}>
-                  <Text size="2" css={{ lineHeight: '20px' }}>
-                    {item.name}
-                  </Text>
-                </Link>
-              </Box>
+              },
+            ].map(({ id, name }) => {
+              if (!id) id = name.toLowerCase().replace(/\s/g, '')
+              return <NavItem key={id} id={id} name={name} />
             })
           }
         </Box>
         <Heading>Quick nav</Heading>
         <Box as="ul" css={{ p: 0 }}>
-          <Box css={{ my: '$1' }}>
-            <Link href="#accordion" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Accordion
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#alert" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Alert
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#alertdialog" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Alert Dialog
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#avatar" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Avatar
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#badge" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Badge
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#button" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Button
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#card" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Card
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#checkbox" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Checkbox
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#container" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Container
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#contextmenu2" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Context Menu
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#controlgroup" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Control Group
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#code" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Code
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#dialog" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Dialog
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#directionnav" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                DirectionNav
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#dropdownmenu" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Dropdown Menu
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#input" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Input
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#kbd" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Kbd
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#link" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Link
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#popover" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Popover
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#progressbar" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Progress Bar
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#radio" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Radio
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#radiocard" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Radio Card
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#section" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Section
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#sheet" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Sheet
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#select" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Select
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#slider" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Slider
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#status" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Status
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#switch" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Switch
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#table" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Table
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#tablink" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                TabLink
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#tabs" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Tabs
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#text" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Text
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#textarea" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Textarea
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#TextField" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                TextField
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#trianglenav" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                TriangleNav
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#iconbutton" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                IconButton
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#typography" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Typography
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#simpletoggle" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Simple Toggle
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#spinner" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Spinner
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#skeleton" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Skeleton
-              </Text>
-            </Link>
-          </Box>
-          <Box css={{ my: '$1' }}>
-            <Link href="#verifiedbadge" variant="subtle" css={{ display: 'inline-flex' }}>
-              <Text size="2" css={{ lineHeight: '20px' }}>
-                Verified Badge
-              </Text>
-            </Link>
-          </Box>
+          {
+            [{
+              id: 'accordion',
+              name: 'Accordion',
+            },
+            {
+              id: 'alert',
+              name: 'Alert'
+            },
+            {
+              id: 'alertdialog',
+              name: 'Alert Dialog'
+            },
+            {
+              name: 'Avatar'
+            },
+            {
+              name: 'Badge'
+            },
+            {
+              name: 'Button'
+            },
+            {
+              name: 'Card'
+            },
+            {
+              name: 'Checkbox'
+            },
+            {
+              name: 'Container'
+            },
+            {
+              name: 'Context Menu',
+              id: 'contextmenu2'
+            },
+            {
+              name: 'Code'
+            },
+            {
+              name: 'Dialog'
+            },
+            {
+              name: 'Direction Nav'
+            },
+            {
+              name: 'Dropdown Menu'
+            },
+            {
+              name: 'Input',
+            },
+            {
+              name: 'Kbd',
+            },
+            {
+              name: 'Link',
+            },
+            {
+              name: 'Popover',
+            },
+            {
+              name: 'Progress Bar',
+            },
+            {
+              name: 'Radio',
+            },
+            {
+              name: 'Radio Card',
+            },
+            {
+              name: 'Section',
+            },
+            {
+              name: 'Sheet',
+            },
+            {
+              name: 'Select',
+            },
+            {
+              name: 'Slider',
+            },
+            {
+              name: 'Status',
+            },
+            {
+              name: 'Switch',
+            },
+            {
+              name: 'Table',
+            },
+            {
+              name: 'TabLink',
+            },
+            {
+              name: 'Tabs',
+            },
+            {
+              name: 'Text',
+            },
+            {
+              name: 'Textarea',
+            },
+            {
+              name: 'TextField',
+            },
+            {
+              name: 'TriangleNav',
+            },
+            {
+              name: 'IconButton',
+            },
+            {
+              name: 'Typography',
+            },
+            {
+              name: 'Simple Toggle',
+            },
+            {
+              name: 'Spinner',
+            },
+            {
+              name: 'Skeleton',
+            },
+            {
+              name: 'Verified Badge',
+            },
+            ].map(({ id, name }) => {
+              if (!id) id = name.toLowerCase().replace(/\s/g, '')
+              return <NavItem key={id} id={id} name={name} />
+            })
+          }
         </Box>
       </Box>
       {/* #endregion nav */}
@@ -473,30 +319,30 @@ function Home() {
       <Box css={{ bc: '$loContrast', height: '100%', marginInline: '150px' }}>
         <Section size="3">
           <Container size="2">
-            <Heading size="4" css={{ ta: 'center', mb: '$3' }}>
+            <Heading size="4" className={css({ ta: 'center', mb: '$3' })}>
               Radix UI test suite
             </Heading>
-            <Paragraph size="2" css={{ ta: 'center' }}>
+            <Paragraph size="2" className={css({ ta: 'center' })}>
               An environment for testing Radix DS.
             </Paragraph>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex className={css({ justifyContent: 'center' })}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
           <Container size="2">
-            <Heading id="section" css={{ mb: '$6', scrollMarginTop: '$7' }}>
+            <Heading id="section" className={css({ mb: '$6', scrollMarginTop: '$7' })}>
               Section
             </Heading>
           </Container>
-          <Section size="1" css={{ bc: '$gray3' }}>
-            <Text as="p" size="4" css={{ ta: 'center' }}>
+          <Section size="1" className={css({ bc: '$gray3' })}>
+            <Text as="p" size="4" className={css({ ta: 'center' })}>
               Section 1
             </Text>
           </Section>
-          <Section size="2" css={{ bc: '$gray3', my: '$1' }}>
-            <Text as="p" size="4" css={{ ta: 'center' }}>
+          <Section size="2" className={css({ bc: '$gray3', my: '$1' })}>
+            <Text as="p" size="4" className={css({ ta: 'center' })}>
               Section 2
             </Text>
           </Section>
@@ -506,7 +352,7 @@ function Home() {
             </Text>
           </Section>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -538,7 +384,7 @@ function Home() {
                   autoComplete="off"
                   css={{ mb: '$3' }}
                 />
-                <Flex css={{ ai: 'center', jc: 'space-between' }}>
+                <Flex css={{ ai: 'center', justifyContent: 'space-between' }}>
                   <Text size="2" css={{ color: '$gray11' }}>
                     Forgot password
                   </Text>
@@ -594,7 +440,7 @@ function Home() {
             </Text>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -609,7 +455,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -628,7 +474,7 @@ function Home() {
             </Grid>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -765,7 +611,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -804,7 +650,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -862,7 +708,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -914,7 +760,7 @@ function Home() {
           </Container>
         </Section>
 
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -940,7 +786,7 @@ function Home() {
           </Container>
         </Section>
 
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1010,7 +856,7 @@ function Home() {
           </Container>
         </Section>
 
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
 
@@ -1130,7 +976,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1162,55 +1008,8 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
-          <Separator size="2" />
-        </Flex>
-        <Section size="3">
-          <Container size="2">
-            <Heading id="controlgroup" css={{ mb: '$6', scrollMarginTop: '$7' }}>
-              ControlGroup
-            </Heading>
-            <ControlGroup>
-              <Button>Button</Button>
-              <Button>Button</Button>
-              <Button>Button</Button>
-              <Button>Button</Button>
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <Button>Button</Button>
-              <Button>Button</Button>
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <Button>Button</Button>
-              <TextField placeholder="Hello world" />
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <TextField placeholder="Hello world" />
-              <Button>Button</Button>
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <TextField size="1" placeholder="Hello world" />
-              <OldSelect>
-                <option>Button</option>
-                <option>Button</option>
-                <option>Button</option>
-                <option>Button</option>
-                <option>Button</option>
-              </OldSelect>
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <TextField placeholder="Hello world" />
-              <TextField placeholder="Hello world" />
-              <TextField placeholder="Hello world" />
-            </ControlGroup>
-            <ControlGroup css={{ mt: '$6' }}>
-              <TextField size="2" placeholder="Hello world" />
-              <Button size="2">Button</Button>
-            </ControlGroup>
-          </Container>
-        </Section>
 
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1234,7 +1033,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1247,7 +1046,7 @@ function Home() {
             </Box>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1273,7 +1072,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1282,7 +1081,7 @@ function Home() {
               Kbd
             </Heading>
             <Heading css={{ mb: '$6' }}>Kbd test</Heading>
-            <Flex css={{ ai: 'center', jc: 'space-between', mb: '$7' }}>
+            <Flex css={{ ai: 'center', justifyContent: 'space-between', mb: '$7' }}>
               <Text>Resize selected object</Text>
               <Flex css={{ ai: 'center', gap: '$1' }}>
                 <Kbd>⌘</Kbd>
@@ -1295,7 +1094,7 @@ function Home() {
           </Container>
           <Kbds />
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1314,7 +1113,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1342,7 +1141,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1374,7 +1173,7 @@ function Home() {
             </Paragraph>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1391,7 +1190,7 @@ function Home() {
             </Paragraph>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1408,7 +1207,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1439,7 +1238,7 @@ function Home() {
                     Modulz is a visual code editor that empowers teams to design, develop, document
                     and deploy a design system, without writing code.
                   </Text>
-                  <Flex css={{ ai: 'center', jc: 'space-between', mt: '$3' }}>
+                  <Flex css={{ ai: 'center', justifyContent: 'space-between', mt: '$3' }}>
                     <Flex css={{ ai: 'center' }}>
                       <Avatar
                         size="2"
@@ -1476,7 +1275,7 @@ function Home() {
                       Modulz is a visual code editor that empowers teams to design, develop,
                       document and deploy a design system, without writing code.
                     </Text>
-                    <Flex css={{ ai: 'center', jc: 'space-between', mt: '$3' }}>
+                    <Flex css={{ ai: 'center', justifyContent: 'space-between', mt: '$3' }}>
                       <Flex css={{ ai: 'center' }}>
                         <Avatar
                           size="2"
@@ -1513,7 +1312,7 @@ function Home() {
                     Modulz is a visual code editor that empowers teams to design, develop, document
                     and deploy a design system, without writing code.
                   </Text>
-                  <Flex css={{ ai: 'center', jc: 'space-between', mt: '$3' }}>
+                  <Flex css={{ ai: 'center', justifyContent: 'space-between', mt: '$3' }}>
                     <Flex css={{ ai: 'center' }}>
                       <Avatar
                         size="2"
@@ -1549,7 +1348,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1570,7 +1369,7 @@ function Home() {
                     This will do a very dangerous thing. Thar be dragons!
                   </Text>
                 </AlertDialogDescription>
-                <Flex css={{ jc: 'flex-end', gap: '$3', mt: '$5' }}>
+                <Flex css={{ justifyContent: 'flex-end', gap: '$3', mt: '$5' }}>
                   <AlertDialogCancel asChild>
                     <Button ghost>Cancel</Button>
                   </AlertDialogCancel>
@@ -1582,7 +1381,7 @@ function Home() {
             </AlertDialog>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1635,7 +1434,7 @@ function Home() {
             </Dialog>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Container size="2">
@@ -1645,7 +1444,7 @@ function Home() {
           <DirectionNav><RocketIcon /></DirectionNav>
           <DirectionNav>DIRECTIONS IN HERE</DirectionNav>
         </Container>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1830,7 +1629,7 @@ function Home() {
             </Box>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1843,7 +1642,7 @@ function Home() {
             <Spinner color="overlay8" />
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1888,7 +1687,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -1995,7 +1794,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -2071,11 +1870,11 @@ function Home() {
             </Accordion>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Avatars />
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -2156,7 +1955,7 @@ function Home() {
             </Tabs>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -2224,7 +2023,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -2246,7 +2045,7 @@ function Home() {
             </Box>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
 
@@ -2261,7 +2060,7 @@ function Home() {
           </Container>
         </Section>
 
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -2276,7 +2075,7 @@ function Home() {
             </Flex>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -2291,7 +2090,7 @@ function Home() {
             </RadioGroup>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -2329,7 +2128,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2359,7 +2158,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2389,7 +2188,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2419,7 +2218,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2449,7 +2248,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2481,7 +2280,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2538,7 +2337,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2573,7 +2372,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2624,7 +2423,7 @@ function Home() {
                     32
                   </Td>
                   <Td align="center" border="dashed">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2659,7 +2458,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2694,7 +2493,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2731,7 +2530,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2783,7 +2582,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2813,7 +2612,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2843,7 +2642,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2873,7 +2672,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2903,7 +2702,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2935,7 +2734,7 @@ function Home() {
                   <Td align="center">32</Td>
                   <Td align="center">32</Td>
                   <Td align="center">
-                    <Flex css={{ gap: '$1', jc: 'flex-end' }}>
+                    <Flex css={{ gap: '$1', justifyContent: 'flex-end' }}>
                       <Box css={{ width: 15, height: 15, bc: '$success9', borderRadius: '$round' }}>
                         <CheckIcon />
                       </Box>
@@ -2958,7 +2757,7 @@ function Home() {
             </Table>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -2998,7 +2797,7 @@ function Home() {
             </RadioCardGroup>
           </Container>
         </Section>
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -3012,7 +2811,7 @@ function Home() {
           </Container>
         </Section>
 
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -3046,7 +2845,7 @@ function Home() {
           </Container>
         </Section>
 
-        <Flex css={{ jc: 'center' }}>
+        <Flex css={{ justifyContent: 'center' }}>
           <Separator size="2" />
         </Flex>
         <Section size="3">
@@ -3059,7 +2858,7 @@ function Home() {
                 <Flex
                   css={{
                     ai: 'center',
-                    jc: 'center',
+                    justifyContent: 'center',
                     height: '$9',
                     bc: '$gray2',
                     border: '2px dashed $colors$gray6',

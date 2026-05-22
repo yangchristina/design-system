@@ -1,119 +1,13 @@
 {
-  "name": "@planda/design-system",
-  "version": "1.4.0",
-  "main": "dist/src/index.js",
-  "files": [
-    "dist"
-  ],
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/src/index.js",
-      "require": "./dist/src/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "scripts": {
-    "dev": "next dev --port 3001",
-    "types": "tsc --noEmit",
-    "build": "next build",
-    "build2": "rm -rf dist && node ./esbuild.config.js && tsc",
-    "start": "next start",
-    "prettier": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "ds:build": "rollup -c",
-    "ds:release": "yarn ds:build && np",
-    "ds:prerelease": "npm run ds:build && npm version prerelease --preid=canary && npm publish --tag canary",
-    "prerelease": "npm version prerelease --preid=canary && npm publish --tag canary",
-    "release": "npm run ds:build && npm version patch && npm publish",
-    "minor-release": "npm run ds:build && npm version minor && npm publish"
-  },
-  "peerDependencies": {
-    "next": "^14.x",
-    "react": "^18.x",
-    "react-dom": "^18.x"
-  },
-  "dependencies": {
-    "@radix-ui/colors": "^3.0.0",
-    "@radix-ui/react-accordion": "1.0.0",
-    "@radix-ui/react-alert-dialog": "^1.0.5",
-    "@radix-ui/react-aspect-ratio": "1.0.0",
-    "@radix-ui/react-avatar": "1.0.0",
-    "@radix-ui/react-checkbox": "^1.0.4",
-    "@radix-ui/react-collapsible": "^1.0.3",
-    "@radix-ui/react-context-menu": "1.0.0",
-    "@radix-ui/react-dialog": "^1.0.5",
-    "@radix-ui/react-dropdown-menu": "1.0.0",
-    "@radix-ui/react-icons": "1.1.1",
-    "@radix-ui/react-label": "^2.0.2",
-    "@radix-ui/react-menu": "1.0.0",
-    "@radix-ui/react-popover": "^1.0.7",
-    "@radix-ui/react-portal": "1.0.0",
-    "@radix-ui/react-progress": "1.0.0",
-    "@radix-ui/react-radio-group": "1.0.0",
-    "@radix-ui/react-scroll-area": "^1.0.5",
-    "@radix-ui/react-select": "^2.0.0",
-    "@radix-ui/react-separator": "1.0.0",
-    "@radix-ui/react-slider": "^1.1.2",
-    "@radix-ui/react-switch": "^1.0.3",
-    "@radix-ui/react-tabs": "1.0.0",
-    "@radix-ui/react-toggle": "1.0.0",
-    "@radix-ui/react-toggle-group": "^1.0.4",
-    "@radix-ui/react-tooltip": "^1.0.7",
-    "@radix-ui/react-use-layout-effect": "^1.0.1",
-    "@stitches/react": "^1.3.1-1",
-    "@types/lodash": "^4.17.7",
-    "date-fns": "^2.30.0",
-    "esbuild-plugin-d.ts": "^1.3.0",
-    "localforage": "^1.10.0",
-    "lodash": "^4.17.21",
-    "next-themes": "^0.2.1",
-    "npm": "^10.2.5",
-    "react-bezier-curve-editor": "^1.1.2",
-    "tslib": "^2.5.3"
-  },
-  "devDependencies": {
-    "@next/mdx": "10.2.3",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.1",
-    "@types/bezier-easing": "^2.1.2",
-    "@types/chroma-js": "^2.1.3",
-    "@types/node": "^20.3.1",
-    "@types/react": "^18.2.12",
-    "bezier-easing": "^2.1.0",
-    "chroma-js": "^2.1.1",
-    "esbuild": "0.23.0",
-    "esbuild-css-modules-plugin": "^3.1.2",
-    "esbuild-node-externals": "^1.14.0",
-    "esbuild-plugin-react18": "^0.2.5",
-    "esbuild-plugin-tsc": "^0.4.0",
-    "husky": ">=4",
-    "lint-staged": ">=10",
-    "np": "^7.3.0",
-    "prettier": "^2.1.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "rollup": "^3.29.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-preserve-directives": "^0.2.0",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yangchristina/design-system.git"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
-  }
+    "name": "plandav2.1",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Christina Yang",
+    "description": "",
+    "workspaces": [
+        "packages/*"
+    ]
 }

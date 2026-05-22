@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
-import { Sheet, SheetContent, SheetTrigger, } from '../components/Sheet';
-import { AlertSheet, AlertSheetContent, AlertSheetTrigger, } from '../components/AlertSheet';
+import { Sheet, SheetContent, SheetTrigger, } from '../src/components/Sheet';
+import { AlertSheet, AlertSheetContent, AlertSheetTrigger, } from '../src/components/AlertSheet';
 import { MixIcon, RocketIcon } from '@radix-ui/react-icons';
 
 const DayPanel = () => {

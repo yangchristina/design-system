@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { AppBar } from '../components/AppBar'
-import { Banner } from '../components/Banner'
-import { Announcement, AnnouncementsBar } from '../custom/AnnouncementsBar'
+import { AppBar } from '../src/components/AppBar'
+import { Banner } from '../src/components/Banner'
+import { Announcement, AnnouncementsBar } from '../src/custom/AnnouncementsBar'
 
 const BannerDemo = () => {
     const [announcements, setAnnouncements] = useState<Announcement[]>([

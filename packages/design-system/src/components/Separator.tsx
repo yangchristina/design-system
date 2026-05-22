@@ -1,0 +1,39 @@
+"use client"
+import { styled } from '@planda/styled-system/jsx'
+import * as SeparatorPrimitive from '@radix-ui/react-separator';
+
+export const Separator = styled(SeparatorPrimitive.Root, {
+  variants: {
+    size: {
+      "1": {
+        "&[data-orientation=\"horizontal\"]": {
+          height: "1px",
+          width: "$3"
+        },
+        "&[data-orientation=\"vertical\"]": {
+          width: "1px",
+          height: "$3"
+        }
+      },
+      "2": {
+        "&[data-orientation=\"horizontal\"]": {
+          height: "1px",
+          width: "$7"
+        },
+        "&[data-orientation=\"vertical\"]": {
+          width: "1px",
+          height: "$7"
+        }
+      }
+    }
+  },
+  defaultVariants: {
+    size: "1"
+  },
+  base: {
+    border: "none",
+    flexShrink: 0,
+    backgroundColor: "$gray6",
+    cursor: "default"
+  }
+});

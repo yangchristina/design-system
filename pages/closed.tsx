@@ -34,7 +34,7 @@ import { Cross2Icon } from '@radix-ui/react-icons';
 import { Radio, RadioGroup } from '../src/components/Radio';
 import { RadioCard, RadioCardGroup } from '../src/components/RadioCard';
 import { Heading } from '../src/components/Heading';
-import { Menus } from '../custom/Menus';
+import { Menus } from '../src/custom/Menus';
 import {
   DropdownMenu,
   DropdownMenuTrigger,

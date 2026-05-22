@@ -1,20 +1,20 @@
 import React from 'react';
-import { Container } from '../components/Container';
-import { Box } from '../components/Box';
-import { Flex } from '../components/Flex';
-import { Text } from '../components/Text';
-import { Separator } from '../components/Separator';
-import { Section } from '../components/Section';
-import { ScrollArea } from '../components/Scrollbar';
-import { Heading } from '../components/Heading';
-import { Paragraph } from '../components/Paragraph';
-import { Button } from '../components/Button';
-import { Badge } from '../components/Badge';
+import { Container } from '../src/components/Container';
+import { Box } from '../src/components/Box';
+import { Flex } from '../src/components/Flex';
+import { Text } from '../src/components/Text';
+import { Separator } from '../src/components/Separator';
+import { Section } from '../src/components/Section';
+import { ScrollArea } from '../src/components/Scrollbar';
+import { Heading } from '../src/components/Heading';
+import { Paragraph } from '../src/components/Paragraph';
+import { Button } from '../src/components/Button';
+import { Badge } from '../src/components/Badge';
 
-import { Layers } from '../custom/Layers';
-import { Properties } from '../custom/Properties';
-import { Toolbar } from '../custom/Toolbar';
-import { DarkThemeButton } from '../custom/DarkThemeButton';
+import { Layers } from '../src/custom/Layers';
+import { Properties } from '../src/custom/Properties';
+import { Toolbar } from '../src/custom/Toolbar';
+import { DarkThemeButton } from '../src/custom/DarkThemeButton';
 
 function Test() {
   return (
